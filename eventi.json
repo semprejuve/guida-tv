@@ -1,0 +1,112 @@
+[
+  {
+    "data": "2026-11-23",
+    "ora": "18:30",
+    "sport": "Pallavolo",
+    "competizione": "Esempio • SuperLega / Volley",
+    "evento": "Esempio Partita Volley (Sostituisci con i match reali)",
+    "paese": "Italia",
+    "canale": "Rai Sport",
+    "link": "https://www.raiplay.it/dirette/raisport"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "20:30",
+    "sport": "Calcio",
+    "competizione": "Esempio • Serie BKT Free",
+    "evento": "Esempio Partita Gratuita DAZN",
+    "paese": "DAZN Free",
+    "canale": "DAZN Free Italia",
+    "link": "https://www.dazn.com/it-IT/home"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "21:00",
+    "sport": "Calcio",
+    "competizione": "Esempio • Coppa Europea",
+    "evento": "Esempio Big Match in chiaro",
+    "paese": "Svizzera",
+    "canale": "RSI La 2",
+    "link": "https://www.rsi.ch/play/tv"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "23:30",
+    "sport": "Calcio",
+    "competizione": "Esempio • Brasileirão / Liga",
+    "evento": "Esempio Diretta YouTube Brasile",
+    "paese": "Brasile YouTube",
+    "canale": "CazéTV (YouTube)",
+    "link": "https://www.youtube.com/@CazeTV"
+  },
+  {
+    "data": "2026-11-27",
+    "ora": "19:00",
+    "sport": "Basket & NBA",
+    "competizione": "Esempio • Basket Free",
+    "evento": "Esempio Diretta Basket",
+    "paese": "Brasile YouTube",
+    "canale": "NBA Brasil / NBB",
+    "link": "https://www.youtube.com/@nbabrasil"
+  },
+  {
+    "data": "2026-11-28",
+    "ora": "11:30",
+    "sport": "Sci Alpino",
+    "competizione": "Esempio • Coppa del Mondo",
+    "evento": "Esempio Slalom / Discesa Libera",
+    "paese": "Svizzera",
+    "canale": "SRF zwei",
+    "link": "https://www.srf.ch/play/tv"
+  },
+  {
+    "data": "2026-11-28",
+    "ora": "18:00",
+    "sport": "College Football",
+    "competizione": "Esempio • NCAA Football",
+    "evento": "Esempio Partita College Football",
+    "paese": "Germania",
+    "canale": "ProSieben MAXX",
+    "link": "https://www.ran.de/"
+  },
+  {
+    "data": "2026-11-29",
+    "ora": "14:00",
+    "sport": "MotoGP",
+    "competizione": "Esempio • Motomondiale",
+    "evento": "Esempio Gran Premio in chiaro",
+    "paese": "Italia",
+    "canale": "TV8",
+    "link": "https://tv8.it/streaming"
+  },
+  {
+    "data": "2026-11-29",
+    "ora": "15:00",
+    "sport": "Formula 1",
+    "competizione": "Esempio • F1 World Championship",
+    "evento": "Esempio Gran Premio F1",
+    "paese": "Germania",
+    "canale": "RTL",
+    "link": "https://www.rtl.de/"
+  },
+  {
+    "data": "2026-11-29",
+    "ora": "19:00",
+    "sport": "Football Americano",
+    "competizione": "Esempio • NFL Week",
+    "evento": "Esempio Partita NFL in chiaro",
+    "paese": "Germania",
+    "canale": "RTL / Nitro",
+    "link": "https://www.rtl.de/"
+  },
+  {
+    "data": "2026-11-29",
+    "ora": "16:00",
+    "sport": "Tennis",
+    "competizione": "Esempio • Circuito ATP/WTA",
+    "evento": "Esempio Finale Tennis",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  }
+]
