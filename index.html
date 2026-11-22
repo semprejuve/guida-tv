@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guida TV Sport Gratis</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --card-hover: #273549;
+      --border: #334155;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --accent: #22c55e;
+      --accent-blue: #38bdf8;
+      --dazn: #facc15;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      padding-bottom: 50px;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 22px 16px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 1.75rem;
+      margin-bottom: 6px;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 18px 14px;
+    }
+
+    .search-box {
+      width: 100%;
+      padding: 13px 16px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+      font-size: 1rem;
+      margin-bottom: 16px;
+      outline: none;
+    }
+
+    .search-box:focus {
+      border-color: var(--accent-blue);
+    }
+
+    .filter-section {
+      margin-bottom: 14px;
+    }
+
+    .filter-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--muted);
+      margin-bottom: 7px;
+      display: block;
+      font-weight: 700;
+    }
+
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .pill {
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 7px 13px;
+      border-radius: 999px;
+      font-size: 0.86rem;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .pill:hover {
+      background: var(--card-hover);
+    }
+
+    .pill.active {
+      background: var(--accent);
+      color: #052e16;
+      border-color: var(--accent);
+      font-weight: 700;
+    }
+
+    .pill.active-blue {
+      background: var(--accent-blue);
+      color: #082f49;
+      border-color: var(--accent-blue);
+      font-weight: 700;
+    }
+
+    .stats {
+      margin: 14px 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .day-group {
+      margin-top: 22px;
+    }
+
+    .day-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      padding: 8px 12px;
+      background: #172033;
+      border-left: 4px solid var(--accent);
+      border-radius: 6px;
+      margin-bottom: 10px;
+      text-transform: capitalize;
+    }
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 12px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent-blue);
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .time-badge {
+      background: #0f172a;
+      color: var(--accent);
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-size: 0.92rem;
+      border: 1px solid var(--border);
+    }
+
+    .sport-tag {
+      font-size: 0.8rem;
+      color: var(--accent-blue);
+      font-weight: 600;
+    }
+
+    .comp-name {
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    .event-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
+    }
+
+    .channel-badge {
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 4px 9px;
+      border-radius: 6px;
+      background: #0f172a;
+      color: #e2e8f0;
+    }
+
+    .channel-badge.dazn {
+      color: var(--dazn);
+      border: 1px solid rgba(250, 204, 21, 0.35);
+    }
+
+    .watch-btn {
+      text-decoration: none;
+      background: var(--accent-blue);
+      color: #082f49;
+      font-weight: 700;
+      font-size: 0.82rem;
+      padding: 6px 11px;
+      border-radius: 8px;
+      white-space: nowrap;
+    }
+
+    .watch-btn:hover {
+      opacity: 0.9;
+    }
+
+    .empty-msg {
+      text-align: center;
+      padding: 40px 20px;
+      background: var(--card);
+      border-radius: 14px;
+      color: var(--muted);
+      margin-top: 20px;
+    }
+
+    .channels-directory {
+      margin-top: 38px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+    }
+
+    .channels-directory h2 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .dir-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 12px;
+      font-size: 0.86rem;
+    }
+
+    .dir-box h3 {
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+      color: var(--accent-blue);
+    }
+
+    .dir-box a {
+      display: inline-block;
+      color: var(--muted);
+      text-decoration: none;
+      margin-right: 8px;
+      margin-bottom: 4px;
+    }
+
+    .dir-box a:hover {
+      color: var(--text);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📺 Guida TV Sport Gratis</h1>
+    <p>Eventi gratuiti della settimana • Italia 🇮🇹 • Germania 🇩🇪 • Svizzera 🇨🇭 • Brasile YouTube 🇧🇷 • DAZN Free ⚡</p>
+  </header>
+
+  <div class="container">
+    <input type="text" id="searchInput" class="search-box" placeholder="🔍 Cerca squadra, torneo, pilota, tennista o canale (es. TV8, CazéTV, RSI, NBA)..." />
+
+    <div class="filter-section">
+      <span class="filter-label">📅 Giorno</span>
+      <div class="pills" id="dayFilters"></div>
+    </div>
+
+    <div class="filter-section">
+      <span class="filter-label">🌍 Nazione / Piattaforma</span>
+      <div class="pills" id="countryFilters"></div>
+    </div>
+
+    <div class="filter-section">
+      <span class="filter-label">🏅 Sport</span>
+      <div class="pills" id="sportFilters"></div>
+    </div>
+
+    <div class="stats">
+      <span id="resultsCount">Caricamento eventi...</span>
+      <span>🕒 Orari indicati nel tuo fuso orario locale (Italia)</span>
+    </div>
+
+    <div id="eventsContainer"></div>
+
+    <div class="channels-directory">
+      <h2>🔗 Accesso rapido ai canali ufficiali gratuiti</h2>
+      <div class="dir-grid">
+        <div class="dir-box">
+          <h3>🇮🇹 Italia Free</h3>
+          <a href="https://www.raiplay.it/dirette" target="_blank">RaiPlay / Rai Sport</a>
+          <a href="https://mediasetinfinity.mediaset.it/diretta" target="_blank">Mediaset Infinity</a>
+          <a href="https://tv8.it/streaming" target="_blank">TV8</a>
+          <a href="https://www.cielotv.it/streaming.html" target="_blank">Cielo</a>
+          <a href="https://www.supertennis.tv/" target="_blank">SuperTennis</a>
+          <a href="https://www.sportitalia.it/" target="_blank">Sportitalia</a>
+        </div>
+        <div class="dir-box">
+          <h3>🇩🇪 Germania Free</h3>
+          <a href="https://www.ardmediathek.de/live" target="_blank">Das Erste (ARD)</a>
+          <a href="https://www.zdf.de/live-tv" target="_blank">ZDF</a>
+          <a href="https://www.ran.de/" target="_blank">ran / ProSieben MAXX</a>
+          <a href="https://www.sport1.de/tv-programm" target="_blank">Sport1</a>
+          <a href="https://df1.de/" target="_blank">DF1</a>
+          <a href="https://www.rtl.de/" target="_blank">RTL / Nitro</a>
+        </div>
+        <div class="dir-box">
+          <h3>🇨🇭 Svizzera Free</h3>
+          <a href="https://www.rsi.ch/play/tv" target="_blank">RSI La 2</a>
+          <a href="https://www.srf.ch/play/tv" target="_blank">SRF zwei</a>
+          <a href="https://www.rts.ch/play/tv" target="_blank">RTS 2</a>
+          <a href="https://www.blueplus.ch/de/bluezoom" target="_blank">blue Zoom</a>
+        </div>
+        <div class="dir-box">
+          <h3>🇧🇷 Brasile YouTube</h3>
+          <a href="https://www.youtube.com/@CazeTV" target="_blank">CazéTV</a>
+          <a href="https://www.youtube.com/@getv" target="_blank">GE TV</a>
+          <a href="https://www.youtube.com/@canalgoatbr" target="_blank">Canal GOAT</a>
+          <a href="https://www.youtube.com/@xsports.brasil" target="_blank">Xsports</a>
+          <a href="https://www.youtube.com/@SportyNetBrasil" target="_blank">SportyNet</a>
+          <a href="https://www.youtube.com/@NSports" target="_blank">N Sports</a>
+          <a href="https://www.youtube.com/@TimeBrasil" target="_blank">Time Brasil</a>
+          <a href="https://www.youtube.com/@nbabrasil" target="_blank">NBA Brasil</a>
+        </div>
+        <div class="dir-box">
+          <h3>⚡ DAZN Free</h3>
+          <a href="https://www.dazn.com/it-IT/home" target="_blank">DAZN Free Italia</a>
+          <a href="https://www.dazn.com/de-DE/home" target="_blank">DAZN Free Germania</a>
+          <a href="https://www.dazn.com/de-CH/home" target="_blank">DAZN Free Svizzera</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const SPORTS = [
+      { id: "Tutti", label: "Tutti" },
+      { id: "Calcio", label: "⚽ Calcio" },
+      { id: "Pallavolo", label: "🏐 Pallavolo" },
+      { id: "Basket & NBA", label: "🏀 Basket & NBA" },
+      { id: "Formula 1", label: "🏎️ Formula 1" },
+      { id: "MotoGP", label: "🏍️ MotoGP" },
+      { id: "Tennis", label: "🎾 Tennis" },
+      { id: "Sci Alpino", label: "⛷️ Sci Alpino" },
+      { id: "Football Americano", label: "🏈 NFL" },
+      { id: "College Football", label: "🎓 College Football" }
+    ];
+
+    const COUNTRIES = [
+      { id: "Tutti", label: "Tutti" },
+      { id: "Italia", label: "🇮🇹 Italia" },
+      { id: "Germania", label: "🇩🇪 Germania" },
+      { id: "Svizzera", label: "🇨🇭 Svizzera" },
+      { id: "Brasile YouTube", label: "🇧🇷 Brasile YouTube" },
+      { id: "DAZN Free", label: "⚡ DAZN Free" }
+    ];
+
+    let allEvents = [];
+    let selectedDay = "Tutti";
+    let selectedCountry = "Tutti";
+    let selectedSport = "Tutti";
+    let searchQuery = "";
+
+    const sportIcons = {
+      "Calcio": "⚽",
+      "Pallavolo": "🏐",
+      "Basket & NBA": "🏀",
+      "Formula 1": "🏎️",
+      "MotoGP": "🏍️",
+      "Tennis": "🎾",
+      "Sci Alpino": "⛷️",
+      "Football Americano": "🏈",
+      "College Football": "🎓"
+    };
+
+    const countryFlags = {
+      "Italia": "🇮🇹",
+      "Germania": "🇩🇪",
+      "Svizzera": "🇨🇭",
+      "Brasile YouTube": "🇧🇷",
+      "DAZN Free": "⚡"
+    };
+
+    function formatDayLabel(dateStr) {
+      const [y, m, d] = dateStr.split("-").map(Number);
+      const date = new Date(y, m - 1, d);
+      const today = new Date();
+      const isToday =
+        date.getFullYear() === today.getFullYear() &&
+        date.getMonth() === today.getMonth() &&
+        date.getDate() === today.getDate();
+
+      const label = date.toLocaleDateString("it-IT", {
+        weekday: "long",
+        day: "numeric",
+        month: "long"
+      });
+
+      return isToday ? `OGGI • ${label}` : label;
+    }
+
+    function renderFilterPills() {
+      // Giorni disponibili nei dati
+      const uniqueDates = [...new Set(allEvents.map(e => e.data))].sort();
+      const dayContainer = document.getElementById("dayFilters");
+      dayContainer.innerHTML = "";
+
+      const allDayBtn = document.createElement("button");
+      allDayBtn.className = `pill ${selectedDay === "Tutti" ? "active" : ""}`;
+      allDayBtn.textContent = "Tutta la settimana";
+      allDayBtn.onclick = () => { selectedDay = "Tutti"; updateUI(); };
+      dayContainer.appendChild(allDayBtn);
+
+      uniqueDates.forEach(dateStr => {
+        const btn = document.createElement("button");
+        btn.className = `pill ${selectedDay === dateStr ? "active" : ""}`;
+        const [y, m, d] = dateStr.split("-").map(Number);
+        const dt = new Date(y, m - 1, d);
+        btn.textContent = dt.toLocaleDateString("it-IT", { weekday: "short", day: "numeric", month: "short" });
+        btn.onclick = () => { selectedDay = dateStr; updateUI(); };
+        dayContainer.appendChild(btn);
+      });
+
+      // Nazioni
+      const countryContainer = document.getElementById("countryFilters");
+      countryContainer.innerHTML = "";
+      COUNTRIES.forEach(c => {
+        const btn = document.createElement("button");
+        btn.className = `pill ${selectedCountry === c.id ? "active-blue" : ""}`;
+        btn.textContent = c.label;
+        btn.onclick = () => { selectedCountry = c.id; updateUI(); };
+        countryContainer.appendChild(btn);
+      });
+
+      // Sport
+      const sportContainer = document.getElementById("sportFilters");
+      sportContainer.innerHTML = "";
+      SPORTS.forEach(s => {
+        const btn = document.createElement("button");
+        btn.className = `pill ${selectedSport === s.id ? "active" : ""}`;
+        btn.textContent = s.label;
+        btn.onclick = () => { selectedSport = s.id; updateUI(); };
+        sportContainer.appendChild(btn);
+      });
+    }
+
+    function renderEvents() {
+      const container = document.getElementById("eventsContainer");
+      const filtered = allEvents.filter(ev => {
+        const matchDay = selectedDay === "Tutti" || ev.data === selectedDay;
+        const matchCountry = selectedCountry === "Tutti" || ev.paese === selectedCountry;
+        const matchSport = selectedSport === "Tutti" || ev.sport === selectedSport;
+        const q = searchQuery.trim().toLowerCase();
+        const matchSearch =
+          !q ||
+          ev.evento.toLowerCase().includes(q) ||
+          ev.competizione.toLowerCase().includes(q) ||
+          ev.canale.toLowerCase().includes(q) ||
+          ev.sport.toLowerCase().includes(q);
+        return matchDay && matchCountry && matchSport && matchSearch;
+      });
+
+      filtered.sort((a, b) => (a.data + a.ora).localeCompare(b.data + b.ora));
+
+      document.getElementById("resultsCount").textContent =
+        `${filtered.length} ${filtered.length === 1 ? "evento trovato" : "eventi trovati"}`;
+
+      if (filtered.length === 0) {
+        container.innerHTML = `<div class="empty-msg">😕 Nessun evento trovato con questi filtri.<br/>Prova a cambiare sport, nazione o parola cercata!</div>`;
+        return;
+      }
+
+      const grouped = {};
+      filtered.forEach(ev => {
+        if (!grouped[ev.data]) grouped[ev.data] = [];
+        grouped[ev.data].push(ev);
+      });
+
+      container.innerHTML = "";
+      Object.keys(grouped).sort().forEach(dateStr => {
+        const section = document.createElement("div");
+        section.className = "day-group";
+
+        const title = document.createElement("div");
+        title.className = "day-title";
+        title.textContent = formatDayLabel(dateStr);
+        section.appendChild(title);
+
+        const grid = document.createElement("div");
+        grid.className = "events-grid";
+
+        grouped[dateStr].forEach(ev => {
+          const card = document.createElement("div");
+          card.className = "card";
+          const isDazn = ev.paese === "DAZN Free";
+          const icon = sportIcons[ev.sport] || "🏅";
+          const flag = countryFlags[ev.paese] || "📺";
+
+          card.innerHTML = `
+            <div>
+              <div class="card-top">
+                <span class="time-badge">🕒 ${ev.ora}</span>
+                <span class="sport-tag">${icon} ${ev.sport}</span>
+              </div>
+              <div class="comp-name" style="margin-top:8px;">${ev.competizione}</div>
+              <div class="event-title">${ev.evento}</div>
+            </div>
+            <div class="card-footer">
+              <span class="channel-badge ${isDazn ? "dazn" : ""}">${flag} ${ev.canale}</span>
+              <a class="watch-btn" href="${ev.link}" target="_blank" rel="noopener">Apri ↗</a>
+            </div>
+          `;
+          grid.appendChild(card);
+        });
+
+        section.appendChild(grid);
+        container.appendChild(section);
+      });
+    }
+
+    function updateUI() {
+      renderFilterPills();
+      renderEvents();
+    }
+
+    document.getElementById("searchInput").addEventListener("input", e => {
+      searchQuery = e.target.value;
+      renderEvents();
+    });
+
+    fetch(`eventi.json?v=${Date.now()}`)
+      .then(res => res.json())
+      .then(data => {
+        allEvents = data;
+        updateUI();
+      })
+      .catch(() => {
+        document.getElementById("eventsContainer").innerHTML =
+          `<div class="empty-msg">⚠️ Impossibile caricare il file <strong>eventi.json</strong>. Assicurati di averlo creato nella stessa cartella di index.html!</div>`;
+      });
+  </script>
+</body>
+</html>
