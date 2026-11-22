@@ -34,22 +34,20 @@
       text-align: center;
     }
 
-    header h1 {
-      font-size: 1.75rem;
-      margin-bottom: 6px;
-      letter-spacing: -0.5px;
+    header h1 { font-size: 1.75rem; margin-bottom: 6px; }
+    header p { color: var(--muted); font-size: 0.95rem; }
+    .bot-status {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: var(--accent);
+      background: rgba(34, 197, 94, 0.12);
+      border: 1px solid rgba(34, 197, 94, 0.3);
+      padding: 3px 10px;
+      border-radius: 999px;
     }
 
-    header p {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .container {
-      max-width: 1050px;
-      margin: 0 auto;
-      padding: 18px 14px;
-    }
+    .container { max-width: 1080px; margin: 0 auto; padding: 18px 14px; }
 
     .search-box {
       width: 100%;
@@ -62,15 +60,9 @@
       margin-bottom: 16px;
       outline: none;
     }
+    .search-box:focus { border-color: var(--accent-blue); }
 
-    .search-box:focus {
-      border-color: var(--accent-blue);
-    }
-
-    .filter-section {
-      margin-bottom: 14px;
-    }
-
+    .filter-section { margin-bottom: 14px; }
     .filter-label {
       font-size: 0.78rem;
       text-transform: uppercase;
@@ -81,12 +73,7 @@
       font-weight: 700;
     }
 
-    .pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
+    .pills { display: flex; flex-wrap: wrap; gap: 8px; }
     .pill {
       background: var(--card);
       color: var(--text);
@@ -97,18 +84,13 @@
       cursor: pointer;
       transition: all 0.15s ease;
     }
-
-    .pill:hover {
-      background: var(--card-hover);
-    }
-
+    .pill:hover { background: var(--card-hover); }
     .pill.active {
       background: var(--accent);
       color: #052e16;
       border-color: var(--accent);
       font-weight: 700;
     }
-
     .pill.active-blue {
       background: var(--accent-blue);
       color: #082f49;
@@ -126,10 +108,7 @@
       gap: 8px;
     }
 
-    .day-group {
-      margin-top: 22px;
-    }
-
+    .day-group { margin-top: 22px; }
     .day-title {
       font-size: 1.15rem;
       font-weight: 700;
@@ -158,19 +137,9 @@
       gap: 10px;
       transition: transform 0.15s ease, border-color 0.15s ease;
     }
+    .card:hover { transform: translateY(-2px); border-color: var(--accent-blue); }
 
-    .card:hover {
-      transform: translateY(-2px);
-      border-color: var(--accent-blue);
-    }
-
-    .card-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 8px;
-    }
-
+    .card-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
     .time-badge {
       background: #0f172a;
       color: var(--accent);
@@ -180,25 +149,15 @@
       font-size: 0.92rem;
       border: 1px solid var(--border);
     }
-
-    .sport-tag {
-      font-size: 0.8rem;
-      color: var(--accent-blue);
-      font-weight: 600;
-    }
-
+    .sport-tag { font-size: 0.8rem; color: var(--accent-blue); font-weight: 600; }
     .comp-name {
       font-size: 0.78rem;
       color: var(--muted);
       text-transform: uppercase;
       letter-spacing: 0.4px;
+      margin-top: 8px;
     }
-
-    .event-title {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--text);
-    }
+    .event-title { font-size: 1.03rem; font-weight: 700; color: var(--text); }
 
     .card-footer {
       display: flex;
@@ -208,7 +167,6 @@
       padding-top: 8px;
       border-top: 1px solid var(--border);
     }
-
     .channel-badge {
       font-size: 0.82rem;
       font-weight: 600;
@@ -217,12 +175,10 @@
       background: #0f172a;
       color: #e2e8f0;
     }
-
     .channel-badge.dazn {
       color: var(--dazn);
       border: 1px solid rgba(250, 204, 21, 0.35);
     }
-
     .watch-btn {
       text-decoration: none;
       background: var(--accent-blue);
@@ -233,10 +189,7 @@
       border-radius: 8px;
       white-space: nowrap;
     }
-
-    .watch-btn:hover {
-      opacity: 0.9;
-    }
+    .watch-btn:hover { opacity: 0.9; }
 
     .empty-msg {
       text-align: center;
@@ -254,25 +207,14 @@
       border-radius: 14px;
       padding: 18px;
     }
-
-    .channels-directory h2 {
-      font-size: 1.1rem;
-      margin-bottom: 10px;
-    }
-
+    .channels-directory h2 { font-size: 1.1rem; margin-bottom: 10px; }
     .dir-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
       gap: 12px;
       font-size: 0.86rem;
     }
-
-    .dir-box h3 {
-      font-size: 0.9rem;
-      margin-bottom: 5px;
-      color: var(--accent-blue);
-    }
-
+    .dir-box h3 { font-size: 0.9rem; margin-bottom: 5px; color: var(--accent-blue); }
     .dir-box a {
       display: inline-block;
       color: var(--muted);
@@ -280,22 +222,19 @@
       margin-right: 8px;
       margin-bottom: 4px;
     }
-
-    .dir-box a:hover {
-      color: var(--text);
-      text-decoration: underline;
-    }
+    .dir-box a:hover { color: var(--text); text-decoration: underline; }
   </style>
 </head>
 <body>
 
   <header>
     <h1>📺 Guida TV Sport Gratis</h1>
-    <p>Eventi gratuiti della settimana • Italia 🇮🇹 • Germania 🇩🇪 • Svizzera 🇨🇭 • Brasile YouTube 🇧🇷 • DAZN Free ⚡</p>
+    <p>Eventi sportivi gratuiti della settimana • Aggiornamento automatico</p>
+    <div id="botStatus" class="bot-status" style="display:none;"></div>
   </header>
 
   <div class="container">
-    <input type="text" id="searchInput" class="search-box" placeholder="🔍 Cerca squadra, torneo, pilota, tennista o canale (es. TV8, CazéTV, RSI, NBA)..." />
+    <input type="text" id="searchInput" class="search-box" placeholder="🔍 Cerca squadra, gara, torneo o canale (es. TV8, CazéTV, RSI, NBA, F1)..." />
 
     <div class="filter-section">
       <span class="filter-label">📅 Giorno</span>
@@ -314,7 +253,7 @@
 
     <div class="stats">
       <span id="resultsCount">Caricamento eventi...</span>
-      <span>🕒 Orari indicati nel tuo fuso orario locale (Italia)</span>
+      <span>🕒 Orari nel fuso orario italiano</span>
     </div>
 
     <div id="eventsContainer"></div>
@@ -357,46 +296,19 @@
           <a href="https://www.youtube.com/@NSports" target="_blank">N Sports</a>
           <a href="https://www.youtube.com/@TimeBrasil" target="_blank">Time Brasil</a>
           <a href="https://www.youtube.com/@nbabrasil" target="_blank">NBA Brasil</a>
+          <a href="https://www.youtube.com/@SBTSports" target="_blank">SBT Sports</a>
         </div>
         <div class="dir-box">
           <h3>⚡ DAZN Free</h3>
-          <a href="https://www.dazn.com/it-IT/home" target="_blank">DAZN Free Italia</a>
-          <a href="https://www.dazn.com/de-DE/home" target="_blank">DAZN Free Germania</a>
-          <a href="https://www.dazn.com/de-CH/home" target="_blank">DAZN Free Svizzera</a>
+          <a href="https://www.dazn.com/it-IT/home" target="_blank">DAZN Italia</a>
+          <a href="https://www.dazn.com/de-DE/home" target="_blank">DAZN Germania</a>
+          <a href="https://www.dazn.com/de-CH/home" target="_blank">DAZN Svizzera</a>
         </div>
       </div>
     </div>
   </div>
 
   <script>
-    const SPORTS = [
-      { id: "Tutti", label: "Tutti" },
-      { id: "Calcio", label: "⚽ Calcio" },
-      { id: "Pallavolo", label: "🏐 Pallavolo" },
-      { id: "Basket & NBA", label: "🏀 Basket & NBA" },
-      { id: "Formula 1", label: "🏎️ Formula 1" },
-      { id: "MotoGP", label: "🏍️ MotoGP" },
-      { id: "Tennis", label: "🎾 Tennis" },
-      { id: "Sci Alpino", label: "⛷️ Sci Alpino" },
-      { id: "Football Americano", label: "🏈 NFL" },
-      { id: "College Football", label: "🎓 College Football" }
-    ];
-
-    const COUNTRIES = [
-      { id: "Tutti", label: "Tutti" },
-      { id: "Italia", label: "🇮🇹 Italia" },
-      { id: "Germania", label: "🇩🇪 Germania" },
-      { id: "Svizzera", label: "🇨🇭 Svizzera" },
-      { id: "Brasile YouTube", label: "🇧🇷 Brasile YouTube" },
-      { id: "DAZN Free", label: "⚡ DAZN Free" }
-    ];
-
-    let allEvents = [];
-    let selectedDay = "Tutti";
-    let selectedCountry = "Tutti";
-    let selectedSport = "Tutti";
-    let searchQuery = "";
-
     const sportIcons = {
       "Calcio": "⚽",
       "Pallavolo": "🏐",
@@ -406,7 +318,8 @@
       "Tennis": "🎾",
       "Sci Alpino": "⛷️",
       "Football Americano": "🏈",
-      "College Football": "🎓"
+      "College Football": "🎓",
+      "Altri Sport": "🏅"
     };
 
     const countryFlags = {
@@ -414,8 +327,31 @@
       "Germania": "🇩🇪",
       "Svizzera": "🇨🇭",
       "Brasile YouTube": "🇧🇷",
-      "DAZN Free": "⚡"
+      "Brasile": "🇧🇷",
+      "DAZN Free": "⚡",
+      "Austria": "🇦🇹",
+      "Francia": "🇫🇷",
+      "Spagna": "🇪🇸",
+      "Regno Unito": "🇬🇧",
+      "USA": "🇺🇸",
+      "Argentina": "🇦🇷",
+      "Belgio": "🇧🇪",
+      "Danimarca": "🇩🇰"
     };
+
+    let allEvents = [];
+    let selectedDay = "Tutti";
+    let selectedCountry = "Tutti";
+    let selectedSport = "Tutti";
+    let searchQuery = "";
+
+    function escapeHtml(str) {
+      return String(str || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
 
     function formatDayLabel(dateStr) {
       const [y, m, d] = dateStr.split("-").map(Number);
@@ -431,12 +367,11 @@
         day: "numeric",
         month: "long"
       });
-
       return isToday ? `OGGI • ${label}` : label;
     }
 
     function renderFilterPills() {
-      // Giorni disponibili nei dati
+      // Giorni
       const uniqueDates = [...new Set(allEvents.map(e => e.data))].sort();
       const dayContainer = document.getElementById("dayFilters");
       dayContainer.innerHTML = "";
@@ -457,25 +392,47 @@
         dayContainer.appendChild(btn);
       });
 
-      // Nazioni
+      // Nazioni (automatiche dai dati!)
+      const uniqueCountries = [...new Set(allEvents.map(e => e.paese))];
       const countryContainer = document.getElementById("countryFilters");
       countryContainer.innerHTML = "";
-      COUNTRIES.forEach(c => {
+
+      const allCBtn = document.createElement("button");
+      allCBtn.className = `pill ${selectedCountry === "Tutti" ? "active-blue" : ""}`;
+      allCBtn.textContent = "Tutti";
+      allCBtn.onclick = () => { selectedCountry = "Tutti"; updateUI(); };
+      countryContainer.appendChild(allCBtn);
+
+      uniqueCountries.forEach(c => {
         const btn = document.createElement("button");
-        btn.className = `pill ${selectedCountry === c.id ? "active-blue" : ""}`;
-        btn.textContent = c.label;
-        btn.onclick = () => { selectedCountry = c.id; updateUI(); };
+        btn.className = `pill ${selectedCountry === c ? "active-blue" : ""}`;
+        btn.textContent = `${countryFlags[c] || "🌍"} ${c}`;
+        btn.onclick = () => { selectedCountry = c; updateUI(); };
         countryContainer.appendChild(btn);
       });
 
-      // Sport
+      // Sport (automatici dai dati!)
+      const preferredOrder = Object.keys(sportIcons);
+      const uniqueSports = [...new Set(allEvents.map(e => e.sport))].sort((a, b) => {
+        const ia = preferredOrder.indexOf(a);
+        const ib = preferredOrder.indexOf(b);
+        return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib);
+      });
+
       const sportContainer = document.getElementById("sportFilters");
       sportContainer.innerHTML = "";
-      SPORTS.forEach(s => {
+
+      const allSBtn = document.createElement("button");
+      allSBtn.className = `pill ${selectedSport === "Tutti" ? "active" : ""}`;
+      allSBtn.textContent = "Tutti";
+      allSBtn.onclick = () => { selectedSport = "Tutti"; updateUI(); };
+      sportContainer.appendChild(allSBtn);
+
+      uniqueSports.forEach(s => {
         const btn = document.createElement("button");
-        btn.className = `pill ${selectedSport === s.id ? "active" : ""}`;
-        btn.textContent = s.label;
-        btn.onclick = () => { selectedSport = s.id; updateUI(); };
+        btn.className = `pill ${selectedSport === s ? "active" : ""}`;
+        btn.textContent = `${sportIcons[s] || "🏅"} ${s}`;
+        btn.onclick = () => { selectedSport = s; updateUI(); };
         sportContainer.appendChild(btn);
       });
     }
@@ -489,10 +446,11 @@
         const q = searchQuery.trim().toLowerCase();
         const matchSearch =
           !q ||
-          ev.evento.toLowerCase().includes(q) ||
-          ev.competizione.toLowerCase().includes(q) ||
-          ev.canale.toLowerCase().includes(q) ||
-          ev.sport.toLowerCase().includes(q);
+          (ev.evento || "").toLowerCase().includes(q) ||
+          (ev.competizione || "").toLowerCase().includes(q) ||
+          (ev.canale || "").toLowerCase().includes(q) ||
+          (ev.sport || "").toLowerCase().includes(q) ||
+          (ev.paese || "").toLowerCase().includes(q);
         return matchDay && matchCountry && matchSport && matchSearch;
       });
 
@@ -535,15 +493,15 @@
           card.innerHTML = `
             <div>
               <div class="card-top">
-                <span class="time-badge">🕒 ${ev.ora}</span>
-                <span class="sport-tag">${icon} ${ev.sport}</span>
+                <span class="time-badge">🕒 ${escapeHtml(ev.ora)}</span>
+                <span class="sport-tag">${icon} ${escapeHtml(ev.sport)}</span>
               </div>
-              <div class="comp-name" style="margin-top:8px;">${ev.competizione}</div>
-              <div class="event-title">${ev.evento}</div>
+              <div class="comp-name">${escapeHtml(ev.competizione)}</div>
+              <div class="event-title">${escapeHtml(ev.evento)}</div>
             </div>
             <div class="card-footer">
-              <span class="channel-badge ${isDazn ? "dazn" : ""}">${flag} ${ev.canale}</span>
-              <a class="watch-btn" href="${ev.link}" target="_blank" rel="noopener">Apri ↗</a>
+              <span class="channel-badge ${isDazn ? "dazn" : ""}">${flag} ${escapeHtml(ev.canale)}</span>
+              <a class="watch-btn" href="${escapeHtml(ev.link || "#")}" target="_blank" rel="noopener">Apri ↗</a>
             </div>
           `;
           grid.appendChild(card);
@@ -572,8 +530,19 @@
       })
       .catch(() => {
         document.getElementById("eventsContainer").innerHTML =
-          `<div class="empty-msg">⚠️ Impossibile caricare il file <strong>eventi.json</strong>. Assicurati di averlo creato nella stessa cartella di index.html!</div>`;
+          `<div class="empty-msg">⚠️ Impossibile caricare <strong>eventi.json</strong>.</div>`;
       });
+
+    fetch(`meta.json?v=${Date.now()}`)
+      .then(res => res.ok ? res.json() : null)
+      .then(meta => {
+        if (meta && meta.ultimo_aggiornamento) {
+          const el = document.getElementById("botStatus");
+          el.textContent = `🤖 Robottino aggiornato il ${meta.ultimo_aggiornamento}`;
+          el.style.display = "inline-block";
+        }
+      })
+      .catch(() => {});
   </script>
 </body>
 </html>
