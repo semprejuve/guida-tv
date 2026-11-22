@@ -1,0 +1,66 @@
+name: Aggiorna Guida TV Sport
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 5 * * *'   # Ogni giorno alle ~06:00 ora italiana
+    - cron: '0 13 * * *'  # Ogni giorno alle ~14:00 ora italiana
+  workflow_dispatch:      # Ti permette di avviarlo a mano con 1 click!
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Scarica i file del sito
+        uses: actions/checkout@v4
+
+      - name: Prepara Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Installa librerie
+        run: pip install requests beautifulsoup4
+
+      - name: Esegui il robottino
+        run: python aggiorna.py
+
+      - name: Salva eventi aggiornati
+        run: |
+          git config user.name "Robottino Guida TV"
+          git config user.email "bot@users.noreply.github.com"
+          git add eventi.json meta.json
+          if ! git diff --cached --quiet; then
+            git commit -m "🤖 Aggiornamento automatico palinsesti"
+            git pull --rebase origin main || true
+            git push
+          else
+            echo "Nessuna modifica agli eventi."
+          fi
+
+      - name: Prepara pubblicazione sito
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Pubblica sito online
+        id: deployment
+        uses: actions/deploy-pages@v4
