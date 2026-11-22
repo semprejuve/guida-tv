@@ -5,20 +5,27 @@ import os
 import re
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta
+from urllib.parse import quote_plus, urljoin
 from zoneinfo import ZoneInfo
 
 import requests
 from bs4 import BeautifulSoup
 
 ROME_TZ = ZoneInfo("Europe/Rome")
+BR_TZ = ZoneInfo("America/Sao_Paulo")
 NOW = datetime.now(ROME_TZ)
 MIN_DT = NOW - timedelta(hours=2)
 MAX_DT = NOW + timedelta(days=7)
 
+BROWSER_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "pt-BR,pt;q=0.9,it;q=0.8,en;q=0.7",
+}
+
 # ==============================================================================
-# 1) QUI PUOI AGGIUNGERE FACILMENTE NUOVI PAESI E CANALI TV GRATUITI!
-# Fonti XMLTV gratuite da epgshare01.online (puoi vedere tutti i file disponibili
-# su: https://epgshare01.online/epgshare01/ )
+# 1) PAESI E CANALI TV GRATUITI (Europei / XMLTV)
+# Puoi aggiungerne altri prendendo i codici da: https://epgshare01.online/epgshare01/
 # ==============================================================================
 PAESI_TV = {
     "Italia": {
@@ -68,36 +75,35 @@ PAESI_TV = {
             "blue Zoom": {"alias": ["blue zoom", "blue zoom d", "blue zoom f"], "link": "https://www.blueplus.ch/de/bluezoom"},
         },
     },
-    # 👉 ESEMPIO PER AGGIUNGERE ALTRI PAESI OGGI POMERIGGIO (basta togliere i # davanti!):
-    # Codici utili su epgshare01: AT1 (Austria), FR1 (Francia), ES1 (Spagna), UK1 (Regno Unito), US2 (USA), AR1 (Argentina)
-    # "Austria": {
-    #     "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_AT1.xml.gz",
-    #     "canali": {
-    #         "ORF 1": {"alias": ["orf 1", "orf eins", "orf 1 hd"], "link": "https://on.orf.at/"},
-    #         "ORF Sport +": {"alias": ["orf sport +", "orf sport+", "orf sport plus"], "link": "https://on.orf.at/"},
-    #         "ServusTV": {"alias": ["servustv", "servus tv", "servustv hd"], "link": "https://www.servustv.com/sport/"},
-    #     },
-    # },
 }
 
 # ==============================================================================
-# 2) QUI PUOI AGGIUNGERE TUTTI I CANALI YOUTUBE CHE VUOI!
+# 2) CANALI YOUTUBE BRASILIANI GRATUITI (puoi aggiungerne quanti ne vuoi!)
+# Formato: (Nome mostrato sul sito, Link YouTube, [parole chiave per riconoscerlo])
 # ==============================================================================
-CANALI_YOUTUBE = [
-    {"nome": "CazéTV", "handle": "@CazeTV", "paese": "Brasile YouTube"},
-    {"nome": "GE TV", "handle": "@getv", "paese": "Brasile YouTube"},
-    {"nome": "Canal GOAT", "handle": "@canalgoatbr", "paese": "Brasile YouTube"},
-    {"nome": "Xsports", "handle": "@xsports.brasil", "paese": "Brasile YouTube"},
-    {"nome": "SportyNet", "handle": "@SportyNetBrasil", "paese": "Brasile YouTube"},
-    {"nome": "N Sports", "handle": "@NSports", "paese": "Brasile YouTube"},
-    {"nome": "Time Brasil", "handle": "@TimeBrasil", "paese": "Brasile YouTube"},
-    {"nome": "NBA Brasil", "handle": "@nbabrasil", "paese": "Brasile YouTube"},
-    {"nome": "SBT Sports", "handle": "@SBTSports", "paese": "Brasile YouTube"},
-    {"nome": "Metrópoles Esportes", "handle": "@MetropolesEsportes", "paese": "Brasile YouTube"},
-    {"nome": "Desimpedidos", "handle": "@desimpedidos", "paese": "Brasile YouTube"},
-    {"nome": "Romário TV", "handle": "@RomarioTVoficial", "paese": "Brasile YouTube"},
-    # 👉 Puoi aggiungere altri canali YouTube (anche di altri paesi!) copiando una riga qui sotto:
-    # {"nome": "Nome Canale", "handle": "@NomeHandle", "paese": "Brasile YouTube"},
+CANALI_BR_INFO = [
+    ("CazéTV (YouTube)", "https://www.youtube.com/@CazeTV", [r"\bcaz[ée]tv\b"]),
+    ("GE TV (YouTube)", "https://www.youtube.com/@getv", [r"\bge\s*tv\b"]),
+    ("Canal GOAT (YouTube)", "https://www.youtube.com/@canalgoatbr", [r"\bcanal\s*goat\b"]),
+    ("Xsports (YouTube)", "https://www.youtube.com/@xsports.brasil", [r"\bx\s*sports\b"]),
+    ("SportyNet (YouTube)", "https://www.youtube.com/@SportyNetBrasil", [r"\bsportynet\b"]),
+    ("N Sports (YouTube)", "https://www.youtube.com/@NSports", [r"\bn\s*sports\b"]),
+    ("Romário TV (YouTube)", "https://www.youtube.com/@RomarioTVoficial", [r"\brom[áa]rio\s*tv\b", r"\btv\s*rom[áa]rio\b"]),
+    ("Time Brasil (YouTube)", "https://www.youtube.com/@TimeBrasil", [r"\btime\s*brasil\b"]),
+    ("NBA Brasil (YouTube)", "https://www.youtube.com/@nbabrasil", [r"\bnba\s*brasil\b"]),
+    ("NBB (YouTube)", "https://www.youtube.com/@NBB", [r"youtube\s*\(nbb\)", r"nbb\s*\(youtube\)"]),
+    ("SBT Sports (YouTube)", "https://www.youtube.com/@SBTSports", [r"\bsbt\s*sports\b", r"youtube.*\bsbt\b"]),
+    ("CNN Esportes (YouTube)", "https://www.youtube.com/@cnnesportes", [r"\bcnn\s*esportes\b"]),
+    ("Metrópoles Esportes (YouTube)", "https://www.youtube.com/@MetropolesEsportes", [r"\bmetr[óo]poles\s*esportes\b"]),
+    ("Desimpedidos (YouTube)", "https://www.youtube.com/@desimpedidos", [r"\bdesimpedidos\b"]),
+    ("TNT Sports (YouTube)", "https://www.youtube.com/@TNTSportsBR", [r"tnt\s*sports.*youtube", r"youtube.*tnt\s*sports"]),
+    ("ESPN Brasil (YouTube)", "https://www.youtube.com/@espnbrasil", [r"espn.*youtube", r"youtube.*espn"]),
+    ("Canal GOL Brasil (YouTube)", "https://www.youtube.com/@canalgolbrasil", [r"canal\s*gol\s*br", r"golbrasil\s*youtube"]),
+    ("Jovem Pan Esportes (YouTube)", "https://www.youtube.com/@jovempanesportes", [r"\bjovem\s*pan\b.*youtube", r"youtube.*\bjovem\s*pan\b", r"\bjovem\s*pan\s*esportes\b"]),
+    ("Vôlei Brasil / CBV (YouTube)", "https://www.youtube.com/@voleibrasil", [r"v[ôo]lei\s*brasil", r"canal\s*v[ôo]lei"]),
+    ("LNF / CBFS Futsal (YouTube)", "https://www.youtube.com/@LNFTV", [r"\blnf\s*(?:tv|\(youtube\))", r"\bcbfs\s*tv\b"]),
+    ("CONCACAF (YouTube)", "https://www.youtube.com/@concacaf", [r"concacaf.*youtube", r"youtube.*concacaf"]),
+    ("A-Leagues (YouTube)", "https://www.youtube.com/@aleagues", [r"a-leagues.*youtube", r"youtube.*a-leagues"]),
 ]
 
 # ==============================================================================
@@ -106,30 +112,29 @@ CANALI_YOUTUBE = [
 PAROLE_DA_ESCLUDERE = [
     "telegiornale", "tg sport", "tg1", "tg2", "tg3", "sport mediaset",
     "sportmediaset", "tagesschau", "heute-journal", "meteo", "previsioni",
-    "teleshopping", "rubrica", "cortes", "podcast", "resenha", "bom dia",
+    "teleshopping", "rubrica", "cortes", "podcast", "resenha",
 ]
 
 REGOLE_SPORT = [
-    ("College Football", [r"\bcollege football\b", r"\bncaa football\b", r"\bncaaf\b"]),
-    ("Football Americano", [r"\bnfl\b", r"\bfootball americano\b", r"\bamerican football\b", r"\bsuper bowl\b", r"\bran football\b"]),
-    ("Formula 1", [r"\bformula 1\b", r"\bformula uno\b", r"\bformel 1\b", r"\bformule 1\b", r"\bf1\b", r"\bgran premio di f1\b"]),
+    ("College Football", [r"\bcollege football\b", r"\bncaa football\b", r"\bncaaf\b", r"\bncaa\b.*futebol americano"]),
+    ("Football Americano", [r"\bnfl\b", r"\bfutebol americano\b", r"\bfootball americano\b", r"\bamerican football\b", r"\bsuper bowl\b", r"\bran football\b"]),
+    ("Formula 1", [r"\bformula 1\b", r"\bf[óo]rmula 1\b", r"\bformula uno\b", r"\bformel 1\b", r"\bformule 1\b", r"\bf1\b", r"\bgran premio di f1\b", r"\bgarage f1\b"]),
     ("MotoGP", [r"\bmotogp\b", r"\bmoto gp\b", r"\bmoto2\b", r"\bmoto3\b", r"\bmotomondiale\b", r"\bsuperbike\b", r"\bwsbk\b"]),
     ("Sci Alpino", [r"\bsci alpino\b", r"\bski alpin\b", r"\bski weltcup\b", r"\bski-weltcup\b", r"\bslalom\b", r"\bdiscesa libera\b", r"\bsuper-g\b", r"\bsuper g\b", r"\briesenslalom\b", r"\babfahrt\b", r"\bcoppa del mondo di sci\b"]),
-    ("Pallavolo", [r"\bpallavolo\b", r"\bvolley\b", r"\bvolleyball\b", r"\bvôlei\b", r"\bvolei\b", r"\bsuperlega\b", r"\bsuperliga\b", r"\blvf\b", r"\bvnl\b"]),
-    ("Basket & NBA", [r"\bnba\b", r"\bwnba\b", r"\bbasket\b", r"\bpallacanestro\b", r"\bbasketball\b", r"\bbasquete\b", r"\beurolega\b", r"\beuroleague\b", r"\beurocup\b", r"\bnbb\b", r"\bfiba\b", r"\blega basket\b", r"\bbbl\b"]),
-    ("Tennis", [r"\btennis\b", r"\btênis\b", r"\btenis\b", r"\batp\b", r"\bwta\b", r"\bcoppa davis\b", r"\bdavis cup\b", r"\bbillie jean king\b", r"\broland garros\b", r"\bwimbledon\b", r"\baustralian open\b", r"\bus open\b", r"\bchallenger\b"]),
+    ("Pallavolo", [r"\bpallavolo\b", r"\bvolley\b", r"\bvolleyball\b", r"\bv[ôo]lei\b", r"\bsuperlega\b", r"\bsuperliga\b", r"\blvf\b", r"\bvnl\b"]),
+    ("Basket & NBA", [r"\bnba\b", r"\bwnba\b", r"\bbasket\b", r"\bbasquete\b", r"\bpallacanestro\b", r"\bbasketball\b", r"\beurolega\b", r"\beuroleague\b", r"\beurocup\b", r"\beuroliga\b", r"\bnbb\b", r"\bfiba\b", r"\blega basket\b", r"\bbbl\b"]),
+    ("Tennis", [r"\btennis\b", r"\bt[êe]nis\b", r"\batp\b", r"\bwta\b", r"\bcoppa davis\b", r"\bdavis cup\b", r"\bbillie jean king\b", r"\broland garros\b", r"\bwimbledon\b", r"\baustralian open\b", r"\bus open\b", r"\bchallenger\b"]),
     ("Calcio", [
-        r"\bcalcio\b", r"\bfutebol\b", r"\bfußball\b", r"\bfussball\b", r"\bserie a\b",
-        r"\bserie b\b", r"\bsérie b\b", r"\bcoppa italia\b", r"\bsupercoppa\b",
+        r"\bcalcio\b", r"\bfutebol\b", r"\bfu[ßs]ball\b", r"\bserie a\b",
+        r"\bserie b\b", r"\bs[ée]rie b\b", r"\bcoppa italia\b", r"\bsupercoppa\b",
         r"\bchampions league\b", r"\beuropa league\b", r"\bconference league\b",
         r"\bnations league\b", r"\bmondiali\b", r"\bpremier league\b", r"\bbundesliga\b",
         r"\bdfb-pokal\b", r"\bdfb pokal\b", r"\blaliga\b", r"\bla liga\b", r"\bligue 1\b",
-        r"\bbrasileirão\b", r"\bbrasileirao\b", r"\bpaulistão\b", r"\bpaulistao\b",
-        r"\bcarioca\b", r"\bcopa do brasil\b", r"\blibertadores\b", r"\bsul-americana\b",
-        r"\bsudamericana\b", r"\bsuper league\b", r"\bchallenge league\b", r"\bcoppa svizzera\b",
-        r"\bschweizer cup\b", r"\bsaudi pro league\b", r"\bmls\b", r"\bliga mx\b",
-        r"\beredivisie\b", r"\bfa cup\b", r"\bcopa del rey\b", r"\bfutsal\b",
-        r"\bfrauen-bundesliga\b", r"\bwomen's super league\b", r"\bwsl\b",
+        r"\bbrasileir[ãa]o\b", r"\bpaulist[ãa]o\b", r"\bcarioca\b", r"\bcopa do brasil\b",
+        r"\blibertadores\b", r"\bsul-americana\b", r"\bsudamericana\b", r"\bsuper league\b",
+        r"\bchallenge league\b", r"\bcoppa svizzera\b", r"\bschweizer cup\b",
+        r"\bsaudi pro league\b", r"\bmls\b", r"\bliga mx\b", r"\beredivisie\b",
+        r"\bfa cup\b", r"\bcopa del rey\b", r"\bfutsal\b", r"\bnwsl\b", r"\bwsl\b",
     ]),
 ]
 
@@ -142,12 +147,8 @@ def classifica_sport(testo, canale_solo_sport=False):
         for pat in patterns:
             if re.search(pat, t):
                 return sport
-    # Sui canali YouTube 100% sportivi, titoli come "PALMEIRAS x FLAMENGO" sono quasi sempre calcio!
-    if canale_solo_sport:
-        if re.search(r"\b(x|vs\.?)\b", t):
-            return "Calcio"
-        if "ao vivo" in t or "live" in t:
-            return "Altri Sport"
+    if canale_solo_sport and re.search(r"\b(x|vs\.?)\b", t):
+        return "Calcio"
     return None
 
 
@@ -162,8 +163,7 @@ def parse_xmltv_date(s):
     if " " not in s:
         s = s[:14] + " +0000"
     try:
-        dt = datetime.strptime(s, "%Y%m%d%H%M%S %z")
-        return dt.astimezone(ROME_TZ)
+        return datetime.strptime(s, "%Y%m%d%H%M%S %z").astimezone(ROME_TZ)
     except Exception:
         return None
 
@@ -172,9 +172,8 @@ def scarica_epg_paesi():
     risultati = []
     for paese, cfg in PAESI_TV.items():
         url = cfg["epg_url"]
-        canali_cfg = cfg["canali"]
         alias_map = {}
-        for nome_ufficiale, info in canali_cfg.items():
+        for nome_ufficiale, info in cfg["canali"].items():
             for al in info["alias"]:
                 alias_map[normalizza_nome_canale(al)] = (nome_ufficiale, info["link"])
 
@@ -193,7 +192,6 @@ def scarica_epg_paesi():
                 for _, elem in ET.iterparse(gz, events=("end",)):
                     if elem.tag == "channel":
                         cid = elem.attrib.get("id", "")
-                        # Prova a riconoscere il canale dal nome visualizzato
                         for dn in elem.findall("display-name"):
                             norm = normalizza_nome_canale(dn.text)
                             if norm in alias_map:
@@ -229,114 +227,296 @@ def scarica_epg_paesi():
     return risultati
 
 
-def trova_video_renderers(obj):
-    if isinstance(obj, dict):
-        if "videoRenderer" in obj:
-            yield obj["videoRenderer"]
-        for v in obj.values():
-            yield from trova_video_renderers(v)
-    elif isinstance(obj, list):
-        for item in obj:
-            yield from trova_video_renderers(item)
+def risolvi_canali_br(testo_canali):
+    t = (testo_canali or "").lower()
+    trovati = []
+    visti = set()
+    for nome_uff, link, patterns in CANALI_BR_INFO:
+        if any(re.search(pat, t) for pat in patterns):
+            if nome_uff not in visti:
+                visti.add(nome_uff)
+                trovati.append((nome_uff, link))
+
+    # Se non è tra i soliti noti, cattura comunque altri canali YouTube tipo "YouTube (FMF TV)"
+    if not trovati:
+        for m in re.finditer(r"youtube\s*\(([^)]+)\)", testo_canali or "", re.IGNORECASE):
+            nome_extra = m.group(1).strip()
+            if nome_extra:
+                label = f"{nome_extra} (YouTube)"
+                if label not in visti:
+                    visti.add(label)
+                    trovati.append((label, f"https://www.youtube.com/results?search_query={quote_plus(nome_extra)}"))
+    return trovati
 
 
-def scarica_youtube():
+# ------------------------------------------------------------------------------
+# SORGENTE BRASILIANA 1: futebol.tv.br (Tutta la settimana per canale YouTube!)
+# ------------------------------------------------------------------------------
+def scarica_futebol_tv_br():
     risultati = []
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
-        "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.8",
-    }
-    cookies = {
-        "CONSENT": "YES+cb.20210328-17-p0.en+FX+999",
-        "SOCS": "CAESHAgBEhJnd3NfMjAyMzA4MTAtMF9zUjMaAmVuIAEaBgiA_LyaBg",
-    }
+    base_url = "https://futebol.tv.br"
+    print("🇧🇷 Controllo futebol.tv.br/canais (programmazione settimanale YouTube BR)...")
+    try:
+        resp = requests.get(f"{base_url}/canais", headers=BROWSER_HEADERS, timeout=30)
+        resp.raise_for_status()
+    except Exception as e:
+        print(f"⚠️ futebol.tv.br non raggiungibile: {e}")
+        return risultati
 
-    for ch in CANALI_YOUTUBE:
-        nome = ch["nome"]
-        handle = ch["handle"]
-        paese = ch["paese"]
-        url = f"https://www.youtube.com/{handle}/streams"
-        print(f"▶️ Controllo YouTube {nome} ({handle})...")
+    soup = BeautifulSoup(resp.text, "html.parser")
+    pagine_canali = {}
+
+    for a in soup.find_all("a", href=True):
+        href = a["href"]
+        testo_link = re.sub(r"\d+\s*pr[óo]ximos?\s*jogos.*", "", a.get_text(" ", strip=True), flags=re.IGNORECASE).strip()
+        if not testo_link:
+            continue
+        match_canali = risolvi_canali_br(testo_link)
+        if match_canali:
+            full_url = urljoin(base_url, href)
+            nome_uff, link_yt = match_canali[0]
+            if full_url not in pagine_canali:
+                pagine_canali[full_url] = (nome_uff, link_yt)
+
+    print(f"🔎 Trovate {len(pagine_canali)} pagine canale su futebol.tv.br")
+
+    for page_url, (nome_canale, link_yt) in pagine_canali.items():
         try:
-            resp = requests.get(url, headers=headers, cookies=cookies, timeout=30)
-            resp.raise_for_status()
-            idx = resp.text.find("var ytInitialData = ")
-            if idx == -1:
-                print(f"⚠️ Nessun dato trovato per {nome}")
-                continue
-            data, _ = json.JSONDecoder().raw_decode(resp.text, idx + len("var ytInitialData = "))
-        except Exception as e:
-            print(f"⚠️ Errore YouTube {nome}: {e}")
+            r = requests.get(page_url, headers=BROWSER_HEADERS, timeout=25)
+            r.raise_for_status()
+        except Exception:
             continue
 
-        trovati = 0
-        visti_id = set()
-        for vr in trova_video_renderers(data):
-            vid = vr.get("videoId")
-            if not vid or vid in visti_id:
+        psoup = BeautifulSoup(r.text, "html.parser")
+        testo = psoup.get_text("\n")
+        if "Próximos jogos" in testo:
+            testo = testo.split("Próximos jogos", 1)[1]
+        if "Histórico recente" in testo:
+            testo = testo.split("Histórico recente", 1)[0]
+
+        current_date = None
+        current_time = None
+        for raw_line in testo.splitlines():
+            line = re.sub(r"\s+", " ", raw_line).strip()
+            if not line:
                 continue
-            visti_id.add(vid)
 
-            title = "".join(r.get("text", "") for r in vr.get("title", {}).get("runs", [])) or vr.get("title", {}).get("simpleText", "")
-            title = title.strip()
-            if not title:
+            m_date = re.search(r"\b(\d{2}/\d{2}/\d{4})\b", line)
+            if m_date:
+                current_date = m_date.group(1)
                 continue
 
-            # Controlla se è una diretta programmata futura
-            up = vr.get("upcomingEventData")
-            dt = None
-            is_live_now = False
+            m_time = re.search(r"\b(\d{2}:\d{2})\b", line)
+            if m_time and len(line) < 25:
+                current_time = m_time.group(1)
+                continue
 
-            if up and "startTime" in up:
+            if current_date and current_time and " x " in line and "Ver jogo" not in line and "Logo " not in line:
+                parti = [p.strip() for p in line.split("·") if p.strip()]
+                evento = parti[0]
+                competizione = parti[1] if len(parti) > 1 else "Calcio Brasile / Mondo"
+                # Pulisci eventuali residui
+                competizione = re.sub(r"Logo\s+.*", "", competizione).strip() or "Calcio"
                 try:
-                    dt = datetime.fromtimestamp(int(up["startTime"]), tz=ROME_TZ)
+                    dt_br = datetime.strptime(f"{current_date} {current_time}", "%d/%m/%Y %H:%M").replace(tzinfo=BR_TZ)
+                    dt_it = dt_br.astimezone(ROME_TZ)
+                    if MIN_DT <= dt_it <= MAX_DT:
+                        risultati.append({
+                            "data": dt_it.strftime("%Y-%m-%d"),
+                            "ora": dt_it.strftime("%H:%M"),
+                            "sport": "Calcio",
+                            "competizione": competizione,
+                            "evento": evento,
+                            "paese": "Brasile YouTube",
+                            "canale": nome_canale,
+                            "link": link_yt,
+                        })
                 except Exception:
-                    dt = None
-            else:
-                # Controlla se è IN ONDA ADESSO (LIVE)
-                overlays = vr.get("thumbnailOverlays", [])
-                for ov in overlays:
-                    st = ov.get("thumbnailOverlayTimeStatusRenderer", {}).get("style", "")
-                    if st == "LIVE":
-                        is_live_now = True
-                for b in vr.get("badges", []):
-                    st = b.get("metadataBadgeRenderer", {}).get("style", "")
-                    lbl = b.get("metadataBadgeRenderer", {}).get("label", "").upper()
-                    if "LIVE_NOW" in st or lbl in ("LIVE", "AO VIVO", "DAL VIVO"):
-                        is_live_now = True
-                if is_live_now:
-                    dt = NOW
+                    pass
+                current_time = None
 
-            if not dt or not (MIN_DT <= dt <= MAX_DT):
-                continue
-
-            sport = classifica_sport(title, canale_solo_sport=True)
-            if not sport:
-                continue
-
-            titolo_finale = f"🔴 LIVE • {title}" if is_live_now else title
-            risultati.append({
-                "data": dt.strftime("%Y-%m-%d"),
-                "ora": dt.strftime("%H:%M"),
-                "sport": sport,
-                "competizione": f"YouTube Diretta • {nome}",
-                "evento": titolo_finale,
-                "paese": paese,
-                "canale": f"{nome} (YouTube)",
-                "link": f"https://www.youtube.com/watch?v={vid}",
-            })
-            trovati += 1
-        print(f"✅ {nome}: trovate {trovati} dirette in programma/live")
+    print(f"✅ futebol.tv.br: trovati {len(risultati)} eventi YouTube BR")
     return risultati
 
 
+# ------------------------------------------------------------------------------
+# SORGENTE BRASILIANA 2 & 3: AuvaroMaia & GFEsporte (TUTTI GLI SPORT BR!)
+# ------------------------------------------------------------------------------
+def risolvi_data_post_br(pub_dt, title_text):
+    m = re.search(r"\((\d{1,2})(?:/\d{1,2})?\)", title_text or "")
+    if not m:
+        m = re.search(r"\b(\d{1,2})\s+de\s+[a-zç]+", (title_text or "").lower())
+    if m:
+        giorno = int(m.group(1))
+        for delta in (0, 1, -1):
+            cand = pub_dt + timedelta(days=delta)
+            if cand.day == giorno:
+                return cand
+    return pub_dt
+
+
+def estrai_eventi_da_html_br(html_content, base_date_br):
+    risultati = []
+    soup = BeautifulSoup(html_content, "html.parser")
+    sezione = ""
+
+    for raw_line in soup.get_text("\n").splitlines():
+        line = re.sub(r"\s+", " ", raw_line).strip()
+        if not line:
+            continue
+
+        # Riconosce titoli di sezione come "VÔLEI", "BASQUETE", "FUTEBOL AMERICANO", "AUTOMOBILISMO"
+        if len(line) < 55 and not re.match(r"^\d{1,2}h", line):
+            low = line.lower()
+            if any(k in low for k in [
+                "futebol", "vôlei", "volei", "basquete", "nba", "nbb", "futsal",
+                "tênis", "tenis", "automobilismo", "fórmula 1", "formula 1",
+                "motogp", "nfl", "brasileirão", "laliga", "bundesliga",
+                "premier league", "ligue 1", "sul-americana", "libertadores",
+            ]):
+                sezione = line
+            continue
+
+        # Formato tipico: "18h30 – Superliga Feminina: Mackenzie x Brusque – Ge TV"
+        m = re.match(r"^(\d{1,2})h(\d{2})?\s*[–—\-]\s*(.+?)\s+[–—\-]\s+(.+)$", line)
+        if not m:
+            continue
+
+        hh = int(m.group(1))
+        mm = int(m.group(2) or "0")
+        corpo = m.group(3).strip()
+        canali_str = m.group(4).strip()
+
+        canali_trovati = risolvi_canali_br(canali_str)
+        if not canali_trovati:
+            continue
+
+        # Separa competizione ed evento se c'è ":" (es. "Superliga: Team A x Team B")
+        if ":" in corpo:
+            comp, evento = [x.strip() for x in corpo.split(":", 1)]
+        else:
+            comp = sezione or "Sport Brasile"
+            evento = corpo
+
+        sport = classifica_sport(f"{sezione} {comp} {evento}", canale_solo_sport=True)
+        if not sport:
+            continue
+
+        try:
+            dt_br = datetime(base_date_br.year, base_date_br.month, base_date_br.day, hh, mm, tzinfo=BR_TZ)
+            dt_it = dt_br.astimezone(ROME_TZ)
+        except Exception:
+            continue
+
+        if not (MIN_DT <= dt_it <= MAX_DT):
+            continue
+
+        # Unisce i nomi se più canali YouTube lo trasmettono (es. "CazéTV / Xsports")
+        nomi_puliti = [c[0].replace(" (YouTube)", "") for c in canali_trovati]
+        nome_finale = " / ".join(nomi_puliti) + " (YouTube)"
+        link_finale = canali_trovati[0][1]
+
+        risultati.append({
+            "data": dt_it.strftime("%Y-%m-%d"),
+            "ora": dt_it.strftime("%H:%M"),
+            "sport": sport,
+            "competizione": comp,
+            "evento": evento,
+            "paese": "Brasile YouTube",
+            "canale": nome_finale,
+            "link": link_finale,
+        })
+    return risultati
+
+
+def scarica_auvaromaia_br():
+    risultati = []
+    print("🇧🇷 Controllo AuvaroMaia (Calcio, Volley, Basket/NBA, Futsal, Tennis, Motori)...")
+    try:
+        r = requests.get(
+            "https://auvaromaia.com/wp-json/wp/v2/posts?search=Agenda+esportiva&per_page=7",
+            headers=BROWSER_HEADERS,
+            timeout=25,
+        )
+        r.raise_for_status()
+        posts = r.json()
+        for post in posts:
+            titolo = BeautifulSoup(post.get("title", {}).get("rendered", ""), "html.parser").get_text()
+            if "agenda esportiva" not in titolo.lower():
+                continue
+            pub_dt = datetime.fromisoformat(post["date"][:19])
+            base_dt = risolvi_data_post_br(pub_dt, titolo)
+            html = post.get("content", {}).get("rendered", "")
+            risultati.extend(estrai_eventi_da_html_br(html, base_dt))
+    except Exception as e:
+        print(f"⚠️ API AuvaroMaia non disponibile ({e}), provo RSS...")
+        try:
+            r = requests.get("https://auvaromaia.com/feed/", headers=BROWSER_HEADERS, timeout=25)
+            r.raise_for_status()
+            root = ET.fromstring(r.text)
+            ns = {"content": "http://purl.org/rss/1.0/modules/content/"}
+            for item in root.findall("./channel/item"):
+                titolo = item.findtext("title") or ""
+                if "agenda esportiva" not in titolo.lower():
+                    continue
+                pub_str = item.findtext("pubDate") or ""
+                try:
+                    pub_dt = datetime.strptime(pub_str[:25].strip(), "%a, %d %b %Y %H:%M:%S")
+                except Exception:
+                    pub_dt = NOW
+                base_dt = risolvi_data_post_br(pub_dt, titolo)
+                html = item.findtext("content:encoded", namespaces=ns) or item.findtext("description") or ""
+                risultati.extend(estrai_eventi_da_html_br(html, base_dt))
+        except Exception as e2:
+            print(f"⚠️ Anche RSS AuvaroMaia saltato: {e2}")
+    print(f"✅ AuvaroMaia: trovati {len(risultati)} eventi YouTube BR")
+    return risultati
+
+
+def scarica_gfesporte_br():
+    risultati = []
+    print("🇧🇷 Controllo GFEsporte (Backup tutti gli sport BR)...")
+    try:
+        r = requests.get("https://www.gfesporte.com.br/", headers=BROWSER_HEADERS, timeout=25)
+        r.raise_for_status()
+    except Exception as e:
+        print(f"⚠️ GFEsporte non raggiungibile: {e}")
+        return risultati
+
+    soup = BeautifulSoup(r.text, "html.parser")
+    links = []
+    visti = set()
+    for a in soup.find_all("a", href=True):
+        href = urljoin("https://www.gfesporte.com.br/", a["href"])
+        txt = a.get_text(" ", strip=True)
+        if ("programacao-esportiva" in href.lower() or "agenda esportiva" in txt.lower() or "programação esportiva" in txt.lower()) and href not in visti:
+            visti.add(href)
+            links.append((href, txt))
+
+    for url_post, txt in links[:5]:
+        try:
+            rp = requests.get(url_post, headers=BROWSER_HEADERS, timeout=25)
+            rp.raise_for_status()
+            psoup = BeautifulSoup(rp.text, "html.parser")
+            titolo = (psoup.find("h1").get_text(" ", strip=True) if psoup.find("h1") else txt)
+            base_dt = risolvi_data_post_br(NOW.astimezone(BR_TZ), titolo)
+            risultati.extend(estrai_eventi_da_html_br(rp.text, base_dt))
+        except Exception:
+            continue
+    print(f"✅ GFEsporte: trovati {len(risultati)} eventi YouTube BR")
+    return risultati
+
+
+# ------------------------------------------------------------------------------
+# DAZN FREE ITALIA + MANUALI
+# ------------------------------------------------------------------------------
 def scarica_dazn_free_italia():
     url = "https://www.dazn.com/it-IT/news/altro/come-funziona-la-modalita-free-su-dazn-e-come-attivarla/1n63xr4bv4gb8zw0uwdeq9cdq"
     print("⚡ Controllo pagina ufficiale DAZN Free Italia...")
     risultati = []
     try:
         resp = requests.get(url, timeout=30, headers={
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
+            "User-Agent": BROWSER_HEADERS["User-Agent"],
             "Accept-Language": "it-IT,it;q=0.9",
         })
         resp.raise_for_status()
@@ -366,7 +546,7 @@ def scarica_dazn_free_italia():
             })
         print(f"✅ DAZN Free Italia: trovati {len(risultati)} eventi")
     except Exception as e:
-        print(f"⚠️ DAZN Free Italia non raggiungibile automaticamente ({e}) - nessun problema, proseguo!")
+        print(f"⚠️ DAZN Free Italia non raggiungibile automaticamente ({e})")
     return risultati
 
 
@@ -376,10 +556,7 @@ def carica_manuali():
     try:
         with open("eventi_manuali.json", "r", encoding="utf-8") as f:
             dati = json.load(f)
-        validi = []
-        for ev in dati:
-            if ev.get("data", "") >= NOW.strftime("%Y-%m-%d"):
-                validi.append(ev)
+        validi = [ev for ev in dati if ev.get("data", "") >= NOW.strftime("%Y-%m-%d")]
         print(f"📝 Caricati {len(validi)} eventi da eventi_manuali.json")
         return validi
     except Exception as e:
@@ -391,11 +568,13 @@ def deduplica(eventi):
     visti = set()
     puliti = []
     for ev in eventi:
+        titolo_base = ev.get("evento", "").split(":", 1)[-1].lower()
+        titolo_base = re.sub(r"\b(fc|sc|ec|cr|ca)\b", "", titolo_base)
         chiave = (
             ev.get("data", ""),
             ev.get("ora", ""),
-            ev.get("canale", "").lower(),
-            re.sub(r"[^a-z0-9]", "", ev.get("evento", "").lower())[:25],
+            ev.get("paese", ""),
+            re.sub(r"[^a-z0-9]", "", titolo_base)[:22],
         )
         if chiave not in visti:
             visti.add(chiave)
@@ -407,13 +586,14 @@ def deduplica(eventi):
 def main():
     tutti = []
     tutti.extend(scarica_epg_paesi())
-    tutti.extend(scarica_youtube())
+    tutti.extend(scarica_futebol_tv_br())
+    tutti.extend(scarica_auvaromaia_br())
+    tutti.extend(scarica_gfesporte_br())
     tutti.extend(scarica_dazn_free_italia())
     tutti.extend(carica_manuali())
 
     finali = deduplica(tutti)
 
-    # Salva solo se ha trovato almeno qualcosa (evita di svuotare il sito in caso di blackout di rete)
     if len(finali) > 0:
         with open("eventi.json", "w", encoding="utf-8") as f:
             json.dump(finali, f, ensure_ascii=False, indent=2)
@@ -424,7 +604,7 @@ def main():
             }, f, ensure_ascii=False, indent=2)
         print(f"🎉 Salvati {len(finali)} eventi totali in eventi.json!")
     else:
-        print("⚠️ Nessun evento raccolto in questa esecuzione, mantengo il vecchio eventi.json.")
+        print("⚠️ Nessun evento raccolto, mantengo il vecchio eventi.json.")
 
 
 if __name__ == "__main__":
