@@ -1,23 +1,13 @@
 [
   {
     "data": "2026-11-22",
-    "ora": "12:45",
-    "sport": "Sci Alpino",
-    "competizione": "Ski Alpin",
-    "evento": "Ski alpin: Weltcup",
-    "paese": "Germania",
-    "canale": "ZDF",
-    "link": "https://www.zdf.de/live-tv"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "12:55",
-    "sport": "Basket & NBA",
-    "competizione": "Show",
-    "evento": "Wer stiehlt Carolin Kebekus die Show?",
-    "paese": "Germania",
-    "canale": "ProSieben",
-    "link": "https://www.prosieben.de/"
+    "ora": "13:00",
+    "sport": "Calcio",
+    "competizione": "Inglês",
+    "evento": "Birmingham x Manchester United",
+    "paese": "Brasile YouTube",
+    "canale": "BarclaysWSL (YouTube)",
+    "link": "https://www.youtube.com/results?search_query=BarclaysWSL"
   },
   {
     "data": "2026-11-22",
@@ -68,6 +58,26 @@
     "paese": "Svizzera",
     "canale": "RSI La 2",
     "link": "https://www.rsi.ch/play/tv"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "13:30",
+    "sport": "Calcio",
+    "competizione": "2. Bundesliga",
+    "evento": "Cottbus x Hertha",
+    "paese": "Brasile YouTube",
+    "canale": "Romário TV (YouTube)",
+    "link": "https://www.youtube.com/@RomarioTVoficial"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "13:30",
+    "sport": "Calcio",
+    "competizione": "2. Bundesliga",
+    "evento": "Kaiserslautern x Dresden",
+    "paese": "Brasile YouTube",
+    "canale": "Canal GOAT (YouTube)",
+    "link": "https://www.youtube.com/@canalgoatbr"
   },
   {
     "data": "2026-11-22",
@@ -152,6 +162,46 @@
   {
     "data": "2026-11-22",
     "ora": "14:00",
+    "sport": "Calcio",
+    "competizione": "LaLiga",
+    "evento": "Barcelona x Villarreal",
+    "paese": "Brasile YouTube",
+    "canale": "CazéTV (YouTube)",
+    "link": "https://www.youtube.com/@CazeTV"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "14:00",
+    "sport": "Calcio",
+    "competizione": "Sueco",
+    "evento": "Sirius x Djurgarden",
+    "paese": "Brasile YouTube",
+    "canale": "Canal GOL Brasil (YouTube)",
+    "link": "https://www.youtube.com/@canalgolbrasil"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "14:00",
+    "sport": "Tennis",
+    "competizione": "Copa do Mundo de Esqui Alpino",
+    "evento": "etapa de Gurgl (em andamento)",
+    "paese": "Brasile YouTube",
+    "canale": "Xsports (YouTube)",
+    "link": "https://www.youtube.com/@xsports.brasil"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "14:00",
+    "sport": "Tennis",
+    "competizione": "Copa do Mundo de Esqui Alpino",
+    "evento": "etapa de Gurgl",
+    "paese": "Brasile YouTube",
+    "canale": "Xsports (YouTube)",
+    "link": "https://www.youtube.com/@xsports.brasil"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "14:00",
     "sport": "Basket & NBA",
     "competizione": "TV Svizzera",
     "evento": "Yanic Niederhäusers Weg in die NBA",
@@ -212,6 +262,116 @@
   {
     "data": "2026-11-22",
     "ora": "15:00",
+    "sport": "Calcio",
+    "competizione": "Ligue 1",
+    "evento": "Paris FC x Angers",
+    "paese": "Brasile YouTube",
+    "canale": "CazéTV / Xsports (YouTube)",
+    "link": "https://www.youtube.com/@CazeTV"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "15:00",
+    "sport": "Calcio",
+    "competizione": "Serie A",
+    "evento": "Sassuolo x Genoa",
+    "paese": "Brasile YouTube",
+    "canale": "ESPN Brasil (YouTube)",
+    "link": "https://www.youtube.com/@espnbrasil"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "15:00",
+    "sport": "Calcio",
+    "competizione": "Indiano",
+    "evento": "Churchill Brothers x Mohun Bagan",
+    "paese": "Brasile YouTube",
+    "canale": "Indian Super League (YouTube)",
+    "link": "https://www.youtube.com/results?search_query=Indian+Super+League"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "15:00",
+    "sport": "Calcio",
+    "competizione": "Mineiro",
+    "evento": "Cruzeiro x Atlético (final)",
+    "paese": "Brasile YouTube",
+    "canale": "FMF TV e Samuca TV (YouTube)",
+    "link": "https://www.youtube.com/results?search_query=FMF+TV+e+Samuca+TV"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "15:00",
+    "sport": "Calcio",
+    "competizione": "Paulista Sub-17",
+    "evento": "Ferroviária x São Paulo (final)",
+    "paese": "Brasile YouTube",
+    "canale": "Paulistão (YouTube)",
+    "link": "https://www.youtube.com/results?search_query=Paulist%C3%A3o"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "15:00",
+    "sport": "Calcio",
+    "competizione": "Inglês",
+    "evento": "Everton x Brighton",
+    "paese": "Brasile YouTube",
+    "canale": "BarclaysWSL (YouTube)",
+    "link": "https://www.youtube.com/results?search_query=BarclaysWSL"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "15:00",
+    "sport": "Calcio",
+    "competizione": "Inglês",
+    "evento": "Charlton x Aston Villa",
+    "paese": "Brasile YouTube",
+    "canale": "BarclaysWSL (YouTube)",
+    "link": "https://www.youtube.com/results?search_query=BarclaysWSL"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "15:00",
+    "sport": "Calcio",
+    "competizione": "Francês",
+    "evento": "Paris FC x Fleury",
+    "paese": "Brasile YouTube",
+    "canale": "Arkema Première Ligue (YouTube)",
+    "link": "https://www.youtube.com/results?search_query=Arkema+Premi%C3%A8re+Ligue"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "15:00",
+    "sport": "Calcio",
+    "competizione": "Francês",
+    "evento": "Lyonnes x Strasbourg",
+    "paese": "Brasile YouTube",
+    "canale": "Arkema Première Ligue (YouTube)",
+    "link": "https://www.youtube.com/results?search_query=Arkema+Premi%C3%A8re+Ligue"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "15:00",
+    "sport": "Calcio",
+    "competizione": "Players Cup",
+    "evento": "Ipswich Town x Southampton",
+    "paese": "Brasile YouTube",
+    "canale": "BarclaysWSL (YouTube)",
+    "link": "https://www.youtube.com/results?search_query=BarclaysWSL"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "15:00",
+    "sport": "Basket & NBA",
+    "competizione": "NBB",
+    "evento": "São José x Corinthians",
+    "paese": "Brasile YouTube",
+    "canale": "NBB (YouTube)",
+    "link": "https://www.youtube.com/@NBB"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "15:00",
     "sport": "MotoGP",
     "competizione": "Sport Motori",
     "evento": "Moto GP Zona Rossa",
@@ -261,13 +421,13 @@
   },
   {
     "data": "2026-11-22",
-    "ora": "15:10",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Heimspiel - Der Fussball-Talk",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
+    "ora": "15:15",
+    "sport": "Basket & NBA",
+    "competizione": "NBB",
+    "evento": "Brasília x Pato",
+    "paese": "Brasile YouTube",
+    "canale": "NBB (YouTube)",
+    "link": "https://www.youtube.com/@NBB"
   },
   {
     "data": "2026-11-22",
@@ -281,6 +441,16 @@
   },
   {
     "data": "2026-11-22",
+    "ora": "15:30",
+    "sport": "Calcio",
+    "competizione": "Bundesliga",
+    "evento": "Augsburg x Mainz",
+    "paese": "Brasile YouTube",
+    "canale": "Canal GOAT (YouTube)",
+    "link": "https://www.youtube.com/@canalgoatbr"
+  },
+  {
+    "data": "2026-11-22",
     "ora": "15:35",
     "sport": "Calcio",
     "competizione": "TV Svizzera",
@@ -288,6 +458,16 @@
     "paese": "Svizzera",
     "canale": "RSI La 1",
     "link": "https://www.rsi.ch/play/tv"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "15:45",
+    "sport": "Calcio",
+    "competizione": "Grego",
+    "evento": "Panathinaikos x OFI",
+    "paese": "Brasile YouTube",
+    "canale": "SportyNet (YouTube)",
+    "link": "https://www.youtube.com/@SportyNetBrasil"
   },
   {
     "data": "2026-11-22",
@@ -332,6 +512,16 @@
   {
     "data": "2026-11-22",
     "ora": "16:15",
+    "sport": "Calcio",
+    "competizione": "LaLiga",
+    "evento": "Racing x Real Sociedad",
+    "paese": "Brasile YouTube",
+    "canale": "CazéTV (YouTube)",
+    "link": "https://www.youtube.com/@CazeTV"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "16:15",
     "sport": "Formula 1",
     "competizione": "Sport Motori",
     "evento": "F1 Paddock Live Pre Gara",
@@ -362,12 +552,42 @@
   {
     "data": "2026-11-22",
     "ora": "17:15",
+    "sport": "Calcio",
+    "competizione": "Ligue 1",
+    "evento": "Lorient x Rennes",
+    "paese": "Brasile YouTube",
+    "canale": "CazéTV (YouTube)",
+    "link": "https://www.youtube.com/@CazeTV"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "17:15",
+    "sport": "Calcio",
+    "competizione": "Amistoso Feminino",
+    "evento": "Brasil x Portugal",
+    "paese": "Brasile YouTube",
+    "canale": "Canal GOL Brasil (YouTube)",
+    "link": "https://www.youtube.com/@canalgolbrasil"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "17:15",
     "sport": "Tennis",
     "competizione": "Sport Tennis",
     "evento": "Supertennis Today - Nitto ATP Finals",
     "paese": "Italia",
     "canale": "SuperTennis",
     "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "17:30",
+    "sport": "Calcio",
+    "competizione": "Bundesliga",
+    "evento": "Bremen x Hamburgo",
+    "paese": "Brasile YouTube",
+    "canale": "Canal GOAT / Xsports / SportyNet (YouTube)",
+    "link": "https://www.youtube.com/@canalgoatbr"
   },
   {
     "data": "2026-11-22",
@@ -402,6 +622,26 @@
   {
     "data": "2026-11-22",
     "ora": "18:00",
+    "sport": "Calcio",
+    "competizione": "Serie A",
+    "evento": "Milan x Frosinone",
+    "paese": "Brasile YouTube",
+    "canale": "SportyNet (YouTube)",
+    "link": "https://www.youtube.com/@SportyNetBrasil"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "18:00",
+    "sport": "Calcio",
+    "competizione": "Tcheco",
+    "evento": "Sparta Praga x Slovan Liberec",
+    "paese": "Brasile YouTube",
+    "canale": "Canal GOL Brasil (YouTube)",
+    "link": "https://www.youtube.com/@canalgolbrasil"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "18:00",
     "sport": "Sci Alpino",
     "competizione": "Ski Alpin",
     "evento": "Ski alpin: Weltcup",
@@ -432,12 +672,32 @@
   {
     "data": "2026-11-22",
     "ora": "18:15",
+    "sport": "Calcio",
+    "competizione": "Galês",
+    "evento": "TNS x Wrexham",
+    "paese": "Brasile YouTube",
+    "canale": "Sgorio (YouTube)",
+    "link": "https://www.youtube.com/results?search_query=Sgorio"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "18:15",
     "sport": "Football Americano",
     "competizione": "American Footballmagazin",
     "evento": "NFL LIVE – Guten Abend Football",
     "paese": "Germania",
     "canale": "Nitro",
     "link": "https://www.rtl.de/"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "18:30",
+    "sport": "Calcio",
+    "competizione": "LaLiga",
+    "evento": "Osasuna x Málaga",
+    "paese": "Brasile YouTube",
+    "canale": "CazéTV (YouTube)",
+    "link": "https://www.youtube.com/@CazeTV"
   },
   {
     "data": "2026-11-22",
@@ -461,16 +721,6 @@
   },
   {
     "data": "2026-11-22",
-    "ora": "18:35",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Ungefiltert: Fussball-Stars und ihre Geschichten",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-22",
     "ora": "18:55",
     "sport": "Calcio",
     "competizione": "TV Svizzera",
@@ -478,6 +728,46 @@
     "paese": "Svizzera",
     "canale": "blue Zoom",
     "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "19:00",
+    "sport": "Calcio",
+    "competizione": "Sergipano C",
+    "evento": "Mocidade x Coritiba",
+    "paese": "Brasile YouTube",
+    "canale": "93 Sports (YouTube)",
+    "link": "https://www.youtube.com/results?search_query=93+Sports"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "19:00",
+    "sport": "Calcio",
+    "competizione": "Gaúcho",
+    "evento": "Grêmio x Brasil de Farroupilha (semifinal, volta)",
+    "paese": "Brasile YouTube",
+    "canale": "FGF TV (YouTube)",
+    "link": "https://www.youtube.com/results?search_query=FGF+TV"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "19:00",
+    "sport": "Calcio",
+    "competizione": "Gaúcho",
+    "evento": "Internacional x Juventude (semifinal, volta)",
+    "paese": "Brasile YouTube",
+    "canale": "FGF TV (YouTube)",
+    "link": "https://www.youtube.com/results?search_query=FGF+TV"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "19:00",
+    "sport": "Calcio",
+    "competizione": "Alagoano",
+    "evento": "UDA x Independente Atalaia",
+    "paese": "Brasile YouTube",
+    "canale": "FAF TV (YouTube)",
+    "link": "https://www.youtube.com/results?search_query=FAF+TV"
   },
   {
     "data": "2026-11-22",
@@ -552,12 +842,82 @@
   {
     "data": "2026-11-22",
     "ora": "19:30",
+    "sport": "Calcio",
+    "competizione": "Potiguar B",
+    "evento": "Alecrim x Baraúnas",
+    "paese": "Brasile YouTube",
+    "canale": "FNF TV (YouTube)",
+    "link": "https://www.youtube.com/results?search_query=FNF+TV"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "19:30",
+    "sport": "Calcio",
+    "competizione": "Potiguar B",
+    "evento": "Visão Celeste x Mossoró",
+    "paese": "Brasile YouTube",
+    "canale": "FNF TV (YouTube)",
+    "link": "https://www.youtube.com/results?search_query=FNF+TV"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "19:30",
+    "sport": "Calcio",
+    "competizione": "3. Liga",
+    "evento": "Duisburg x Rostock",
+    "paese": "Brasile YouTube",
+    "canale": "German Football (YouTube)",
+    "link": "https://www.youtube.com/results?search_query=German+Football"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "19:30",
     "sport": "Tennis",
     "competizione": "Sport Tennis",
     "evento": "LIVE BJK CUP PLAYOFFS",
     "paese": "Italia",
     "canale": "SuperTennis",
     "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "20:00",
+    "sport": "Calcio",
+    "competizione": "BRASILEIRÃO SÉRIE B (PLAYOFFS – IDA)",
+    "evento": "Criciúma x Fortaleza",
+    "paese": "Brasile YouTube",
+    "canale": "SportyNet (YouTube)",
+    "link": "https://www.youtube.com/@SportyNetBrasil"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "20:00",
+    "sport": "Calcio",
+    "competizione": "Paulista Sub-20",
+    "evento": "Palmeiras x Corinthians (final, ida)",
+    "paese": "Brasile YouTube",
+    "canale": "Xsports / TNT Sports (YouTube)",
+    "link": "https://www.youtube.com/@xsports.brasil"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "20:00",
+    "sport": "Basket & NBA",
+    "competizione": "NBB",
+    "evento": "Basquete Cearense x Flamengo",
+    "paese": "Brasile YouTube",
+    "canale": "NBB e Flamengo TV (YouTube)",
+    "link": "https://www.youtube.com/results?search_query=NBB+e+Flamengo+TV"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "20:00",
+    "sport": "Calcio",
+    "competizione": "BRASILEIRÃO SÉRIE B",
+    "evento": "Criciúma x Fortaleza (playoff, ida)",
+    "paese": "Brasile YouTube",
+    "canale": "SportyNet (YouTube)",
+    "link": "https://www.youtube.com/@SportyNetBrasil"
   },
   {
     "data": "2026-11-22",
@@ -611,6 +971,96 @@
   },
   {
     "data": "2026-11-22",
+    "ora": "20:45",
+    "sport": "Calcio",
+    "competizione": "Ligue 1",
+    "evento": "Marseille x Le Mans",
+    "paese": "Brasile YouTube",
+    "canale": "CNN Esportes (YouTube)",
+    "link": "https://www.youtube.com/@cnnesportes"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "21:00",
+    "sport": "Calcio",
+    "competizione": "Copa Fares Lopes",
+    "evento": "Guarani de Juazeiro x Icasa",
+    "paese": "Brasile YouTube",
+    "canale": "Metrópoles Esportes (YouTube)",
+    "link": "https://www.youtube.com/@MetropolesEsportes"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "21:00",
+    "sport": "Calcio",
+    "competizione": "Copa Fares Lopes",
+    "evento": "Tirol x Palmácia",
+    "paese": "Brasile YouTube",
+    "canale": "Metrópoles Esportes (YouTube)",
+    "link": "https://www.youtube.com/@MetropolesEsportes"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "21:00",
+    "sport": "Calcio",
+    "competizione": "Copa Fares Lopes",
+    "evento": "Vila Real x Atlético",
+    "paese": "Brasile YouTube",
+    "canale": "Metrópoles Esportes (YouTube)",
+    "link": "https://www.youtube.com/@MetropolesEsportes"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "21:00",
+    "sport": "Calcio",
+    "competizione": "Taça Paraíba",
+    "evento": "Atlético Cajazeiras x Campinense",
+    "paese": "Brasile YouTube",
+    "canale": "Metrópoles Esportes (YouTube)",
+    "link": "https://www.youtube.com/@MetropolesEsportes"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "21:00",
+    "sport": "Calcio",
+    "competizione": "Taça Paraíba",
+    "evento": "Esporte de Patos x Serra Branca",
+    "paese": "Brasile YouTube",
+    "canale": "Metrópoles Esportes (YouTube)",
+    "link": "https://www.youtube.com/@MetropolesEsportes"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "21:00",
+    "sport": "Calcio",
+    "competizione": "Taça Paraíba",
+    "evento": "Treze x Nacional de Patos",
+    "paese": "Brasile YouTube",
+    "canale": "Metrópoles Esportes (YouTube)",
+    "link": "https://www.youtube.com/@MetropolesEsportes"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "21:00",
+    "sport": "Calcio",
+    "competizione": "Copa Santa Catarina",
+    "evento": "Marcílio Dias x Joinville (final)",
+    "paese": "Brasile YouTube",
+    "canale": "Metrópoles Esportes (YouTube)",
+    "link": "https://www.youtube.com/@MetropolesEsportes"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "21:00",
+    "sport": "Calcio",
+    "competizione": "LaLiga",
+    "evento": "Getafe x Atlético de Madrid",
+    "paese": "Brasile YouTube",
+    "canale": "CazéTV (YouTube)",
+    "link": "https://www.youtube.com/@CazeTV"
+  },
+  {
+    "data": "2026-11-22",
     "ora": "21:20",
     "sport": "Tennis",
     "competizione": "Sport Tennis",
@@ -628,6 +1078,26 @@
     "paese": "Italia",
     "canale": "SuperTennis",
     "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "22:00",
+    "sport": "Calcio",
+    "competizione": "Mato-Grossense",
+    "evento": "Operário x Paulistano (final, volta)",
+    "paese": "Brasile YouTube",
+    "canale": "FMF TV (YouTube)",
+    "link": "https://www.youtube.com/results?search_query=FMF+TV"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "22:00",
+    "sport": "Basket & NBA",
+    "competizione": "NBB",
+    "evento": "Bauru x União Corinthians",
+    "paese": "Brasile YouTube",
+    "canale": "NBB (YouTube)",
+    "link": "https://www.youtube.com/@NBB"
   },
   {
     "data": "2026-11-22",
@@ -653,6 +1123,16 @@
     "data": "2026-11-22",
     "ora": "22:25",
     "sport": "Football Americano",
+    "competizione": "NFL",
+    "evento": "Jacksonville Jaguars x New York Giants",
+    "paese": "Brasile YouTube",
+    "canale": "GE TV (YouTube)",
+    "link": "https://www.youtube.com/@getv"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "22:25",
+    "sport": "Football Americano",
     "competizione": "American Football",
     "evento": "American Football: NFL",
     "paese": "Germania",
@@ -668,6 +1148,36 @@
     "paese": "Svizzera",
     "canale": "RSI La 2",
     "link": "https://www.rsi.ch/play/tv"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "22:30",
+    "sport": "Calcio",
+    "competizione": "BRASILEIRÃO SÉRIE A",
+    "evento": "Fluminense x Mirassol",
+    "paese": "Brasile YouTube",
+    "canale": "CazéTV (YouTube)",
+    "link": "https://www.youtube.com/@CazeTV"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "22:30",
+    "sport": "Calcio",
+    "competizione": "Venezuelano",
+    "evento": "Metropolitanos x La Guaira",
+    "paese": "Brasile YouTube",
+    "canale": "Liga FUTVE (YouTube)",
+    "link": "https://www.youtube.com/results?search_query=Liga+FUTVE"
+  },
+  {
+    "data": "2026-11-22",
+    "ora": "22:30",
+    "sport": "Calcio",
+    "competizione": "BRASILEIRÃO SÉRIE B",
+    "evento": "Atlético/GO x Vila Nova (playoff, ida)",
+    "paese": "Brasile YouTube",
+    "canale": "Canal GOAT / Xsports (YouTube)",
+    "link": "https://www.youtube.com/@canalgoatbr"
   },
   {
     "data": "2026-11-22",
@@ -791,6 +1301,16 @@
   },
   {
     "data": "2026-11-23",
+    "ora": "00:00",
+    "sport": "Calcio",
+    "competizione": "Brasileiro",
+    "evento": "Fazenda x Traipu (semifinal)",
+    "paese": "Brasile YouTube",
+    "canale": "Canal GOL Brasil / LNF / CBFS Futsal (YouTube)",
+    "link": "https://www.youtube.com/@canalgolbrasil"
+  },
+  {
+    "data": "2026-11-23",
     "ora": "00:05",
     "sport": "Tennis",
     "competizione": "Sport",
@@ -808,6 +1328,26 @@
     "paese": "Italia",
     "canale": "SuperTennis",
     "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "00:30",
+    "sport": "Calcio",
+    "competizione": "MLS",
+    "evento": "Chicago Fire x Charlotte",
+    "paese": "Brasile YouTube",
+    "canale": "TNT Sports (YouTube)",
+    "link": "https://www.youtube.com/@TNTSportsBR"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "00:30",
+    "sport": "Calcio",
+    "competizione": "Venezuelano",
+    "evento": "Carabobo x Portuguesa",
+    "paese": "Brasile YouTube",
+    "canale": "Liga FUTVE (YouTube)",
+    "link": "https://www.youtube.com/results?search_query=Liga+FUTVE"
   },
   {
     "data": "2026-11-23",
@@ -852,6 +1392,16 @@
   {
     "data": "2026-11-23",
     "ora": "02:00",
+    "sport": "Calcio",
+    "competizione": "Liga MX",
+    "evento": "UNAM Pumas x Monterrey",
+    "paese": "Brasile YouTube",
+    "canale": "SportyNet (YouTube)",
+    "link": "https://www.youtube.com/@SportyNetBrasil"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "02:00",
     "sport": "Football Americano",
     "competizione": "American Football",
     "evento": "American Football: NFL",
@@ -878,6 +1428,16 @@
     "paese": "Italia",
     "canale": "Sportitalia",
     "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "02:30",
+    "sport": "Calcio",
+    "competizione": "Peruano",
+    "evento": "Sporting Cristal x Cienciano",
+    "paese": "Brasile YouTube",
+    "canale": "Canal GOL Brasil (YouTube)",
+    "link": "https://www.youtube.com/@canalgolbrasil"
   },
   {
     "data": "2026-11-23",
@@ -1378,16 +1938,6 @@
     "paese": "Germania",
     "canale": "Sport1",
     "link": "https://www.sport1.de/tv-programm"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "20:00",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Heimspiel - Der Fussball-Talk",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
   },
   {
     "data": "2026-11-23",
@@ -1901,16 +2451,6 @@
   },
   {
     "data": "2026-11-24",
-    "ora": "18:55",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "The Evolution of Sport",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-24",
     "ora": "19:30",
     "sport": "Calcio",
     "competizione": "Fußballmagazin",
@@ -2111,16 +2651,6 @@
   },
   {
     "data": "2026-11-25",
-    "ora": "02:40",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "The Evolution of Sport",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-25",
     "ora": "03:10",
     "sport": "Calcio",
     "competizione": "TV Svizzera",
@@ -2135,16 +2665,6 @@
     "sport": "Calcio",
     "competizione": "TV Svizzera",
     "evento": "This is Paris - Staffel 2",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-25",
-    "ora": "04:05",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Fussball: Toulouse FC - Olympique de Marseille",
     "paese": "Svizzera",
     "canale": "blue Zoom",
     "link": "https://www.blueplus.ch/de/bluezoom"
