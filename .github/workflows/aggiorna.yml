@@ -7,7 +7,7 @@ on:
   schedule:
     - cron: '0 5 * * *'   # Ogni giorno alle ~06:00 ora italiana
     - cron: '0 13 * * *'  # Ogni giorno alle ~14:00 ora italiana
-  workflow_dispatch:      # Ti permette di avviarlo a mano con 1 click!
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -30,8 +30,10 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Installa librerie
-        run: pip install requests beautifulsoup4
+      - name: Installa librerie e browser
+        run: |
+          pip install requests beautifulsoup4 curl_cffi playwright
+          playwright install --with-deps chromium
 
       - name: Esegui il robottino
         run: python aggiorna.py
