@@ -1,6 +1,576 @@
 [
   {
     "data": "2026-11-23",
+    "ora": "00:00",
+    "sport": "Calcio",
+    "competizione": "Brasileiro",
+    "evento": "Fazenda x Traipu (semifinal)",
+    "paese": "Brasile YouTube",
+    "canale": "Canal GOL Brasil / LNF / CBFS Futsal (YouTube)",
+    "link": "https://www.youtube.com/@canalgolbrasil"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "00:00",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "US Open 2026 - Singolare maschile - Ep. 67 - Alexander Zverev vs Ben Shelton US OPEN 2026 Finale prima parte # 1",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "00:05",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "Nitto Atp Finals",
+    "paese": "Italia",
+    "canale": "20 Mediaset",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/20mediaset_cLB"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "00:30",
+    "sport": "Calcio",
+    "competizione": "MLS",
+    "evento": "Chicago Fire x Charlotte",
+    "paese": "Brasile YouTube",
+    "canale": "TNT Sports (YouTube)",
+    "link": "https://www.youtube.com/@TNTSportsBR"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "00:30",
+    "sport": "Calcio",
+    "competizione": "Venezuelano",
+    "evento": "Carabobo x Portuguesa",
+    "paese": "Brasile YouTube",
+    "canale": "Liga FUTVE (YouTube)",
+    "link": "https://www.youtube.com/results?search_query=Liga+FUTVE"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "01:07",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "Nitto Atp Finals",
+    "paese": "Italia",
+    "canale": "20 Mediaset",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/20mediaset_cLB"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "01:10",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Fussball: FC Lugano - Grasshopper Club Zürich",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "02:00",
+    "sport": "Calcio",
+    "competizione": "Liga MX",
+    "evento": "UNAM Pumas x Monterrey",
+    "paese": "Brasile YouTube",
+    "canale": "SportyNet (YouTube)",
+    "link": "https://www.youtube.com/@SportyNetBrasil"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "02:00",
+    "sport": "Football Americano",
+    "competizione": "American Football",
+    "evento": "American Football: NFL",
+    "paese": "Germania",
+    "canale": "RTL",
+    "link": "https://www.rtl.de/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "02:00",
+    "sport": "Tennis",
+    "competizione": "Sport",
+    "evento": "Nitto Atp Finals Live",
+    "paese": "Italia",
+    "canale": "20 Mediaset",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/20mediaset_cLB"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "02:00",
+    "sport": "Calcio",
+    "competizione": "Sport Calcio",
+    "evento": "Campionato Primavera 1 TIM",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "02:25",
+    "sport": "MotoGP",
+    "competizione": "TV Svizzera",
+    "evento": "Moto2: GP Portogallo: Gara",
+    "paese": "Svizzera",
+    "canale": "RSI La 2",
+    "link": "https://www.rsi.ch/play/tv"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "02:30",
+    "sport": "Calcio",
+    "competizione": "Peruano",
+    "evento": "Sporting Cristal x Cienciano",
+    "paese": "Brasile YouTube",
+    "canale": "Canal GOL Brasil (YouTube)",
+    "link": "https://www.youtube.com/@canalgolbrasil"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "02:30",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "US Open 2026 - Singolare maschile - Ep. 68 - Alexander Zverev vs Ben Shelton US OPEN 2026 Finale parte finale # 1",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "02:50",
+    "sport": "Pallavolo",
+    "competizione": "Pallavolo",
+    "evento": "Pallavolo: Serie A Maschile",
+    "paese": "Italia",
+    "canale": "Rai Sport",
+    "link": "https://www.raiplay.it/dirette/raisport"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "02:58",
+    "sport": "Tennis",
+    "competizione": "Sport",
+    "evento": "Nitto Atp Finals Show",
+    "paese": "Italia",
+    "canale": "Italia 1",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/italia1_cI1"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "03:20",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "US Open 2025 - Singolare maschile - Ep. 76 - Jannik Sinner vs Carlos Alcaraz US OPEN 2025 finale # 1",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "03:25",
+    "sport": "MotoGP",
+    "competizione": "TV Svizzera",
+    "evento": "MotoGP: GP Portogallo: Gara",
+    "paese": "Svizzera",
+    "canale": "RSI La 2",
+    "link": "https://www.rsi.ch/play/tv"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "03:55",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "US Open 2025 - Singolare maschile - Ep. 77 - Jannik Sinner vs Carlos Alcaraz US OPEN 2025 finale seconda parte # 1",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "04:00",
+    "sport": "Calcio",
+    "competizione": "Sport Calcio",
+    "evento": "Campionato Primavera 1 TIM",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "04:00",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Fussball: FC Sion - Servette FC",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "04:20",
+    "sport": "Sci Alpino",
+    "competizione": "TV Svizzera",
+    "evento": "FIS Sci alpino Coppa del Mondo: Gurgl, Uomini, Slalom: 2a manche",
+    "paese": "Svizzera",
+    "canale": "RSI La 2",
+    "link": "https://www.rsi.ch/play/tv"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "04:30",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "US Open 2025 - Singolare maschile - Ep. 78 - Jannik Sinner vs Carlos Alcaraz US OPEN 2025 finale terza parte # 1",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "05:00",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "US Open 2025 - Singolare maschile - Ep. 79 - Jannik Sinner vs Carlos Alcaraz US OPEN 2025 finale quarta parte # 1",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "05:50",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "ATP 500 Vienna 2025 - Ep. 6 - Lorenzo Musetti vs Alexander Zverev  ATP 500 Vienna 2025 # 1",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "06:00",
+    "sport": "Calcio",
+    "competizione": "TV Italia",
+    "evento": "La Domenica Sportiva",
+    "paese": "Italia",
+    "canale": "Rai Sport",
+    "link": "https://www.raiplay.it/dirette/raisport"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "06:55",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Foot: FC Lugano - Grasshopper Club Zurich",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "07:15",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "ATP 1000 Parigi Bercy 2025 - Ep. 2 - Alexander Zverev vs Daniil Medvedev ATP 1000 Parigi 2025 # 1",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "08:15",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Fussball: BSC Young Boys - FC Thun",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "08:25",
+    "sport": "Calcio",
+    "competizione": "Arti Marziali",
+    "evento": "Karate",
+    "paese": "Italia",
+    "canale": "Rai Sport",
+    "link": "https://www.raiplay.it/dirette/raisport"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "09:00",
+    "sport": "Calcio",
+    "competizione": "Calcio Talk Show",
+    "evento": "Tutti In campo",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "09:15",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Foot: BSC Young Boys - FC Thoune",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "09:35",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "Nitto ATP Finals Torino 2025 - Stag. 2022 Ep. 3 - Taylor Fritz vs Carlos Alcaraz Atp Finals 2025 # 1",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "10:00",
+    "sport": "Sci Alpino",
+    "competizione": "Ski Alpin",
+    "evento": "Ski alpin: Weltcup",
+    "paese": "Germania",
+    "canale": "Eurosport 1 DE",
+    "link": "https://www.eurosport.de/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "10:45",
+    "sport": "Sci Alpino",
+    "competizione": "Ski Alpin",
+    "evento": "Ski alpin: Weltcup",
+    "paese": "Germania",
+    "canale": "Eurosport 1 DE",
+    "link": "https://www.eurosport.de/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "11:00",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Alle Spiele, alle Tore - Brack Super League",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "11:25",
+    "sport": "Pallavolo",
+    "competizione": "Pallavolo",
+    "evento": "Pallavolo: Serie A Maschile",
+    "paese": "Italia",
+    "canale": "Rai Sport",
+    "link": "https://www.raiplay.it/dirette/raisport"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "11:30",
+    "sport": "Sci Alpino",
+    "competizione": "Ski Alpin",
+    "evento": "Ski alpin: Weltcup",
+    "paese": "Germania",
+    "canale": "Eurosport 1 DE",
+    "link": "https://www.eurosport.de/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "11:45",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Foot: FC Lausanne-Sport - FC Vaduz",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "12:00",
+    "sport": "Calcio",
+    "competizione": "Dibattito Sportivo Calcio",
+    "evento": "Calcio today",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "12:15",
+    "sport": "Sci Alpino",
+    "competizione": "Ski Alpin",
+    "evento": "Ski alpin: Weltcup",
+    "paese": "Germania",
+    "canale": "Eurosport 1 DE",
+    "link": "https://www.eurosport.de/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "12:20",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "ATP 500 Rotterdam 2025 - Ep. 3 - Carlos Alcaraz vs Hubert Hurkacz ATP 500 Rotterdam 2025 # 1",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "13:05",
+    "sport": "Calcio",
+    "competizione": "Rugby",
+    "evento": "Rugby: Super League",
+    "paese": "Germania",
+    "canale": "More Than Sports TV",
+    "link": "https://morethansports.tv/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "14:00",
+    "sport": "Calcio",
+    "competizione": "Sport Notizie",
+    "evento": "B-Lab",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "14:00",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Fussball: FC Basel 1893 - FC Luzern",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "14:05",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Le temps additionnel - Brack Super League",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "14:25",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "Davis Cup Finals 8 2025 SF1 - ITA vs BEL - Ep. 1 - Matteo Berrettini vs Raphael Collignon ITA vs BEL Davis Cup Final 8 Bologna SF1 # 1",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "15:00",
+    "sport": "Calcio",
+    "competizione": "Surf Brasil",
+    "evento": "etapa Guarda do Embaú",
+    "paese": "Brasile YouTube",
+    "canale": "Xsports (YouTube)",
+    "link": "https://www.youtube.com/@xsports.brasil"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "15:00",
+    "sport": "Football Americano",
+    "competizione": "Surf Brasil",
+    "evento": "etapa de Guarda do Embaú",
+    "paese": "Brasile YouTube",
+    "canale": "Xsports (YouTube)",
+    "link": "https://www.youtube.com/@xsports.brasil"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "15:00",
+    "sport": "Calcio",
+    "competizione": "Sport Calcio",
+    "evento": "Campionato Primavera 1 TIM",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "15:20",
+    "sport": "Calcio",
+    "competizione": "TV Italia",
+    "evento": "Calcio: Mondiali Under 17",
+    "paese": "Italia",
+    "canale": "Rai Sport",
+    "link": "https://www.raiplay.it/dirette/raisport"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "16:00",
+    "sport": "Sci Alpino",
+    "competizione": "Ski Alpin",
+    "evento": "Ski alpin: Weltcup",
+    "paese": "Germania",
+    "canale": "Eurosport 1 DE",
+    "link": "https://www.eurosport.de/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "16:10",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "Davis Cup Finals 8 2025 SF1 - ITA vs BEL - Ep. 2 - Flavio Cobolli vs Zizou Bergs ITA vs BEL Davis Cup Final 8 Bologna SF1 # 1",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "16:40",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Foot: FC Sion - Servette FC",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "16:45",
+    "sport": "Sci Alpino",
+    "competizione": "Ski Alpin",
+    "evento": "Ski alpin: Weltcup",
+    "paese": "Germania",
+    "canale": "Eurosport 1 DE",
+    "link": "https://www.eurosport.de/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "16:55",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Alle Spiele, alle Tore - Brack Super League",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "17:00",
+    "sport": "Calcio",
+    "competizione": "Sport Calcio",
+    "evento": "Campionato Primavera 1 TIM",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-23",
     "ora": "17:30",
     "sport": "Sci Alpino",
     "competizione": "Ski Alpin",
@@ -138,16 +708,6 @@
     "paese": "Italia",
     "canale": "Sportitalia",
     "link": "https://www.sportitalia.it/"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "20:41",
-    "sport": "Altri Sport",
-    "competizione": "DAZN Free",
-    "evento": "2026-11-23T12:20:41+0000",
-    "paese": "DAZN Free Spagna",
-    "canale": "DAZN Free Spagna",
-    "link": "https://www.dazn.com/es-ES/home"
   },
   {
     "data": "2026-11-23",
@@ -488,16 +1048,6 @@
     "paese": "Italia",
     "canale": "SuperTennis",
     "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "04:42",
-    "sport": "Altri Sport",
-    "competizione": "DAZN Free",
-    "evento": "2026-11-23T11:28:42+0000",
-    "paese": "DAZN Free Spagna",
-    "canale": "DAZN Free Spagna",
-    "link": "https://www.dazn.com/es-ES/home"
   },
   {
     "data": "2026-11-24",
@@ -1398,6 +1948,16 @@
     "paese": "Italia",
     "canale": "Rai Sport",
     "link": "https://www.raiplay.it/dirette/raisport"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "15:55",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Paris Saint-Germain - AS Roma",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
   },
   {
     "data": "2026-11-25",
