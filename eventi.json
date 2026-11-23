@@ -1,6 +1,36 @@
 [
   {
     "data": "2026-11-23",
+    "ora": "17:30",
+    "sport": "Sci Alpino",
+    "competizione": "Ski Alpin",
+    "evento": "Ski alpin: Weltcup",
+    "paese": "Germania",
+    "canale": "Eurosport 1 DE",
+    "link": "https://www.eurosport.de/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "17:45",
+    "sport": "Calcio",
+    "competizione": "Fußball",
+    "evento": "Fußball: Bundesliga der Frauen",
+    "paese": "Germania",
+    "canale": "Sport1",
+    "link": "https://www.sport1.de/tv-programm"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "18:00",
+    "sport": "Calcio",
+    "competizione": "Fußball",
+    "evento": "Fußball: Bundesliga der Frauen",
+    "paese": "Germania",
+    "canale": "Sport1",
+    "link": "https://www.sport1.de/tv-programm"
+  },
+  {
+    "data": "2026-11-23",
     "ora": "18:15",
     "sport": "Sci Alpino",
     "competizione": "Ski Alpin",
