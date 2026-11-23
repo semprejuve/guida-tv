@@ -1,16 +1,6 @@
 [
   {
     "data": "2026-11-23",
-    "ora": "18:00",
-    "sport": "Calcio",
-    "competizione": "Fußball",
-    "evento": "Fußball: Bundesliga der Frauen",
-    "paese": "Germania",
-    "canale": "Sport1",
-    "link": "https://www.sport1.de/tv-programm"
-  },
-  {
-    "data": "2026-11-23",
     "ora": "18:15",
     "sport": "Sci Alpino",
     "competizione": "Ski Alpin",
@@ -118,6 +108,16 @@
     "paese": "Italia",
     "canale": "Sportitalia",
     "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "20:41",
+    "sport": "Altri Sport",
+    "competizione": "DAZN Free",
+    "evento": "2026-11-23T12:20:41+0000",
+    "paese": "DAZN Free Spagna",
+    "canale": "DAZN Free Spagna",
+    "link": "https://www.dazn.com/es-ES/home"
   },
   {
     "data": "2026-11-23",
@@ -458,6 +458,16 @@
     "paese": "Italia",
     "canale": "SuperTennis",
     "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "04:42",
+    "sport": "Altri Sport",
+    "competizione": "DAZN Free",
+    "evento": "2026-11-23T11:28:42+0000",
+    "paese": "DAZN Free Spagna",
+    "canale": "DAZN Free Spagna",
+    "link": "https://www.dazn.com/es-ES/home"
   },
   {
     "data": "2026-11-24",
