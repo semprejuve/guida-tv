@@ -16,9 +16,7 @@
       --accent-blue: #38bdf8;
       --dazn: #facc15;
     }
-
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background-color: var(--bg);
@@ -26,14 +24,12 @@
       line-height: 1.5;
       padding-bottom: 50px;
     }
-
     header {
       background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
       border-bottom: 1px solid var(--border);
       padding: 22px 16px;
       text-align: center;
     }
-
     header h1 { font-size: 1.75rem; margin-bottom: 6px; }
     header p { color: var(--muted); font-size: 0.95rem; }
     .bot-status {
@@ -46,9 +42,7 @@
       padding: 3px 10px;
       border-radius: 999px;
     }
-
-    .container { max-width: 1080px; margin: 0 auto; padding: 18px 14px; }
-
+    .container { max-width: 1100px; margin: 0 auto; padding: 18px 14px; }
     .search-box {
       width: 100%;
       padding: 13px 16px;
@@ -61,7 +55,6 @@
       outline: none;
     }
     .search-box:focus { border-color: var(--accent-blue); }
-
     .filter-section { margin-bottom: 14px; }
     .filter-label {
       font-size: 0.78rem;
@@ -72,7 +65,6 @@
       display: block;
       font-weight: 700;
     }
-
     .pills { display: flex; flex-wrap: wrap; gap: 8px; }
     .pill {
       background: var(--card);
@@ -80,24 +72,13 @@
       border: 1px solid var(--border);
       padding: 7px 13px;
       border-radius: 999px;
-      font-size: 0.86rem;
+      font-size: 0.85rem;
       cursor: pointer;
-      transition: all 0.15s ease;
     }
     .pill:hover { background: var(--card-hover); }
-    .pill.active {
-      background: var(--accent);
-      color: #052e16;
-      border-color: var(--accent);
-      font-weight: 700;
-    }
-    .pill.active-blue {
-      background: var(--accent-blue);
-      color: #082f49;
-      border-color: var(--accent-blue);
-      font-weight: 700;
-    }
-
+    .pill.active { background: var(--accent); color: #052e16; border-color: var(--accent); font-weight: 700; }
+    .pill.active-blue { background: var(--accent-blue); color: #082f49; border-color: var(--accent-blue); font-weight: 700; }
+    .pill.active-dazn { background: var(--dazn); color: #422006; border-color: var(--dazn); font-weight: 700; }
     .stats {
       margin: 14px 0;
       font-size: 0.9rem;
@@ -107,7 +88,6 @@
       flex-wrap: wrap;
       gap: 8px;
     }
-
     .day-group { margin-top: 22px; }
     .day-title {
       font-size: 1.15rem;
@@ -119,13 +99,11 @@
       margin-bottom: 10px;
       text-transform: capitalize;
     }
-
     .events-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 12px;
     }
-
     .card {
       background: var(--card);
       border: 1px solid var(--border);
@@ -135,10 +113,8 @@
       flex-direction: column;
       justify-content: space-between;
       gap: 10px;
-      transition: transform 0.15s ease, border-color 0.15s ease;
     }
-    .card:hover { transform: translateY(-2px); border-color: var(--accent-blue); }
-
+    .card:hover { border-color: var(--accent-blue); }
     .card-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
     .time-badge {
       background: #0f172a;
@@ -150,15 +126,8 @@
       border: 1px solid var(--border);
     }
     .sport-tag { font-size: 0.8rem; color: var(--accent-blue); font-weight: 600; }
-    .comp-name {
-      font-size: 0.78rem;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.4px;
-      margin-top: 8px;
-    }
+    .comp-name { font-size: 0.78rem; color: var(--muted); text-transform: uppercase; margin-top: 8px; }
     .event-title { font-size: 1.03rem; font-weight: 700; color: var(--text); }
-
     .card-footer {
       display: flex;
       justify-content: space-between;
@@ -175,10 +144,7 @@
       background: #0f172a;
       color: #e2e8f0;
     }
-    .channel-badge.dazn {
-      color: var(--dazn);
-      border: 1px solid rgba(250, 204, 21, 0.35);
-    }
+    .channel-badge.dazn { color: var(--dazn); border: 1px solid rgba(250, 204, 21, 0.35); }
     .watch-btn {
       text-decoration: none;
       background: var(--accent-blue);
@@ -189,8 +155,6 @@
       border-radius: 8px;
       white-space: nowrap;
     }
-    .watch-btn:hover { opacity: 0.9; }
-
     .empty-msg {
       text-align: center;
       padding: 40px 20px;
@@ -199,7 +163,6 @@
       color: var(--muted);
       margin-top: 20px;
     }
-
     .channels-directory {
       margin-top: 38px;
       background: var(--card);
@@ -215,26 +178,19 @@
       font-size: 0.86rem;
     }
     .dir-box h3 { font-size: 0.9rem; margin-bottom: 5px; color: var(--accent-blue); }
-    .dir-box a {
-      display: inline-block;
-      color: var(--muted);
-      text-decoration: none;
-      margin-right: 8px;
-      margin-bottom: 4px;
-    }
+    .dir-box a { display: inline-block; color: var(--muted); text-decoration: none; margin-right: 8px; margin-bottom: 4px; }
     .dir-box a:hover { color: var(--text); text-decoration: underline; }
   </style>
 </head>
 <body>
-
   <header>
     <h1>📺 Guida TV Sport Gratis</h1>
-    <p>Eventi sportivi gratuiti della settimana • Aggiornamento automatico</p>
+    <p>TV Gratis (IT • DE • CH) • YouTube Brasile 🇧🇷 • DAZN Free Mondo ⚡</p>
     <div id="botStatus" class="bot-status" style="display:none;"></div>
   </header>
 
   <div class="container">
-    <input type="text" id="searchInput" class="search-box" placeholder="🔍 Cerca squadra, gara, torneo o canale (es. TV8, CazéTV, RSI, NBA, F1)..." />
+    <input type="text" id="searchInput" class="search-box" placeholder="🔍 Cerca squadra, torneo, canale o nazione (es. DAZN, Belgio, Giappone, TV8, CazéTV, NBA)..." />
 
     <div class="filter-section">
       <span class="filter-label">📅 Giorno</span>
@@ -253,7 +209,7 @@
 
     <div class="stats">
       <span id="resultsCount">Caricamento eventi...</span>
-      <span>🕒 Orari nel fuso orario italiano</span>
+      <span>🕒 Tutti gli orari sono in ora italiana</span>
     </div>
 
     <div id="eventsContainer"></div>
@@ -271,20 +227,14 @@
           <a href="https://www.sportitalia.it/" target="_blank">Sportitalia</a>
         </div>
         <div class="dir-box">
-          <h3>🇩🇪 Germania Free</h3>
-          <a href="https://www.ardmediathek.de/live" target="_blank">Das Erste (ARD)</a>
+          <h3>🇩🇪 Germania & 🇨🇭 Svizzera</h3>
+          <a href="https://www.ardmediathek.de/live" target="_blank">Das Erste</a>
           <a href="https://www.zdf.de/live-tv" target="_blank">ZDF</a>
           <a href="https://www.ran.de/" target="_blank">ran / ProSieben MAXX</a>
           <a href="https://www.sport1.de/tv-programm" target="_blank">Sport1</a>
-          <a href="https://df1.de/" target="_blank">DF1</a>
           <a href="https://www.rtl.de/" target="_blank">RTL / Nitro</a>
-        </div>
-        <div class="dir-box">
-          <h3>🇨🇭 Svizzera Free</h3>
           <a href="https://www.rsi.ch/play/tv" target="_blank">RSI La 2</a>
           <a href="https://www.srf.ch/play/tv" target="_blank">SRF zwei</a>
-          <a href="https://www.rts.ch/play/tv" target="_blank">RTS 2</a>
-          <a href="https://www.blueplus.ch/de/bluezoom" target="_blank">blue Zoom</a>
         </div>
         <div class="dir-box">
           <h3>🇧🇷 Brasile YouTube</h3>
@@ -296,13 +246,16 @@
           <a href="https://www.youtube.com/@NSports" target="_blank">N Sports</a>
           <a href="https://www.youtube.com/@TimeBrasil" target="_blank">Time Brasil</a>
           <a href="https://www.youtube.com/@nbabrasil" target="_blank">NBA Brasil</a>
-          <a href="https://www.youtube.com/@SBTSports" target="_blank">SBT Sports</a>
         </div>
         <div class="dir-box">
-          <h3>⚡ DAZN Free</h3>
-          <a href="https://www.dazn.com/it-IT/home" target="_blank">DAZN Italia</a>
-          <a href="https://www.dazn.com/de-DE/home" target="_blank">DAZN Germania</a>
-          <a href="https://www.dazn.com/de-CH/home" target="_blank">DAZN Svizzera</a>
+          <h3>⚡ DAZN Free (Italia & Estero)</h3>
+          <a href="https://www.dazn.com/it-IT/help/articles/dazn-freemium" target="_blank">🇮🇹 Italia</a>
+          <a href="https://www.dazn.com/fr-BE/home" target="_blank">🇧🇪 Belgio</a>
+          <a href="https://www.dazn.com/de-DE/help/articles/dazn-kostenlos-dazn-free-spiele-inhalt-programm-stream" target="_blank">🇩🇪 Germania</a>
+          <a href="https://www.dazn.com/en-CA/home" target="_blank">🇨🇦 Canada</a>
+          <a href="https://www.dazn.com/ja-JP/home" target="_blank">🇯🇵 Giappone</a>
+          <a href="https://www.dazn.com/es-ES/home" target="_blank">🇪🇸 Spagna</a>
+          <a href="https://www.dazn.com/pt-PT/home" target="_blank">🇵🇹 Portogallo</a>
         </div>
       </div>
     </div>
@@ -310,33 +263,19 @@
 
   <script>
     const sportIcons = {
-      "Calcio": "⚽",
-      "Pallavolo": "🏐",
-      "Basket & NBA": "🏀",
-      "Formula 1": "🏎️",
-      "MotoGP": "🏍️",
-      "Tennis": "🎾",
-      "Sci Alpino": "⛷️",
-      "Football Americano": "🏈",
-      "College Football": "🎓",
-      "Altri Sport": "🏅"
+      "Calcio": "⚽", "Pallavolo": "🏐", "Basket & NBA": "🏀",
+      "Formula 1": "🏎️", "MotoGP": "🏍️", "Tennis": "🎾",
+      "Sci Alpino": "⛷️", "Football Americano": "🏈",
+      "College Football": "🎓", "Altri Sport": "🏅"
     };
 
     const countryFlags = {
-      "Italia": "🇮🇹",
-      "Germania": "🇩🇪",
-      "Svizzera": "🇨🇭",
+      "Italia": "🇮🇹", "Germania": "🇩🇪", "Svizzera": "🇨🇭",
       "Brasile YouTube": "🇧🇷",
-      "Brasile": "🇧🇷",
-      "DAZN Free": "⚡",
-      "Austria": "🇦🇹",
-      "Francia": "🇫🇷",
-      "Spagna": "🇪🇸",
-      "Regno Unito": "🇬🇧",
-      "USA": "🇺🇸",
-      "Argentina": "🇦🇷",
-      "Belgio": "🇧🇪",
-      "Danimarca": "🇩🇰"
+      "DAZN Free Italia": "🇮🇹⚡", "DAZN Free Belgio": "🇧🇪⚡",
+      "DAZN Free Germania": "🇩🇪⚡", "DAZN Free Canada": "🇨🇦⚡",
+      "DAZN Free Giappone": "🇯🇵⚡", "DAZN Free Spagna": "🇪🇸⚡",
+      "DAZN Free Portogallo": "🇵🇹⚡", "DAZN Free": "⚡"
     };
 
     let allEvents = [];
@@ -347,10 +286,8 @@
 
     function escapeHtml(str) {
       return String(str || "")
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;");
+        .replace(/&/g, "&amp;").replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
     }
 
     function formatDayLabel(dateStr) {
@@ -361,17 +298,11 @@
         date.getFullYear() === today.getFullYear() &&
         date.getMonth() === today.getMonth() &&
         date.getDate() === today.getDate();
-
-      const label = date.toLocaleDateString("it-IT", {
-        weekday: "long",
-        day: "numeric",
-        month: "long"
-      });
+      const label = date.toLocaleDateString("it-IT", { weekday: "long", day: "numeric", month: "long" });
       return isToday ? `OGGI • ${label}` : label;
     }
 
     function renderFilterPills() {
-      // Giorni
       const uniqueDates = [...new Set(allEvents.map(e => e.data))].sort();
       const dayContainer = document.getElementById("dayFilters");
       dayContainer.innerHTML = "";
@@ -392,8 +323,8 @@
         dayContainer.appendChild(btn);
       });
 
-      // Nazioni (automatiche dai dati!)
       const uniqueCountries = [...new Set(allEvents.map(e => e.paese))];
+      const hasAnyDazn = uniqueCountries.some(c => c.startsWith("DAZN Free"));
       const countryContainer = document.getElementById("countryFilters");
       countryContainer.innerHTML = "";
 
@@ -403,15 +334,23 @@
       allCBtn.onclick = () => { selectedCountry = "Tutti"; updateUI(); };
       countryContainer.appendChild(allCBtn);
 
+      if (hasAnyDazn) {
+        const daznAllBtn = document.createElement("button");
+        daznAllBtn.className = `pill ${selectedCountry === "ALL_DAZN" ? "active-dazn" : ""}`;
+        daznAllBtn.textContent = "⚡ Tutti i DAZN Free";
+        daznAllBtn.onclick = () => { selectedCountry = "ALL_DAZN"; updateUI(); };
+        countryContainer.appendChild(daznAllBtn);
+      }
+
       uniqueCountries.forEach(c => {
+        const isDazn = c.startsWith("DAZN Free");
         const btn = document.createElement("button");
-        btn.className = `pill ${selectedCountry === c ? "active-blue" : ""}`;
+        btn.className = `pill ${selectedCountry === c ? (isDazn ? "active-dazn" : "active-blue") : ""}`;
         btn.textContent = `${countryFlags[c] || "🌍"} ${c}`;
         btn.onclick = () => { selectedCountry = c; updateUI(); };
         countryContainer.appendChild(btn);
       });
 
-      // Sport (automatici dai dati!)
       const preferredOrder = Object.keys(sportIcons);
       const uniqueSports = [...new Set(allEvents.map(e => e.sport))].sort((a, b) => {
         const ia = preferredOrder.indexOf(a);
@@ -441,7 +380,10 @@
       const container = document.getElementById("eventsContainer");
       const filtered = allEvents.filter(ev => {
         const matchDay = selectedDay === "Tutti" || ev.data === selectedDay;
-        const matchCountry = selectedCountry === "Tutti" || ev.paese === selectedCountry;
+        const matchCountry =
+          selectedCountry === "Tutti" ||
+          (selectedCountry === "ALL_DAZN" && (ev.paese || "").startsWith("DAZN Free")) ||
+          ev.paese === selectedCountry;
         const matchSport = selectedSport === "Tutti" || ev.sport === selectedSport;
         const q = searchQuery.trim().toLowerCase();
         const matchSearch =
@@ -455,7 +397,6 @@
       });
 
       filtered.sort((a, b) => (a.data + a.ora).localeCompare(b.data + b.ora));
-
       document.getElementById("resultsCount").textContent =
         `${filtered.length} ${filtered.length === 1 ? "evento trovato" : "eventi trovati"}`;
 
@@ -474,7 +415,6 @@
       Object.keys(grouped).sort().forEach(dateStr => {
         const section = document.createElement("div");
         section.className = "day-group";
-
         const title = document.createElement("div");
         title.className = "day-title";
         title.textContent = formatDayLabel(dateStr);
@@ -486,7 +426,7 @@
         grouped[dateStr].forEach(ev => {
           const card = document.createElement("div");
           card.className = "card";
-          const isDazn = ev.paese === "DAZN Free";
+          const isDazn = (ev.paese || "").startsWith("DAZN Free");
           const icon = sportIcons[ev.sport] || "🏅";
           const flag = countryFlags[ev.paese] || "📺";
 
@@ -524,10 +464,7 @@
 
     fetch(`eventi.json?v=${Date.now()}`)
       .then(res => res.json())
-      .then(data => {
-        allEvents = data;
-        updateUI();
-      })
+      .then(data => { allEvents = data; updateUI(); })
       .catch(() => {
         document.getElementById("eventsContainer").innerHTML =
           `<div class="empty-msg">⚠️ Impossibile caricare <strong>eventi.json</strong>.</div>`;
