@@ -24,7 +24,7 @@ except Exception:
 ROME_TZ = ZoneInfo("Europe/Rome")
 BR_TZ = ZoneInfo("America/Sao_Paulo")
 NOW = datetime.now(ROME_TZ)
-MIN_DT = NOW - timedelta(hours=2)
+MIN_DT = NOW - timedelta(hours=3)
 MAX_DT = NOW + timedelta(days=7)
 
 BROWSER_HEADERS = {
@@ -547,12 +547,15 @@ DAZN_PAESI = [
         "direct_urls": [
             "https://www.dazn.com/it-IT/news/altro/come-funziona-la-modalita-free-su-dazn-e-come-attivarla/1n63xr4bv4gb8zw0uwdeq9cdq",
         ],
-        "bing_mkt": "it-IT",
-        "bing_queries": [
-            '"DAZN gratis" eventi calendario',
-            '"DAZN gratis" "Serie B" OR "LaLiga" OR "volley"',
+        "wp_sites": [
+            ("https://www.webnews.it", "DAZN Gratis"),
+            ("https://www.telefonino.net", "DAZN Gratis"),
+            ("https://www.calcioefinanza.it", "DAZN gratis"),
+            ("https://www.pianetaserieb.it", "DAZN gratis"),
         ],
-        "gnews": ("it", "IT", "IT:it", '"DAZN gratis" OR "DAZN free" calendario OR partite'),
+        "bing_mkt": "it-IT",
+        "bing_queries": ['"DAZN gratis" calendario OR partite', '"DAZN free" Serie B OR volley OR LaLiga'],
+        "gnews": ("it", "IT", "IT:it", '"DAZN gratis" OR "DAZN free" partite OR calendario'),
     },
     {
         "paese": "DAZN Free Belgio",
@@ -560,11 +563,9 @@ DAZN_PAESI = [
         "tz": "Europe/Brussels",
         "home": "https://www.dazn.com/fr-BE/home",
         "direct_urls": ["https://www.dazn.com/fr-BE/news", "https://www.dazn.com/nl-BE/news"],
+        "wp_sites": [],
         "bing_mkt": "fr-BE",
-        "bing_queries": [
-            '"DAZN" "gratuit" Belgique OR "Pro League" OR "Croky"',
-            '"DAZN" "gratis" België OR "Pro League"',
-        ],
+        "bing_queries": ['"DAZN" "gratuit" Belgique OR "Pro League" OR "Croky"', '"DAZN" "gratis" België OR "Pro League"'],
         "gnews": ("fr", "BE", "BE:fr", '"DAZN" gratuit OR freemium'),
     },
     {
@@ -573,11 +574,9 @@ DAZN_PAESI = [
         "tz": "Europe/Berlin",
         "home": "https://www.dazn.com/de-DE/home",
         "direct_urls": ["https://www.dazn.com/de-DE/news"],
+        "wp_sites": [],
         "bing_mkt": "de-DE",
-        "bing_queries": [
-            '"DAZN for free" OR "DAZN kostenlos" Programm OR live',
-            '"DAZN Free" Spiele kostenlos Livestream',
-        ],
+        "bing_queries": ['"DAZN for free" OR "DAZN kostenlos" Programm OR live', '"DAZN Free" Spiele kostenlos Livestream'],
         "gnews": ("de", "DE", "DE:de", '"DAZN for free" OR "DAZN kostenlos"'),
     },
     {
@@ -586,11 +585,9 @@ DAZN_PAESI = [
         "tz": "America/Toronto",
         "home": "https://www.dazn.com/en-CA/home",
         "direct_urls": ["https://www.dazn.com/en-CA/news"],
+        "wp_sites": [],
         "bing_mkt": "en-CA",
-        "bing_queries": [
-            '"DAZN" "for free" Canada OR NCAA OR Grey Cup OR FIFA+',
-            '"DAZN Freemium" Canada',
-        ],
+        "bing_queries": ['"DAZN" "for free" Canada OR NCAA OR FIFA+', '"DAZN Freemium" Canada'],
         "gnews": ("en", "CA", "CA:en", '"DAZN" "for free" OR freemium'),
     },
     {
@@ -599,11 +596,9 @@ DAZN_PAESI = [
         "tz": "Asia/Tokyo",
         "home": "https://www.dazn.com/ja-JP/home",
         "direct_urls": ["https://www.dazn.com/ja-JP/news"],
+        "wp_sites": [],
         "bing_mkt": "ja-JP",
-        "bing_queries": [
-            '"DAZN Freemium" 無料 配信予定',
-            '"DAZN" "無料ライブ配信" OR "フリーミアム"',
-        ],
+        "bing_queries": ['"DAZN Freemium" 無料 配信', '"DAZN" "無料ライブ配信" OR "フリーミアム"'],
         "gnews": ("ja", "JP", "JP:ja", '"DAZN Freemium" OR "DAZN 無料"'),
     },
     {
@@ -612,11 +607,9 @@ DAZN_PAESI = [
         "tz": "Europe/Madrid",
         "home": "https://www.dazn.com/es-ES/home",
         "direct_urls": ["https://www.dazn.com/es-ES/news"],
+        "wp_sites": [],
         "bing_mkt": "es-ES",
-        "bing_queries": [
-            '"DAZN App Gratis" OR "DAZN gratis" partido',
-            '"DAZN" "en abierto" España gratis',
-        ],
+        "bing_queries": ['"DAZN App Gratis" OR "DAZN gratis" partido', '"DAZN" "en abierto" España gratis'],
         "gnews": ("es", "ES", "ES:es", '"DAZN App Gratis" OR "DAZN gratis"'),
     },
     {
@@ -625,11 +618,9 @@ DAZN_PAESI = [
         "tz": "Europe/Lisbon",
         "home": "https://www.dazn.com/pt-PT/home",
         "direct_urls": ["https://www.dazn.com/pt-PT/news"],
+        "wp_sites": [],
         "bing_mkt": "pt-PT",
-        "bing_queries": [
-            '"DAZN" "grátis" OR "em aberto" jogo Portugal',
-            '"ver grátis na DAZN" Portugal',
-        ],
+        "bing_queries": ['"DAZN" "grátis" OR "em aberto" jogo Portugal', '"ver grátis na DAZN" Portugal'],
         "gnews": ("pt-PT", "PT", "PT:pt-150", '"DAZN" grátis OR "em aberto"'),
     },
 ]
@@ -684,6 +675,11 @@ class SmartFetcher:
                     user_agent=BROWSER_HEADERS["User-Agent"],
                     viewport={"width": 1366, "height": 768},
                 )
+                # Evita la schermata europea "Accetta i cookie" di Google News
+                self._context.add_cookies([
+                    {"name": "CONSENT", "value": "YES+cb.20210328-17-p0.en+FX+999", "domain": ".google.com", "path": "/"},
+                    {"name": "SOCS", "value": "CAESHAgBEhJnd3NfMjAyMzA4MTAtMF9zUjMaAmVuIAEaBgiA_LyaBg", "domain": ".google.com", "path": "/"},
+                ])
             except Exception as e:
                 print(f"⚠️ Impossibile avviare Chromium: {e}")
 
@@ -700,29 +696,33 @@ class SmartFetcher:
 
     @staticmethod
     def _is_blocked_or_empty(html):
-        if not html or len(html) < 800:
+        if not html or len(html) < 700:
             return True
         low = html.lower()
         if "access denied" in low and ("akamai" in low or "reference #" in low):
             return True
         if "<title>access denied" in low or "just a moment..." in low or "cf-browser-verification" in low:
             return True
+        if "consent.google.com" in low:
+            return True
         return False
 
     def get_content(self, url, force_browser=False, allow_jina=True):
-        if not force_browser and cffi_requests is not None:
+        is_gnews = "news.google.com" in url
+
+        if not force_browser and not is_gnews and cffi_requests is not None:
             try:
                 r = cffi_requests.get(url, impersonate="chrome", timeout=18, headers={"Accept-Language": "it-IT,it;q=0.9,en;q=0.8"})
                 if r.status_code == 200 and not self._is_blocked_or_empty(r.text):
-                    return ("html", r.text)
+                    return ("html", r.text, "cffi")
             except Exception:
                 pass
 
-        if not force_browser and cffi_requests is None:
+        if not force_browser and not is_gnews and cffi_requests is None:
             try:
                 r = requests.get(url, headers=BROWSER_HEADERS, timeout=18)
                 if r.status_code == 200 and not self._is_blocked_or_empty(r.text):
-                    return ("html", r.text)
+                    return ("html", r.text, "req")
             except Exception:
                 pass
 
@@ -732,10 +732,16 @@ class SmartFetcher:
             try:
                 page = self._context.new_page()
                 page.goto(url, wait_until="domcontentloaded", timeout=22000)
-                page.wait_for_timeout(2500)
+                if is_gnews:
+                    # Aspetta il redirect di Google News verso il sito reale
+                    for _ in range(10):
+                        if "news.google.com" not in page.url and "consent.google" not in page.url:
+                            break
+                        page.wait_for_timeout(600)
+                page.wait_for_timeout(2000)
                 html = page.content()
                 if not self._is_blocked_or_empty(html):
-                    return ("html", html)
+                    return ("html", html, "pw")
             except Exception:
                 pass
             finally:
@@ -745,15 +751,15 @@ class SmartFetcher:
                     except Exception:
                         pass
 
-        if allow_jina:
+        if allow_jina and not is_gnews:
             try:
                 rj = requests.get(f"https://r.jina.ai/{url}", timeout=18, headers={"User-Agent": BROWSER_HEADERS["User-Agent"]})
                 if rj.status_code == 200 and len(rj.text) > 500 and "Access Denied" not in rj.text[:500] and "Just a moment" not in rj.text[:500]:
-                    return ("markdown", rj.text)
+                    return ("markdown", rj.text, "jina")
             except Exception:
                 pass
 
-        return (None, None)
+        return (None, None, "blocked")
 
 
 def anno_vicino(mese, giorno, ref_dt=None):
@@ -1095,12 +1101,49 @@ def estrai_eventi_dazn_da_contenuto(kind, content, cfg, is_calendar_article=True
     return risultati
 
 
+def parse_rss_date(pub_str):
+    try:
+        from email.utils import parsedate_to_datetime
+        dt = parsedate_to_datetime(pub_str)
+        return dt.replace(tzinfo=None)
+    except Exception:
+        return None
+
+
+def cerca_wordpress_dazn(site_url, query, cfg):
+    trovati = []
+    try:
+        r = requests.get(
+            f"{site_url}/wp-json/wp/v2/posts?search={quote_plus(query)}&per_page=3",
+            headers=BROWSER_HEADERS,
+            timeout=15,
+        )
+        if r.status_code != 200:
+            return []
+        for post in r.json():
+            titolo = BeautifulSoup(post.get("title", {}).get("rendered", ""), "html.parser").get_text()
+            low_t = titolo.lower()
+            if "dazn" not in low_t or not any(fk in low_t for fk in FREE_KEYWORDS):
+                continue
+            if any(bad in low_t for bad in PROMO_BAD_WORDS):
+                continue
+            pub_dt = datetime.fromisoformat(post["date"][:19])
+            if (NOW.replace(tzinfo=None) - pub_dt).days > 28:
+                continue
+            html = post.get("content", {}).get("rendered", "")
+            trovati.extend(estrai_eventi_dazn_da_contenuto("html", html, cfg, is_calendar_article=True, fallback_pub_dt=pub_dt))
+    except Exception:
+        pass
+    return trovati
+
+
 def cerca_bing_news(query, mkt):
     articoli = []
     url = f"https://www.bing.com/news/search?q={quote_plus(query)}&format=rss&mkt={mkt}"
     try:
-        r = requests.get(url, headers=BROWSER_HEADERS, timeout=20)
-        r.raise_for_status()
+        r = requests.get(url, headers=BROWSER_HEADERS, timeout=18)
+        if r.status_code != 200 or "<item>" not in r.text:
+            return []
         root = ET.fromstring(r.text)
         for item in root.findall("./channel/item"):
             title = (item.findtext("title") or "").strip()
@@ -1108,11 +1151,7 @@ def cerca_bing_news(query, mkt):
             pub_str = (item.findtext("pubDate") or "").strip()
             qs = parse_qs(urlparse(raw_link).query)
             real_url = qs.get("url", [raw_link])[0]
-            pub_dt = None
-            try:
-                pub_dt = datetime.strptime(pub_str[:25].strip(), "%a, %d %b %Y %H:%M:%S")
-            except Exception:
-                pass
+            pub_dt = parse_rss_date(pub_str)
             if real_url:
                 articoli.append((title, real_url, pub_dt))
     except Exception:
@@ -1124,18 +1163,15 @@ def cerca_google_news(query, hl, gl, ceid):
     articoli = []
     url = f"https://news.google.com/rss/search?q={quote_plus(query)}&hl={hl}&gl={gl}&ceid={ceid}"
     try:
-        r = requests.get(url, headers=BROWSER_HEADERS, timeout=20)
-        r.raise_for_status()
+        r = requests.get(url, headers=BROWSER_HEADERS, timeout=18)
+        if r.status_code != 200 or "<item>" not in r.text:
+            return []
         root = ET.fromstring(r.text)
         for item in root.findall("./channel/item"):
             title = (item.findtext("title") or "").strip()
             link = (item.findtext("link") or "").strip()
             pub_str = (item.findtext("pubDate") or "").strip()
-            pub_dt = None
-            try:
-                pub_dt = datetime.strptime(pub_str[:25].strip(), "%a, %d %b %Y %H:%M:%S")
-            except Exception:
-                pass
+            pub_dt = parse_rss_date(pub_str)
             if link:
                 articoli.append((title, link, pub_dt))
     except Exception:
@@ -1152,12 +1188,21 @@ def scarica_dazn_tutti_paesi(fetcher):
         candidati = []
         visti_url = set()
 
+        # 1) Blog WordPress diretti (zero blocchi!)
+        wp_ev = 0
+        for wp_site, wp_q in cfg.get("wp_sites", []):
+            ev_wp = cerca_wordpress_dazn(wp_site, wp_q, cfg)
+            wp_ev += len(ev_wp)
+            eventi_paese.extend(ev_wp)
+
+        # 2) URL diretti DAZN
         for u in cfg.get("direct_urls", []):
             if u not in visti_url:
                 visti_url.add(u)
                 candidati.append((f"DAZN {paese} gratis", u, None, True))
 
-        # Cerca articoli recenti via Bing News RSS (non bloccato da Akamai!)
+        # 3) Bing News RSS
+        bing_n = 0
         for bq in cfg.get("bing_queries", []):
             for title, u, pub_dt in cerca_bing_news(bq, cfg["bing_mkt"]):
                 low_t = title.lower()
@@ -1169,9 +1214,11 @@ def scarica_dazn_tutti_paesi(fetcher):
                     if u not in visti_url:
                         visti_url.add(u)
                         candidati.append((title, u, pub_dt, True))
+                        bing_n += 1
 
-        # Backup rapido Google News RSS se trovati pochi candidati
-        if len(candidati) <= 2 and cfg.get("gnews"):
+        # 4) Google News RSS (ora sbloccato dal consenso cookie!)
+        gnews_n = 0
+        if cfg.get("gnews"):
             hl, gl, ceid, gq = cfg["gnews"]
             for title, u, pub_dt in cerca_google_news(gq, hl, gl, ceid):
                 low_t = title.lower()
@@ -1183,20 +1230,21 @@ def scarica_dazn_tutti_paesi(fetcher):
                     if u not in visti_url:
                         visti_url.add(u)
                         candidati.append((title, u, pub_dt, True))
+                        gnews_n += 1
 
         pagine_lette = 0
+        metodi = []
         for title, page_url, pub_dt, is_cal in candidati[:7]:
-            is_gnews = "news.google.com" in page_url
-            kind, content = fetcher.get_content(page_url, force_browser=is_gnews, allow_jina=True)
+            kind, content, via = fetcher.get_content(page_url, allow_jina=True)
+            metodi.append(via)
             if not content:
                 continue
             pagine_lette += 1
-            trovati = estrai_eventi_dazn_da_contenuto(
-                kind, content, cfg, is_calendar_article=is_cal, fallback_pub_dt=pub_dt
+            eventi_paese.extend(
+                estrai_eventi_dazn_da_contenuto(kind, content, cfg, is_calendar_article=is_cal, fallback_pub_dt=pub_dt)
             )
-            eventi_paese.extend(trovati)
 
-        print(f"✅ {paese}: lette {pagine_lette}/{len(candidati[:7])} pagine -> trovati {len(eventi_paese)} eventi")
+        print(f"   🔎 [{paese}] wp={wp_ev}, bing={bing_n}, gnews={gnews_n}, lette={pagine_lette}/{len(candidati[:7])} ({','.join(metodi)}) -> {len(eventi_paese)} eventi")
         tutti.extend(eventi_paese)
     return tutti
 
@@ -1213,8 +1261,10 @@ def scarica_dazn_spagna_futbolenlatv(fetcher):
         ("https://www.futbolenlatv.es/canal/dazn-es-youtube", "DAZN ES (YouTube)", False),
     ]
 
+    vias = []
     for url_ch, nome_canale, solo_se_gratis in urls_da_leggere:
-        kind, content = fetcher.get_content(url_ch, allow_jina=True)
+        kind, content, via = fetcher.get_content(url_ch, allow_jina=True)
+        vias.append(via)
         if not content:
             continue
 
@@ -1260,7 +1310,6 @@ def scarica_dazn_spagna_futbolenlatv(fetcher):
                     "link": "https://www.dazn.com/es-ES/home",
                 })
         else:
-            # Fallback testo/markdown da r.jina.ai
             current_date = NOW.date()
             for raw_line in content.splitlines():
                 line = re.sub(r"\s+", " ", raw_line).strip()
@@ -1297,15 +1346,16 @@ def scarica_dazn_spagna_futbolenlatv(fetcher):
                             "link": "https://www.dazn.com/es-ES/home",
                         })
 
-    print(f"✅ FutbolenlaTV ES: trovati {len(risultati)} eventi")
+    print(f"   🔎 [FutbolenlaTV ES] ({','.join(vias)}) -> trovati {len(risultati)} eventi")
     return risultati
 
 
 def scarica_dazn_germania_fussballgucken(fetcher):
     risultati = []
     print("🇩🇪⚡ Controllo FussballGucken.info (Dirette gratis DAZN Germania)...")
-    _, home_html = fetcher.get_content("https://www.fussballgucken.info/", allow_jina=True)
+    _, home_html, via_home = fetcher.get_content("https://www.fussballgucken.info/", allow_jina=True)
     if not home_html:
+        print(f"   🔎 [FussballGucken DE] home={via_home} -> 0 eventi")
         return risultati
 
     urls = set()
@@ -1319,8 +1369,10 @@ def scarica_dazn_germania_fussballgucken(fetcher):
     if not urls:
         urls.add("https://www.fussballgucken.info/free-tv")
 
+    vias = []
     for u in list(urls)[:3]:
-        kind, content = fetcher.get_content(u, allow_jina=True)
+        kind, content, via = fetcher.get_content(u, allow_jina=True)
+        vias.append(via)
         if not content:
             continue
         testo = BeautifulSoup(content, "html.parser").get_text("\n") if kind == "html" else content
@@ -1331,7 +1383,7 @@ def scarica_dazn_germania_fussballgucken(fetcher):
         while i < len(lines):
             line = lines[i]
             m_d = re.search(r"\b(\d{2}\.\d{2}\.202\d)\b", line)
-            if m_d and len(line) < 50:
+            if m_d and len(line) < 55:
                 try:
                     current_date = datetime.strptime(m_d.group(1), "%d.%m.%Y").date()
                 except Exception:
@@ -1339,11 +1391,12 @@ def scarica_dazn_germania_fussballgucken(fetcher):
                 i += 1
                 continue
 
-            if re.match(r"^\d{2}:\d{2}$", line):
-                hh, mm = map(int, line.split(":"))
+            m_hm = re.match(r"^(\d{2}):(\d{2})(?:\s*Uhr)?\b", line)
+            if m_hm:
+                hh, mm = int(m_hm.group(1)), int(m_hm.group(2))
                 blocco = []
                 j = i + 1
-                while j < len(lines) and j <= i + 14 and not re.match(r"^\d{2}:\d{2}$", lines[j]) and not re.search(r"\b\d{2}\.\d{2}\.202\d\b", lines[j]):
+                while j < len(lines) and j <= i + 14 and not re.match(r"^\d{2}:\d{2}(?:\s*Uhr)?\b", lines[j]) and not re.search(r"\b\d{2}\.\d{2}\.202\d\b", lines[j]):
                     blocco.append(lines[j])
                     j += 1
 
@@ -1375,7 +1428,7 @@ def scarica_dazn_germania_fussballgucken(fetcher):
                 continue
             i += 1
 
-    print(f"✅ FussballGucken DE: trovati {len(risultati)} eventi")
+    print(f"   🔎 [FussballGucken DE] ({','.join(vias)}) -> trovati {len(risultati)} eventi")
     return risultati
 
 
