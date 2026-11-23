@@ -3,16 +3,6 @@
     "data": "2026-11-23",
     "ora": "18:00",
     "sport": "Calcio",
-    "competizione": "Frauen Bundesliga",
-    "evento": "Bayern München-Hoffenheim",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "18:00",
-    "sport": "Calcio",
     "competizione": "Fußball",
     "evento": "Fußball: Bundesliga der Frauen",
     "paese": "Germania",
@@ -163,6 +153,16 @@
     "data": "2026-11-23",
     "ora": "21:00",
     "sport": "Calcio",
+    "competizione": "Football",
+    "evento": "Australian Football League",
+    "paese": "Germania",
+    "canale": "More Than Sports TV",
+    "link": "https://morethansports.tv/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "21:00",
+    "sport": "Calcio",
     "competizione": "TV Svizzera",
     "evento": "Foot: OGC Nice - Paris Saint-Germain",
     "paese": "Svizzera",
@@ -212,7 +212,7 @@
   {
     "data": "2026-11-23",
     "ora": "22:50",
-    "sport": "Basket & NBA",
+    "sport": "Pallavolo",
     "competizione": "TV Italia",
     "evento": "Basket: Serie A2 Old Wild West",
     "paese": "Italia",
@@ -471,16 +471,6 @@
   },
   {
     "data": "2026-11-24",
-    "ora": "05:00",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Foot: Yverdon Sport FC - FC Winterthour",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-24",
     "ora": "06:00",
     "sport": "Calcio",
     "competizione": "TV Italia",
@@ -601,6 +591,16 @@
   },
   {
     "data": "2026-11-24",
+    "ora": "09:35",
+    "sport": "Calcio",
+    "competizione": "Football",
+    "evento": "Australian Football League",
+    "paese": "Germania",
+    "canale": "More Than Sports TV",
+    "link": "https://morethansports.tv/"
+  },
+  {
+    "data": "2026-11-24",
     "ora": "10:30",
     "sport": "Calcio",
     "competizione": "Sport Calcio",
@@ -691,16 +691,6 @@
   },
   {
     "data": "2026-11-24",
-    "ora": "13:30",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Fussball: Feyenoord - Excelsior Rotterdam",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-24",
     "ora": "13:45",
     "sport": "Tennis",
     "competizione": "Sport Tennis",
@@ -708,16 +698,6 @@
     "paese": "Italia",
     "canale": "SuperTennis",
     "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "14:05",
-    "sport": "Calcio",
-    "competizione": "Serie A Enilive",
-    "evento": "Tutti Convocati",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
   },
   {
     "data": "2026-11-24",
@@ -872,7 +852,7 @@
   {
     "data": "2026-11-24",
     "ora": "20:15",
-    "sport": "Basket & NBA",
+    "sport": "Pallavolo",
     "competizione": "TV Italia",
     "evento": "Basket: Serie A2 Old Wild West",
     "paese": "Italia",
@@ -1171,6 +1151,16 @@
   },
   {
     "data": "2026-11-25",
+    "ora": "06:55",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Ruben & Cie",
+    "paese": "Svizzera",
+    "canale": "RTS 1",
+    "link": "https://www.rts.ch/play/tv"
+  },
+  {
+    "data": "2026-11-25",
     "ora": "07:00",
     "sport": "Calcio",
     "competizione": "Calcio Dibattito Sportivo",
@@ -1283,6 +1273,16 @@
     "data": "2026-11-25",
     "ora": "12:00",
     "sport": "Calcio",
+    "competizione": "Football",
+    "evento": "Australian Football League",
+    "paese": "Germania",
+    "canale": "More Than Sports TV",
+    "link": "https://morethansports.tv/"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "12:00",
+    "sport": "Calcio",
     "competizione": "Calcio Dibattito Sportivo",
     "evento": "Sportitalia Mercato",
     "paese": "Italia",
@@ -1292,7 +1292,7 @@
   {
     "data": "2026-11-25",
     "ora": "12:25",
-    "sport": "Basket & NBA",
+    "sport": "Pallavolo",
     "competizione": "TV Italia",
     "evento": "Basket: Serie A2 Old Wild West",
     "paese": "Italia",
@@ -1341,16 +1341,6 @@
   },
   {
     "data": "2026-11-25",
-    "ora": "14:05",
-    "sport": "Calcio",
-    "competizione": "Serie A Enilive",
-    "evento": "Tutti Convocati",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-25",
     "ora": "14:20",
     "sport": "Calcio",
     "competizione": "TV Svizzera",
@@ -1362,7 +1352,7 @@
   {
     "data": "2026-11-25",
     "ora": "14:40",
-    "sport": "Basket & NBA",
+    "sport": "Pallavolo",
     "competizione": "TV Italia",
     "evento": "SportAbilia",
     "paese": "Italia",
@@ -1421,26 +1411,6 @@
   },
   {
     "data": "2026-11-25",
-    "ora": "18:55",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Scooore Niederlande – Fussballmagazin",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-25",
-    "ora": "19:15",
-    "sport": "Altri Sport",
-    "competizione": "Ice Hockey League",
-    "evento": "Salzburg-Pustertal",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-25",
     "ora": "19:25",
     "sport": "Calcio",
     "competizione": "TV Svizzera",
@@ -1448,6 +1418,16 @@
     "paese": "Svizzera",
     "canale": "blue Zoom",
     "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "19:50",
+    "sport": "Pallavolo",
+    "competizione": "TV Italia",
+    "evento": "Pallanuoto",
+    "paese": "Italia",
+    "canale": "Rai Sport",
+    "link": "https://www.raiplay.it/dirette/raisport"
   },
   {
     "data": "2026-11-25",
@@ -1498,16 +1478,6 @@
     "paese": "Italia",
     "canale": "TV8",
     "link": "https://tv8.it/streaming"
-  },
-  {
-    "data": "2026-11-25",
-    "ora": "20:30",
-    "sport": "Pallavolo",
-    "competizione": "Serie A2 (M)",
-    "evento": "SS Reggio Calabria-Virtus Volley Napoli",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
   },
   {
     "data": "2026-11-25",
@@ -1711,6 +1681,16 @@
   },
   {
     "data": "2026-11-26",
+    "ora": "02:30",
+    "sport": "Calcio",
+    "competizione": "Football",
+    "evento": "Australian Football League",
+    "paese": "Germania",
+    "canale": "More Than Sports TV",
+    "link": "https://morethansports.tv/"
+  },
+  {
+    "data": "2026-11-26",
     "ora": "02:40",
     "sport": "Calcio",
     "competizione": "TV Svizzera",
@@ -1741,16 +1721,6 @@
   },
   {
     "data": "2026-11-26",
-    "ora": "05:00",
-    "sport": "Altri Sport",
-    "competizione": "WBSC Premier12",
-    "evento": "Nicaragua-Great Britain",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-26",
     "ora": "11:00",
     "sport": "Sci Alpino",
     "competizione": "Ski Alpin",
@@ -1762,32 +1732,12 @@
   {
     "data": "2026-11-26",
     "ora": "11:30",
-    "sport": "Altri Sport",
-    "competizione": "WBSC Premier12",
-    "evento": "Czech Republic-China",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-26",
-    "ora": "11:30",
     "sport": "Sci Alpino",
     "competizione": "Ski Alpin",
     "evento": "Ski alpin: Weltcup",
     "paese": "Germania",
     "canale": "Eurosport 1 DE",
     "link": "https://www.eurosport.de/"
-  },
-  {
-    "data": "2026-11-26",
-    "ora": "14:05",
-    "sport": "Calcio",
-    "competizione": "Serie A Enilive",
-    "evento": "Tutti Convocati",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
   },
   {
     "data": "2026-11-26",
@@ -1848,325 +1798,5 @@
     "paese": "Germania",
     "canale": "More Than Sports TV",
     "link": "https://morethansports.tv/"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "05:00",
-    "sport": "Altri Sport",
-    "competizione": "WBSC Premier12",
-    "evento": "Czech Republic-Nicaragua",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "07:55",
-    "sport": "Altri Sport",
-    "competizione": "UIM-F1H2O World Championship",
-    "evento": "Grand Prix of Jeddah-Qualifying",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "11:30",
-    "sport": "Altri Sport",
-    "competizione": "WBSC Premier12",
-    "evento": "China-Great Britain",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "12:30",
-    "sport": "Altri Sport",
-    "competizione": "UIM-F1H2O World Championship",
-    "evento": "Grand Prix of Jeddah-Sprint Races",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "13:30",
-    "sport": "Altri Sport",
-    "competizione": "Riyadh Season Horse Racing",
-    "evento": "The Crown Prince Cup",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "14:05",
-    "sport": "Calcio",
-    "competizione": "Serie A Enilive",
-    "evento": "Tutti Convocati",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "15:45",
-    "sport": "Altri Sport",
-    "competizione": "Freestyle Friday Championship",
-    "evento": "Freestyle Friday #22",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "18:00",
-    "sport": "Calcio",
-    "competizione": "Serie A Enilive",
-    "evento": "Fantacalcio Night",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-28",
-    "ora": "05:00",
-    "sport": "Altri Sport",
-    "competizione": "WBSC Premier12",
-    "evento": "Great Britain-Czech Republic",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-28",
-    "ora": "11:30",
-    "sport": "Altri Sport",
-    "competizione": "WBSC Premier12",
-    "evento": "China-Nicaragua",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-28",
-    "ora": "12:30",
-    "sport": "Altri Sport",
-    "competizione": "UIM-F1H2O World Championship",
-    "evento": "Grand Prix of Jeddah-Race",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-28",
-    "ora": "13:30",
-    "sport": "Altri Sport",
-    "competizione": "Riyadh Season Horse Racing",
-    "evento": "European Union Cup",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-28",
-    "ora": "16:00",
-    "sport": "Pallavolo",
-    "competizione": "LVF A2",
-    "evento": "Club Italia-Costa Volpino",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-28",
-    "ora": "20:30",
-    "sport": "Pallavolo",
-    "competizione": "LVF A2",
-    "evento": "Perugia Volley-Melendugno",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-28",
-    "ora": "20:30",
-    "sport": "Altri Sport",
-    "competizione": "Serie A2 (M)",
-    "evento": "Jv Gioia Del Colle-Macerata",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-29",
-    "ora": "16:15",
-    "sport": "Calcio",
-    "competizione": "LaLiga",
-    "evento": "Deportivo Coruna-Barcellona",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-29",
-    "ora": "17:00",
-    "sport": "Pallavolo",
-    "competizione": "LVF A2",
-    "evento": "Altafratte Padova-Akademia Sant'Anna",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-29",
-    "ora": "17:00",
-    "sport": "Pallavolo",
-    "competizione": "LVF A2",
-    "evento": "Casalmaggiore-Pinerolo",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-29",
-    "ora": "17:00",
-    "sport": "Pallavolo",
-    "competizione": "LVF A2",
-    "evento": "Leonessa Volley Altamura-Offanengo",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-29",
-    "ora": "17:00",
-    "sport": "Pallavolo",
-    "competizione": "LVF A2",
-    "evento": "Marsala-VC Il Podio Fasano",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-29",
-    "ora": "17:00",
-    "sport": "Pallavolo",
-    "competizione": "LVF A2",
-    "evento": "Trentino Volley-Roma",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-29",
-    "ora": "17:00",
-    "sport": "Pallavolo",
-    "competizione": "LVF A1",
-    "evento": "Conegliano-S. Giovanni in Marignano",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-29",
-    "ora": "17:00",
-    "sport": "Pallavolo",
-    "competizione": "LVF A1",
-    "evento": "Firenze-Macerata",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-29",
-    "ora": "17:00",
-    "sport": "Pallavolo",
-    "competizione": "LVF A1",
-    "evento": "Chieri-Bergamo 1991",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-29",
-    "ora": "17:30",
-    "sport": "Altri Sport",
-    "competizione": "Serie A2 (M)",
-    "evento": "Virtus Fano-Brescia",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-29",
-    "ora": "18:00",
-    "sport": "Pallavolo",
-    "competizione": "Serie A2 (M)",
-    "evento": "Pallavolo Belluno-Rinascita Lagonegro",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-29",
-    "ora": "18:00",
-    "sport": "Pallavolo",
-    "competizione": "Serie A2 (M)",
-    "evento": "Pineto Volley-Ravenna",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-29",
-    "ora": "18:00",
-    "sport": "Altri Sport",
-    "competizione": "Serie A2 (M)",
-    "evento": "Videx Royalpat Grottazzolina-Sud Catania",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-29",
-    "ora": "19:00",
-    "sport": "Pallavolo",
-    "competizione": "Serie A2 (M)",
-    "evento": "Porto Viro-Reggio Emilia Volley",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-29",
-    "ora": "20:00",
-    "sport": "Altri Sport",
-    "competizione": "Segunda División",
-    "evento": "Almería-Sporting de Gijón",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-30",
-    "ora": "14:05",
-    "sport": "Calcio",
-    "competizione": "Serie A Enilive",
-    "evento": "Tutti Convocati",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-30",
-    "ora": "16:00",
-    "sport": "Altri Sport",
-    "competizione": "Kings Cup Italy",
-    "evento": "King's Cup Italy-Day 7",
-    "paese": "DAZN Free",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
   }
 ]
