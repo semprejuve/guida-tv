@@ -347,4 +347,899 @@ def scarica_futebol_tv_br():
 
 
 def risolvi_data_post_br(pub_dt, title_text):
-    m = re.search(r"\((\d{1,2})(?:/\d{1,2})?\)
+    m = re.search(r"\((\d{1,2})(?:/\d{1,2})?\)", title_text or "")
+    if not m:
+        m = re.search(r"\b(\d{1,2})\s+de\s+[a-zç]+", (title_text or "").lower())
+    if m:
+        giorno = int(m.group(1))
+        for delta in (0, 1, -1):
+            cand = pub_dt + timedelta(days=delta)
+            if cand.day == giorno:
+                return cand
+    return pub_dt
+
+
+def estrai_eventi_da_html_br(html_content, base_date_br):
+    risultati = []
+    soup = BeautifulSoup(html_content, "html.parser")
+    sezione = ""
+
+    for raw_line in soup.get_text("\n").splitlines():
+        line = re.sub(r"\s+", " ", raw_line).strip()
+        if not line:
+            continue
+
+        if len(line) < 55 and not re.match(r"^\d{1,2}h", line):
+            low = line.lower()
+            if any(k in low for k in [
+                "futebol", "vôlei", "volei", "basquete", "nba", "nbb", "futsal",
+                "tênis", "tenis", "automobilismo", "fórmula 1", "formula 1",
+                "motogp", "nfl", "brasileirão", "laliga", "bundesliga",
+                "premier league", "ligue 1", "sul-americana", "libertadores",
+            ]):
+                sezione = line
+            continue
+
+        m = re.match(r"^(\d{1,2})h(\d{2})?\s*[–—\-]\s*(.+?)\s+[–—\-]\s+(.+)$", line)
+        if not m:
+            continue
+
+        hh = int(m.group(1))
+        mm = int(m.group(2) or "0")
+        corpo = m.group(3).strip()
+        canali_str = m.group(4).strip()
+
+        canali_trovati = risolvi_canali_br(canali_str)
+        if not canali_trovati:
+            continue
+
+        if ":" in corpo:
+            comp, evento = [x.strip() for x in corpo.split(":", 1)]
+        else:
+            comp = sezione or "Sport Brasile"
+            evento = corpo
+
+        sport = classifica_sport(f"{sezione} {comp} {evento}", canale_solo_sport=True)
+        if not sport:
+            continue
+
+        try:
+            dt_br = datetime(base_date_br.year, base_date_br.month, base_date_br.day, hh, mm, tzinfo=BR_TZ)
+            dt_it = dt_br.astimezone(ROME_TZ)
+        except Exception:
+            continue
+
+        if not (MIN_DT <= dt_it <= MAX_DT):
+            continue
+
+        nomi_puliti = [c[0].replace(" (YouTube)", "") for c in canali_trovati]
+        nome_finale = " / ".join(nomi_puliti) + " (YouTube)"
+        link_finale = canali_trovati[0][1]
+
+        risultati.append({
+            "data": dt_it.strftime("%Y-%m-%d"),
+            "ora": dt_it.strftime("%H:%M"),
+            "sport": sport,
+            "competizione": comp,
+            "evento": evento,
+            "paese": "Brasile YouTube",
+            "canale": nome_finale,
+            "link": link_finale,
+        })
+    return risultati
+
+
+def scarica_auvaromaia_br():
+    risultati = []
+    print("🇧🇷 Controllo AuvaroMaia (tutti gli sport BR)...")
+    try:
+        r = requests.get(
+            "https://auvaromaia.com/wp-json/wp/v2/posts?search=Agenda+esportiva&per_page=7",
+            headers=BROWSER_HEADERS,
+            timeout=25,
+        )
+        r.raise_for_status()
+        for post in r.json():
+            titolo = BeautifulSoup(post.get("title", {}).get("rendered", ""), "html.parser").get_text()
+            if "agenda esportiva" not in titolo.lower():
+                continue
+            pub_dt = datetime.fromisoformat(post["date"][:19])
+            base_dt = risolvi_data_post_br(pub_dt, titolo)
+            risultati.extend(estrai_eventi_da_html_br(post.get("content", {}).get("rendered", ""), base_dt))
+    except Exception as e:
+        print(f"⚠️ API AuvaroMaia saltata ({e}), provo RSS...")
+        try:
+            r = requests.get("https://auvaromaia.com/feed/", headers=BROWSER_HEADERS, timeout=25)
+            r.raise_for_status()
+            root = ET.fromstring(r.text)
+            ns = {"content": "http://purl.org/rss/1.0/modules/content/"}
+            for item in root.findall("./channel/item"):
+                titolo = item.findtext("title") or ""
+                if "agenda esportiva" not in titolo.lower():
+                    continue
+                pub_str = item.findtext("pubDate") or ""
+                try:
+                    pub_dt = datetime.strptime(pub_str[:25].strip(), "%a, %d %b %Y %H:%M:%S")
+                except Exception:
+                    pub_dt = NOW
+                base_dt = risolvi_data_post_br(pub_dt, titolo)
+                html = item.findtext("content:encoded", namespaces=ns) or item.findtext("description") or ""
+                risultati.extend(estrai_eventi_da_html_br(html, base_dt))
+        except Exception as e2:
+            print(f"⚠️ Anche RSS AuvaroMaia saltato: {e2}")
+    print(f"✅ AuvaroMaia: trovati {len(risultati)} eventi YouTube BR")
+    return risultati
+
+
+def scarica_gfesporte_br():
+    risultati = []
+    print("🇧🇷 Controllo GFEsporte (Backup tutti gli sport BR)...")
+    try:
+        r = requests.get("https://www.gfesporte.com.br/", headers=BROWSER_HEADERS, timeout=25)
+        r.raise_for_status()
+    except Exception as e:
+        print(f"⚠️ GFEsporte non raggiungibile: {e}")
+        return risultati
+
+    soup = BeautifulSoup(r.text, "html.parser")
+    links = []
+    visti = set()
+    for a in soup.find_all("a", href=True):
+        href = urljoin("https://www.gfesporte.com.br/", a["href"])
+        txt = a.get_text(" ", strip=True)
+        if ("programacao-esportiva" in href.lower() or "agenda esportiva" in txt.lower() or "programação esportiva" in txt.lower()) and href not in visti:
+            visti.add(href)
+            links.append((href, txt))
+
+    for url_post, txt in links[:5]:
+        try:
+            rp = requests.get(url_post, headers=BROWSER_HEADERS, timeout=25)
+            rp.raise_for_status()
+            psoup = BeautifulSoup(rp.text, "html.parser")
+            titolo = (psoup.find("h1").get_text(" ", strip=True) if psoup.find("h1") else txt)
+            base_dt = risolvi_data_post_br(NOW.astimezone(BR_TZ), titolo)
+            risultati.extend(estrai_eventi_da_html_br(rp.text, base_dt))
+        except Exception:
+            continue
+    print(f"✅ GFEsporte: trovati {len(risultati)} eventi YouTube BR")
+    return risultati
+
+
+# ==============================================================================
+# 4) DAZN FREE IN ITALIA E ALL'ESTERO (IT, BE, DE, CA, JP, ES, PT)
+# ==============================================================================
+MESI_MAP = {
+    "gennaio": 1, "gen": 1, "febbraio": 2, "feb": 2, "marzo": 3, "mar": 3,
+    "aprile": 4, "apr": 4, "maggio": 5, "mag": 5, "giugno": 6, "giu": 6,
+    "luglio": 7, "lug": 7, "agosto": 8, "ago": 8, "settembre": 9, "set": 9,
+    "ottobre": 10, "ott": 10, "novembre": 11, "nov": 11, "dicembre": 12, "dic": 12,
+    "januar": 1, "februar": 2, "märz": 3, "maerz": 3, "mai": 5, "juni": 6,
+    "juli": 7, "oktober": 10, "dezember": 12,
+    "janvier": 1, "janv": 1, "février": 2, "fevrier": 2, "févr": 2, "mars": 3,
+    "avril": 4, "avr": 4, "juin": 6, "juillet": 7, "juil": 7, "août": 8,
+    "aout": 8, "septembre": 9, "sept": 9, "octobre": 10, "décembre": 12, "decembre": 12,
+    "januari": 1, "februari": 2, "maart": 3, "mei": 5, "augustus": 8, "december": 12,
+    "enero": 1, "febrero": 2, "abril": 4, "mayo": 5, "junio": 6, "julio": 7,
+    "septiembre": 9, "octubre": 10, "noviembre": 11, "diciembre": 12,
+    "janeiro": 1, "fevereiro": 2, "março": 3, "marco": 3, "maio": 5, "junho": 6,
+    "julho": 7, "setembro": 9, "outubro": 10, "novembro": 11, "dezembro": 12,
+    "january": 1, "jan": 1, "february": 2, "march": 3, "april": 4, "may": 5,
+    "june": 6, "jun": 6, "july": 7, "jul": 7, "august": 8, "aug": 8,
+    "september": 9, "sep": 9, "october": 10, "oct": 10, "november": 11,
+}
+
+GIORNI_SETTIMANA = {
+    "lunedì": 0, "lunedi": 0, "montag": 0, "lundi": 0, "maandag": 0, "lunes": 0, "segunda-feira": 0, "segunda": 0, "monday": 0,
+    "martedì": 1, "martedi": 1, "dienstag": 1, "mardi": 1, "dinsdag": 1, "martes": 1, "terça-feira": 1, "terça": 1, "terca-feira": 1, "tuesday": 1,
+    "mercoledì": 2, "mercoledi": 2, "mittwoch": 2, "mercredi": 2, "woensdag": 2, "miércoles": 2, "miercoles": 2, "quarta-feira": 2, "quarta": 2, "wednesday": 2,
+    "giovedì": 3, "giovedi": 3, "donnerstag": 3, "jeudi": 3, "donderdag": 3, "jueves": 3, "quinta-feira": 3, "quinta": 3, "thursday": 3,
+    "venerdì": 4, "venerdi": 4, "freitag": 4, "vendredi": 4, "vrijdag": 4, "viernes": 4, "sexta-feira": 4, "sexta": 4, "friday": 4,
+    "sabato": 5, "samstag": 5, "samedi": 5, "zaterdag": 5, "sábado": 5, "sabado": 5, "saturday": 5,
+    "domenica": 6, "sonntag": 6, "dimanche": 6, "zondag": 6, "domingo": 6, "sunday": 6,
+}
+
+DAZN_PAESI = [
+    {
+        "paese": "DAZN Free Italia",
+        "canale": "DAZN Free Italia",
+        "tz": "Europe/Rome",
+        "home": "https://www.dazn.com/it-IT/home",
+        "help_urls": ["https://www.dazn.com/it-IT/help/articles/dazn-freemium"],
+        "news_hubs": ["https://www.dazn.com/it-IT/news"],
+        "url_keywords": ["freemium", "dazn-gratis", "modalita-free", "gratis-su-dazn", "freezone", "gratis", "in-chiaro"],
+    },
+    {
+        "paese": "DAZN Free Belgio",
+        "canale": "DAZN Free Belgio",
+        "tz": "Europe/Brussels",
+        "home": "https://www.dazn.com/fr-BE/home",
+        "help_urls": [
+            "https://www.dazn.com/fr-BE/help/articles/dazn-freemium",
+            "https://www.dazn.com/nl-BE/help/articles/dazn-freemium",
+        ],
+        "news_hubs": ["https://www.dazn.com/fr-BE/news", "https://www.dazn.com/nl-BE/news"],
+        "url_keywords": ["contenu-gratuit", "gratis-aanbod", "gratuit", "gratis", "freemium"],
+    },
+    {
+        "paese": "DAZN Free Germania",
+        "canale": "DAZN Free Germania",
+        "tz": "Europe/Berlin",
+        "home": "https://www.dazn.com/de-DE/home",
+        "help_urls": ["https://www.dazn.com/de-DE/help/articles/dazn-kostenlos-dazn-free-spiele-inhalt-programm-stream"],
+        "news_hubs": ["https://www.dazn.com/de-DE/news"],
+        "url_keywords": ["dazn-kostenlos", "dazn-for-free", "for-free", "kostenlos", "ohne-abo"],
+    },
+    {
+        "paese": "DAZN Free Canada",
+        "canale": "DAZN Free Canada",
+        "tz": "America/Toronto",
+        "home": "https://www.dazn.com/en-CA/home",
+        "help_urls": ["https://www.dazn.com/en-CA/help/articles/dazn-freemium"],
+        "news_hubs": ["https://www.dazn.com/en-CA/news"],
+        "url_keywords": ["watch-dazn-canada-for-free", "for-free", "free-live-sports", "free", "freemium"],
+    },
+    {
+        "paese": "DAZN Free Giappone",
+        "canale": "DAZN Free Giappone",
+        "tz": "Asia/Tokyo",
+        "home": "https://www.dazn.com/ja-JP/home",
+        "help_urls": ["https://www.dazn.com/ja-JP/help/articles/dazn-freemium"],
+        "news_hubs": ["https://www.dazn.com/ja-JP/news"],
+        "url_keywords": ["freemium", "free", "無料", "フリーミアム"],
+    },
+    {
+        "paese": "DAZN Free Spagna",
+        "canale": "DAZN Free Spagna",
+        "tz": "Europe/Madrid",
+        "home": "https://www.dazn.com/es-ES/home",
+        "help_urls": ["https://www.dazn.com/es-ES/help/articles/dazn-freemium"],
+        "news_hubs": ["https://www.dazn.com/es-ES/news"],
+        "url_keywords": ["dazn-gratis", "ver-dazn-gratis", "gratis", "en-abierto", "freemium"],
+    },
+    {
+        "paese": "DAZN Free Portogallo",
+        "canale": "DAZN Free Portogallo",
+        "tz": "Europe/Lisbon",
+        "home": "https://www.dazn.com/pt-PT/home",
+        "help_urls": ["https://www.dazn.com/pt-PT/help/articles/dazn-freemium"],
+        "news_hubs": ["https://www.dazn.com/pt-PT/news"],
+        "url_keywords": ["jogos-em-aberto", "jogos-gratis", "gratis", "gratuito", "em-aberto", "freemium"],
+    },
+]
+
+STOP_SECTIONS = [
+    "notizie correlate", "related news", "related articles", "artigos relacionados",
+    "noticias relacionadas", "articles liés", "ähnliche artikel", "weitere news",
+    "meer nieuws", "関連記事", "notícias em destaque", "featured news",
+]
+
+IGNORE_LINES = [
+    "abbonamento", "iscriviti", "registrati", "accedi", "cookie", "privacy",
+    "copyright", "newsletter", "smart tv", "playstation", "xbox", "iphone", "ipad",
+    "registrieren", "anmelden", "kostenlos anmelden", "jetzt anmelden", "werbung",
+    "s'inscrire", "se connecter", "registrarse", "iniciar sesión", "regista-te",
+    "sign up", "log in", "subscribe", "download the app", "無料登録", "ログイン",
+]
+
+
+class SmartFetcher:
+    def __init__(self):
+        self._pw = None
+        self._browser = None
+        self._context = None
+
+    def _ensure_browser(self):
+        if self._browser is None and sync_playwright is not None:
+            try:
+                self._pw = sync_playwright().start()
+                self._browser = self._pw.chromium.launch(
+                    headless=True,
+                    args=["--disable-blink-features=AutomationControlled", "--no-sandbox"],
+                )
+                self._context = self._browser.new_context(
+                    user_agent=BROWSER_HEADERS["User-Agent"],
+                    viewport={"width": 1366, "height": 768},
+                )
+            except Exception as e:
+                print(f"⚠️ Impossibile avviare Chromium: {e}")
+
+    def close(self):
+        try:
+            if self._context:
+                self._context.close()
+            if self._browser:
+                self._browser.close()
+            if self._pw:
+                self._pw.stop()
+        except Exception:
+            pass
+
+    @staticmethod
+    def _is_blocked_or_empty(html):
+        if not html or len(html) < 800:
+            return True
+        low = html.lower()
+        if "access denied" in low and ("akamai" in low or "reference #" in low):
+            return True
+        if "<title>access denied" in low:
+            return True
+        if "/help/" in low and "salesforce" in low and len(BeautifulSoup(html, "html.parser").get_text(strip=True)) < 250:
+            return True
+        return False
+
+    def get_content(self, url, force_browser=False, allow_jina=False):
+        # 1) Tentativo veloce HTTP Chrome (curl_cffi)
+        if not force_browser and cffi_requests is not None:
+            try:
+                r = cffi_requests.get(url, impersonate="chrome", timeout=20, headers={"Accept-Language": "it-IT,it;q=0.9,en;q=0.8"})
+                if r.status_code == 200 and not self._is_blocked_or_empty(r.text):
+                    return ("html", r.text)
+            except Exception:
+                pass
+
+        if not force_browser and cffi_requests is None:
+            try:
+                r = requests.get(url, headers=BROWSER_HEADERS, timeout=20)
+                if r.status_code == 200 and not self._is_blocked_or_empty(r.text):
+                    return ("html", r.text)
+            except Exception:
+                pass
+
+        # 2) Browser vero Chromium (Playwright)
+        self._ensure_browser()
+        if self._context is not None:
+            page = None
+            try:
+                page = self._context.new_page()
+                page.goto(url, wait_until="domcontentloaded", timeout=22000)
+                page.wait_for_timeout(2500)
+                html = page.content()
+                if not self._is_blocked_or_empty(html):
+                    return ("html", html)
+            except Exception:
+                pass
+            finally:
+                if page:
+                    try:
+                        page.close()
+                    except Exception:
+                        pass
+
+        # 3) Ultima spiaggia se il server blocca IP cloud
+        if allow_jina:
+            try:
+                rj = requests.get(f"https://r.jina.ai/{url}", timeout=18, headers={"User-Agent": BROWSER_HEADERS["User-Agent"]})
+                if rj.status_code == 200 and len(rj.text) > 500 and "Access Denied" not in rj.text[:300]:
+                    return ("markdown", rj.text)
+            except Exception:
+                pass
+
+        return (None, None)
+
+
+def anno_vicino(mese, giorno, ref_dt=None):
+    ref = ref_dt or NOW
+    for y in (ref.year, ref.year + 1, ref.year - 1):
+        try:
+            cand = datetime(y, mese, giorno)
+            if abs((cand.date() - ref.date()).days) <= 180:
+                return y
+        except ValueError:
+            continue
+    return ref.year
+
+
+def estrai_data_da_testo(testo, ref_dt=None, month_first=False):
+    ref = ref_dt or NOW
+    t = (testo or "").strip()
+    low = t.lower()
+
+    if re.search(r"\b(oggi|heute|aujourd'hui|vandaag|hoy|hoje|today)\b", low) or "今日" in t or "本日" in t:
+        return ref.date()
+    if re.search(r"\b(domani|morgen|demain|mañana|amanhã|tomorrow)\b", low) or "明日" in t:
+        return (ref + timedelta(days=1)).date()
+
+    m = re.search(r"\b(202\d)[-/.年](\d{1,2})[-/.月](\d{1,2})日?", t)
+    if m:
+        try:
+            return datetime(int(m.group(1)), int(m.group(2)), int(m.group(3))).date()
+        except ValueError:
+            pass
+
+    m = re.search(r"\b(\d{1,2})[/.](\d{1,2})[/.](202\d)\b", t)
+    if m:
+        try:
+            a, b, yr = int(m.group(1)), int(m.group(2)), int(m.group(3))
+            mo, dy = (a, b) if (month_first and a <= 12) or b > 12 else (b, a)
+            return datetime(yr, mo, dy).date()
+        except ValueError:
+            pass
+
+    m = re.search(r"(\d{1,2})月(\d{1,2})日", t)
+    if m:
+        mo, dy = int(m.group(1)), int(m.group(2))
+        try:
+            return datetime(anno_vicino(mo, dy, ref), mo, dy).date()
+        except ValueError:
+            pass
+
+    mesi_regex = "|".join(sorted(MESI_MAP.keys(), key=len, reverse=True))
+    m = re.search(rf"\b(\d{{1,2}})\.?\s*(?:de\s+)?({mesi_regex})\.?(?:\s*(?:de\s+)?(202\d))?\b", low)
+    if m:
+        dy = int(m.group(1))
+        mo = MESI_MAP[m.group(2)]
+        yr = int(m.group(3)) if m.group(3) else anno_vicino(mo, dy, ref)
+        try:
+            return datetime(yr, mo, dy).date()
+        except ValueError:
+            pass
+
+    m = re.search(rf"\b({mesi_regex})\.?\s+(\d{{1,2}})(?:st|nd|rd|th)?(?:,?\s*(202\d))?\b", low)
+    if m:
+        mo = MESI_MAP[m.group(1)]
+        dy = int(m.group(2))
+        yr = int(m.group(3)) if m.group(3) else anno_vicino(mo, dy, ref)
+        try:
+            return datetime(yr, mo, dy).date()
+        except ValueError:
+            pass
+
+    m = re.search(r"\b(\d{1,2})\.(\d{1,2})\.(?!\s*\d)", t)
+    if m:
+        dy, mo = int(m.group(1)), int(m.group(2))
+        if 1 <= dy <= 31 and 1 <= mo <= 12:
+            try:
+                return datetime(anno_vicino(mo, dy, ref), mo, dy).date()
+            except ValueError:
+                pass
+
+    m = re.search(r"\b(\d{1,2})/(\d{1,2})\b", t)
+    if m:
+        a, b = int(m.group(1)), int(m.group(2))
+        mo, dy = (a, b) if (month_first and a <= 12) or b > 12 else (b, a)
+        if 1 <= mo <= 12 and 1 <= dy <= 31:
+            try:
+                return datetime(anno_vicino(mo, dy, ref), mo, dy).date()
+            except ValueError:
+                pass
+
+    for g_nome, g_idx in GIORNI_SETTIMANA.items():
+        if re.search(rf"\b{re.escape(g_nome)}\b", low):
+            diff = (g_idx - ref.weekday()) % 7
+            return (ref + timedelta(days=diff)).date()
+
+    return None
+
+
+def estrai_orario_da_testo(testo):
+    t = (testo or "").strip()
+    low = t.lower()
+
+    m = re.search(r"(\d{1,2})\s*時\s*(\d{2})?\s*分?", t)
+    if m:
+        return int(m.group(1)), int(m.group(2) or "0")
+
+    m = re.search(r"\b(\d{1,2})(?:[:.](\d{2}))?\s*(am|pm)\b", low)
+    if m:
+        hh = int(m.group(1))
+        mm = int(m.group(2) or "0")
+        ampm = m.group(3)
+        if ampm == "pm" and hh != 12:
+            hh += 12
+        elif ampm == "am" and hh == 12:
+            hh = 0
+        return hh, mm
+
+    patterns = [
+        r"\b(\d{1,2}):(\d{2})\b",
+        r"\b(\d{1,2})\s*h\s*(\d{2})?\b",
+        r"\b(\d{1,2})[.:](\d{2})\s*uhr\b",
+        r"\b(\d{1,2})\s*uhr\b",
+        r"\b(?:ore|alle|às|as|à|a las)\s+(\d{1,2})(?:[:.h](\d{2}))?\b",
+    ]
+    for pat in patterns:
+        m = re.search(pat, low)
+        if m:
+            hh = int(m.group(1))
+            mm = int(m.group(2) or "0") if m.lastindex and m.lastindex >= 2 else 0
+            if 0 <= hh <= 29 and 0 <= mm <= 59:
+                return hh, mm
+    return None
+
+
+def risolvi_tz_linea(testo, default_tz_name):
+    low = (testo or "").lower()
+    if re.search(r"\b(bst|uk)\b", low):
+        return ZoneInfo("Europe/London")
+    if re.search(r"\b(gmt|utc)\b", low):
+        return ZoneInfo("UTC")
+    if re.search(r"\b(cet|cest|mez|mesz)\b", low):
+        return ZoneInfo("Europe/Berlin")
+    if re.search(r"\b(et|est|edt)\b", low):
+        return ZoneInfo("America/Toronto")
+    return ZoneInfo(default_tz_name)
+
+
+def pulisci_evento_dazn(testo):
+    s = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", testo or "")
+    s = s.replace("**", "").replace("__", "")
+    s = re.sub(r"^(?:#{1,6}\s+|[*•>\-]+\s+)", "", s)
+    s = re.sub(r"\s+", " ", s).strip(" -–—:|•·,")
+    s = re.sub(r"^(?:ore|ab|às|à|um)\s+", "", s, flags=re.I)
+    s = re.sub(r"^\d{1,2}[:.h]\d{0,2}\s*(?:uhr|am|pm|et|est|cet|mez)?\s*[-–—:|•]?\s*", "", s, flags=re.I)
+    s = re.sub(r"\s*[-–—|•]?\s*(?:dazn(?:\s+for\s+free|\s+freemium|\s+gratis)?)$", "", s, flags=re.I)
+    return s.strip(" -–—:|•·,")
+
+
+def sembra_evento_valido(testo):
+    if not testo or len(testo) < 6 or len(testo) > 150:
+        return False
+    low = testo.lower()
+    if any(bad in low for bad in IGNORE_LINES):
+        return False
+    ha_sfida = bool(re.search(r"(\s+-\s+|\s+vs\.?\s+|\s+x\s+|\s+@\s+|–)", testo, re.I))
+    ha_sport = classifica_sport(testo, canale_solo_sport=False) is not None
+    ha_parole_evento = any(w in low for w in [
+        "women", "liga", "cup", "coppa", "open", "day", "grand prix", "gp ",
+        "fight", "boxing", "padel", "darts", "golf", "chess", "marathon", "final",
+        "konferenz", "j1", "j2", "j3", "serie ", "league", "f4 ", "rally", "dtm",
+    ])
+    return ha_sfida or ha_sport or ha_parole_evento
+
+
+def estrai_pub_date_articolo(soup):
+    for sel in [
+        ("meta", {"property": "article:published_time"}),
+        ("meta", {"name": "publish-date"}),
+        ("meta", {"property": "og:updated_time"}),
+    ]:
+        tag = soup.find(*sel)
+        if tag and tag.get("content"):
+            try:
+                return datetime.fromisoformat(tag["content"][:19])
+            except Exception:
+                pass
+    t_tag = soup.find("time")
+    if t_tag and t_tag.get("datetime"):
+        try:
+            return datetime.fromisoformat(t_tag["datetime"][:19])
+        except Exception:
+            pass
+    return None
+
+
+def aggiungi_riga_tabella(cells, cfg, ref_dt, month_first, risultati):
+    if len(cells) < 2:
+        return
+    riga_completa = " | ".join(cells)
+    d = estrai_data_da_testo(riga_completa, ref_dt, month_first=month_first)
+    hm = estrai_orario_da_testo(riga_completa)
+    if not d or not hm:
+        return
+    hh, mm = hm
+    extra_days = hh // 24
+    hh = hh % 24
+    tz = risolvi_tz_linea(riga_completa, cfg["tz"])
+    try:
+        dt_local = datetime(d.year, d.month, d.day, hh, mm, tzinfo=tz) + timedelta(days=extra_days)
+        dt_it = dt_local.astimezone(ROME_TZ)
+    except Exception:
+        return
+    if not (MIN_DT <= dt_it <= MAX_DT):
+        return
+
+    altre_celle = []
+    for c in cells:
+        if estrai_orario_da_testo(c) and len(c) < 32:
+            continue
+        if re.match(r"^(dazn|gratis|free)", c, re.I) and len(c) < 25:
+            continue
+        altre_celle.append(c)
+
+    if not altre_celle:
+        return
+    if len(altre_celle) >= 2:
+        ev_idx = next((i for i, x in enumerate(altre_celle) if re.search(r"\bvs\.?\b| - | @ | x ", x, re.I)), len(altre_celle) - 1)
+        evento = pulisci_evento_dazn(altre_celle[ev_idx])
+        comp = " • ".join(x for i, x in enumerate(altre_celle) if i != ev_idx)[:60] or "DAZN Free"
+    else:
+        evento = pulisci_evento_dazn(altre_celle[0])
+        comp = "DAZN Free"
+
+    if sembra_evento_valido(evento):
+        sport = classifica_sport(f"{comp} {evento}", canale_solo_sport=True) or "Altri Sport"
+        risultati.append({
+            "data": dt_it.strftime("%Y-%m-%d"),
+            "ora": dt_it.strftime("%H:%M"),
+            "sport": sport,
+            "competizione": comp,
+            "evento": evento,
+            "paese": cfg["paese"],
+            "canale": cfg["canale"],
+            "link": cfg["home"],
+        })
+
+
+def estrai_eventi_dazn_da_contenuto(kind, content, cfg, is_help_page=False):
+    risultati = []
+    month_first = cfg["tz"] in ("Asia/Tokyo", "America/Toronto")
+    pub_dt = None
+
+    if kind == "html":
+        soup = BeautifulSoup(content, "html.parser")
+        pub_dt = estrai_pub_date_articolo(soup)
+        if not is_help_page and pub_dt and (NOW.replace(tzinfo=None) - pub_dt).days > 25:
+            return []
+        ref_dt = pub_dt if pub_dt else NOW.replace(tzinfo=None)
+
+        for tr in soup.find_all("tr"):
+            cells = [re.sub(r"\s+", " ", td.get_text(" ", strip=True)) for td in tr.find_all(["td", "th"])]
+            aggiungi_riga_tabella(cells, cfg, ref_dt, month_first, risultati)
+
+        for tag in soup(["script", "style", "nav", "footer", "header"]):
+            tag.decompose()
+        testo = soup.get_text("\n")
+    else:
+        ref_dt = NOW.replace(tzinfo=None)
+        testo = content or ""
+
+    current_date = None
+    for raw_line in testo.splitlines():
+        line = re.sub(r"\s+", " ", raw_line).strip()
+        if not line:
+            continue
+
+        # Gestisce tabelle Markdown (| col1 | col2 |)
+        if line.startswith("|") and "|" in line[1:]:
+            if re.match(r"^[\|\s:-]+$", line):
+                continue
+            cells = [p.strip() for p in line.strip("|").split("|") if p.strip()]
+            aggiungi_riga_tabella(cells, cfg, ref_dt, month_first, risultati)
+            continue
+
+        line_clean = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", line)
+        line_clean = re.sub(r"^(?:#{1,6}\s+|[*•>\-]+\s+)", "", line_clean).replace("**", "").strip()
+        low = line_clean.lower()
+
+        if any(stop in low for stop in STOP_SECTIONS):
+            break
+        if any(bad in low for bad in IGNORE_LINES) and len(line_clean) < 90:
+            continue
+
+        d_found = estrai_data_da_testo(line_clean, ref_dt, month_first=month_first)
+        hm_found = estrai_orario_da_testo(line_clean)
+
+        if d_found and not hm_found and len(line_clean) < 65:
+            current_date = d_found
+            continue
+
+        eff_date = d_found or current_date
+        if eff_date and hm_found:
+            hh, mm = hm_found
+            extra_days = hh // 24
+            hh = hh % 24
+            tz = risolvi_tz_linea(line_clean, cfg["tz"])
+            try:
+                dt_local = datetime(eff_date.year, eff_date.month, eff_date.day, hh, mm, tzinfo=tz) + timedelta(days=extra_days)
+                dt_it = dt_local.astimezone(ROME_TZ)
+            except Exception:
+                continue
+            if not (MIN_DT <= dt_it <= MAX_DT):
+                continue
+
+            evento = pulisci_evento_dazn(line_clean)
+            if len(evento) > 130 or not sembra_evento_valido(evento):
+                continue
+            sport = classifica_sport(evento, canale_solo_sport=True) or "Altri Sport"
+            risultati.append({
+                "data": dt_it.strftime("%Y-%m-%d"),
+                "ora": dt_it.strftime("%H:%M"),
+                "sport": sport,
+                "competizione": "DAZN Free",
+                "evento": evento,
+                "paese": cfg["paese"],
+                "canale": cfg["canale"],
+                "link": cfg["home"],
+            })
+
+    return risultati
+
+
+def scarica_dazn_tutti_paesi(fetcher):
+    tutti = []
+    for cfg in DAZN_PAESI:
+        paese = cfg["paese"]
+        print(f"⚡ Cerco eventi gratuiti per {paese}...")
+        eventi_paese = []
+        url_da_visitare = []
+        visti = set()
+
+        for hurl in cfg["help_urls"]:
+            if hurl not in visti:
+                visti.add(hurl)
+                url_da_visitare.append((hurl, True))
+
+        for hub in cfg["news_hubs"]:
+            kind, content = fetcher.get_content(hub, allow_jina=True)
+            if not content:
+                continue
+            if kind == "html":
+                soup_hub = BeautifulSoup(content, "html.parser")
+                for a in soup_hub.find_all("a", href=True):
+                    href = urljoin(hub, a["href"])
+                    low_href = href.lower()
+                    low_txt = a.get_text(" ", strip=True).lower()
+                    if "/news/" in low_href and any(kw in low_href or kw in low_txt for kw in cfg["url_keywords"]):
+                        if href not in visti:
+                            visti.add(href)
+                            url_da_visitare.append((href, False))
+            else:
+                for m in re.finditer(r"https://www\.dazn\.com/[^\s\)\"'>]+/news/[^\s\)\"'>]+", content):
+                    href = m.group(0)
+                    if any(kw in href.lower() for kw in cfg["url_keywords"]) and href not in visti:
+                        visti.add(href)
+                        url_da_visitare.append((href, False))
+
+        for page_url, is_help in url_da_visitare[:6]:
+            kind, content = fetcher.get_content(page_url, force_browser=is_help, allow_jina=True)
+            if not content:
+                continue
+            eventi_paese.extend(estrai_eventi_dazn_da_contenuto(kind, content, cfg, is_help_page=is_help))
+
+        print(f"✅ {paese}: trovati {len(eventi_paese)} eventi")
+        tutti.extend(eventi_paese)
+    return tutti
+
+
+# ------------------------------------------------------------------------------
+# BACKUP ESTERNI NON-DAZN (Spagna: futbolenlatv.es • Germania: dslweb.de)
+# ------------------------------------------------------------------------------
+def scarica_dazn_spagna_futbolenlatv(fetcher):
+    risultati = []
+    print("🇪🇸⚡ Controllo FutbolenlaTV (DAZN App Gratis Spagna)...")
+    _, html = fetcher.get_content("https://www.futbolenlatv.es/canales")
+    if not html:
+        return risultati
+
+    soup = BeautifulSoup(html, "html.parser")
+    target_urls = []
+    for a in soup.find_all("a", href=True):
+        if "dazn app gratis" in a.get_text(" ", strip=True).lower():
+            target_urls.append(urljoin("https://www.futbolenlatv.es", a["href"]))
+
+    if not target_urls:
+        target_urls = ["https://www.futbolenlatv.es/canal/dazn-app-gratis"]
+
+    for url_ch in target_urls[:2]:
+        _, ch_html = fetcher.get_content(url_ch)
+        if not ch_html:
+            continue
+        csoup = BeautifulSoup(ch_html, "html.parser")
+        current_date = NOW.date()
+        for tr in csoup.find_all("tr"):
+            row_txt = re.sub(r"\s+", " ", tr.get_text(" ", strip=True))
+            m_d = re.search(r"\b(\d{2}/\d{2}/\d{4})\b", row_txt)
+            if m_d and len(row_txt) < 60:
+                try:
+                    current_date = datetime.strptime(m_d.group(1), "%d/%m/%Y").date()
+                except Exception:
+                    pass
+                continue
+
+            tds = [re.sub(r"\s+", " ", td.get_text(" ", strip=True)) for td in tr.find_all("td")]
+            if len(tds) < 3:
+                continue
+            hm = estrai_orario_da_testo(tds[0])
+            if not hm:
+                continue
+            hh, mm = hm
+            try:
+                dt_es = datetime(current_date.year, current_date.month, current_date.day, hh, mm, tzinfo=ZoneInfo("Europe/Madrid"))
+                dt_it = dt_es.astimezone(ROME_TZ)
+            except Exception:
+                continue
+            if not (MIN_DT <= dt_it <= MAX_DT):
+                continue
+
+            comp = tds[1] if len(tds) >= 3 else "Sport Spagna"
+            evento = tds[2] if len(tds) >= 3 else tds[1]
+            evento = re.sub(r"\b([A-Za-zÀ-ÿ0-9.]+(?:\s+[A-Za-zÀ-ÿ0-9.]+)?)\s+\1\b", r"\1", evento).strip()
+            sport = classifica_sport(f"{comp} {evento}", canale_solo_sport=True) or "Calcio"
+            risultati.append({
+                "data": dt_it.strftime("%Y-%m-%d"),
+                "ora": dt_it.strftime("%H:%M"),
+                "sport": sport,
+                "competizione": comp or "DAZN Free Spagna",
+                "evento": evento,
+                "paese": "DAZN Free Spagna",
+                "canale": "DAZN App Gratis (ES)",
+                "link": "https://www.dazn.com/es-ES/home",
+            })
+
+    print(f"✅ FutbolenlaTV DAZN Gratis ES: trovati {len(risultati)} eventi")
+    return risultati
+
+
+def scarica_dazn_germania_dslweb(fetcher):
+    print("🇩🇪⚡ Controllo DSLWEB (Backup DAZN Free Germania)...")
+    _, html = fetcher.get_content("https://www.dslweb.de/dazn/dazn-free/")
+    if not html:
+        _, html = fetcher.get_content("https://www.dslweb.de/news/dazn/")
+    if not html:
+        return []
+    cfg_de = next(c for c in DAZN_PAESI if c["paese"] == "DAZN Free Germania")
+    trovati = estrai_eventi_dazn_da_contenuto("html", html, cfg_de, is_help_page=False)
+    print(f"✅ DSLWEB DAZN Free DE: trovati {len(trovati)} eventi")
+    return trovati
+
+
+# ==============================================================================
+# 5) EVENTI MANUALI + DEDUPLICAZIONE + SALVATAGGIO
+# ==============================================================================
+def carica_manuali():
+    if not os.path.exists("eventi_manuali.json"):
+        return []
+    try:
+        with open("eventi_manuali.json", "r", encoding="utf-8") as f:
+            dati = json.load(f)
+        validi = [ev for ev in dati if ev.get("data", "") >= NOW.strftime("%Y-%m-%d")]
+        print(f"📝 Caricati {len(validi)} eventi da eventi_manuali.json")
+        return validi
+    except Exception as e:
+        print(f"⚠️ Errore in eventi_manuali.json: {e}")
+        return []
+
+
+def deduplica(eventi):
+    visti = set()
+    puliti = []
+    for ev in eventi:
+        titolo_base = ev.get("evento", "").split(":", 1)[-1].lower()
+        titolo_base = re.sub(r"\b(fc|sc|ec|cr|ca)\b", "", titolo_base)
+        chiave = (
+            ev.get("data", ""),
+            ev.get("ora", ""),
+            ev.get("paese", ""),
+            re.sub(r"[^a-z0-9]", "", titolo_base)[:22],
+        )
+        if chiave not in visti:
+            visti.add(chiave)
+            puliti.append(ev)
+    puliti.sort(key=lambda x: (x.get("data", ""), x.get("ora", ""), x.get("paese", "")))
+    return puliti
+
+
+def main():
+    tutti = []
+    tutti.extend(scarica_epg_paesi())
+    tutti.extend(scarica_futebol_tv_br())
+    tutti.extend(scarica_auvaromaia_br())
+    tutti.extend(scarica_gfesporte_br())
+
+    fetcher = SmartFetcher()
+    try:
+        tutti.extend(scarica_dazn_tutti_paesi(fetcher))
+        tutti.extend(scarica_dazn_spagna_futbolenlatv(fetcher))
+        tutti.extend(scarica_dazn_germania_dslweb(fetcher))
+    finally:
+        fetcher.close()
+
+    tutti.extend(carica_manuali())
+
+    finali = deduplica(tutti)
+
+    if len(finali) > 0:
+        with open("eventi.json", "w", encoding="utf-8") as f:
+            json.dump(finali, f, ensure_ascii=False, indent=2)
+        with open("meta.json", "w", encoding="utf-8") as f:
+            json.dump({
+                "ultimo_aggiornamento": NOW.strftime("%d/%m/%Y alle %H:%M"),
+                "totale_eventi": len(finali),
+            }, f, ensure_ascii=False, indent=2)
+        print(f"🎉 Salvati {len(finali)} eventi totali in eventi.json!")
+    else:
+        print("⚠️ Nessun evento raccolto, mantengo il vecchio eventi.json.")
+
+
+if __name__ == "__main__":
+    main()
