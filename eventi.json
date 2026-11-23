@@ -1,166 +1,6 @@
 [
   {
     "data": "2026-11-23",
-    "ora": "14:00",
-    "sport": "Calcio",
-    "competizione": "Sport Notizie",
-    "evento": "B-Lab",
-    "paese": "Italia",
-    "canale": "Sportitalia",
-    "link": "https://www.sportitalia.it/"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "14:00",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Fussball: FC Basel 1893 - FC Luzern",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "14:05",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Le temps additionnel - Brack Super League",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "14:25",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "Davis Cup Finals 8 2025 SF1 - ITA vs BEL - Ep. 1 - Matteo Berrettini vs Raphael Collignon ITA vs BEL Davis Cup Final 8 Bologna SF1 # 1",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "15:00",
-    "sport": "Calcio",
-    "competizione": "Surf Brasil",
-    "evento": "etapa Guarda do Embaú",
-    "paese": "Brasile YouTube",
-    "canale": "Xsports (YouTube)",
-    "link": "https://www.youtube.com/@xsports.brasil"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "15:00",
-    "sport": "Football Americano",
-    "competizione": "Surf Brasil",
-    "evento": "etapa de Guarda do Embaú",
-    "paese": "Brasile YouTube",
-    "canale": "Xsports (YouTube)",
-    "link": "https://www.youtube.com/@xsports.brasil"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "15:00",
-    "sport": "Calcio",
-    "competizione": "Sport Calcio",
-    "evento": "Campionato Primavera 1 TIM",
-    "paese": "Italia",
-    "canale": "Sportitalia",
-    "link": "https://www.sportitalia.it/"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "15:20",
-    "sport": "Calcio",
-    "competizione": "TV Italia",
-    "evento": "Calcio: Mondiali Under 17",
-    "paese": "Italia",
-    "canale": "Rai Sport",
-    "link": "https://www.raiplay.it/dirette/raisport"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "16:00",
-    "sport": "Sci Alpino",
-    "competizione": "Ski Alpin",
-    "evento": "Ski alpin: Weltcup",
-    "paese": "Germania",
-    "canale": "Eurosport 1 DE",
-    "link": "https://www.eurosport.de/"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "16:10",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "Davis Cup Finals 8 2025 SF1 - ITA vs BEL - Ep. 2 - Flavio Cobolli vs Zizou Bergs ITA vs BEL Davis Cup Final 8 Bologna SF1 # 1",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "16:40",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Foot: FC Sion - Servette FC",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "16:45",
-    "sport": "Sci Alpino",
-    "competizione": "Ski Alpin",
-    "evento": "Ski alpin: Weltcup",
-    "paese": "Germania",
-    "canale": "Eurosport 1 DE",
-    "link": "https://www.eurosport.de/"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "16:55",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Alle Spiele, alle Tore - Brack Super League",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "17:00",
-    "sport": "Calcio",
-    "competizione": "Sport Calcio",
-    "evento": "Campionato Primavera 1 TIM",
-    "paese": "Italia",
-    "canale": "Sportitalia",
-    "link": "https://www.sportitalia.it/"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "17:30",
-    "sport": "Sci Alpino",
-    "competizione": "Ski Alpin",
-    "evento": "Ski alpin: Weltcup",
-    "paese": "Germania",
-    "canale": "Eurosport 1 DE",
-    "link": "https://www.eurosport.de/"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "17:45",
-    "sport": "Calcio",
-    "competizione": "Fußball",
-    "evento": "Fußball: Bundesliga der Frauen",
-    "paese": "Germania",
-    "canale": "Sport1",
-    "link": "https://www.sport1.de/tv-programm"
-  },
-  {
-    "data": "2026-11-23",
     "ora": "18:00",
     "sport": "Calcio",
     "competizione": "Fußball",
@@ -1848,5 +1688,85 @@
     "paese": "Svizzera",
     "canale": "blue Zoom",
     "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "11:00",
+    "sport": "Sci Alpino",
+    "competizione": "Ski Alpin",
+    "evento": "Ski alpin: Weltcup",
+    "paese": "Germania",
+    "canale": "Eurosport 1 DE",
+    "link": "https://www.eurosport.de/"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "11:30",
+    "sport": "Sci Alpino",
+    "competizione": "Ski Alpin",
+    "evento": "Ski alpin: Weltcup",
+    "paese": "Germania",
+    "canale": "Eurosport 1 DE",
+    "link": "https://www.eurosport.de/"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "18:10",
+    "sport": "Sci Alpino",
+    "competizione": "Ski Alpin",
+    "evento": "Ski alpin: Weltcup",
+    "paese": "Germania",
+    "canale": "Eurosport 1 DE",
+    "link": "https://www.eurosport.de/"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "18:30",
+    "sport": "Football Americano",
+    "competizione": "American Football",
+    "evento": "American Football: NFL",
+    "paese": "Germania",
+    "canale": "Nitro",
+    "link": "https://www.rtl.de/"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "19:30",
+    "sport": "Calcio",
+    "competizione": "Fußballmagazin",
+    "evento": "45 – Die Fußball-Halbzeit auf SPORT1",
+    "paese": "Germania",
+    "canale": "Sport1",
+    "link": "https://www.sport1.de/tv-programm"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "20:15",
+    "sport": "Calcio",
+    "competizione": "Fußball",
+    "evento": "Fußball: UEFA Europa Conference League",
+    "paese": "Germania",
+    "canale": "RTL",
+    "link": "https://www.rtl.de/"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "22:20",
+    "sport": "Football Americano",
+    "competizione": "American Football",
+    "evento": "American Football: NFL",
+    "paese": "Germania",
+    "canale": "Nitro",
+    "link": "https://www.rtl.de/"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "23:45",
+    "sport": "Calcio",
+    "competizione": "Rugby",
+    "evento": "Rugby: Super League",
+    "paese": "Germania",
+    "canale": "More Than Sports TV",
+    "link": "https://morethansports.tv/"
   }
 ]
