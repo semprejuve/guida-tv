@@ -1,1513 +1,13 @@
 [
   {
-    "data": "2026-11-22",
-    "ora": "13:00",
-    "sport": "Calcio",
-    "competizione": "Inglês",
-    "evento": "Birmingham x Manchester United",
-    "paese": "Brasile YouTube",
-    "canale": "BarclaysWSL (YouTube)",
-    "link": "https://www.youtube.com/results?search_query=BarclaysWSL"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "13:15",
-    "sport": "Sci Alpino",
-    "competizione": "TV Italia",
-    "evento": "Sci Alpino: Coppa del Mondo maschile",
-    "paese": "Italia",
-    "canale": "Rai Sport",
-    "link": "https://www.raiplay.it/dirette/raisport"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "13:15",
-    "sport": "Sci Alpino",
-    "competizione": "TV Svizzera",
-    "evento": "FIS Ski Alpin Weltcup: Gurgl: Slalom Männer, 2. Lauf",
-    "paese": "Svizzera",
-    "canale": "SRF zwei",
-    "link": "https://www.srf.ch/play/tv"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "13:20",
-    "sport": "Sci Alpino",
-    "competizione": "TV Svizzera",
-    "evento": "FIS Ski alpin : Coupe du monde: Gurgl : Slalom (H) - 2ème manche",
-    "paese": "Svizzera",
-    "canale": "RTS 2",
-    "link": "https://www.rts.ch/play/tv"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "13:25",
+    "data": "2026-11-23",
+    "ora": "05:00",
     "sport": "Tennis",
     "competizione": "Sport Tennis",
-    "evento": "LIVE BJK CUP PLAYOFFS",
+    "evento": "US Open 2025 - Singolare maschile - Ep. 79 - Jannik Sinner vs Carlos Alcaraz US OPEN 2025 finale quarta parte # 1",
     "paese": "Italia",
     "canale": "SuperTennis",
     "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "13:25",
-    "sport": "Sci Alpino",
-    "competizione": "TV Svizzera",
-    "evento": "FIS Sci alpino Coppa del Mondo: Gurgl, Uomini, Slalom: 2a manche",
-    "paese": "Svizzera",
-    "canale": "RSI La 2",
-    "link": "https://www.rsi.ch/play/tv"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "13:30",
-    "sport": "Calcio",
-    "competizione": "2. Bundesliga",
-    "evento": "Cottbus x Hertha",
-    "paese": "Brasile YouTube",
-    "canale": "Romário TV (YouTube)",
-    "link": "https://www.youtube.com/@RomarioTVoficial"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "13:30",
-    "sport": "Calcio",
-    "competizione": "2. Bundesliga",
-    "evento": "Kaiserslautern x Dresden",
-    "paese": "Brasile YouTube",
-    "canale": "Canal GOAT (YouTube)",
-    "link": "https://www.youtube.com/@canalgoatbr"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "13:30",
-    "sport": "Calcio",
-    "competizione": "Fußballmagazin",
-    "evento": "Bundesliga pur – 1. & 2. Bundesliga",
-    "paese": "Germania",
-    "canale": "Sport1",
-    "link": "https://www.sport1.de/tv-programm"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "13:30",
-    "sport": "Sci Alpino",
-    "competizione": "Ski Alpin",
-    "evento": "Ski alpin: Weltcup",
-    "paese": "Germania",
-    "canale": "Eurosport 1 DE",
-    "link": "https://www.eurosport.de/"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "13:30",
-    "sport": "MotoGP",
-    "competizione": "Sport Motori",
-    "evento": "MotoGP Grid",
-    "paese": "Italia",
-    "canale": "TV8",
-    "link": "https://tv8.it/streaming"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "13:35",
-    "sport": "Sci Alpino",
-    "competizione": "Ski Alpin",
-    "evento": "Ski alpin: Weltcup",
-    "paese": "Germania",
-    "canale": "ZDF",
-    "link": "https://www.zdf.de/live-tv"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "13:40",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Club Super League",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "13:40",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Brack Super League - Der Countdown",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "13:50",
-    "sport": "MotoGP",
-    "competizione": "TV Svizzera",
-    "evento": "MotoGP: GP Portogallo: Gara",
-    "paese": "Svizzera",
-    "canale": "RSI La 1",
-    "link": "https://www.rsi.ch/play/tv"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "13:55",
-    "sport": "MotoGP",
-    "competizione": "Sport Motori",
-    "evento": "GP Portogallo: Gara",
-    "paese": "Italia",
-    "canale": "TV8",
-    "link": "https://tv8.it/streaming"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "14:00",
-    "sport": "Calcio",
-    "competizione": "LaLiga",
-    "evento": "Barcelona x Villarreal",
-    "paese": "Brasile YouTube",
-    "canale": "CazéTV (YouTube)",
-    "link": "https://www.youtube.com/@CazeTV"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "14:00",
-    "sport": "Calcio",
-    "competizione": "Sueco",
-    "evento": "Sirius x Djurgarden",
-    "paese": "Brasile YouTube",
-    "canale": "Canal GOL Brasil (YouTube)",
-    "link": "https://www.youtube.com/@canalgolbrasil"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "14:00",
-    "sport": "Tennis",
-    "competizione": "Copa do Mundo de Esqui Alpino",
-    "evento": "etapa de Gurgl (em andamento)",
-    "paese": "Brasile YouTube",
-    "canale": "Xsports (YouTube)",
-    "link": "https://www.youtube.com/@xsports.brasil"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "14:00",
-    "sport": "Tennis",
-    "competizione": "Copa do Mundo de Esqui Alpino",
-    "evento": "etapa de Gurgl",
-    "paese": "Brasile YouTube",
-    "canale": "Xsports (YouTube)",
-    "link": "https://www.youtube.com/@xsports.brasil"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "14:00",
-    "sport": "Basket & NBA",
-    "competizione": "TV Svizzera",
-    "evento": "Yanic Niederhäusers Weg in die NBA",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "14:30",
-    "sport": "Sci Alpino",
-    "competizione": "Skisportdoku",
-    "evento": "ZDFsportstudio live",
-    "paese": "Germania",
-    "canale": "ZDF",
-    "link": "https://www.zdf.de/live-tv"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "14:30",
-    "sport": "MotoGP",
-    "competizione": "TV Svizzera",
-    "evento": "MotoGP: GP du Portugal : Essais libres 2",
-    "paese": "Svizzera",
-    "canale": "RTS 2",
-    "link": "https://www.rts.ch/play/tv"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "14:30",
-    "sport": "MotoGP",
-    "competizione": "TV Svizzera",
-    "evento": "Motorrad",
-    "paese": "Svizzera",
-    "canale": "SRF zwei",
-    "link": "https://www.srf.ch/play/tv"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "14:40",
-    "sport": "Calcio",
-    "competizione": "TV Italia",
-    "evento": "La Domenica Sportiva",
-    "paese": "Italia",
-    "canale": "Rai 2",
-    "link": "https://www.raiplay.it/dirette/rai2"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "14:55",
-    "sport": "Calcio",
-    "competizione": "TV Italia",
-    "evento": "Serie A Women Athora",
-    "paese": "Italia",
-    "canale": "Rai 2",
-    "link": "https://www.raiplay.it/dirette/rai2"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "15:00",
-    "sport": "Calcio",
-    "competizione": "Ligue 1",
-    "evento": "Paris FC x Angers",
-    "paese": "Brasile YouTube",
-    "canale": "CazéTV / Xsports (YouTube)",
-    "link": "https://www.youtube.com/@CazeTV"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "15:00",
-    "sport": "Calcio",
-    "competizione": "Serie A",
-    "evento": "Sassuolo x Genoa",
-    "paese": "Brasile YouTube",
-    "canale": "ESPN Brasil (YouTube)",
-    "link": "https://www.youtube.com/@espnbrasil"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "15:00",
-    "sport": "Calcio",
-    "competizione": "Indiano",
-    "evento": "Churchill Brothers x Mohun Bagan",
-    "paese": "Brasile YouTube",
-    "canale": "Indian Super League (YouTube)",
-    "link": "https://www.youtube.com/results?search_query=Indian+Super+League"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "15:00",
-    "sport": "Calcio",
-    "competizione": "Mineiro",
-    "evento": "Cruzeiro x Atlético (final)",
-    "paese": "Brasile YouTube",
-    "canale": "FMF TV e Samuca TV (YouTube)",
-    "link": "https://www.youtube.com/results?search_query=FMF+TV+e+Samuca+TV"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "15:00",
-    "sport": "Calcio",
-    "competizione": "Paulista Sub-17",
-    "evento": "Ferroviária x São Paulo (final)",
-    "paese": "Brasile YouTube",
-    "canale": "Paulistão (YouTube)",
-    "link": "https://www.youtube.com/results?search_query=Paulist%C3%A3o"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "15:00",
-    "sport": "Calcio",
-    "competizione": "Inglês",
-    "evento": "Everton x Brighton",
-    "paese": "Brasile YouTube",
-    "canale": "BarclaysWSL (YouTube)",
-    "link": "https://www.youtube.com/results?search_query=BarclaysWSL"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "15:00",
-    "sport": "Calcio",
-    "competizione": "Inglês",
-    "evento": "Charlton x Aston Villa",
-    "paese": "Brasile YouTube",
-    "canale": "BarclaysWSL (YouTube)",
-    "link": "https://www.youtube.com/results?search_query=BarclaysWSL"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "15:00",
-    "sport": "Calcio",
-    "competizione": "Francês",
-    "evento": "Paris FC x Fleury",
-    "paese": "Brasile YouTube",
-    "canale": "Arkema Première Ligue (YouTube)",
-    "link": "https://www.youtube.com/results?search_query=Arkema+Premi%C3%A8re+Ligue"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "15:00",
-    "sport": "Calcio",
-    "competizione": "Francês",
-    "evento": "Lyonnes x Strasbourg",
-    "paese": "Brasile YouTube",
-    "canale": "Arkema Première Ligue (YouTube)",
-    "link": "https://www.youtube.com/results?search_query=Arkema+Premi%C3%A8re+Ligue"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "15:00",
-    "sport": "Calcio",
-    "competizione": "Players Cup",
-    "evento": "Ipswich Town x Southampton",
-    "paese": "Brasile YouTube",
-    "canale": "BarclaysWSL (YouTube)",
-    "link": "https://www.youtube.com/results?search_query=BarclaysWSL"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "15:00",
-    "sport": "Basket & NBA",
-    "competizione": "NBB",
-    "evento": "São José x Corinthians",
-    "paese": "Brasile YouTube",
-    "canale": "NBB (YouTube)",
-    "link": "https://www.youtube.com/@NBB"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "15:00",
-    "sport": "MotoGP",
-    "competizione": "Sport Motori",
-    "evento": "Moto GP Zona Rossa",
-    "paese": "Italia",
-    "canale": "TV8",
-    "link": "https://tv8.it/streaming"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "15:00",
-    "sport": "Calcio",
-    "competizione": "Sport Calcio",
-    "evento": "Serie A",
-    "paese": "Italia",
-    "canale": "Sportitalia",
-    "link": "https://www.sportitalia.it/"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "15:00",
-    "sport": "Basket & NBA",
-    "competizione": "TV Svizzera",
-    "evento": "Yanic Niederhäuser, de la Suisse vers la NBA",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "15:10",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "Supertennis Today - Nitto ATP Finals",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "15:10",
-    "sport": "Formula 1",
-    "competizione": "TV Svizzera",
-    "evento": "Formule 1: GP de Las Vegas : La course",
-    "paese": "Svizzera",
-    "canale": "RTS 2",
-    "link": "https://www.rts.ch/play/tv"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "15:15",
-    "sport": "Basket & NBA",
-    "competizione": "NBB",
-    "evento": "Brasília x Pato",
-    "paese": "Brasile YouTube",
-    "canale": "NBB (YouTube)",
-    "link": "https://www.youtube.com/@NBB"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "15:25",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "LIVE BJK CUP PLAYOFFS",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "15:30",
-    "sport": "Calcio",
-    "competizione": "Bundesliga",
-    "evento": "Augsburg x Mainz",
-    "paese": "Brasile YouTube",
-    "canale": "Canal GOAT (YouTube)",
-    "link": "https://www.youtube.com/@canalgoatbr"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "15:35",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Delitti in Paradiso",
-    "paese": "Svizzera",
-    "canale": "RSI La 1",
-    "link": "https://www.rsi.ch/play/tv"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "15:45",
-    "sport": "Calcio",
-    "competizione": "Grego",
-    "evento": "Panathinaikos x OFI",
-    "paese": "Brasile YouTube",
-    "canale": "SportyNet (YouTube)",
-    "link": "https://www.youtube.com/@SportyNetBrasil"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "15:45",
-    "sport": "Calcio",
-    "competizione": "TV Italia",
-    "evento": "La Domenica Sportiva",
-    "paese": "Italia",
-    "canale": "Rai 2",
-    "link": "https://www.raiplay.it/dirette/rai2"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "15:50",
-    "sport": "Formula 1",
-    "competizione": "TV Svizzera",
-    "evento": "Formula 1: GP Las Vegas: Gara",
-    "paese": "Svizzera",
-    "canale": "RSI La 2",
-    "link": "https://www.rsi.ch/play/tv"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "16:00",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Club Super League",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "16:10",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Brack Super League - Der Countdown",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "16:15",
-    "sport": "Calcio",
-    "competizione": "LaLiga",
-    "evento": "Racing x Real Sociedad",
-    "paese": "Brasile YouTube",
-    "canale": "CazéTV (YouTube)",
-    "link": "https://www.youtube.com/@CazeTV"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "16:15",
-    "sport": "Formula 1",
-    "competizione": "Sport Motori",
-    "evento": "F1 Paddock Live Pre Gara",
-    "paese": "Italia",
-    "canale": "TV8",
-    "link": "https://tv8.it/streaming"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "16:30",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Fussball: Liverpool FC - Chelsea FC",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "17:00",
-    "sport": "Basket & NBA",
-    "competizione": "Sport",
-    "evento": "SportAbilia",
-    "paese": "Italia",
-    "canale": "Rai Sport",
-    "link": "https://www.raiplay.it/dirette/raisport"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "17:15",
-    "sport": "Calcio",
-    "competizione": "Ligue 1",
-    "evento": "Lorient x Rennes",
-    "paese": "Brasile YouTube",
-    "canale": "CazéTV (YouTube)",
-    "link": "https://www.youtube.com/@CazeTV"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "17:15",
-    "sport": "Calcio",
-    "competizione": "Amistoso Feminino",
-    "evento": "Brasil x Portugal",
-    "paese": "Brasile YouTube",
-    "canale": "Canal GOL Brasil (YouTube)",
-    "link": "https://www.youtube.com/@canalgolbrasil"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "17:15",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "Supertennis Today - Nitto ATP Finals",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "17:30",
-    "sport": "Calcio",
-    "competizione": "Bundesliga",
-    "evento": "Bremen x Hamburgo",
-    "paese": "Brasile YouTube",
-    "canale": "Canal GOAT / Xsports / SportyNet (YouTube)",
-    "link": "https://www.youtube.com/@canalgoatbr"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "17:30",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "LIVE BJK CUP PLAYOFFS",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "17:41",
-    "sport": "Tennis",
-    "competizione": "Sport",
-    "evento": "Nitto Atp Finals Live",
-    "paese": "Italia",
-    "canale": "Italia 1",
-    "link": "https://mediasetinfinity.mediaset.it/diretta/italia1_cI1"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "17:50",
-    "sport": "Pallavolo",
-    "competizione": "TV Italia",
-    "evento": "Pallavolo: Serie A Maschile",
-    "paese": "Italia",
-    "canale": "Rai Sport",
-    "link": "https://www.raiplay.it/dirette/raisport"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "18:00",
-    "sport": "Calcio",
-    "competizione": "Serie A",
-    "evento": "Milan x Frosinone",
-    "paese": "Brasile YouTube",
-    "canale": "SportyNet (YouTube)",
-    "link": "https://www.youtube.com/@SportyNetBrasil"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "18:00",
-    "sport": "Calcio",
-    "competizione": "Tcheco",
-    "evento": "Sparta Praga x Slovan Liberec",
-    "paese": "Brasile YouTube",
-    "canale": "Canal GOL Brasil (YouTube)",
-    "link": "https://www.youtube.com/@canalgolbrasil"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "18:00",
-    "sport": "Sci Alpino",
-    "competizione": "Ski Alpin",
-    "evento": "Ski alpin: Weltcup",
-    "paese": "Germania",
-    "canale": "Eurosport 1 DE",
-    "link": "https://www.eurosport.de/"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "18:00",
-    "sport": "Calcio",
-    "competizione": "Sport Calcio",
-    "evento": "Serie A",
-    "paese": "Italia",
-    "canale": "Sportitalia",
-    "link": "https://www.sportitalia.it/"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "18:02",
-    "sport": "Tennis",
-    "competizione": "Sport",
-    "evento": "Nitto Atp Finals",
-    "paese": "Italia",
-    "canale": "Italia 1",
-    "link": "https://mediasetinfinity.mediaset.it/diretta/italia1_cI1"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "18:15",
-    "sport": "Calcio",
-    "competizione": "Galês",
-    "evento": "TNS x Wrexham",
-    "paese": "Brasile YouTube",
-    "canale": "Sgorio (YouTube)",
-    "link": "https://www.youtube.com/results?search_query=Sgorio"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "18:15",
-    "sport": "Football Americano",
-    "competizione": "American Footballmagazin",
-    "evento": "NFL LIVE – Guten Abend Football",
-    "paese": "Germania",
-    "canale": "Nitro",
-    "link": "https://www.rtl.de/"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "18:30",
-    "sport": "Calcio",
-    "competizione": "LaLiga",
-    "evento": "Osasuna x Málaga",
-    "paese": "Brasile YouTube",
-    "canale": "CazéTV (YouTube)",
-    "link": "https://www.youtube.com/@CazeTV"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "18:30",
-    "sport": "Sci Alpino",
-    "competizione": "Ski Alpin",
-    "evento": "Ski alpin: Weltcup",
-    "paese": "Germania",
-    "canale": "Eurosport 1 DE",
-    "link": "https://www.eurosport.de/"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "18:30",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Le temps additionnel - Brack Super League",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "18:55",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Alle Spiele, alle Tore - Brack Super League",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "19:00",
-    "sport": "Calcio",
-    "competizione": "Sergipano C",
-    "evento": "Mocidade x Coritiba",
-    "paese": "Brasile YouTube",
-    "canale": "93 Sports (YouTube)",
-    "link": "https://www.youtube.com/results?search_query=93+Sports"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "19:00",
-    "sport": "Calcio",
-    "competizione": "Gaúcho",
-    "evento": "Grêmio x Brasil de Farroupilha (semifinal, volta)",
-    "paese": "Brasile YouTube",
-    "canale": "FGF TV (YouTube)",
-    "link": "https://www.youtube.com/results?search_query=FGF+TV"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "19:00",
-    "sport": "Calcio",
-    "competizione": "Gaúcho",
-    "evento": "Internacional x Juventude (semifinal, volta)",
-    "paese": "Brasile YouTube",
-    "canale": "FGF TV (YouTube)",
-    "link": "https://www.youtube.com/results?search_query=FGF+TV"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "19:00",
-    "sport": "Calcio",
-    "competizione": "Alagoano",
-    "evento": "UDA x Independente Atalaia",
-    "paese": "Brasile YouTube",
-    "canale": "FAF TV (YouTube)",
-    "link": "https://www.youtube.com/results?search_query=FAF+TV"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "19:00",
-    "sport": "Football Americano",
-    "competizione": "American Football",
-    "evento": "American Football: NFL",
-    "paese": "Germania",
-    "canale": "RTL",
-    "link": "https://www.rtl.de/"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "19:00",
-    "sport": "Calcio",
-    "competizione": "Springreiten",
-    "evento": "Springreiten: Global Champions League",
-    "paese": "Germania",
-    "canale": "Eurosport 1 DE",
-    "link": "https://www.eurosport.de/"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "19:00",
-    "sport": "Formula 1",
-    "competizione": "Sport Motori",
-    "evento": "F1 Podio",
-    "paese": "Italia",
-    "canale": "TV8",
-    "link": "https://tv8.it/streaming"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "19:00",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "UEFA Champions League magazine",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "19:00",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Super League - Highlights",
-    "paese": "Svizzera",
-    "canale": "SRF zwei",
-    "link": "https://www.srf.ch/play/tv"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "19:15",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "Supertennis Today - Nitto ATP Finals",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "19:25",
-    "sport": "Formula 1",
-    "competizione": "Sport Motori",
-    "evento": "F1 Paddock Live Post Gara",
-    "paese": "Italia",
-    "canale": "TV8",
-    "link": "https://tv8.it/streaming"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "19:30",
-    "sport": "Calcio",
-    "competizione": "Potiguar B",
-    "evento": "Alecrim x Baraúnas",
-    "paese": "Brasile YouTube",
-    "canale": "FNF TV (YouTube)",
-    "link": "https://www.youtube.com/results?search_query=FNF+TV"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "19:30",
-    "sport": "Calcio",
-    "competizione": "Potiguar B",
-    "evento": "Visão Celeste x Mossoró",
-    "paese": "Brasile YouTube",
-    "canale": "FNF TV (YouTube)",
-    "link": "https://www.youtube.com/results?search_query=FNF+TV"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "19:30",
-    "sport": "Calcio",
-    "competizione": "3. Liga",
-    "evento": "Duisburg x Rostock",
-    "paese": "Brasile YouTube",
-    "canale": "German Football (YouTube)",
-    "link": "https://www.youtube.com/results?search_query=German+Football"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "19:30",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "LIVE BJK CUP PLAYOFFS",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "20:00",
-    "sport": "Calcio",
-    "competizione": "BRASILEIRÃO SÉRIE B (PLAYOFFS – IDA)",
-    "evento": "Criciúma x Fortaleza",
-    "paese": "Brasile YouTube",
-    "canale": "SportyNet (YouTube)",
-    "link": "https://www.youtube.com/@SportyNetBrasil"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "20:00",
-    "sport": "Calcio",
-    "competizione": "Paulista Sub-20",
-    "evento": "Palmeiras x Corinthians (final, ida)",
-    "paese": "Brasile YouTube",
-    "canale": "Xsports / TNT Sports (YouTube)",
-    "link": "https://www.youtube.com/@xsports.brasil"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "20:00",
-    "sport": "Basket & NBA",
-    "competizione": "NBB",
-    "evento": "Basquete Cearense x Flamengo",
-    "paese": "Brasile YouTube",
-    "canale": "NBB e Flamengo TV (YouTube)",
-    "link": "https://www.youtube.com/results?search_query=NBB+e+Flamengo+TV"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "20:00",
-    "sport": "Calcio",
-    "competizione": "BRASILEIRÃO SÉRIE B",
-    "evento": "Criciúma x Fortaleza (playoff, ida)",
-    "paese": "Brasile YouTube",
-    "canale": "SportyNet (YouTube)",
-    "link": "https://www.youtube.com/@SportyNetBrasil"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "20:04",
-    "sport": "Tennis",
-    "competizione": "Sport",
-    "evento": "Nitto Atp Finals Live",
-    "paese": "Italia",
-    "canale": "Italia 1",
-    "link": "https://mediasetinfinity.mediaset.it/diretta/italia1_cI1"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "20:05",
-    "sport": "MotoGP",
-    "competizione": "TV Svizzera",
-    "evento": "Moto3: GP Portogallo: Gara",
-    "paese": "Svizzera",
-    "canale": "RSI La 2",
-    "link": "https://www.rsi.ch/play/tv"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "20:30",
-    "sport": "Basket & NBA",
-    "competizione": "TV Italia",
-    "evento": "Basket: Serie A2 Old Wild West",
-    "paese": "Italia",
-    "canale": "Rai Sport",
-    "link": "https://www.raiplay.it/dirette/raisport"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "20:30",
-    "sport": "Calcio",
-    "competizione": "Sport Calcio",
-    "evento": "Serie A",
-    "paese": "Italia",
-    "canale": "Sportitalia",
-    "link": "https://www.sportitalia.it/"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "20:30",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Foot: FC Sion - Servette FC",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "20:45",
-    "sport": "Calcio",
-    "competizione": "Ligue 1",
-    "evento": "Marseille x Le Mans",
-    "paese": "Brasile YouTube",
-    "canale": "CNN Esportes (YouTube)",
-    "link": "https://www.youtube.com/@cnnesportes"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "21:00",
-    "sport": "Calcio",
-    "competizione": "Copa Fares Lopes",
-    "evento": "Guarani de Juazeiro x Icasa",
-    "paese": "Brasile YouTube",
-    "canale": "Metrópoles Esportes (YouTube)",
-    "link": "https://www.youtube.com/@MetropolesEsportes"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "21:00",
-    "sport": "Calcio",
-    "competizione": "Copa Fares Lopes",
-    "evento": "Tirol x Palmácia",
-    "paese": "Brasile YouTube",
-    "canale": "Metrópoles Esportes (YouTube)",
-    "link": "https://www.youtube.com/@MetropolesEsportes"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "21:00",
-    "sport": "Calcio",
-    "competizione": "Copa Fares Lopes",
-    "evento": "Vila Real x Atlético",
-    "paese": "Brasile YouTube",
-    "canale": "Metrópoles Esportes (YouTube)",
-    "link": "https://www.youtube.com/@MetropolesEsportes"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "21:00",
-    "sport": "Calcio",
-    "competizione": "Taça Paraíba",
-    "evento": "Atlético Cajazeiras x Campinense",
-    "paese": "Brasile YouTube",
-    "canale": "Metrópoles Esportes (YouTube)",
-    "link": "https://www.youtube.com/@MetropolesEsportes"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "21:00",
-    "sport": "Calcio",
-    "competizione": "Taça Paraíba",
-    "evento": "Esporte de Patos x Serra Branca",
-    "paese": "Brasile YouTube",
-    "canale": "Metrópoles Esportes (YouTube)",
-    "link": "https://www.youtube.com/@MetropolesEsportes"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "21:00",
-    "sport": "Calcio",
-    "competizione": "Taça Paraíba",
-    "evento": "Treze x Nacional de Patos",
-    "paese": "Brasile YouTube",
-    "canale": "Metrópoles Esportes (YouTube)",
-    "link": "https://www.youtube.com/@MetropolesEsportes"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "21:00",
-    "sport": "Calcio",
-    "competizione": "Copa Santa Catarina",
-    "evento": "Marcílio Dias x Joinville (final)",
-    "paese": "Brasile YouTube",
-    "canale": "Metrópoles Esportes (YouTube)",
-    "link": "https://www.youtube.com/@MetropolesEsportes"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "21:00",
-    "sport": "Calcio",
-    "competizione": "LaLiga",
-    "evento": "Getafe x Atlético de Madrid",
-    "paese": "Brasile YouTube",
-    "canale": "CazéTV (YouTube)",
-    "link": "https://www.youtube.com/@CazeTV"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "21:20",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "Supertennis Today - Nitto ATP Finals",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "21:35",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "LIVE BJK CUP PLAYOFFS",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "22:00",
-    "sport": "Calcio",
-    "competizione": "Mato-Grossense",
-    "evento": "Operário x Paulistano (final, volta)",
-    "paese": "Brasile YouTube",
-    "canale": "FMF TV (YouTube)",
-    "link": "https://www.youtube.com/results?search_query=FMF+TV"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "22:00",
-    "sport": "Basket & NBA",
-    "competizione": "NBB",
-    "evento": "Bauru x União Corinthians",
-    "paese": "Brasile YouTube",
-    "canale": "NBB (YouTube)",
-    "link": "https://www.youtube.com/@NBB"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "22:00",
-    "sport": "Sci Alpino",
-    "competizione": "Ski Alpin",
-    "evento": "Ski alpin: Weltcup",
-    "paese": "Germania",
-    "canale": "Eurosport 1 DE",
-    "link": "https://www.eurosport.de/"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "22:15",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Alle Spiele, alle Tore - Brack Super League",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "22:25",
-    "sport": "Football Americano",
-    "competizione": "NFL",
-    "evento": "Jacksonville Jaguars x New York Giants",
-    "paese": "Brasile YouTube",
-    "canale": "GE TV (YouTube)",
-    "link": "https://www.youtube.com/@getv"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "22:25",
-    "sport": "Football Americano",
-    "competizione": "American Football",
-    "evento": "American Football: NFL",
-    "paese": "Germania",
-    "canale": "RTL",
-    "link": "https://www.rtl.de/"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "22:25",
-    "sport": "MotoGP",
-    "competizione": "TV Svizzera",
-    "evento": "MotoGP: GP Portogallo: Gara",
-    "paese": "Svizzera",
-    "canale": "RSI La 2",
-    "link": "https://www.rsi.ch/play/tv"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "22:30",
-    "sport": "Calcio",
-    "competizione": "BRASILEIRÃO SÉRIE A",
-    "evento": "Fluminense x Mirassol",
-    "paese": "Brasile YouTube",
-    "canale": "CazéTV (YouTube)",
-    "link": "https://www.youtube.com/@CazeTV"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "22:30",
-    "sport": "Calcio",
-    "competizione": "Venezuelano",
-    "evento": "Metropolitanos x La Guaira",
-    "paese": "Brasile YouTube",
-    "canale": "Liga FUTVE (YouTube)",
-    "link": "https://www.youtube.com/results?search_query=Liga+FUTVE"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "22:30",
-    "sport": "Calcio",
-    "competizione": "BRASILEIRÃO SÉRIE B",
-    "evento": "Atlético/GO x Vila Nova (playoff, ida)",
-    "paese": "Brasile YouTube",
-    "canale": "Canal GOAT / Xsports (YouTube)",
-    "link": "https://www.youtube.com/@canalgoatbr"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "22:30",
-    "sport": "Sci Alpino",
-    "competizione": "Ski Alpin",
-    "evento": "Ski alpin: Weltcup",
-    "paese": "Germania",
-    "canale": "Eurosport 1 DE",
-    "link": "https://www.eurosport.de/"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "22:40",
-    "sport": "Calcio",
-    "competizione": "TV Italia",
-    "evento": "La Domenica Sportiva",
-    "paese": "Italia",
-    "canale": "Rai 2",
-    "link": "https://www.raiplay.it/dirette/rai2"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "22:40",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "UEFA Champions League Magazin",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "22:50",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Le temps additionnel - Brack Super League",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "23:00",
-    "sport": "Calcio",
-    "competizione": "Sport Calcio",
-    "evento": "Campionato argentino",
-    "paese": "Italia",
-    "canale": "Sportitalia",
-    "link": "https://www.sportitalia.it/"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "23:10",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Fussball: Liverpool FC - Chelsea FC",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "23:20",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "Supertennis Today - Nitto ATP Finals",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "23:20",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "This is Paris - Staffel 2",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "23:35",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "LIVE BJK CUP PLAYOFFS",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "23:35",
-    "sport": "Sci Alpino",
-    "competizione": "TV Svizzera",
-    "evento": "FIS Sci alpino Coppa del Mondo: Gurgl, Uomini, Slalom: 2a manche",
-    "paese": "Svizzera",
-    "canale": "RSI La 2",
-    "link": "https://www.rsi.ch/play/tv"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "23:47",
-    "sport": "Tennis",
-    "competizione": "Sport",
-    "evento": "Nitto Atp Finals Live",
-    "paese": "Italia",
-    "canale": "20 Mediaset",
-    "link": "https://mediasetinfinity.mediaset.it/diretta/20mediaset_cLB"
-  },
-  {
-    "data": "2026-11-22",
-    "ora": "23:55",
-    "sport": "Calcio",
-    "competizione": "Calcio",
-    "evento": "Pressing Nel Cuore Dello Sport",
-    "paese": "Italia",
-    "canale": "Canale 5",
-    "link": "https://mediasetinfinity.mediaset.it/diretta/canale5_cC5"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "00:00",
-    "sport": "Calcio",
-    "competizione": "Brasileiro",
-    "evento": "Fazenda x Traipu (semifinal)",
-    "paese": "Brasile YouTube",
-    "canale": "Canal GOL Brasil / LNF / CBFS Futsal (YouTube)",
-    "link": "https://www.youtube.com/@canalgolbrasil"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "00:05",
-    "sport": "Tennis",
-    "competizione": "Sport",
-    "evento": "Nitto Atp Finals",
-    "paese": "Italia",
-    "canale": "20 Mediaset",
-    "link": "https://mediasetinfinity.mediaset.it/diretta/20mediaset_cLB"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "00:10",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "BJK CUP PLAYOFFS",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "00:30",
-    "sport": "Calcio",
-    "competizione": "MLS",
-    "evento": "Chicago Fire x Charlotte",
-    "paese": "Brasile YouTube",
-    "canale": "TNT Sports (YouTube)",
-    "link": "https://www.youtube.com/@TNTSportsBR"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "00:30",
-    "sport": "Calcio",
-    "competizione": "Venezuelano",
-    "evento": "Carabobo x Portuguesa",
-    "paese": "Brasile YouTube",
-    "canale": "Liga FUTVE (YouTube)",
-    "link": "https://www.youtube.com/results?search_query=Liga+FUTVE"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "00:35",
-    "sport": "Basket & NBA",
-    "competizione": "Show",
-    "evento": "Wer stiehlt mir die Show?",
-    "paese": "Germania",
-    "canale": "ProSieben",
-    "link": "https://www.prosieben.de/"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "01:07",
-    "sport": "Tennis",
-    "competizione": "Sport",
-    "evento": "Nitto Atp Finals",
-    "paese": "Italia",
-    "canale": "20 Mediaset",
-    "link": "https://mediasetinfinity.mediaset.it/diretta/20mediaset_cLB"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "01:10",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Fussball: FC Lugano - Grasshopper Club Zürich",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "01:35",
-    "sport": "Sci Alpino",
-    "competizione": "TV Svizzera",
-    "evento": "FIS Sci alpino Coppa del Mondo: Gurgl, Uomini, Slalom: 2a manche",
-    "paese": "Svizzera",
-    "canale": "RSI La 2",
-    "link": "https://www.rsi.ch/play/tv"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "02:00",
-    "sport": "Calcio",
-    "competizione": "Liga MX",
-    "evento": "UNAM Pumas x Monterrey",
-    "paese": "Brasile YouTube",
-    "canale": "SportyNet (YouTube)",
-    "link": "https://www.youtube.com/@SportyNetBrasil"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "02:00",
-    "sport": "Football Americano",
-    "competizione": "American Football",
-    "evento": "American Football: NFL",
-    "paese": "Germania",
-    "canale": "RTL",
-    "link": "https://www.rtl.de/"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "02:00",
-    "sport": "Tennis",
-    "competizione": "Sport",
-    "evento": "Nitto Atp Finals Live",
-    "paese": "Italia",
-    "canale": "20 Mediaset",
-    "link": "https://mediasetinfinity.mediaset.it/diretta/20mediaset_cLB"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "02:00",
-    "sport": "Calcio",
-    "competizione": "Sport Calcio",
-    "evento": "Campionato Primavera 1 TIM",
-    "paese": "Italia",
-    "canale": "Sportitalia",
-    "link": "https://www.sportitalia.it/"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "02:30",
-    "sport": "Calcio",
-    "competizione": "Peruano",
-    "evento": "Sporting Cristal x Cienciano",
-    "paese": "Brasile YouTube",
-    "canale": "Canal GOL Brasil (YouTube)",
-    "link": "https://www.youtube.com/@canalgolbrasil"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "02:40",
-    "sport": "MotoGP",
-    "competizione": "TV Svizzera",
-    "evento": "Moto2: GP Portogallo: Gara",
-    "paese": "Svizzera",
-    "canale": "RSI La 2",
-    "link": "https://www.rsi.ch/play/tv"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "02:50",
-    "sport": "Pallavolo",
-    "competizione": "TV Italia",
-    "evento": "Pallavolo: Serie A Maschile",
-    "paese": "Italia",
-    "canale": "Rai Sport",
-    "link": "https://www.raiplay.it/dirette/raisport"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "03:03",
-    "sport": "Tennis",
-    "competizione": "Sport",
-    "evento": "Nitto Atp Finals Show",
-    "paese": "Italia",
-    "canale": "Italia 1",
-    "link": "https://mediasetinfinity.mediaset.it/diretta/italia1_cI1"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "03:40",
-    "sport": "MotoGP",
-    "competizione": "TV Svizzera",
-    "evento": "MotoGP: GP Portogallo: Gara",
-    "paese": "Svizzera",
-    "canale": "RSI La 2",
-    "link": "https://www.rsi.ch/play/tv"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "04:00",
-    "sport": "Calcio",
-    "competizione": "Sport Calcio",
-    "evento": "Campionato Primavera 1 TIM",
-    "paese": "Italia",
-    "canale": "Sportitalia",
-    "link": "https://www.sportitalia.it/"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "04:00",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Fussball: FC Sion - Servette FC",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "04:40",
-    "sport": "MotoGP",
-    "competizione": "TV Svizzera",
-    "evento": "Moto3: GP Portogallo: Gara",
-    "paese": "Svizzera",
-    "canale": "RSI La 2",
-    "link": "https://www.rsi.ch/play/tv"
   },
   {
     "data": "2026-11-23",
@@ -1521,10 +21,10 @@
   },
   {
     "data": "2026-11-23",
-    "ora": "05:45",
+    "ora": "05:50",
     "sport": "Tennis",
     "competizione": "Sport Tennis",
-    "evento": "BJK CUP PLAYOFFS",
+    "evento": "ATP 500 Vienna 2025 - Ep. 6 - Lorenzo Musetti vs Alexander Zverev  ATP 500 Vienna 2025 # 1",
     "paese": "Italia",
     "canale": "SuperTennis",
     "link": "https://www.supertennis.tv/"
@@ -1541,20 +41,20 @@
   },
   {
     "data": "2026-11-23",
-    "ora": "07:00",
+    "ora": "06:55",
     "sport": "Calcio",
     "competizione": "TV Svizzera",
-    "evento": "Foot: FC Zurich - FC Saint-Gall 1879",
+    "evento": "Foot: FC Lugano - Grasshopper Club Zurich",
     "paese": "Svizzera",
     "canale": "blue Zoom",
     "link": "https://www.blueplus.ch/de/bluezoom"
   },
   {
     "data": "2026-11-23",
-    "ora": "07:35",
+    "ora": "07:15",
     "sport": "Tennis",
     "competizione": "Sport Tennis",
-    "evento": "BJK CUP PLAYOFFS",
+    "evento": "ATP 1000 Parigi Bercy 2025 - Ep. 2 - Alexander Zverev vs Daniil Medvedev ATP 1000 Parigi 2025 # 1",
     "paese": "Italia",
     "canale": "SuperTennis",
     "link": "https://www.supertennis.tv/"
@@ -1573,7 +73,7 @@
     "data": "2026-11-23",
     "ora": "08:25",
     "sport": "Calcio",
-    "competizione": "TV Italia",
+    "competizione": "Arti Marziali",
     "evento": "Karate",
     "paese": "Italia",
     "canale": "Rai Sport",
@@ -1591,20 +91,20 @@
   },
   {
     "data": "2026-11-23",
-    "ora": "09:25",
+    "ora": "09:15",
     "sport": "Calcio",
     "competizione": "TV Svizzera",
-    "evento": "Foot: FC Bâle 1893 - FC Lucerne",
+    "evento": "Foot: BSC Young Boys - FC Thoune",
     "paese": "Svizzera",
     "canale": "blue Zoom",
     "link": "https://www.blueplus.ch/de/bluezoom"
   },
   {
     "data": "2026-11-23",
-    "ora": "09:30",
+    "ora": "09:35",
     "sport": "Tennis",
     "competizione": "Sport Tennis",
-    "evento": "BJK CUP PLAYOFFS",
+    "evento": "Nitto ATP Finals Torino 2025 - Stag. 2022 Ep. 3 - Taylor Fritz vs Carlos Alcaraz Atp Finals 2025 # 1",
     "paese": "Italia",
     "canale": "SuperTennis",
     "link": "https://www.supertennis.tv/"
@@ -1643,7 +143,7 @@
     "data": "2026-11-23",
     "ora": "11:25",
     "sport": "Pallavolo",
-    "competizione": "TV Italia",
+    "competizione": "Pallavolo",
     "evento": "Pallavolo: Serie A Maschile",
     "paese": "Italia",
     "canale": "Rai Sport",
@@ -1661,7 +161,7 @@
   },
   {
     "data": "2026-11-23",
-    "ora": "11:40",
+    "ora": "11:45",
     "sport": "Calcio",
     "competizione": "TV Svizzera",
     "evento": "Foot: FC Lausanne-Sport - FC Vaduz",
@@ -1691,6 +191,16 @@
   },
   {
     "data": "2026-11-23",
+    "ora": "12:20",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "ATP 500 Rotterdam 2025 - Ep. 3 - Carlos Alcaraz vs Hubert Hurkacz ATP 500 Rotterdam 2025 # 1",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-23",
     "ora": "13:05",
     "sport": "Calcio",
     "competizione": "Rugby",
@@ -1698,16 +208,6 @@
     "paese": "Germania",
     "canale": "More Than Sports TV",
     "link": "https://morethansports.tv/"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "13:45",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "Davis Cup Finals 8 2025 SF1 - ITA vs BEL - Ep. 1 - Matteo Berrettini vs Raphael Collignon ITA vs BEL Davis Cup Final 8 Bologna SF1 # 1",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
   },
   {
     "data": "2026-11-23",
@@ -1741,6 +241,36 @@
   },
   {
     "data": "2026-11-23",
+    "ora": "14:25",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "Davis Cup Finals 8 2025 SF1 - ITA vs BEL - Ep. 1 - Matteo Berrettini vs Raphael Collignon ITA vs BEL Davis Cup Final 8 Bologna SF1 # 1",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "15:00",
+    "sport": "Calcio",
+    "competizione": "Surf Brasil",
+    "evento": "etapa Guarda do Embaú",
+    "paese": "Brasile YouTube",
+    "canale": "Xsports (YouTube)",
+    "link": "https://www.youtube.com/@xsports.brasil"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "15:00",
+    "sport": "Football Americano",
+    "competizione": "Surf Brasil",
+    "evento": "etapa de Guarda do Embaú",
+    "paese": "Brasile YouTube",
+    "canale": "Xsports (YouTube)",
+    "link": "https://www.youtube.com/@xsports.brasil"
+  },
+  {
+    "data": "2026-11-23",
     "ora": "15:00",
     "sport": "Calcio",
     "competizione": "Sport Calcio",
@@ -1748,16 +278,6 @@
     "paese": "Italia",
     "canale": "Sportitalia",
     "link": "https://www.sportitalia.it/"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "15:15",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "Davis Cup Finals 8 2025 SF1 - ITA vs BEL - Ep. 2 - Flavio Cobolli vs Zizou Bergs ITA vs BEL Davis Cup Final 8 Bologna SF1 # 1",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
   },
   {
     "data": "2026-11-23",
@@ -1781,6 +301,26 @@
   },
   {
     "data": "2026-11-23",
+    "ora": "16:10",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "Davis Cup Finals 8 2025 SF1 - ITA vs BEL - Ep. 2 - Flavio Cobolli vs Zizou Bergs ITA vs BEL Davis Cup Final 8 Bologna SF1 # 1",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "16:40",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Foot: FC Sion - Servette FC",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-23",
     "ora": "16:45",
     "sport": "Sci Alpino",
     "competizione": "Ski Alpin",
@@ -1788,16 +328,6 @@
     "paese": "Germania",
     "canale": "Eurosport 1 DE",
     "link": "https://www.eurosport.de/"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "16:45",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Foot: FC Sion - Servette FC",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
   },
   {
     "data": "2026-11-23",
@@ -1861,16 +391,6 @@
   },
   {
     "data": "2026-11-23",
-    "ora": "18:30",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "Davis Cup Finals 8 2025- Fin ITA vs ESP - Ep. 1 - Matteo Berrettini vs Pablo Carreno Busta Italia vs Spagna Davis Cup Final 8 Bologna Finale # 1",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-23",
     "ora": "18:35",
     "sport": "Calcio",
     "competizione": "TV Svizzera",
@@ -1881,13 +401,13 @@
   },
   {
     "data": "2026-11-23",
-    "ora": "18:55",
+    "ora": "19:00",
     "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Le temps additionnel - Brack Super League",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
+    "competizione": "FUTEBOL FEMININO",
+    "evento": "Brøndby x Midtjylland",
+    "paese": "Brasile YouTube",
+    "canale": "Canal GOL Brasil (YouTube)",
+    "link": "https://www.youtube.com/@canalgolbrasil"
   },
   {
     "data": "2026-11-23",
@@ -1898,6 +418,26 @@
     "paese": "Italia",
     "canale": "Sportitalia",
     "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "19:00",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Le temps additionnel - Brack Super League",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "19:15",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "Davis Cup Finals 8 2025- Fin ITA vs ESP - Ep. 1 - Matteo Berrettini vs Pablo Carreno Busta Italia vs Spagna Davis Cup Final 8 Bologna Finale # 1",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
   },
   {
     "data": "2026-11-23",
@@ -1921,16 +461,6 @@
   },
   {
     "data": "2026-11-23",
-    "ora": "19:50",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "Davis Cup Finals 8 2025- Fin ITA vs ESP - Ep. 2 - Flavio Cobolli vs Jaume Munar Italia vs Spagna Davis Cup Final 8 Bologna Finale # 1",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-23",
     "ora": "20:00",
     "sport": "Calcio",
     "competizione": "Fußball",
@@ -1943,11 +473,51 @@
     "data": "2026-11-23",
     "ora": "20:30",
     "sport": "Calcio",
+    "competizione": "FUTSAL – CAMPEONATO ESPANHOL",
+    "evento": "Palma x Inter",
+    "paese": "Brasile YouTube",
+    "canale": "Canal GOL Brasil (YouTube)",
+    "link": "https://www.youtube.com/@canalgolbrasil"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "20:30",
+    "sport": "Calcio",
     "competizione": "Sport Calcio",
     "evento": "Serie A Live",
     "paese": "Italia",
     "canale": "Sportitalia",
     "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "20:45",
+    "sport": "Calcio",
+    "competizione": "FUTSAL – CAMPEONATO ESPANHOL",
+    "evento": "Monza x Fiorentina",
+    "paese": "Brasile YouTube",
+    "canale": "SportyNet (YouTube)",
+    "link": "https://www.youtube.com/@SportyNetBrasil"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "20:50",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "Davis Cup Finals 8 2025- Fin ITA vs ESP - Ep. 2 - Flavio Cobolli vs Jaume Munar Italia vs Spagna Davis Cup Final 8 Bologna Finale # 1",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "21:00",
+    "sport": "Calcio",
+    "competizione": "FUTSAL – CAMPEONATO ESPANHOL",
+    "evento": "Levante x Elche",
+    "paese": "Brasile YouTube",
+    "canale": "CazéTV (YouTube)",
+    "link": "https://www.youtube.com/@CazeTV"
   },
   {
     "data": "2026-11-23",
@@ -1971,6 +541,26 @@
   },
   {
     "data": "2026-11-23",
+    "ora": "22:30",
+    "sport": "Pallavolo",
+    "competizione": "SUPERLIGA DE VÔLEI",
+    "evento": "Minas x Bauru (feminino)",
+    "paese": "Brasile YouTube",
+    "canale": "GE TV (YouTube)",
+    "link": "https://www.youtube.com/@getv"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "22:30",
+    "sport": "Pallavolo",
+    "competizione": "Superliga Feminina",
+    "evento": "Minas x Bauru",
+    "paese": "Brasile YouTube",
+    "canale": "GE TV (YouTube)",
+    "link": "https://www.youtube.com/@getv"
+  },
+  {
+    "data": "2026-11-23",
     "ora": "22:35",
     "sport": "Calcio",
     "competizione": "TV Italia",
@@ -1978,16 +568,6 @@
     "paese": "Italia",
     "canale": "Rai Sport",
     "link": "https://www.raiplay.it/dirette/raisport"
-  },
-  {
-    "data": "2026-11-23",
-    "ora": "22:40",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "WTA Finals Indian Wells 2026 - Doppio - Ep. 13 - Guo/Mladenovic vs Errani/Paolini WTA Finals # 1",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
   },
   {
     "data": "2026-11-23",
@@ -2061,16 +641,6 @@
   },
   {
     "data": "2026-11-23",
-    "ora": "23:15",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "WTA Finals Indian Wells 2026 - Doppio - Ep. 14 - Guo/Mladenovic vs Errani/Paolini WTA Finals # 1",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-23",
     "ora": "23:30",
     "sport": "Calcio",
     "competizione": "TV Svizzera",
@@ -2078,6 +648,26 @@
     "paese": "Svizzera",
     "canale": "blue Zoom",
     "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "23:35",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "Circolando 2026 - Ep. 1 - Circolando - New Country Tennis Academy Bari",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-23",
+    "ora": "23:55",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "WTA Finals Indian Wells 2026 - Doppio - Ep. 13 - Guo/Mladenovic vs Errani/Paolini WTA Finals # 1",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
   },
   {
     "data": "2026-11-24",
@@ -2088,6 +678,16 @@
     "paese": "Germania",
     "canale": "Eurosport 1 DE",
     "link": "https://www.eurosport.de/"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "00:30",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "WTA Finals Indian Wells 2026 - Doppio - Ep. 14 - Guo/Mladenovic vs Errani/Paolini WTA Finals # 1",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
   },
   {
     "data": "2026-11-24",
@@ -2118,6 +718,16 @@
     "paese": "Germania",
     "canale": "More Than Sports TV",
     "link": "https://morethansports.tv/"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "01:05",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "WTA Finals Indian Wells 2026 - Singolare - Ep. 15 - Mirra Andreeva vs Elina Svitolina WTA Finals # 1",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
   },
   {
     "data": "2026-11-24",
@@ -2161,6 +771,16 @@
   },
   {
     "data": "2026-11-24",
+    "ora": "02:55",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "LIVE MAJOR MEXICO",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-24",
     "ora": "04:00",
     "sport": "Calcio",
     "competizione": "Sport Calcio",
@@ -2191,6 +811,26 @@
   },
   {
     "data": "2026-11-24",
+    "ora": "04:35",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "Colpo da campione - Stagione 2026 - Ep. 32 - Colpo da campione By Head - il servizio di Sonego",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "04:50",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "LIVE MAJOR MEXICO",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-24",
     "ora": "05:00",
     "sport": "Calcio",
     "competizione": "TV Svizzera",
@@ -2211,6 +851,16 @@
   },
   {
     "data": "2026-11-24",
+    "ora": "06:45",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "WTA Finals Indian Wells 2026 - Doppio - Ep. 1 - Siniakova/Townsend vs Errani/Paolini WTA Finals # 4",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-24",
     "ora": "07:00",
     "sport": "Calcio",
     "competizione": "Calcio Dibattito Sportivo",
@@ -2218,6 +868,26 @@
     "paese": "Italia",
     "canale": "Sportitalia",
     "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "07:45",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "TIE-BREAK 2026 - Stag. 2023 Ep. 28 - Tie Break - Shelton vs Alcaraz 1 set US OPEN 2026",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "08:00",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "Davis Cup Finals 8 2025 SF1 - ITA vs BEL - Ep. 1 - Matteo Berrettini vs Raphael Collignon ITA vs BEL Davis Cup Final 8 Bologna SF1 # 1",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
   },
   {
     "data": "2026-11-24",
@@ -2281,6 +951,16 @@
   },
   {
     "data": "2026-11-24",
+    "ora": "09:30",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "Davis Cup Finals 8 2025 SF1 - ITA vs BEL - Ep. 2 - Flavio Cobolli vs Zizou Bergs ITA vs BEL Davis Cup Final 8 Bologna SF1 # 1",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-24",
     "ora": "10:30",
     "sport": "Calcio",
     "competizione": "Sport Calcio",
@@ -2341,6 +1021,16 @@
   },
   {
     "data": "2026-11-24",
+    "ora": "12:25",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "Davis Cup Finals 8 2025- Fin ITA vs ESP - Ep. 1 - Matteo Berrettini vs Pablo Carreno Busta Italia vs Spagna Davis Cup Final 8 Bologna Finale # 1",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-24",
     "ora": "13:30",
     "sport": "Calcio",
     "competizione": "Sport Notizie",
@@ -2368,6 +1058,16 @@
     "paese": "Svizzera",
     "canale": "blue Zoom",
     "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "13:45",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "Davis Cup Finals 8 2025- Fin ITA vs ESP - Ep. 2 - Flavio Cobolli vs Jaume Munar Italia vs Spagna Davis Cup Final 8 Bologna Finale # 1",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
   },
   {
     "data": "2026-11-24",
@@ -2431,6 +1131,26 @@
   },
   {
     "data": "2026-11-24",
+    "ora": "16:25",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "Supertennis Today - Speciale Davis Cup",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "17:00",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "LIVE DAVIS CUP FINALS BY GENERALI",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-24",
     "ora": "17:00",
     "sport": "Calcio",
     "competizione": "TV Svizzera",
@@ -2448,6 +1168,26 @@
     "paese": "Italia",
     "canale": "Sportitalia",
     "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "18:55",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "Supertennis Today - Speciale Davis Cup",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "19:05",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "LIVE DAVIS CUP FINALS BY GENERALI",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
   },
   {
     "data": "2026-11-24",
@@ -2511,6 +1251,16 @@
   },
   {
     "data": "2026-11-24",
+    "ora": "20:55",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "Supertennis Today - Speciale Davis Cup",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-24",
     "ora": "21:00",
     "sport": "Calcio",
     "competizione": "Sport Calcio",
@@ -2531,6 +1281,16 @@
   },
   {
     "data": "2026-11-24",
+    "ora": "21:10",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "LIVE DAVIS CUP FINALS BY GENERALI",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-24",
     "ora": "22:55",
     "sport": "Calcio",
     "competizione": "Sport Calcio",
@@ -2548,6 +1308,16 @@
     "paese": "Svizzera",
     "canale": "blue Zoom",
     "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "23:00",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "Supertennis Today - Speciale Davis Cup",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
   },
   {
     "data": "2026-11-24",
@@ -2588,6 +1358,16 @@
     "paese": "Germania",
     "canale": "More Than Sports TV",
     "link": "https://morethansports.tv/"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "23:10",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "Davis Cup Finals 2026 - CZE vs CAN",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
   },
   {
     "data": "2026-11-24",
@@ -2651,6 +1431,16 @@
   },
   {
     "data": "2026-11-25",
+    "ora": "02:00",
+    "sport": "Calcio",
+    "competizione": "Sport Calcio",
+    "evento": "Magazine argentino",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-25",
     "ora": "03:10",
     "sport": "Calcio",
     "competizione": "TV Svizzera",
@@ -2671,6 +1461,16 @@
   },
   {
     "data": "2026-11-25",
+    "ora": "03:30",
+    "sport": "Calcio",
+    "competizione": "Sport Calcio",
+    "evento": "Magazine Inside City",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-25",
     "ora": "04:50",
     "sport": "Calcio",
     "competizione": "Rugby",
@@ -2688,5 +1488,575 @@
     "paese": "Svizzera",
     "canale": "RSI La 2",
     "link": "https://www.rsi.ch/play/tv"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "06:05",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Fussball: Arsenal FC - West Ham United",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "06:45",
+    "sport": "Calcio",
+    "competizione": "TV Italia",
+    "evento": "Karate",
+    "paese": "Italia",
+    "canale": "Rai Sport",
+    "link": "https://www.raiplay.it/dirette/raisport"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "06:45",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Foot: Manchester City - FC Fulham",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "07:00",
+    "sport": "Calcio",
+    "competizione": "Calcio Dibattito Sportivo",
+    "evento": "Sportitalia Mercato",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "08:35",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Fussball: Manchester City - Tottenham Hotspur",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "08:45",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "UEFA Europa League magazine",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "09:00",
+    "sport": "Calcio",
+    "competizione": "Calcio Talk Show",
+    "evento": "Tutti In campo",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "09:45",
+    "sport": "Pallavolo",
+    "competizione": "TV Italia",
+    "evento": "Pallavolo: Serie A Maschile",
+    "paese": "Italia",
+    "canale": "Rai Sport",
+    "link": "https://www.raiplay.it/dirette/raisport"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "10:00",
+    "sport": "Sci Alpino",
+    "competizione": "Ski Alpin",
+    "evento": "Ski alpin: Weltcup",
+    "paese": "Germania",
+    "canale": "Eurosport 1 DE",
+    "link": "https://www.eurosport.de/"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "10:00",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "UEFA Champions League magazine",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "10:30",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Foot: Galatasaray AŞ - Aston Villa FC",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "11:00",
+    "sport": "Sci Alpino",
+    "competizione": "Ski Alpin",
+    "evento": "Ski alpin: Weltcup",
+    "paese": "Germania",
+    "canale": "Eurosport 1 DE",
+    "link": "https://www.eurosport.de/"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "11:55",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Fussball: Arsenal FC - Borussia Dortmund",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "12:00",
+    "sport": "Sci Alpino",
+    "competizione": "Ski Alpin",
+    "evento": "Ski alpin: Weltcup",
+    "paese": "Germania",
+    "canale": "Eurosport 1 DE",
+    "link": "https://www.eurosport.de/"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "12:00",
+    "sport": "Calcio",
+    "competizione": "Calcio Dibattito Sportivo",
+    "evento": "Sportitalia Mercato",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "12:25",
+    "sport": "Basket & NBA",
+    "competizione": "TV Italia",
+    "evento": "Basket: Serie A2 Old Wild West",
+    "paese": "Italia",
+    "canale": "Rai Sport",
+    "link": "https://www.raiplay.it/dirette/raisport"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "12:25",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Foot: Manchester City - SSC Napoli",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "12:30",
+    "sport": "Sci Alpino",
+    "competizione": "Ski Alpin",
+    "evento": "Ski alpin: Weltcup",
+    "paese": "Germania",
+    "canale": "Eurosport 1 DE",
+    "link": "https://www.eurosport.de/"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "13:15",
+    "sport": "Tennis",
+    "competizione": "TV Svizzera",
+    "evento": "Un match parfait pour Noël",
+    "paese": "Svizzera",
+    "canale": "RTS 1",
+    "link": "https://www.rts.ch/play/tv"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "14:00",
+    "sport": "Calcio",
+    "competizione": "Sport Notizie",
+    "evento": "B-Lab",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "14:20",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Foot: Real Madrid CF - PSV Eindhoven",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "14:40",
+    "sport": "Basket & NBA",
+    "competizione": "TV Italia",
+    "evento": "SportAbilia",
+    "paese": "Italia",
+    "canale": "Rai Sport",
+    "link": "https://www.raiplay.it/dirette/raisport"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "16:15",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Foot: Arsenal FC - Borussia Dortmund",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "16:30",
+    "sport": "Calcio",
+    "competizione": "Sport Calcio",
+    "evento": "Speciale Serie C",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "18:00",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "UEFA Europa League Magazin",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "18:30",
+    "sport": "Calcio",
+    "competizione": "Sport Calcio",
+    "evento": "UEFA Champions League",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "18:55",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Le temps additionnel - UEFA Champions League",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "18:55",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Scooore Niederlande – Fussballmagazin",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "19:25",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Matchnight",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "20:00",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "UEFA Champions League - Der Countdown",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "20:10",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "UEFA Champions League: Inter Milan - VfB Stuttgart",
+    "paese": "Svizzera",
+    "canale": "RTS 2",
+    "link": "https://www.rts.ch/play/tv"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "20:10",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "UEFA Champions League: Inter Mailand - VfB Stuttgart",
+    "paese": "Svizzera",
+    "canale": "SRF zwei",
+    "link": "https://www.srf.ch/play/tv"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "20:15",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "L'avant-match - UEFA Champions League",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "20:20",
+    "sport": "Calcio",
+    "competizione": "Sport Calcio",
+    "evento": "Tv8 Football Night",
+    "paese": "Italia",
+    "canale": "TV8",
+    "link": "https://tv8.it/streaming"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "20:30",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "UEFA Champions League: Inter - VfB Stoccarda",
+    "paese": "Svizzera",
+    "canale": "RSI La 2",
+    "link": "https://www.rsi.ch/play/tv"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "21:00",
+    "sport": "Calcio",
+    "competizione": "Sport Calcio",
+    "evento": "Lille OSC - FC Bayern Monaco",
+    "paese": "Italia",
+    "canale": "TV8",
+    "link": "https://tv8.it/streaming"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "21:00",
+    "sport": "Calcio",
+    "competizione": "Sport Calcio",
+    "evento": "UEFA Champions League",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "21:00",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Foot: Liverpool FC - Manchester United",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "22:00",
+    "sport": "Sci Alpino",
+    "competizione": "Ski Alpin",
+    "evento": "Ski alpin: Weltcup",
+    "paese": "Germania",
+    "canale": "Eurosport 1 DE",
+    "link": "https://www.eurosport.de/"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "22:55",
+    "sport": "Calcio",
+    "competizione": "Sport Calcio",
+    "evento": "Lo Sai Che?",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "22:55",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Matchnight",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "23:00",
+    "sport": "Calcio",
+    "competizione": "Champions League",
+    "evento": "Fußball: Champions League",
+    "paese": "Germania",
+    "canale": "ZDF",
+    "link": "https://www.zdf.de/live-tv"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "23:00",
+    "sport": "Sci Alpino",
+    "competizione": "Ski Alpin",
+    "evento": "Ski alpin: Weltcup",
+    "paese": "Germania",
+    "canale": "Eurosport 1 DE",
+    "link": "https://www.eurosport.de/"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "23:00",
+    "sport": "Calcio",
+    "competizione": "Sport Calcio",
+    "evento": "Tv8 Football Night",
+    "paese": "Italia",
+    "canale": "TV8",
+    "link": "https://tv8.it/streaming"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "23:00",
+    "sport": "Calcio",
+    "competizione": "Calcio Dibattito Sportivo",
+    "evento": "Sportitalia Mercato",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "23:00",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Le temps additionnel - UEFA Champions League",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "23:00",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "UEFA Champions League - Highlights - Alle Spiele, alle Tore",
+    "paese": "Svizzera",
+    "canale": "SRF zwei",
+    "link": "https://www.srf.ch/play/tv"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "23:45",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "UEFA Europa League magazine",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "00:00",
+    "sport": "Sci Alpino",
+    "competizione": "Ski Alpin",
+    "evento": "Ski alpin: Weltcup",
+    "paese": "Germania",
+    "canale": "Eurosport 1 DE",
+    "link": "https://www.eurosport.de/"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "00:05",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Fussball: Liverpool FC - Manchester United",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "00:45",
+    "sport": "Sci Alpino",
+    "competizione": "Ski Alpin",
+    "evento": "Ski alpin: Weltcup",
+    "paese": "Germania",
+    "canale": "Eurosport 1 DE",
+    "link": "https://www.eurosport.de/"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "00:45",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Foot: Manchester City - FC Fulham",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "01:45",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "UEFA Champions League: Inter - VfB Stoccarda",
+    "paese": "Svizzera",
+    "canale": "RSI La 2",
+    "link": "https://www.rsi.ch/play/tv"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "02:05",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Fussball: RB Leipzig - RC Lens",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "02:40",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Foot: OGC Nice - Paris Saint-Germain",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "04:05",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "Fussball: Real Madrid CF - PSV Eindhoven",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "04:40",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "UEFA Champions League magazine",
+    "paese": "Svizzera",
+    "canale": "blue Zoom",
+    "link": "https://www.blueplus.ch/de/bluezoom"
   }
 ]
