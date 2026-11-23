@@ -66,7 +66,3 @@ jobs:
       - name: Pubblica sito online
         id: deployment
         uses: actions/deploy-pages@v4
-    steps:
-      - name: Pubblica sito online
-        id: deployment
-        uses: actions/deploy-pages@v4
