@@ -26,7 +26,6 @@ ROME_TZ = ZoneInfo("Europe/Rome")
 BR_TZ = ZoneInfo("America/Sao_Paulo")
 JP_TZ = ZoneInfo("Asia/Tokyo")
 NOW = datetime.now(ROME_TZ)
-# Mostra tutta la giornata di oggi (dalle 00:00) + i prossimi 7 giorni
 MIN_DT = NOW.replace(hour=0, minute=0, second=0, microsecond=0)
 MAX_DT = NOW + timedelta(days=7)
 
@@ -663,6 +662,20 @@ NEGATIVE_FREE_PHRASES = [
 ]
 
 
+def injetta_alt_immagini(soup):
+    """Trasforma i loghi immagine (es. <img alt='DAZN'>) in testo leggibile!"""
+    for img in soup.find_all("img"):
+        lbl = (img.get("alt") or img.get("title") or "").strip()
+        if lbl:
+            img.replace_with(f" {lbl} ")
+    for tag in soup.find_all(attrs={"title": True}):
+        if not tag.get_text(strip=True):
+            try:
+                tag.append(f" {tag['title']} ")
+            except Exception:
+                pass
+
+
 class SmartFetcher:
     def __init__(self):
         self._pw = None
@@ -710,6 +723,16 @@ class SmartFetcher:
             return True
         if "consent.google.com" in low:
             return True
+        soup = BeautifulSoup(html, "html.parser")
+        title_txt = (soup.title.get_text(strip=True) if soup.title else "").lower()
+        for t in soup(["script", "style", "noscript"]):
+            t.decompose()
+        vis_len = len(soup.get_text(" ", strip=True))
+        if vis_len < 300:
+            return True
+        # Pagina finta vuota di DAZN con solo <title>DAZN</title>
+        if title_txt == "dazn" and vis_len < 1200:
+            return True
         return False
 
     def get_content(self, url, force_browser=False, allow_jina=True):
@@ -742,7 +765,11 @@ class SmartFetcher:
                         if "news.google.com" not in page.url and "consent.google" not in page.url:
                             break
                         page.wait_for_timeout(600)
-                page.wait_for_timeout(2500)
+                try:
+                    page.wait_for_load_state("networkidle", timeout=7000)
+                except Exception:
+                    pass
+                page.wait_for_timeout(2000)
                 html = page.content()
                 if not self._is_blocked_or_empty(html):
                     return ("html", html, "pw")
@@ -914,7 +941,6 @@ def pulisci_evento_dazn(testo):
     s = s.replace("**", "").replace("__", "")
     s = re.sub(r"^(?:#{1,6}\s+|[*•>\-]+\s+)", "", s)
     s = re.sub(r"\s+", " ", s).strip(" -–—:|•·,")
-    # Rimuove frasi introduttive tipo "Esta terça-feira, vê grátis o ..." / "O X está marcado para ..."
     s = re.sub(r"^(?:esta|nesta|este|hoy|oggi|heute|today|this)\s+[^,]+,\s*", "", s, flags=re.I)
     s = re.sub(r"^(?:vê|ve|acompanha|assiste|guarda|mira|ver|watch|siehe|seht)\s+(?:em direto\s+)?(?:e\s+)?(?:grátis|gratis|for free|kostenlos|gratuitamente)\s+(?:o|a|os|as|lo|la|el)?\s*", "", s, flags=re.I)
     s = re.sub(r"^\d{1,2}[/.]\d{1,2}(?:[/.]202\d)?(?:\([日月火水木金土]\))?\s*[-–—,|•]*\s*", "", s)
@@ -929,7 +955,6 @@ def pulisci_evento_dazn(testo):
 def sembra_evento_valido(testo):
     if not testo or len(testo) < 6 or len(testo) > 150:
         return False
-    # Mai "solo numeri": servono almeno 4 lettere vere!
     if sum(c.isalpha() for c in testo) < 4:
         return False
     low = testo.lower()
@@ -1031,8 +1056,8 @@ def estrai_eventi_dazn_da_contenuto(kind, content, cfg, is_calendar_article=True
     if kind == "html":
         soup = BeautifulSoup(content, "html.parser")
         if soup.title:
-            page_title = soup.title.get_text(" ", strip=True)[:50]
-        # Usa il pub_dt solo come riferimento se è recente, MA non buttare mai pagine aggiornate (es. 2024->2026)!
+            page_title = soup.title.get_text(" ", strip=True)[:40]
+        injetta_alt_immagini(soup)
         art_dt = estrai_pub_date_articolo(soup) or fallback_pub_dt
         ref_dt = art_dt.replace(tzinfo=None) if (art_dt and abs((NOW.replace(tzinfo=None) - art_dt.replace(tzinfo=None)).days) <= 21) else NOW.replace(tzinfo=None)
 
@@ -1047,8 +1072,10 @@ def estrai_eventi_dazn_da_contenuto(kind, content, cfg, is_calendar_article=True
     else:
         ref_dt = pub_dt.replace(tzinfo=None) if (pub_dt and abs((NOW.replace(tzinfo=None) - pub_dt.replace(tzinfo=None)).days) <= 21) else NOW.replace(tzinfo=None)
         testo = content or ""
+        page_title = "markdown"
 
     current_date = None
+    last_match_hint = ""
     for raw_line in testo.splitlines():
         line = re.sub(r"\s+", " ", raw_line).strip()
         if not line:
@@ -1069,11 +1096,7 @@ def estrai_eventi_dazn_da_contenuto(kind, content, cfg, is_calendar_article=True
         if any(stop in low_full for stop in STOP_SECTIONS):
             break
 
-        # Spezza eventuali paragrafi lunghi in frasi singole (es. "terça-feira X. quarta-feira Y.")
-        if len(line_clean) > 135:
-            frasi = re.split(r"(?<=[.!?])\s+(?=[A-ZÀ-ÿ0-9])", line_clean)
-        else:
-            frasi = [line_clean]
+        frasi = re.split(r"(?<=[.!?])\s+(?=[A-ZÀ-ÿ0-9])", line_clean) if len(line_clean) > 135 else [line_clean]
 
         for frase in frasi:
             frase = frase.strip()
@@ -1090,6 +1113,11 @@ def estrai_eventi_dazn_da_contenuto(kind, content, cfg, is_calendar_article=True
 
             if d_found and not hm_found and len(frase) < 65:
                 current_date = d_found
+                continue
+
+            # Memorizza se la riga è solo il nome della partita (es. "Real Madrid - Barcellona") prima di riga data/ora
+            if not hm_found and re.search(r"(\s+-\s+|\s+vs\.?\s+|\s+x\s+|\s+@\s+)", frase, re.I) and len(frase) < 85:
+                last_match_hint = pulisci_evento_dazn(frase)
                 continue
 
             if not is_calendar_article and "dazn" not in low:
@@ -1110,6 +1138,9 @@ def estrai_eventi_dazn_da_contenuto(kind, content, cfg, is_calendar_article=True
                     continue
 
                 evento = pulisci_evento_dazn(frase)
+                if len(evento) < 6 and last_match_hint:
+                    evento = last_match_hint
+                last_match_hint = ""
                 if len(evento) > 135 or not sembra_evento_valido(evento):
                     continue
                 sport = classifica_sport(evento, canale_solo_sport=True) or "Altri Sport"
@@ -1124,7 +1155,7 @@ def estrai_eventi_dazn_da_contenuto(kind, content, cfg, is_calendar_article=True
                     "link": cfg["home"],
                 })
 
-    return risultati, page_title
+    return risultati, page_title, len(testo)
 
 
 def parse_rss_date(pub_str):
@@ -1155,7 +1186,7 @@ def cerca_wordpress_dazn(site_url, query, cfg):
             if (NOW.replace(tzinfo=None) - pub_dt).days > 28:
                 continue
             html = post.get("content", {}).get("rendered", "")
-            ev, _ = estrai_eventi_dazn_da_contenuto("html", html, cfg, is_calendar_article=True, fallback_pub_dt=pub_dt)
+            ev, _, _ = estrai_eventi_dazn_da_contenuto("html", html, cfg, is_calendar_article=True, fallback_pub_dt=pub_dt)
             trovati.extend(ev)
     except Exception:
         pass
@@ -1213,20 +1244,17 @@ def scarica_dazn_tutti_paesi(fetcher):
         candidati = []
         visti_url = set()
 
-        # 1) Blog WordPress diretti
         wp_ev = 0
         for wp_site, wp_q in cfg.get("wp_sites", []):
             ev_wp = cerca_wordpress_dazn(wp_site, wp_q, cfg)
             wp_ev += len(ev_wp)
             eventi_paese.extend(ev_wp)
 
-        # 2) URL diretti articoli DAZN
         for u in cfg.get("direct_urls", []):
             if u not in visti_url:
                 visti_url.add(u)
                 candidati.append((f"DAZN {paese}", u, None, True))
 
-        # 3) Scopri gli articoli gratis dentro gli hub /news ufficiali di DAZN!
         hub_links_n = 0
         for hub in cfg.get("news_hubs", []):
             kind_h, content_h, _ = fetcher.get_content(hub, allow_jina=True)
@@ -1243,8 +1271,15 @@ def scarica_dazn_tutti_paesi(fetcher):
                             visti_url.add(href)
                             candidati.append((txt, href, None, True))
                             hub_links_n += 1
+            else:
+                for m in re.finditer(r"https://www\.dazn\.com/[^\s\)\"'>]+/news/[^\s\)\"'>]+", content_h):
+                    href = m.group(0)
+                    if any(kw in href.lower() for kw in cfg.get("hub_keywords", [])) and not any(bad in href.lower() for bad in PROMO_BAD_WORDS):
+                        if href not in visti_url:
+                            visti_url.add(href)
+                            candidati.append((href, href, None, True))
+                            hub_links_n += 1
 
-        # 4) Bing News RSS
         bing_n = 0
         for bq in cfg.get("bing_queries", []):
             for title, u, pub_dt in cerca_bing_news(bq, cfg["bing_mkt"]):
@@ -1259,7 +1294,6 @@ def scarica_dazn_tutti_paesi(fetcher):
                         candidati.append((title, u, pub_dt, True))
                         bing_n += 1
 
-        # 5) Google News RSS
         gnews_n = 0
         if cfg.get("gnews"):
             hl, gl, ceid, gq = cfg["gnews"]
@@ -1275,23 +1309,19 @@ def scarica_dazn_tutti_paesi(fetcher):
                         candidati.append((title, u, pub_dt, True))
                         gnews_n += 1
 
-        pagine_lette = 0
-        metodi = []
-        titolo_sample = ""
-        for title, page_url, pub_dt, is_cal in candidati[:8]:
+        logs_pag = []
+        for title, page_url, pub_dt, is_cal in candidati[:7]:
             kind, content, via = fetcher.get_content(page_url, allow_jina=True)
-            metodi.append(via)
             if not content:
+                logs_pag.append(f"{via}:0")
                 continue
-            pagine_lette += 1
-            trovati, p_title = estrai_eventi_dazn_da_contenuto(
+            trovati, p_title, txt_len = estrai_eventi_dazn_da_contenuto(
                 kind, content, cfg, is_calendar_article=is_cal, fallback_pub_dt=pub_dt
             )
-            if not titolo_sample and p_title:
-                titolo_sample = p_title
+            logs_pag.append(f"{via}:{p_title[:16]}({txt_len}c)->{len(trovati)}")
             eventi_paese.extend(trovati)
 
-        print(f"   🔎 [{paese}] wp={wp_ev}, hub={hub_links_n}, bing={bing_n}, gnews={gnews_n}, lette={pagine_lette}/{len(candidati[:8])} ({','.join(metodi)}) | ex='{titolo_sample}' -> {len(eventi_paese)} eventi")
+        print(f"   🔎 [{paese}] wp={wp_ev}, hub={hub_links_n}, bing={bing_n}, gnews={gnews_n} | {' ; '.join(logs_pag)} => TOT {len(eventi_paese)}")
         tutti.extend(eventi_paese)
     return tutti
 
@@ -1315,15 +1345,20 @@ def scarica_dazn_spagna_futbolenlatv(fetcher):
         if not content:
             continue
 
-        testo = BeautifulSoup(content, "html.parser").get_text("\n") if kind == "html" else content
-        lines = [re.sub(r"\s+", " ", x).strip() for x in testo.splitlines() if x.strip()]
+        if kind == "html":
+            soup = BeautifulSoup(content, "html.parser")
+            injetta_alt_immagini(soup)
+            testo = soup.get_text("\n")
+        else:
+            testo = content
 
+        lines = [re.sub(r"\s+", " ", x).strip() for x in testo.splitlines() if x.strip()]
         current_date = NOW.date()
         i = 0
         while i < len(lines):
             line = lines[i]
             m_d = re.search(r"\b(\d{2}/\d{2}/202\d)\b", line)
-            if m_d and len(line) < 70:
+            if m_d and len(line) < 75:
                 try:
                     current_date = datetime.strptime(m_d.group(1), "%d/%m/%Y").date()
                 except Exception:
@@ -1331,17 +1366,18 @@ def scarica_dazn_spagna_futbolenlatv(fetcher):
                 i += 1
                 continue
 
-            if re.match(r"^\d{2}:\d{2}$", line):
-                hh, mm = map(int, line.split(":"))
+            m_hm = re.search(r"\b(\d{2}):(\d{2})\b", line)
+            if m_hm and len(line) < 16:
+                hh, mm = int(m_hm.group(1)), int(m_hm.group(2))
                 blocco = []
                 j = i + 1
-                while j < len(lines) and j <= i + 12 and not re.match(r"^\d{2}:\d{2}$", lines[j]) and not re.search(r"\b\d{2}/\d{2}/202\d\b", lines[j]):
+                while j < len(lines) and j <= i + 14 and not re.match(r"^\d{2}:\d{2}$", lines[j]) and not re.search(r"\b\d{2}/\d{2}/202\d\b", lines[j]):
                     blocco.append(lines[j])
                     j += 1
                 blocco_txt = " | ".join(blocco)
-                if not solo_se_gratis or "dazn app gratis" in blocco_txt.lower():
+                if not solo_se_gratis or "dazn app gratis" in blocco_txt.lower() or "ver gratis" in blocco_txt.lower():
                     comp = blocco[0] if blocco else "DAZN Free Spagna"
-                    partita_raw = " - ".join(x for x in blocco[1:4] if "dazn" not in x.lower() and "ver " not in x.lower() and len(x) > 1)
+                    partita_raw = " - ".join(x for x in blocco[1:5] if "dazn" not in x.lower() and "ver " not in x.lower() and len(x) > 1)
                     evento = re.sub(r"\b([A-Za-zÀ-ÿ0-9.]+(?:\s+[A-Za-zÀ-ÿ0-9.]+)?)\s+\1\b", r"\1", partita_raw).strip()
                     if sembra_evento_valido(evento):
                         try:
@@ -1394,7 +1430,12 @@ def scarica_dazn_germania_fussballgucken(fetcher):
         vias.append(via)
         if not content:
             continue
-        testo = BeautifulSoup(content, "html.parser").get_text("\n") if kind == "html" else content
+        if kind == "html":
+            csoup = BeautifulSoup(content, "html.parser")
+            injetta_alt_immagini(csoup)
+            testo = csoup.get_text("\n")
+        else:
+            testo = content
         lines = [re.sub(r"\s+", " ", x).strip() for x in testo.splitlines() if x.strip()]
 
         current_date = NOW.date()
@@ -1415,7 +1456,7 @@ def scarica_dazn_germania_fussballgucken(fetcher):
                 hh, mm = int(m_hm.group(1)), int(m_hm.group(2))
                 blocco = []
                 j = i + 1
-                while j < len(lines) and j <= i + 16 and not re.match(r"^\d{2}:\d{2}(?:\s*Uhr)?\b", lines[j]) and not re.search(r"\b\d{2}\.\d{2}\.202\d\b", lines[j]):
+                while j < len(lines) and j <= i + 18 and not re.match(r"^\d{2}:\d{2}(?:\s*Uhr)?\b", lines[j]) and not re.search(r"\b\d{2}\.\d{2}\.202\d\b", lines[j]):
                     blocco.append(lines[j])
                     j += 1
 
@@ -1454,49 +1495,48 @@ def scarica_dazn_germania_fussballgucken(fetcher):
 def scarica_abema_giappone(fetcher):
     risultati = []
     print("🇯🇵📺 Controllo ABEMA Free Giappone (Bundesliga & Sport Gratis JP)...")
-    # Soccer King pubblica la tabella settimanale esatta indicando "ABEMA · 無料配信"
     urls = ["https://www.soccer-king.jp/league/bundesliga", "https://www.soccer-king.jp/"]
     vias = []
     for u in urls:
         kind, content, via = fetcher.get_content(u, allow_jina=True)
         vias.append(via)
-        if not content:
+        if not content or kind != "html":
             continue
-        if kind == "html":
-            soup = BeautifulSoup(content, "html.parser")
-            for a in soup.find_all("a", href=True):
-                href = urljoin(u, a["href"])
-                txt = a.get_text(" ", strip=True)
-                if ("放送" in txt or "配信" in txt) and ("ブンデス" in txt or "abema" in txt.lower()):
-                    if href not in urls and len(urls) < 5:
-                        urls.append(href)
-            for tr in soup.find_all("tr"):
-                row_txt = re.sub(r"\s+", " ", tr.get_text(" ", strip=True))
-                if "abema" in row_txt.lower() and ("無料" in row_txt or "abema de dazn" not in row_txt.lower()):
-                    d = estrai_data_da_testo(row_txt, NOW.astimezone(JP_TZ).replace(tzinfo=None), month_first=True)
-                    hm = estrai_orario_da_testo(row_txt)
-                    if d and hm:
-                        hh, mm = hm
-                        extra_days = hh // 24
-                        hh = hh % 24
-                        try:
-                            dt_jp = datetime(d.year, d.month, d.day, hh, mm, tzinfo=JP_TZ) + timedelta(days=extra_days)
-                            dt_it = dt_jp.astimezone(ROME_TZ)
-                            if MIN_DT <= dt_it <= MAX_DT:
-                                ev = pulisci_evento_dazn(re.sub(r"(?:ABEMA|無料配信|実況|解説).*", "", row_txt))
-                                if sembra_evento_valido(ev):
-                                    risultati.append({
-                                        "data": dt_it.strftime("%Y-%m-%d"),
-                                        "ora": dt_it.strftime("%H:%M"),
-                                        "sport": classifica_sport(ev, canale_solo_sport=True) or "Calcio",
-                                        "competizione": "ABEMA Free Giappone",
-                                        "evento": ev,
-                                        "paese": "Giappone ABEMA Free",
-                                        "canale": "ABEMA Free (JP)",
-                                        "link": "https://abema.tv/video/genre/sports",
-                                    })
-                        except Exception:
-                            pass
+        soup = BeautifulSoup(content, "html.parser")
+        injetta_alt_immagini(soup)
+        for a in soup.find_all("a", href=True):
+            href = urljoin(u, a["href"])
+            txt = a.get_text(" ", strip=True)
+            if ("放送" in txt or "配信" in txt) and ("ブンデス" in txt or "abema" in txt.lower()):
+                if href not in urls and len(urls) < 5:
+                    urls.append(href)
+        for tr in soup.find_all("tr"):
+            row_txt = re.sub(r"\s+", " ", tr.get_text(" ", strip=True))
+            if "abema" in row_txt.lower() and ("無料" in row_txt or "abema de dazn" not in row_txt.lower()):
+                d = estrai_data_da_testo(row_txt, NOW.astimezone(JP_TZ).replace(tzinfo=None), month_first=True)
+                hm = estrai_orario_da_testo(row_txt)
+                if d and hm:
+                    hh, mm = hm
+                    extra_days = hh // 24
+                    hh = hh % 24
+                    try:
+                        dt_jp = datetime(d.year, d.month, d.day, hh, mm, tzinfo=JP_TZ) + timedelta(days=extra_days)
+                        dt_it = dt_jp.astimezone(ROME_TZ)
+                        if MIN_DT <= dt_it <= MAX_DT:
+                            ev = pulisci_evento_dazn(re.sub(r"(?:ABEMA|無料配信|実況|解説).*", "", row_txt))
+                            if sembra_evento_valido(ev):
+                                risultati.append({
+                                    "data": dt_it.strftime("%Y-%m-%d"),
+                                    "ora": dt_it.strftime("%H:%M"),
+                                    "sport": classifica_sport(ev, canale_solo_sport=True) or "Calcio",
+                                    "competizione": "ABEMA Free Giappone",
+                                    "evento": ev,
+                                    "paese": "Giappone ABEMA Free",
+                                    "canale": "ABEMA Free (JP)",
+                                    "link": "https://abema.tv/video/genre/sports",
+                                })
+                    except Exception:
+                        pass
     print(f"   🔎 [ABEMA JP] ({','.join(vias)}) -> trovati {len(risultati)} eventi")
     return risultati
 
