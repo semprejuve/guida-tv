@@ -98,6 +98,15 @@ CANALI_BR_INFO = [
 
 PAROLE_DA_ESCLUDERE = ["telegiornale", "tg sport", "tg1", "tg2", "tg3", "sport mediaset", "sportmediaset", "tagesschau", "heute-journal", "meteo", "previsioni", "teleshopping", "rubrica", "cortes", "podcast", "resenha"]
 
+ESCLUDI_SPORT_REGEX = [
+    r"\bcurling\b",
+    r"\b(?:equitazione|ippica|horse racing|h[íi]pica|equestrian|pferdesport|pferderennen|reitsport|springreiten|dressur|galopp|show jumping|salto ostacoli)\b",
+    r"\bp[áa]del\b",
+    r"\b(?:scacchi|chess|ajedrez|schach|xadrez|[ée]checs)\b",
+]
+
+CALCIO_FEMMINILE_REGEX = r"\b(?:femminil[ei]|feminino|feminina|femenin[ao]|f[ée]minin[eo]?|frauen|damen|women'?s?|woman|liga f|uwcl|wsl|nwsl|d1 arkema|frauenfu[ßs]ball)\b"
+
 REGOLE_SPORT = [
     ("College Football", [r"\bcollege football\b", r"\bncaa football\b", r"\bncaaf\b"]),
     ("Football Americano", [r"\bnfl\b", r"\bfoot us\b", r"\bfutebol americano\b", r"\bfootball americano\b", r"\bamerican football\b", r"\bfútbol americano\b", r"\bsuper bowl\b", r"\bran football\b", r"\bflag football\b", r"redzone", r"アメフト"]),
@@ -107,7 +116,7 @@ REGOLE_SPORT = [
     ("Pallavolo", [r"\bpallavolo\b", r"\bvolley\b", r"\bvolleyball\b", r"\bv[ôo]lei\b", r"\bsuperlega\b", r"\bsuperliga\b", r"\blvf\b", r"\bvnl\b", r"\bserie a1\b", r"\bserie a2\b", r"バレー"]),
     ("Basket & NBA", [r"\bnba\b", r"\bwnba\b", r"\bbasket\b", r"\bbasquete\b", r"\bbaloncesto\b", r"\bpallacanestro\b", r"\bbasketball\b", r"\beurolega\b", r"\beuroleague\b", r"\beurocup\b", r"\beuroliga\b", r"\bnbb\b", r"\bfiba\b", r"\blega basket\b", r"\bliga endesa\b", r"\bliga acb\b", r"\bliga betclic\b", r"\bmarch madness\b", r"\bbbl\b", r"バスケ", r"bリーグ"]),
     ("Tennis", [r"\btennis\b", r"\bt[êe]nis\b", r"\btenis\b", r"\batp\b", r"\bwta\b", r"\bcoppa davis\b", r"\bdavis cup\b", r"\bbillie jean king\b", r"\broland garros\b", r"\bwimbledon\b", r"\baustralian open\b", r"\bus open\b", r"\bchallenger\b", r"テニス"]),
-    ("Calcio", [r"\bcalcio\b", r"\bfutebol\b", r"\bf[úu]tbol\b", r"\bfootball\b", r"\bsoccer\b", r"\bfu[ßs]ball\b", r"\bvoetbal\b", r"\bserie a\b", r"\bserie b\b", r"\bs[ée]rie b\b", r"\bcoppa italia\b", r"\bsupercoppa\b", r"\bchampions league\b", r"\beuropa league\b", r"\bconference league\b", r"\bnations league\b", r"\bmondiali\b", r"\bpremier league\b", r"\bbundesliga\b", r"\bdfb-pokal\b", r"\bdfb pokal\b", r"\blaliga\b", r"\bla liga\b", r"\bligue 1\b", r"\bbrasileir[ãa]o\b", r"\bpaulist[ãa]o\b", r"\bcarioca\b", r"\bcopa do brasil\b", r"\blibertadores\b", r"\bsul-americana\b", r"\bsudamericana\b", r"\bsuper league\b", r"\bjupiler\b", r"\bchallenger pro league\b", r"\bcroky cup\b", r"\bliga f\b", r"\buwcl\b", r"\bfrauen-bundesliga\b", r"\bfrauen bundesliga\b", r"\bserie a women\b", r"\bserie a femminile\b", r"\bliga portugal\b", r"\bnational league\b", r"\bfa cup\b", r"\bcopa del rey\b", r"\bfutsal\b", r"\bfifa\b", r"\bkings league\b", r"\byouth league\b", r"\bu17-wm\b", r"\bu-17\b", r"\bjリーグ\b", r"\bj1\b", r"\bj2\b", r"\bj3\b", r"サッカー", r"セリエa", r"ラリーガ", r"ブンデスリーガ", r"リーグアン", r"ベルギーリーグ"]),
+    ("Calcio", [r"\bcalcio\b", r"\bfutebol\b", r"\bf[úu]tbol\b", r"\bfootball\b", r"\bsoccer\b", r"\bfu[ßs]ball\b", r"\bvoetbal\b", r"\bserie a\b", r"\bserie b\b", r"\bs[ée]rie b\b", r"\bcoppa italia\b", r"\bsupercoppa\b", r"\bchampions league\b", r"\beuropa league\b", r"\bconference league\b", r"\bnations league\b", r"\bmondiali\b", r"\bpremier league\b", r"\bbundesliga\b", r"\bdfb-pokal\b", r"\bdfb pokal\b", r"\blaliga\b", r"\bla liga\b", r"\bligue 1\b", r"\bbrasileir[ãa]o\b", r"\bpaulist[ãa]o\b", r"\bcarioca\b", r"\bcopa do brasil\b", r"\blibertadores\b", r"\bsul-americana\b", r"\bsudamericana\b", r"\bsuper league\b", r"\bjupiler\b", r"\bchallenger pro league\b", r"\bcroky cup\b", r"\bliga portugal\b", r"\bnational league\b", r"\bfa cup\b", r"\bcopa del rey\b", r"\bfutsal\b", r"\bfifa\b", r"\bkings league\b", r"\byouth league\b", r"\bu17-wm\b", r"\bu-17\b", r"\bjリーグ\b", r"\bj1\b", r"\bj2\b", r"\bj3\b", r"サッカー", r"セリエa", r"ラリーガ", r"ブンデスリーガ", r"リーグアン", r"ベルギーリーグ"]),
 ]
 
 
@@ -115,8 +124,12 @@ def classifica_sport(testo, canale_solo_sport=False):
     t = (testo or "").lower()
     if any(p in t for p in PAROLE_DA_ESCLUDERE):
         return None
+    if any(re.search(pat, t) for pat in ESCLUDI_SPORT_REGEX):
+        return None
     for sport, patterns in REGOLE_SPORT:
         if any(re.search(pat, t) for pat in patterns):
+            if sport == "Calcio" and re.search(CALCIO_FEMMINILE_REGEX, t):
+                return None
             return sport
     if canale_solo_sport and re.search(r"(\bx\b|vs\.?|×|対|\s-\s|\s·\s|\s@\s)", t):
         return "Altri Sport"
@@ -230,6 +243,9 @@ def scarica_futebol_tv_br():
                 parti = [p.strip() for p in line.split("·") if p.strip()]
                 ev = parti[0]
                 comp = re.sub(r"Logo\s+.*", "", parti[1] if len(parti) > 1 else "Calcio").strip() or "Calcio"
+                if classifica_sport(f"futebol {comp} {ev}", True) != "Calcio":
+                    ct = None
+                    continue
                 try:
                     dt_it = datetime.strptime(f"{cd} {ct}", "%d/%m/%Y %H:%M").replace(tzinfo=BR_TZ).astimezone(ROME_TZ)
                     if MIN_DT <= dt_it <= MAX_DT:
