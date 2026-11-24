@@ -15,6 +15,7 @@
       --accent: #22c55e;
       --accent-blue: #38bdf8;
       --dazn: #facc15;
+      --live: #ef4444;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -88,6 +89,39 @@
       flex-wrap: wrap;
       gap: 8px;
     }
+    .concluded-box {
+      margin: 14px 0 18px;
+      background: #131d31;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .concluded-toggle {
+      width: 100%;
+      background: transparent;
+      border: none;
+      color: var(--muted);
+      padding: 11px 14px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+    .concluded-toggle:hover {
+      background: rgba(148, 163, 184, 0.08);
+      color: var(--text);
+    }
+    .concluded-panel {
+      display: none;
+      padding: 0 14px 14px;
+      border-top: 1px solid var(--border);
+    }
+    .concluded-panel.open {
+      display: block;
+      padding-top: 14px;
+    }
     .day-group { margin-top: 22px; }
     .day-title {
       font-size: 1.15rem;
@@ -116,8 +150,13 @@
       gap: 10px;
     }
     .card:hover { border-color: var(--accent-blue); }
+    .card.concluded {
+      opacity: 0.78;
+      background: #182234;
+    }
     .card-header-clickable { cursor: pointer; }
     .card-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+    .time-group { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
     .time-badge {
       background: #0f172a;
       color: var(--accent);
@@ -126,6 +165,19 @@
       border-radius: 8px;
       font-size: 0.92rem;
       border: 1px solid var(--border);
+    }
+    .card.concluded .time-badge {
+      color: var(--muted);
+    }
+    .live-badge {
+      background: rgba(239, 68, 68, 0.16);
+      color: #fca5a5;
+      border: 1px solid rgba(239, 68, 68, 0.45);
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 3px 7px;
+      border-radius: 6px;
+      letter-spacing: 0.3px;
     }
     .sport-tag { font-size: 0.8rem; color: var(--accent-blue); font-weight: 600; }
     .comp-name { font-size: 0.78rem; color: var(--muted); text-transform: uppercase; margin-top: 8px; }
@@ -209,11 +261,11 @@
     }
     .empty-msg {
       text-align: center;
-      padding: 40px 20px;
+      padding: 34px 20px;
       background: var(--card);
       border-radius: 14px;
       color: var(--muted);
-      margin-top: 20px;
+      margin-top: 14px;
     }
     .channels-directory {
       margin-top: 38px;
@@ -371,12 +423,14 @@
     };
 
     const PREVIEW_CHANNELS_COUNT = 2;
+    const LIVE_WINDOW_MINUTES = 120; // Eventi iniziati da meno di 2 ore restano visibili come "IN CORSO"
 
     let allEvents = [];
     let selectedDay = "Tutti";
     let selectedCountry = "Tutti";
     let selectedSport = "Tutti";
     let searchQuery = "";
+    let showConcluded = false;
 
     function escapeHtml(str) {
       return String(str || "")
@@ -384,16 +438,33 @@
         .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
     }
 
+    function getRomeNow() {
+      const parts = new Intl.DateTimeFormat("en-CA", {
+        timeZone: "Europe/Rome",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+        hourCycle: "h23"
+      }).formatToParts(new Date());
+      const map = Object.fromEntries(parts.map(p => [p.type, p.value]));
+      const dateStr = `${map.year}-${map.month}-${map.day}`;
+      const mins = (parseInt(map.hour, 10) % 24) * 60 + parseInt(map.minute, 10);
+      return { dateStr, mins };
+    }
+
     function formatDayLabel(dateStr) {
       const [y, m, d] = dateStr.split("-").map(Number);
       const date = new Date(y, m - 1, d);
-      const today = new Date();
-      const isToday =
-        date.getFullYear() === today.getFullYear() &&
-        date.getMonth() === today.getMonth() &&
-        date.getDate() === today.getDate();
+      const isToday = dateStr === getRomeNow().dateStr;
       const label = date.toLocaleDateString("it-IT", { weekday: "long", day: "numeric", month: "long" });
       return isToday ? `OGGI • ${label}` : label;
+    }
+
+    function formatShortDate(dateStr) {
+      const [y, m, d] = dateStr.split("-").map(Number);
+      return new Date(y, m - 1, d).toLocaleDateString("it-IT", { day: "2-digit", month: "2-digit" });
     }
 
     function timeToMinutes(ora) {
@@ -618,6 +689,59 @@
       `;
     }
 
+    function createCardElement(ev, isConcluded, todayStr) {
+      const card = document.createElement("div");
+      card.className = `card ${isConcluded ? "concluded" : ""}`;
+      const icon = sportIcons[ev.sport] || "🏅";
+      const previewChannels = ev.channels.slice(0, PREVIEW_CHANNELS_COUNT);
+      const extraChannels = ev.channels.slice(PREVIEW_CHANNELS_COUNT);
+      const hasExtra = extraChannels.length > 0;
+      const moreText = extraChannels.length === 1
+        ? "+ Altro 1 canale ▾"
+        : `+ Altri ${extraChannels.length} canali ▾`;
+
+      const timeLabel = isConcluded && ev.data !== todayStr
+        ? `${formatShortDate(ev.data)} • ${ev.ora}`
+        : ev.ora;
+
+      card.innerHTML = `
+        <div class="${hasExtra ? "card-header-clickable" : ""}">
+          <div class="card-top">
+            <div class="time-group">
+              <span class="time-badge">🕒 ${escapeHtml(timeLabel)}</span>
+              ${!isConcluded && ev.isLive ? `<span class="live-badge">🔴 IN CORSO</span>` : ""}
+            </div>
+            <span class="sport-tag">${icon} ${escapeHtml(ev.sport)}</span>
+          </div>
+          <div class="comp-name">${escapeHtml(ev.competizione)}</div>
+          <div class="event-title">${escapeHtml(ev.evento)}</div>
+        </div>
+        <div class="card-channels">
+          ${previewChannels.map(ch => buildChannelRowHtml(ch, ev.ora)).join("")}
+          ${hasExtra ? `
+            <div class="extra-channels">
+              ${extraChannels.map(ch => buildChannelRowHtml(ch, ev.ora)).join("")}
+            </div>
+            <button type="button" class="toggle-channels-btn">${moreText}</button>
+          ` : ""}
+        </div>
+      `;
+
+      if (hasExtra) {
+        const extraBox = card.querySelector(".extra-channels");
+        const toggleBtn = card.querySelector(".toggle-channels-btn");
+        const headerEl = card.querySelector(".card-header-clickable");
+        const toggleFn = () => {
+          const isOpen = extraBox.classList.toggle("open");
+          toggleBtn.textContent = isOpen ? "Mostra meno ▴" : moreText;
+        };
+        toggleBtn.addEventListener("click", toggleFn);
+        headerEl.addEventListener("click", toggleFn);
+      }
+
+      return card;
+    }
+
     function renderEvents() {
       const container = document.getElementById("eventsContainer");
       const filtered = allEvents.filter(ev => {
@@ -639,24 +763,82 @@
       });
 
       const groupedEvents = groupEvents(filtered);
-      const evLabel = groupedEvents.length === 1 ? "evento trovato" : "eventi trovati";
-      document.getElementById("resultsCount").textContent =
-        groupedEvents.length === filtered.length
-          ? `${groupedEvents.length} ${evLabel}`
-          : `${groupedEvents.length} ${evLabel} (${filtered.length} canali)`;
+      const { dateStr: todayStr, mins: nowMins } = getRomeNow();
 
-      if (groupedEvents.length === 0) {
+      const activeEvents = [];
+      const concludedEvents = [];
+
+      groupedEvents.forEach(ev => {
+        const isPastDay = ev.data < todayStr;
+        const isTodayConcluded = ev.data === todayStr && (nowMins - ev.mins) > LIVE_WINDOW_MINUTES;
+        if (isPastDay || isTodayConcluded) {
+          concludedEvents.push(ev);
+        } else {
+          ev.isLive = ev.data === todayStr && ev.mins <= nowMins;
+          activeEvents.push(ev);
+        }
+      });
+
+      const activeLabel = activeEvents.length === 1 ? "evento in programma" : "eventi in programma";
+      document.getElementById("resultsCount").textContent =
+        concludedEvents.length > 0
+          ? `${activeEvents.length} ${activeLabel} • ${concludedEvents.length} conclusi`
+          : `${activeEvents.length} ${activeLabel}`;
+
+      container.innerHTML = "";
+
+      if (activeEvents.length === 0 && concludedEvents.length === 0) {
         container.innerHTML = `<div class="empty-msg">😕 Nessun evento trovato con questi filtri.<br/>Prova a cambiare sport, nazione o parola cercata!</div>`;
         return;
       }
 
+      if (concludedEvents.length > 0) {
+        const box = document.createElement("div");
+        box.className = "concluded-box";
+
+        const isOpen = showConcluded || activeEvents.length === 0;
+        const label = concludedEvents.length === 1
+          ? "🏁 1 evento già concluso"
+          : `🏁 ${concludedEvents.length} eventi già conclusi`;
+
+        const toggleBtn = document.createElement("button");
+        toggleBtn.type = "button";
+        toggleBtn.className = "concluded-toggle";
+        toggleBtn.innerHTML = `<span>${label}</span><span>${isOpen ? "Nascondi ▴" : "Mostra ▾"}</span>`;
+
+        const panel = document.createElement("div");
+        panel.className = `concluded-panel ${isOpen ? "open" : ""}`;
+
+        const cGrid = document.createElement("div");
+        cGrid.className = "events-grid";
+        concludedEvents.forEach(ev => cGrid.appendChild(createCardElement(ev, true, todayStr)));
+        panel.appendChild(cGrid);
+
+        toggleBtn.addEventListener("click", () => {
+          showConcluded = !panel.classList.contains("open");
+          panel.classList.toggle("open", showConcluded);
+          toggleBtn.lastElementChild.textContent = showConcluded ? "Nascondi ▴" : "Mostra ▾";
+        });
+
+        box.appendChild(toggleBtn);
+        box.appendChild(panel);
+        container.appendChild(box);
+      }
+
+      if (activeEvents.length === 0) {
+        const note = document.createElement("div");
+        note.className = "empty-msg";
+        note.textContent = "🌙 Nessun altro evento in programma per oggi con questi filtri (vedi quelli già conclusi qui sopra).";
+        container.appendChild(note);
+        return;
+      }
+
       const byDay = {};
-      groupedEvents.forEach(ev => {
+      activeEvents.forEach(ev => {
         if (!byDay[ev.data]) byDay[ev.data] = [];
         byDay[ev.data].push(ev);
       });
 
-      container.innerHTML = "";
       Object.keys(byDay).sort().forEach(dateStr => {
         const section = document.createElement("div");
         section.className = "day-group";
@@ -669,49 +851,7 @@
         grid.className = "events-grid";
 
         byDay[dateStr].forEach(ev => {
-          const card = document.createElement("div");
-          card.className = "card";
-          const icon = sportIcons[ev.sport] || "🏅";
-          const previewChannels = ev.channels.slice(0, PREVIEW_CHANNELS_COUNT);
-          const extraChannels = ev.channels.slice(PREVIEW_CHANNELS_COUNT);
-          const hasExtra = extraChannels.length > 0;
-          const moreText = extraChannels.length === 1
-            ? "+ Altro 1 canale ▾"
-            : `+ Altri ${extraChannels.length} canali ▾`;
-
-          card.innerHTML = `
-            <div class="${hasExtra ? "card-header-clickable" : ""}">
-              <div class="card-top">
-                <span class="time-badge">🕒 ${escapeHtml(ev.ora)}</span>
-                <span class="sport-tag">${icon} ${escapeHtml(ev.sport)}</span>
-              </div>
-              <div class="comp-name">${escapeHtml(ev.competizione)}</div>
-              <div class="event-title">${escapeHtml(ev.evento)}</div>
-            </div>
-            <div class="card-channels">
-              ${previewChannels.map(ch => buildChannelRowHtml(ch, ev.ora)).join("")}
-              ${hasExtra ? `
-                <div class="extra-channels">
-                  ${extraChannels.map(ch => buildChannelRowHtml(ch, ev.ora)).join("")}
-                </div>
-                <button type="button" class="toggle-channels-btn">${moreText}</button>
-              ` : ""}
-            </div>
-          `;
-
-          if (hasExtra) {
-            const extraBox = card.querySelector(".extra-channels");
-            const toggleBtn = card.querySelector(".toggle-channels-btn");
-            const headerEl = card.querySelector(".card-header-clickable");
-            const toggleFn = () => {
-              const isOpen = extraBox.classList.toggle("open");
-              toggleBtn.textContent = isOpen ? "Mostra meno ▴" : moreText;
-            };
-            toggleBtn.addEventListener("click", toggleFn);
-            headerEl.addEventListener("click", toggleFn);
-          }
-
-          grid.appendChild(card);
+          grid.appendChild(createCardElement(ev, false, todayStr));
         });
 
         section.appendChild(grid);
