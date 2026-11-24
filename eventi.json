@@ -61,16 +61,6 @@
   },
   {
     "data": "2026-11-24",
-    "ora": "02:50",
-    "sport": "Calcio",
-    "competizione": "Rugby",
-    "evento": "Rugby: Super League",
-    "paese": "Germania",
-    "canale": "More Than Sports TV",
-    "link": "https://morethansports.tv/"
-  },
-  {
-    "data": "2026-11-24",
     "ora": "03:50",
     "sport": "Tennis",
     "competizione": "Sport Tennis",
@@ -392,6 +382,16 @@
   {
     "data": "2026-11-24",
     "ora": "15:00",
+    "sport": "Calcio",
+    "competizione": "DAZN ONLY",
+    "evento": "DAZN ONLY - Trending",
+    "paese": "DAZN Free Spagna",
+    "canale": "DAZN App Gratis (ES)",
+    "link": "https://www.dazn.com/es-ES/home"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "15:00",
     "sport": "Sci Alpino",
     "competizione": "Ski Alpin",
     "evento": "Ski alpin: Weltcup",
@@ -628,6 +628,16 @@
     "paese": "Brasile YouTube",
     "canale": "Xsports (YouTube)",
     "link": "https://www.youtube.com/@xsports.brasil"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "20:30",
+    "sport": "Basket & NBA",
+    "competizione": "Liga U 2026/27",
+    "evento": "Real Madrid - Casademont Zaragoza",
+    "paese": "DAZN Free Spagna",
+    "canale": "DAZN App Gratis (ES)",
+    "link": "https://www.dazn.com/es-ES/home"
   },
   {
     "data": "2026-11-24",
@@ -1191,6 +1201,16 @@
   },
   {
     "data": "2026-11-25",
+    "ora": "15:00",
+    "sport": "Calcio",
+    "competizione": "DAZN ONLY",
+    "evento": "DAZN ONLY - Trending",
+    "paese": "DAZN Free Spagna",
+    "canale": "DAZN App Gratis (ES)",
+    "link": "https://www.dazn.com/es-ES/home"
+  },
+  {
+    "data": "2026-11-25",
     "ora": "15:30",
     "sport": "Tennis",
     "competizione": "Sport Tennis",
@@ -1701,6 +1721,16 @@
   },
   {
     "data": "2026-11-26",
+    "ora": "05:00",
+    "sport": "Altri Sport",
+    "competizione": "WBSC Premier12",
+    "evento": "Nicaragua - Gran Bretaña",
+    "paese": "DAZN Free Spagna",
+    "canale": "DAZN App Gratis (ES)",
+    "link": "https://www.dazn.com/es-ES/home"
+  },
+  {
+    "data": "2026-11-26",
     "ora": "05:10",
     "sport": "Calcio",
     "competizione": "TV Svizzera",
@@ -1842,6 +1872,16 @@
   {
     "data": "2026-11-26",
     "ora": "11:30",
+    "sport": "Altri Sport",
+    "competizione": "WBSC Premier12",
+    "evento": "República Checa - China",
+    "paese": "DAZN Free Spagna",
+    "canale": "DAZN App Gratis (ES)",
+    "link": "https://www.dazn.com/es-ES/home"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "11:30",
     "sport": "Sci Alpino",
     "competizione": "Ski Alpin",
     "evento": "Ski alpin: Weltcup",
@@ -1941,6 +1981,36 @@
   },
   {
     "data": "2026-11-26",
+    "ora": "15:00",
+    "sport": "Formula 1",
+    "competizione": "FIA F1 World Championship 2026",
+    "evento": "Box, Box | Qatar",
+    "paese": "DAZN Free Spagna",
+    "canale": "DAZN App Gratis (ES)",
+    "link": "https://www.dazn.com/es-ES/home"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "15:00",
+    "sport": "Calcio",
+    "competizione": "DAZN ONLY",
+    "evento": "DAZN ONLY - Trending",
+    "paese": "DAZN Free Spagna",
+    "canale": "DAZN App Gratis (ES)",
+    "link": "https://www.dazn.com/es-ES/home"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "15:15",
+    "sport": "MotoGP",
+    "competizione": "FIM MotoGP World Championship 2026",
+    "evento": "GP Comunidad Valenciana: Paddock Abierto",
+    "paese": "DAZN Free Spagna",
+    "canale": "DAZN App Gratis (ES)",
+    "link": "https://www.dazn.com/es-ES/home"
+  },
+  {
+    "data": "2026-11-26",
     "ora": "16:00",
     "sport": "Calcio",
     "competizione": "Sport Calcio",
@@ -1978,6 +2048,16 @@
     "paese": "Svizzera",
     "canale": "RTS 2",
     "link": "https://www.rts.ch/play/tv"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "18:00",
+    "sport": "Altri Sport",
+    "competizione": "Boxeo",
+    "evento": "Kabayel vs Hysa (Rueda de prensa)",
+    "paese": "DAZN Free Spagna",
+    "canale": "DAZN App Gratis (ES)",
+    "link": "https://www.dazn.com/es-ES/home"
   },
   {
     "data": "2026-11-26",
@@ -2138,6 +2218,16 @@
     "paese": "Germania",
     "canale": "Nitro",
     "link": "https://www.rtl.de/"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "22:30",
+    "sport": "Basket & NBA",
+    "competizione": "NCAA",
+    "evento": "Michigan State - Arkansas Razorbacks",
+    "paese": "DAZN Free Spagna",
+    "canale": "DAZN App Gratis (ES)",
+    "link": "https://www.dazn.com/es-ES/home"
   },
   {
     "data": "2026-11-26",
@@ -2311,6 +2401,16 @@
   },
   {
     "data": "2026-11-27",
+    "ora": "11:05",
+    "sport": "Calcio",
+    "competizione": "Rugby",
+    "evento": "Rugby: Super League",
+    "paese": "Germania",
+    "canale": "More Than Sports TV",
+    "link": "https://morethansports.tv/"
+  },
+  {
+    "data": "2026-11-27",
     "ora": "11:30",
     "sport": "Altri Sport",
     "competizione": "WBSC Premier12",
@@ -2331,16 +2431,6 @@
   },
   {
     "data": "2026-11-27",
-    "ora": "13:30",
-    "sport": "Altri Sport",
-    "competizione": "Riyadh Season Horse Racing",
-    "evento": "The Crown Prince Cup",
-    "paese": "DAZN Free Italia",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-27",
     "ora": "14:05",
     "sport": "Calcio",
     "competizione": "Serie A Enilive",
@@ -2351,13 +2441,23 @@
   },
   {
     "data": "2026-11-27",
-    "ora": "15:45",
-    "sport": "Altri Sport",
-    "competizione": "Freestyle Friday Championship",
-    "evento": "Freestyle Friday #22",
-    "paese": "DAZN Free Italia",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
+    "ora": "16:00",
+    "sport": "Basket & NBA",
+    "competizione": "Liga U 2026/27",
+    "evento": "Barça Basket B - San Pablo Burgos B",
+    "paese": "DAZN Free Spagna",
+    "canale": "DAZN App Gratis (ES)",
+    "link": "https://www.dazn.com/es-ES/home"
+  },
+  {
+    "data": "2026-11-27",
+    "ora": "17:00",
+    "sport": "Basket & NBA",
+    "competizione": "Liga U 2026/27",
+    "evento": "Casademont Zaragoza B - Bàsquet Girona B",
+    "paese": "DAZN Free Spagna",
+    "canale": "DAZN App Gratis (ES)",
+    "link": "https://www.dazn.com/es-ES/home"
   },
   {
     "data": "2026-11-27",
@@ -2368,6 +2468,66 @@
     "paese": "DAZN Free Italia",
     "canale": "DAZN Free Italia",
     "link": "https://www.dazn.com/it-IT/home"
+  },
+  {
+    "data": "2026-11-27",
+    "ora": "19:00",
+    "sport": "Basket & NBA",
+    "competizione": "Liga U 2026/27",
+    "evento": "Real Madrid B - Fundación CB Canarias",
+    "paese": "DAZN Free Spagna",
+    "canale": "DAZN App Gratis (ES)",
+    "link": "https://www.dazn.com/es-ES/home"
+  },
+  {
+    "data": "2026-11-27",
+    "ora": "19:45",
+    "sport": "Calcio",
+    "competizione": "Sportmagazin",
+    "evento": "Sportschau vor acht",
+    "paese": "Germania",
+    "canale": "Das Erste",
+    "link": "https://www.ardmediathek.de/live"
+  },
+  {
+    "data": "2026-11-27",
+    "ora": "20:20",
+    "sport": "Calcio",
+    "competizione": "Football",
+    "evento": "Australian Football League",
+    "paese": "Germania",
+    "canale": "More Than Sports TV",
+    "link": "https://morethansports.tv/"
+  },
+  {
+    "data": "2026-11-27",
+    "ora": "20:30",
+    "sport": "Basket & NBA",
+    "competizione": "Liga U 2026/27",
+    "evento": "Unicaja Málaga B - Kids&Us Manresa B",
+    "paese": "DAZN Free Spagna",
+    "canale": "DAZN App Gratis (ES)",
+    "link": "https://www.dazn.com/es-ES/home"
+  },
+  {
+    "data": "2026-11-27",
+    "ora": "20:30",
+    "sport": "Basket & NBA",
+    "competizione": "Liga U 2026/27",
+    "evento": "UCAM Murcia CB B - Joventut Badalona B",
+    "paese": "DAZN Free Spagna",
+    "canale": "DAZN App Gratis (ES)",
+    "link": "https://www.dazn.com/es-ES/home"
+  },
+  {
+    "data": "2026-11-27",
+    "ora": "20:30",
+    "sport": "Basket & NBA",
+    "competizione": "Liga U 2026/27",
+    "evento": "Amara Lleida - Bilbao Basket B",
+    "paese": "DAZN Free Spagna",
+    "canale": "DAZN App Gratis (ES)",
+    "link": "https://www.dazn.com/es-ES/home"
   },
   {
     "data": "2026-11-28",
@@ -2401,16 +2561,6 @@
   },
   {
     "data": "2026-11-28",
-    "ora": "13:30",
-    "sport": "Altri Sport",
-    "competizione": "Riyadh Season Horse Racing",
-    "evento": "European Union Cup",
-    "paese": "DAZN Free Italia",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-28",
     "ora": "16:00",
     "sport": "Pallavolo",
     "competizione": "LVF A2",
@@ -2418,6 +2568,16 @@
     "paese": "DAZN Free Italia",
     "canale": "DAZN Free Italia",
     "link": "https://www.dazn.com/it-IT/home"
+  },
+  {
+    "data": "2026-11-28",
+    "ora": "16:15",
+    "sport": "Calcio",
+    "competizione": "LaLiga EA Sports",
+    "evento": "Málaga - Athletic Club",
+    "paese": "DAZN Free Spagna",
+    "canale": "DAZN App Gratis (ES)",
+    "link": "https://www.dazn.com/es-ES/home"
   },
   {
     "data": "2026-11-28",
