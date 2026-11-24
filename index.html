@@ -14,8 +14,8 @@
       --muted: #94a3b8;
       --accent: #22c55e;
       --accent-blue: #38bdf8;
+      --accent-mag: #a78bfa;
       --dazn: #facc15;
-      --live: #ef4444;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -80,6 +80,7 @@
     .pill.active { background: var(--accent); color: #052e16; border-color: var(--accent); font-weight: 700; }
     .pill.active-blue { background: var(--accent-blue); color: #082f49; border-color: var(--accent-blue); font-weight: 700; }
     .pill.active-dazn { background: var(--dazn); color: #422006; border-color: var(--dazn); font-weight: 700; }
+    .pill.active-mag { background: var(--accent-mag); color: #2e1065; border-color: var(--accent-mag); font-weight: 700; }
     .stats {
       margin: 14px 0;
       font-size: 0.9rem;
@@ -133,6 +134,21 @@
       margin-bottom: 10px;
       text-transform: capitalize;
     }
+    .magazine-section {
+      margin-top: 32px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+    }
+    .magazine-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      padding: 9px 12px;
+      background: #1d1836;
+      border-left: 4px solid var(--accent-mag);
+      border-radius: 6px;
+      margin-bottom: 12px;
+      color: #ede9fe;
+    }
     .events-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -150,6 +166,8 @@
       gap: 10px;
     }
     .card:hover { border-color: var(--accent-blue); }
+    .card.magazine { border-color: rgba(167, 139, 250, 0.3); }
+    .card.magazine:hover { border-color: var(--accent-mag); }
     .card.concluded {
       opacity: 0.78;
       background: #182234;
@@ -166,9 +184,8 @@
       font-size: 0.92rem;
       border: 1px solid var(--border);
     }
-    .card.concluded .time-badge {
-      color: var(--muted);
-    }
+    .card.magazine .time-badge { color: var(--accent-mag); }
+    .card.concluded .time-badge { color: var(--muted); }
     .live-badge {
       background: rgba(239, 68, 68, 0.16);
       color: #fca5a5;
@@ -180,6 +197,7 @@
       letter-spacing: 0.3px;
     }
     .sport-tag { font-size: 0.8rem; color: var(--accent-blue); font-weight: 600; }
+    .card.magazine .sport-tag { color: var(--accent-mag); }
     .comp-name { font-size: 0.78rem; color: var(--muted); text-transform: uppercase; margin-top: 8px; }
     .event-title { font-size: 1.03rem; font-weight: 700; color: var(--text); }
     .card-channels {
@@ -294,7 +312,7 @@
   </header>
 
   <div class="container">
-    <input type="text" id="searchInput" class="search-box" placeholder="🔍 Cerca squadra, torneo, canale o nazione (es. DAZN, Spagna, TV8, CazéTV, NBA)..." />
+    <input type="text" id="searchInput" class="search-box" placeholder="🔍 Cerca squadra, torneo, programma, canale o nazione (es. DAZN, Serie B, TV8, NBA)..." />
 
     <div class="filter-section">
       <span class="filter-label">📅 Giorno</span>
@@ -307,7 +325,7 @@
     </div>
 
     <div class="filter-section">
-      <span class="filter-label">🏅 Sport</span>
+      <span class="filter-label">🏅 Sport / Categoria</span>
       <div class="pills" id="sportFilters"></div>
     </div>
 
@@ -366,11 +384,14 @@
   </div>
 
   <script>
+    const MAGAZINE_KEY = "Programmi & Magazine";
+
     const sportIcons = {
       "Calcio": "⚽", "Pallavolo": "🏐", "Basket & NBA": "🏀",
       "Formula 1": "🏎️", "MotoGP": "🏍️", "Tennis": "🎾",
       "Sci Alpino": "⛷️", "Football Americano": "🏈",
-      "College Football": "🎓", "Altri Sport": "🏅"
+      "College Football": "🎓", "Altri Sport": "🏅",
+      "Programmi & Magazine": "📺"
     };
 
     const countryFlags = {
@@ -423,7 +444,7 @@
     };
 
     const PREVIEW_CHANNELS_COUNT = 2;
-    const LIVE_WINDOW_MINUTES = 120; // Eventi iniziati da meno di 2 ore restano visibili come "IN CORSO"
+    const LIVE_WINDOW_MINUTES = 120;
 
     let allEvents = [];
     let selectedDay = "Tutti";
@@ -462,9 +483,11 @@
       return isToday ? `OGGI • ${label}` : label;
     }
 
-    function formatShortDate(dateStr) {
+    function formatShortDayTime(dateStr, ora, todayStr) {
+      if (dateStr === todayStr) return `Oggi • ${ora}`;
       const [y, m, d] = dateStr.split("-").map(Number);
-      return new Date(y, m - 1, d).toLocaleDateString("it-IT", { day: "2-digit", month: "2-digit" });
+      const dt = new Date(y, m - 1, d);
+      return `${dt.toLocaleDateString("it-IT", { weekday: "short", day: "2-digit", month: "2-digit" })} • ${ora}`;
     }
 
     function timeToMinutes(ora) {
@@ -670,7 +693,8 @@
 
       uniqueSports.forEach(s => {
         const btn = document.createElement("button");
-        btn.className = `pill ${selectedSport === s ? "active" : ""}`;
+        const isMag = s === MAGAZINE_KEY;
+        btn.className = `pill ${selectedSport === s ? (isMag ? "active-mag" : "active") : ""}`;
         btn.textContent = `${sportIcons[s] || "🏅"} ${s}`;
         btn.onclick = () => { selectedSport = s; updateUI(); };
         sportContainer.appendChild(btn);
@@ -689,9 +713,10 @@
       `;
     }
 
-    function createCardElement(ev, isConcluded, todayStr) {
+    function createCardElement(ev, isConcluded, todayStr, includeDateInTime) {
+      const isMag = ev.sport === MAGAZINE_KEY;
       const card = document.createElement("div");
-      card.className = `card ${isConcluded ? "concluded" : ""}`;
+      card.className = `card ${isMag ? "magazine" : ""} ${isConcluded ? "concluded" : ""}`;
       const icon = sportIcons[ev.sport] || "🏅";
       const previewChannels = ev.channels.slice(0, PREVIEW_CHANNELS_COUNT);
       const extraChannels = ev.channels.slice(PREVIEW_CHANNELS_COUNT);
@@ -700,8 +725,8 @@
         ? "+ Altro 1 canale ▾"
         : `+ Altri ${extraChannels.length} canali ▾`;
 
-      const timeLabel = isConcluded && ev.data !== todayStr
-        ? `${formatShortDate(ev.data)} • ${ev.ora}`
+      const timeLabel = includeDateInTime
+        ? formatShortDayTime(ev.data, ev.ora, todayStr)
         : ev.ora;
 
       card.innerHTML = `
@@ -745,6 +770,10 @@
     function renderEvents() {
       const container = document.getElementById("eventsContainer");
       const filtered = allEvents.filter(ev => {
+        // Sicurezza extra: niente programmi/magazine stranieri in nessuna vista
+        if (ev.sport === MAGAZINE_KEY && ev.paese !== "Italia" && ev.paese !== "DAZN Free Italia") {
+          return false;
+        }
         const matchDay = selectedDay === "Tutti" || ev.data === selectedDay;
         const matchCountry =
           selectedCountry === "Tutti" ||
@@ -779,11 +808,20 @@
         }
       });
 
-      const activeLabel = activeEvents.length === 1 ? "evento in programma" : "eventi in programma";
-      document.getElementById("resultsCount").textContent =
-        concludedEvents.length > 0
-          ? `${activeEvents.length} ${activeLabel} • ${concludedEvents.length} conclusi`
-          : `${activeEvents.length} ${activeLabel}`;
+      const liveSportEvents = activeEvents.filter(ev => ev.sport !== MAGAZINE_KEY);
+      const magazineEvents = activeEvents.filter(ev => ev.sport === MAGAZINE_KEY);
+
+      const partsCount = [];
+      if (selectedSport !== MAGAZINE_KEY) {
+        partsCount.push(`${liveSportEvents.length} ${liveSportEvents.length === 1 ? "evento sportivo" : "eventi sportivi"}`);
+      }
+      if (magazineEvents.length > 0) {
+        partsCount.push(`${magazineEvents.length} ${magazineEvents.length === 1 ? "programma TV" : "programmi TV"}`);
+      }
+      if (concludedEvents.length > 0) {
+        partsCount.push(`${concludedEvents.length} conclusi`);
+      }
+      document.getElementById("resultsCount").textContent = partsCount.join(" • ") || "0 eventi trovati";
 
       container.innerHTML = "";
 
@@ -811,7 +849,7 @@
 
         const cGrid = document.createElement("div");
         cGrid.className = "events-grid";
-        concludedEvents.forEach(ev => cGrid.appendChild(createCardElement(ev, true, todayStr)));
+        concludedEvents.forEach(ev => cGrid.appendChild(createCardElement(ev, true, todayStr, ev.data !== todayStr)));
         panel.appendChild(cGrid);
 
         toggleBtn.addEventListener("click", () => {
@@ -833,30 +871,51 @@
         return;
       }
 
-      const byDay = {};
-      activeEvents.forEach(ev => {
-        if (!byDay[ev.data]) byDay[ev.data] = [];
-        byDay[ev.data].push(ev);
-      });
-
-      Object.keys(byDay).sort().forEach(dateStr => {
-        const section = document.createElement("div");
-        section.className = "day-group";
-        const title = document.createElement("div");
-        title.className = "day-title";
-        title.textContent = formatDayLabel(dateStr);
-        section.appendChild(title);
-
-        const grid = document.createElement("div");
-        grid.className = "events-grid";
-
-        byDay[dateStr].forEach(ev => {
-          grid.appendChild(createCardElement(ev, false, todayStr));
+      if (liveSportEvents.length > 0) {
+        const byDay = {};
+        liveSportEvents.forEach(ev => {
+          if (!byDay[ev.data]) byDay[ev.data] = [];
+          byDay[ev.data].push(ev);
         });
 
-        section.appendChild(grid);
-        container.appendChild(section);
-      });
+        Object.keys(byDay).sort().forEach(dateStr => {
+          const section = document.createElement("div");
+          section.className = "day-group";
+          const title = document.createElement("div");
+          title.className = "day-title";
+          title.textContent = formatDayLabel(dateStr);
+          section.appendChild(title);
+
+          const grid = document.createElement("div");
+          grid.className = "events-grid";
+
+          byDay[dateStr].forEach(ev => {
+            grid.appendChild(createCardElement(ev, false, todayStr, false));
+          });
+
+          section.appendChild(grid);
+          container.appendChild(section);
+        });
+      }
+
+      if (magazineEvents.length > 0) {
+        const magSection = document.createElement("div");
+        magSection.className = "magazine-section";
+
+        const magTitle = document.createElement("div");
+        magTitle.className = "magazine-title";
+        magTitle.textContent = `📺 Programmi & Magazine Sportivi — Solo Italia (${magazineEvents.length})`;
+        magSection.appendChild(magTitle);
+
+        const magGrid = document.createElement("div");
+        magGrid.className = "events-grid";
+        magazineEvents.forEach(ev => {
+          magGrid.appendChild(createCardElement(ev, false, todayStr, true));
+        });
+
+        magSection.appendChild(magGrid);
+        container.appendChild(magSection);
+      }
     }
 
     function updateUI() {
@@ -871,7 +930,10 @@
 
     fetch(`eventi.json?v=${Date.now()}`)
       .then(res => res.json())
-      .then(data => { allEvents = data; updateUI(); })
+      .then(data => {
+        allEvents = data.filter(ev => !(ev.sport === MAGAZINE_KEY && ev.paese !== "Italia" && ev.paese !== "DAZN Free Italia"));
+        updateUI();
+      })
       .catch(() => {
         document.getElementById("eventsContainer").innerHTML =
           `<div class="empty-msg">⚠️ Impossibile caricare <strong>eventi.json</strong>.</div>`;
