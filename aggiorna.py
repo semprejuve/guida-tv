@@ -96,7 +96,18 @@ CANALI_BR_INFO = [
     ("A-Leagues (YouTube)", "https://www.youtube.com/@aleagues", [r"a-leagues.*youtube", r"youtube.*a-leagues"]),
 ]
 
-PAROLE_DA_ESCLUDERE = ["telegiornale", "tg sport", "tg1", "tg2", "tg3", "sport mediaset", "sportmediaset", "tagesschau", "heute-journal", "meteo", "previsioni", "teleshopping", "rubrica", "cortes", "podcast", "resenha"]
+PAROLE_DA_ESCLUDERE = [
+    "telegiornale", "tg1", "tg2", "tg3", "tagesschau", "heute-journal",
+    "meteo", "previsioni", "teleshopping",
+]
+
+REPLAY_REGEX = (
+    r"\(\s*r\s*\)|\[\s*r\s*\]|"
+    r"\b(?:replic[ah]e?|in\s+replica|differita|in\s+differita|"
+    r"wiederholung|wdh\.?|rediffusion|rediff\.?|en\s+reprise|"
+    r"repetici[óo]n|diferido|replay|re-?run|tape\s+delay|"
+    r"partita\s+storica|partite\s+storiche|match\s+storico|archivio|amarcord|vintage|rewind|throwback)\b"
+)
 
 ESCLUDI_SPORT_REGEX = [
     r"\bcurling\b",
@@ -104,6 +115,48 @@ ESCLUDI_SPORT_REGEX = [
     r"\bp[áa]del\b",
     r"\b(?:scacchi|chess|ajedrez|schach|xadrez|[ée]checs)\b",
 ]
+
+SECONDA_DIVISIONE_REGEX = (
+    r"\b(?:"
+    r"serie\s*a2|lvf\s*a2|a2\s*(?:credem|maschile|femminile|\(m\)|\(f\))|"
+    r"serie\s*a3|2\.?\s*bundesliga|zweite\s*bundesliga|3\.?\s*liga|dritte\s*liga|"
+    r"segunda\s*divisi[óo]n|laliga\s*hypermotion|laliga\s*2|la\s*liga\s*2|primera\s*federaci[óo]n|"
+    r"ligue\s*2|ligue\s*b|efl\s*championship|league\s*one|league\s*two|"
+    r"challenge\s*league|challenger\s*pro\s*league|1b\s*pro\s*league|"
+    r"eerste\s*divisie|keuken\s*kampioen|liga\s*portugal\s*2|segunda\s*liga|"
+    r"superliga\s*b|superliga\s*2|proa|prob|lnb\s*pro\s*b|2\.\s*basketball|"
+    r"leb\s*oro|primera\s*feb|segunda\s*feb|"
+    r"g[\s-]*league|del2|swiss\s*league|j2\s*league|j3\s*league|j2|j3|"
+    r"s[ée]rie\s*[cd]|serie\s*[cd]|série\s*b|"
+    r"seconda\s*divisione|second\s*division|2a\s*divisione|2nd\s*division|divisi[óo]n\s*de\s*plata|"
+    r"brasileir[ãa]o\s*(?:s[ée]rie\s*)?b|paulist[ãa]o\s*a2|paulista\s*a2"
+    r")\b"
+)
+
+MAGAZINE_IT_REGEX = (
+    r"\b(?:"
+    r"magazine|rubrica|rotocalco|approfondimento|talk\s*show|"
+    r"domenica\s+sportiva|90[°º]?\s*minuto|novantesimo\s+minuto|pressing|dribbling|"
+    r"tutti\s+convocati|fantacalcio|calciomercato|calcio\s*mercato|sportitalia\s+(?:mercato|live)|"
+    r"sport\s*mediaset|sportmediaset|tg\s*sport|studio\s*sport|processo\s+del\s+luned[ìi]|"
+    r"moviola|anteprima|prepartita|pre-?partita|postpartita|post-?partita|pre-?gara|post-?gara|"
+    r"paddock|griglia\s+di\s+partenza|highlights|sintesi|i\s+gol\s+del|tutti\s+i\s+gol|zona\s+gol|"
+    r"fuorigioco|tiki\s*taka|contropiede|supertennis\s+(?:magazine|today)|tennis\s+talk|"
+    r"speciale\s+(?:calcio|sport|serie|moto|f1|formula|volley|basket|tennis)"
+    r")\b"
+)
+
+MAGAZINE_ESTERI_REGEX = (
+    r"\b(?:"
+    r"magazin[es]?|rubrica|approfondimento|talk\s*show|podcast|cortes|resenha|mesa\s+redonda|debate|"
+    r"sportschau|sportstudio|doppelpass|fantalk|sky90|bundesliga\s+pur|heimspiel|blickpunkt\s+sport|"
+    r"sportpanorama|sportflash|sportaktuell|domenica\s+sportiva|"
+    r"zusammenfassung|r[üu]ckblick|vorschau|vorbericht|countdown|dokumentation|doku|reportage|"
+    r"[ée]mission|r[ée]sum[ée]|temps\s+forts|r[ée]trospective|avant-?match|apr[èe]s-?match|d[ée]brief|documentaire|"
+    r"highlights|preview|review|watchalong|trending|rueda\s+de\s+prensa|press\s+conference|pesaje|weigh-?in|"
+    r"documentary|docuseries|all\s+access|behind\s+the\s+scenes|paddock\s+abierto"
+    r")\b"
+)
 
 CALCIO_FEMMINILE_REGEX = r"\b(?:femminil[ei]|feminino|feminina|femenin[ao]|f[ée]minin[eo]?|frauen|damen|women'?s?|woman|liga f|uwcl|wsl|nwsl|d1 arkema|frauenfu[ßs]ball)\b"
 
@@ -113,25 +166,55 @@ REGOLE_SPORT = [
     ("Formula 1", [r"\bformula 1\b", r"\bf[óo]rmula 1\b", r"\bformula uno\b", r"\bformel 1\b", r"\bformule 1\b", r"\bf1\b", r"\bgran premio di f1\b", r"\bgarage f1\b"]),
     ("MotoGP", [r"\bmotogp\b", r"\bmoto gp\b", r"\bmoto2\b", r"\bmoto3\b", r"\bmotomondiale\b", r"\bsuperbike\b", r"\bwsbk\b"]),
     ("Sci Alpino", [r"\bsci alpino\b", r"\bski alpin\b", r"\bski weltcup\b", r"\bski-weltcup\b", r"\bslalom\b", r"\bdiscesa libera\b", r"\bsuper-g\b", r"\bsuper g\b", r"\briesenslalom\b", r"\babfahrt\b", r"\bcoppa del mondo di sci\b"]),
-    ("Pallavolo", [r"\bpallavolo\b", r"\bvolley\b", r"\bvolleyball\b", r"\bv[ôo]lei\b", r"\bsuperlega\b", r"\bsuperliga\b", r"\blvf\b", r"\bvnl\b", r"\bserie a1\b", r"\bserie a2\b", r"バレー"]),
+    ("Pallavolo", [r"\bpallavolo\b", r"\bvolley\b", r"\bvolleyball\b", r"\bv[ôo]lei\b", r"\bsuperlega\b", r"\bsuperliga\b", r"\blvf\b", r"\bvnl\b", r"\bserie a1\b", r"バレー"]),
     ("Basket & NBA", [r"\bnba\b", r"\bwnba\b", r"\bbasket\b", r"\bbasquete\b", r"\bbaloncesto\b", r"\bpallacanestro\b", r"\bbasketball\b", r"\beurolega\b", r"\beuroleague\b", r"\beurocup\b", r"\beuroliga\b", r"\bnbb\b", r"\bfiba\b", r"\blega basket\b", r"\bliga endesa\b", r"\bliga acb\b", r"\bliga betclic\b", r"\bmarch madness\b", r"\bbbl\b", r"バスケ", r"bリーグ"]),
     ("Tennis", [r"\btennis\b", r"\bt[êe]nis\b", r"\btenis\b", r"\batp\b", r"\bwta\b", r"\bcoppa davis\b", r"\bdavis cup\b", r"\bbillie jean king\b", r"\broland garros\b", r"\bwimbledon\b", r"\baustralian open\b", r"\bus open\b", r"\bchallenger\b", r"テニス"]),
-    ("Calcio", [r"\bcalcio\b", r"\bfutebol\b", r"\bf[úu]tbol\b", r"\bfootball\b", r"\bsoccer\b", r"\bfu[ßs]ball\b", r"\bvoetbal\b", r"\bserie a\b", r"\bserie b\b", r"\bs[ée]rie b\b", r"\bcoppa italia\b", r"\bsupercoppa\b", r"\bchampions league\b", r"\beuropa league\b", r"\bconference league\b", r"\bnations league\b", r"\bmondiali\b", r"\bpremier league\b", r"\bbundesliga\b", r"\bdfb-pokal\b", r"\bdfb pokal\b", r"\blaliga\b", r"\bla liga\b", r"\bligue 1\b", r"\bbrasileir[ãa]o\b", r"\bpaulist[ãa]o\b", r"\bcarioca\b", r"\bcopa do brasil\b", r"\blibertadores\b", r"\bsul-americana\b", r"\bsudamericana\b", r"\bsuper league\b", r"\bjupiler\b", r"\bchallenger pro league\b", r"\bcroky cup\b", r"\bliga portugal\b", r"\bnational league\b", r"\bfa cup\b", r"\bcopa del rey\b", r"\bfutsal\b", r"\bfifa\b", r"\bkings league\b", r"\byouth league\b", r"\bu17-wm\b", r"\bu-17\b", r"\bjリーグ\b", r"\bj1\b", r"\bj2\b", r"\bj3\b", r"サッカー", r"セリエa", r"ラリーガ", r"ブンデスリーガ", r"リーグアン", r"ベルギーリーグ"]),
+    ("Calcio", [r"\bcalcio\b", r"\bfutebol\b", r"\bf[úu]tbol\b", r"\bfootball\b", r"\bsoccer\b", r"\bfu[ßs]ball\b", r"\bvoetbal\b", r"\bserie a\b", r"\bserie b(?:kt)?\b", r"\bcoppa italia\b", r"\bsupercoppa\b", r"\bchampions league\b", r"\beuropa league\b", r"\bconference league\b", r"\bnations league\b", r"\bmondiali\b", r"\bpremier league\b", r"\bbundesliga\b", r"\bdfb-pokal\b", r"\bdfb pokal\b", r"\blaliga\b", r"\bla liga\b", r"\bligue 1\b", r"\bbrasileir[ãa]o\b", r"\bpaulist[ãa]o\b", r"\bcarioca\b", r"\bcopa do brasil\b", r"\blibertadores\b", r"\bsul-americana\b", r"\bsudamericana\b", r"\bsuper league\b", r"\bjupiler\b", r"\bcroky cup\b", r"\bliga portugal\b", r"\bfa cup\b", r"\bcopa del rey\b", r"\bfutsal\b", r"\bfifa\b", r"\bkings league\b", r"\byouth league\b", r"\bu17-wm\b", r"\bu-17\b", r"\bjリーグ\b", r"\bj1\b", r"サッカー", r"セリエa", r"ラリーガ", r"ブンデスリーガ", r"リーグアン", r"ベルギーリーグ"]),
 ]
 
 
-def classifica_sport(testo, canale_solo_sport=False):
+def classifica_sport(testo, canale_solo_sport=False, paese="", title=""):
     t = (testo or "").lower()
+    tl = (title or testo or "").lower()
+
     if any(p in t for p in PAROLE_DA_ESCLUDERE):
+        return None
+    if re.search(REPLAY_REGEX, tl):
+        return None
+    if re.search(REPLAY_REGEX, t) and not re.search(r"\b(?:diretta|live)\b", tl):
         return None
     if any(re.search(pat, t) for pat in ESCLUDI_SPORT_REGEX):
         return None
+    if re.search(SECONDA_DIVISIONE_REGEX, t):
+        return None
+
+    is_match_or_race = bool(
+        re.search(r"(\s+-\s+|\bvs\.?\b|×|\s+x\s+|\s+@\s+|\b(?:gran premio|grand prix|qualifiche|qualifying|gara|race|sprint|slalom|discesa|super-?g|gigante|semifinale|finale|quarti|ottavi)\b)", tl)
+    )
+
+    if paese == "Italia":
+        if re.search(MAGAZINE_IT_REGEX, tl) or (not is_match_or_race and re.search(MAGAZINE_IT_REGEX, t)):
+            return "Programmi & Magazine"
+    else:
+        if re.search(MAGAZINE_ESTERI_REGEX, tl) or (not is_match_or_race and re.search(MAGAZINE_ESTERI_REGEX, t)):
+            return None
+
     for sport, patterns in REGOLE_SPORT:
         if any(re.search(pat, t) for pat in patterns):
-            if sport == "Calcio" and re.search(CALCIO_FEMMINILE_REGEX, t):
-                return None
+            if sport == "Calcio":
+                if re.search(CALCIO_FEMMINILE_REGEX, t):
+                    return None
+                if re.search(r"\bserie\s*b(?:kt)?\b", t):
+                    if paese not in ("Italia", "DAZN Free Italia", "") or re.search(r"\b(?:brasil|brasileir|argentin|ecuador|colombia|chile|rugby|basket|volley|pallavolo)\b", t):
+                        return None
+            else:
+                if re.search(r"\bserie\s*b(?:kt)?\b", t):
+                    return None
             return sport
+
     if canale_solo_sport and re.search(r"(\bx\b|vs\.?|×|対|\s-\s|\s·\s|\s@\s)", t):
+        if re.search(r"\bserie\s*b(?:kt)?\b", t):
+            return None
         return "Altri Sport"
     return None
 
@@ -173,10 +256,11 @@ def scarica_epg_paesi():
                                 title = (elem.findtext("title") or "").strip()
                                 desc = (elem.findtext("desc") or "").strip()
                                 cats = " ".join((c.text or "") for c in elem.findall("category"))
-                                sport = classifica_sport(f"{title} {cats} {desc}", False)
+                                sport = classifica_sport(f"{title} {cats} {desc}", False, paese=paese, title=f"{title} {cats}")
                                 if sport and title:
                                     nc, lk = matched_ids[cid]
-                                    risultati.append({"data": dt.strftime("%Y-%m-%d"), "ora": dt.strftime("%H:%M"), "sport": sport, "competizione": cats.strip() or f"TV {paese}", "evento": title, "paese": paese, "canale": nc, "link": lk})
+                                    comp_lbl = "Programma TV" if sport == "Programmi & Magazine" else (cats.strip() or f"TV {paese}")
+                                    risultati.append({"data": dt.strftime("%Y-%m-%d"), "ora": dt.strftime("%H:%M"), "sport": sport, "competizione": comp_lbl, "evento": title, "paese": paese, "canale": nc, "link": lk})
                                     count += 1
                         elem.clear()
         except Exception as e:
@@ -243,7 +327,7 @@ def scarica_futebol_tv_br():
                 parti = [p.strip() for p in line.split("·") if p.strip()]
                 ev = parti[0]
                 comp = re.sub(r"Logo\s+.*", "", parti[1] if len(parti) > 1 else "Calcio").strip() or "Calcio"
-                if classifica_sport(f"futebol {comp} {ev}", True) != "Calcio":
+                if classifica_sport(f"futebol {comp} {ev}", True, paese="Brasile YouTube", title=f"{comp} {ev}") != "Calcio":
                     ct = None
                     continue
                 try:
@@ -286,7 +370,7 @@ def estrai_br_html(html, base_dt):
             continue
         corpo = m.group(3).strip()
         comp, ev = ([x.strip() for x in corpo.split(":", 1)] if ":" in corpo else (sez or "Sport Brasile", corpo))
-        sport = classifica_sport(f"{sez} {comp} {ev}", True)
+        sport = classifica_sport(f"{sez} {comp} {ev}", True, paese="Brasile YouTube", title=f"{comp} {ev}")
         if not sport:
             continue
         try:
