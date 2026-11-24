@@ -1,6 +1,16 @@
 [
   {
     "data": "2026-11-24",
+    "ora": "00:00",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "SI Live 24: Rassegna",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-24",
     "ora": "00:20",
     "sport": "Tennis",
     "competizione": "Sport Tennis",
@@ -12,12 +22,42 @@
   {
     "data": "2026-11-24",
     "ora": "00:30",
-    "sport": "Calcio",
-    "competizione": "Calcio Dibattito Sportivo",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Sportitalia Mercato",
     "paese": "Italia",
     "canale": "Sportitalia",
     "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "00:36",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Sport Mediaset Monday Night",
+    "paese": "Italia",
+    "canale": "Italia 1",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/italia1_cI1"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "01:05",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Parlamento Magazine",
+    "paese": "Italia",
+    "canale": "Rai 3",
+    "link": "https://www.raiplay.it/dirette/rai3"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "01:08",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "E Planet",
+    "paese": "Italia",
+    "canale": "Italia 1",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/italia1_cI1"
   },
   {
     "data": "2026-11-24",
@@ -31,6 +71,36 @@
   },
   {
     "data": "2026-11-24",
+    "ora": "01:15",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "O anche no",
+    "paese": "Italia",
+    "canale": "Rai 3",
+    "link": "https://www.raiplay.it/dirette/rai3"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "01:37",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Drive Up (it1)",
+    "paese": "Italia",
+    "canale": "Italia 1",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/italia1_cI1"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "01:45",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "SI Live 24",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-24",
     "ora": "02:00",
     "sport": "Calcio",
     "competizione": "Sport Calcio",
@@ -38,6 +108,16 @@
     "paese": "Italia",
     "canale": "Sportitalia",
     "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "02:02",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Ciak Speciale",
+    "paese": "Italia",
+    "canale": "Italia 1",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/italia1_cI1"
   },
   {
     "data": "2026-11-24",
@@ -122,12 +202,32 @@
   {
     "data": "2026-11-24",
     "ora": "06:00",
-    "sport": "Calcio",
-    "competizione": "TV Italia",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Il Processo del Lunedì",
     "paese": "Italia",
     "canale": "Rai Sport",
     "link": "https://www.raiplay.it/dirette/raisport"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "06:30",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "SI Live 24",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "06:55",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "SI Live 24",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
   },
   {
     "data": "2026-11-24",
@@ -142,8 +242,8 @@
   {
     "data": "2026-11-24",
     "ora": "07:00",
-    "sport": "Calcio",
-    "competizione": "Calcio Dibattito Sportivo",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Sportitalia Mercato",
     "paese": "Italia",
     "canale": "Sportitalia",
@@ -162,8 +262,8 @@
   {
     "data": "2026-11-24",
     "ora": "08:00",
-    "sport": "Calcio",
-    "competizione": "TV Italia",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Serie B",
     "paese": "Italia",
     "canale": "Rai Sport",
@@ -171,13 +271,13 @@
   },
   {
     "data": "2026-11-24",
-    "ora": "08:10",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "UEFA Champions League magazine",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
+    "ora": "08:15",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Celebrity Chef - Anteprima",
+    "paese": "Italia",
+    "canale": "Cielo",
+    "link": "https://www.cielotv.it/streaming.html"
   },
   {
     "data": "2026-11-24",
@@ -188,6 +288,16 @@
     "paese": "Svizzera",
     "canale": "blue Zoom",
     "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "08:35",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Unomattina",
+    "paese": "Italia",
+    "canale": "Rai 1",
+    "link": "https://www.raiplay.it/dirette/rai1"
   },
   {
     "data": "2026-11-24",
@@ -211,13 +321,33 @@
   },
   {
     "data": "2026-11-24",
+    "ora": "08:43",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Mattino Cinque News",
+    "paese": "Italia",
+    "canale": "Canale 5",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/canale5_cC5"
+  },
+  {
+    "data": "2026-11-24",
     "ora": "09:00",
-    "sport": "Calcio",
-    "competizione": "Calcio Talk Show",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Tutti In campo",
     "paese": "Italia",
     "canale": "Sportitalia",
     "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "09:03",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Unomattina",
+    "paese": "Italia",
+    "canale": "Rai 1",
+    "link": "https://www.raiplay.it/dirette/rai1"
   },
   {
     "data": "2026-11-24",
@@ -232,8 +362,8 @@
   {
     "data": "2026-11-24",
     "ora": "10:30",
-    "sport": "Calcio",
-    "competizione": "Sport Calcio",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Magazine Inside City",
     "paese": "Italia",
     "canale": "Sportitalia",
@@ -242,8 +372,8 @@
   {
     "data": "2026-11-24",
     "ora": "10:55",
-    "sport": "Calcio",
-    "competizione": "TV Italia",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Serie B",
     "paese": "Italia",
     "canale": "Rai Sport",
@@ -258,6 +388,26 @@
     "paese": "Svizzera",
     "canale": "blue Zoom",
     "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "10:58",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Forum",
+    "paese": "Italia",
+    "canale": "Canale 5",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/canale5_cC5"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "11:00",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Tg Sport",
+    "paese": "Italia",
+    "canale": "Rai 2",
+    "link": "https://www.raiplay.it/dirette/rai2"
   },
   {
     "data": "2026-11-24",
@@ -292,12 +442,22 @@
   {
     "data": "2026-11-24",
     "ora": "12:00",
-    "sport": "Calcio",
-    "competizione": "Calcio Dibattito Sportivo",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Sportitalia Mercato",
     "paese": "Italia",
     "canale": "Sportitalia",
     "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "12:45",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Italia Per Due - Anteprima",
+    "paese": "Italia",
+    "canale": "TV8",
+    "link": "https://tv8.it/streaming"
   },
   {
     "data": "2026-11-24",
@@ -308,6 +468,16 @@
     "paese": "Italia",
     "canale": "SuperTennis",
     "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "13:11",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Sport Mediaset 2026",
+    "paese": "Italia",
+    "canale": "Italia 1",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/italia1_cI1"
   },
   {
     "data": "2026-11-24",
@@ -328,6 +498,16 @@
     "paese": "Italia",
     "canale": "Sportitalia",
     "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "13:53",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Sport Mediaset Extra",
+    "paese": "Italia",
+    "canale": "Italia 1",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/italia1_cI1"
   },
   {
     "data": "2026-11-24",
@@ -358,6 +538,16 @@
     "paese": "Germania",
     "canale": "Eurosport 1 DE",
     "link": "https://www.eurosport.de/"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "14:45",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Uomini E Donne",
+    "paese": "Italia",
+    "canale": "Canale 5",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/canale5_cC5"
   },
   {
     "data": "2026-11-24",
@@ -401,19 +591,19 @@
   },
   {
     "data": "2026-11-24",
-    "ora": "15:20",
-    "sport": "Calcio",
-    "competizione": "Rugby",
-    "evento": "Rugby: Super League",
-    "paese": "Germania",
-    "canale": "More Than Sports TV",
-    "link": "https://morethansports.tv/"
+    "ora": "15:00",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Si Café",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
   },
   {
     "data": "2026-11-24",
     "ora": "15:40",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Supertennis Today - Speciale Davis Cup",
     "paese": "Italia",
     "canale": "SuperTennis",
@@ -491,6 +681,16 @@
   },
   {
     "data": "2026-11-24",
+    "ora": "16:55",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Dentro La Notizia",
+    "paese": "Italia",
+    "canale": "Canale 5",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/canale5_cC5"
+  },
+  {
+    "data": "2026-11-24",
     "ora": "17:40",
     "sport": "Formula 1",
     "competizione": "Sport",
@@ -501,9 +701,29 @@
   },
   {
     "data": "2026-11-24",
+    "ora": "17:54",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Sport Mediaset",
+    "paese": "Italia",
+    "canale": "Italia 1",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/italia1_cI1"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "18:00",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Celebrity Chef - Anteprima",
+    "paese": "Italia",
+    "canale": "Cielo",
+    "link": "https://www.cielotv.it/streaming.html"
+  },
+  {
+    "data": "2026-11-24",
     "ora": "18:05",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Supertennis Today - Speciale Davis Cup",
     "paese": "Italia",
     "canale": "SuperTennis",
@@ -531,6 +751,26 @@
   },
   {
     "data": "2026-11-24",
+    "ora": "18:35",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Tg Sport",
+    "paese": "Italia",
+    "canale": "Rai 2",
+    "link": "https://www.raiplay.it/dirette/rai2"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "19:11",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Studio Aperto Mag",
+    "paese": "Italia",
+    "canale": "Italia 1",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/italia1_cI1"
+  },
+  {
+    "data": "2026-11-24",
     "ora": "19:30",
     "sport": "Calcio",
     "competizione": "Fußballmagazin",
@@ -541,13 +781,13 @@
   },
   {
     "data": "2026-11-24",
-    "ora": "19:50",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "UEFA Champions League magazine",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
+    "ora": "19:54",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Tg5 Prima Pagina",
+    "paese": "Italia",
+    "canale": "Canale 5",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/canale5_cC5"
   },
   {
     "data": "2026-11-24",
@@ -571,43 +811,13 @@
   },
   {
     "data": "2026-11-24",
-    "ora": "20:00",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "UEFA Champions League - Der Countdown",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-24",
     "ora": "20:10",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Supertennis Today - Speciale Davis Cup",
     "paese": "Italia",
     "canale": "SuperTennis",
     "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "20:15",
-    "sport": "Pallavolo",
-    "competizione": "TV Italia",
-    "evento": "Basket: Serie A2 Old Wild West",
-    "paese": "Italia",
-    "canale": "Rai Sport",
-    "link": "https://www.raiplay.it/dirette/raisport"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "20:15",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "L'avant-match - UEFA Champions League",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
   },
   {
     "data": "2026-11-24",
@@ -641,6 +851,16 @@
   },
   {
     "data": "2026-11-24",
+    "ora": "20:35",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Italia Per Due - Anteprima",
+    "paese": "Italia",
+    "canale": "TV8",
+    "link": "https://tv8.it/streaming"
+  },
+  {
+    "data": "2026-11-24",
     "ora": "20:50",
     "sport": "Calcio",
     "competizione": "TV Svizzera",
@@ -648,6 +868,16 @@
     "paese": "Svizzera",
     "canale": "blue Zoom",
     "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "20:55",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Focus On Planetwin",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
   },
   {
     "data": "2026-11-24",
@@ -702,8 +932,8 @@
   {
     "data": "2026-11-24",
     "ora": "22:15",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Supertennis Today - Speciale Davis Cup",
     "paese": "Italia",
     "canale": "SuperTennis",
@@ -732,8 +962,8 @@
   {
     "data": "2026-11-24",
     "ora": "22:55",
-    "sport": "Calcio",
-    "competizione": "Sport Calcio",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Lo Sai Che?",
     "paese": "Italia",
     "canale": "Sportitalia",
@@ -752,8 +982,8 @@
   {
     "data": "2026-11-24",
     "ora": "23:00",
-    "sport": "Calcio",
-    "competizione": "Calcio Dibattito Sportivo",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Sportitalia Mercato",
     "paese": "Italia",
     "canale": "Sportitalia",
@@ -771,16 +1001,6 @@
   },
   {
     "data": "2026-11-24",
-    "ora": "23:00",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "UEFA Champions League - Highlights - Alle Spiele, alle Tore",
-    "paese": "Svizzera",
-    "canale": "SRF zwei",
-    "link": "https://www.srf.ch/play/tv"
-  },
-  {
-    "data": "2026-11-24",
     "ora": "23:10",
     "sport": "MotoGP",
     "competizione": "TV Germania",
@@ -788,6 +1008,16 @@
     "paese": "Germania",
     "canale": "More Than Sports TV",
     "link": "https://morethansports.tv/"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "23:15",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Serie A Women Athora",
+    "paese": "Italia",
+    "canale": "Rai Sport",
+    "link": "https://www.raiplay.it/dirette/raisport"
   },
   {
     "data": "2026-11-24",
@@ -801,20 +1031,20 @@
   },
   {
     "data": "2026-11-25",
+    "ora": "00:00",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "SI Live 24: Rassegna",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-25",
     "ora": "00:05",
     "sport": "Basket & NBA",
     "competizione": "TV Svizzera",
     "evento": "Basketball: Valencia Basket - Panathinaikos Athen",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-25",
-    "ora": "00:15",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "UEFA Europa League magazine",
     "paese": "Svizzera",
     "canale": "blue Zoom",
     "link": "https://www.blueplus.ch/de/bluezoom"
@@ -832,12 +1062,22 @@
   {
     "data": "2026-11-25",
     "ora": "00:30",
-    "sport": "Calcio",
-    "competizione": "Calcio Dibattito Sportivo",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Sportitalia Mercato",
     "paese": "Italia",
     "canale": "Sportitalia",
     "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "01:05",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Parlamento Magazine",
+    "paese": "Italia",
+    "canale": "Rai 3",
+    "link": "https://www.raiplay.it/dirette/rai3"
   },
   {
     "data": "2026-11-25",
@@ -848,6 +1088,36 @@
     "paese": "Svizzera",
     "canale": "blue Zoom",
     "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "01:45",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Sulla Via di Damasco",
+    "paese": "Italia",
+    "canale": "Rai 3",
+    "link": "https://www.raiplay.it/dirette/rai3"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "01:45",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "SI Live 24",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "01:48",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Sport Mediaset La Giornata",
+    "paese": "Italia",
+    "canale": "Italia 1",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/italia1_cI1"
   },
   {
     "data": "2026-11-25",
@@ -872,9 +1142,59 @@
   {
     "data": "2026-11-25",
     "ora": "02:00",
-    "sport": "Calcio",
-    "competizione": "Sport Calcio",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Magazine argentino",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "02:15",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "SI Live 24",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "02:20",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Uomini E Donne",
+    "paese": "Italia",
+    "canale": "Canale 5",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/canale5_cC5"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "02:25",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Appuntamento al cinema",
+    "paese": "Italia",
+    "canale": "Rai 2",
+    "link": "https://www.raiplay.it/dirette/rai2"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "02:30",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "SI Live 24",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "03:00",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "SI Live 24",
     "paese": "Italia",
     "canale": "Sportitalia",
     "link": "https://www.sportitalia.it/"
@@ -891,19 +1211,9 @@
   },
   {
     "data": "2026-11-25",
-    "ora": "03:10",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "UEFA Europa League Magazin",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-25",
     "ora": "03:30",
-    "sport": "Calcio",
-    "competizione": "Sport Calcio",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Magazine Inside City",
     "paese": "Italia",
     "canale": "Sportitalia",
@@ -921,13 +1231,33 @@
   },
   {
     "data": "2026-11-25",
-    "ora": "04:50",
-    "sport": "Calcio",
-    "competizione": "Rugby",
-    "evento": "Rugby: Super League",
-    "paese": "Germania",
-    "canale": "More Than Sports TV",
-    "link": "https://morethansports.tv/"
+    "ora": "04:00",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "SI Live 24",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "04:30",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "SI Live 24",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "05:00",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "SI Live 24",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
   },
   {
     "data": "2026-11-25",
@@ -941,6 +1271,26 @@
   },
   {
     "data": "2026-11-25",
+    "ora": "05:15",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Serie A Women Athora",
+    "paese": "Italia",
+    "canale": "Rai Sport",
+    "link": "https://www.raiplay.it/dirette/raisport"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "05:30",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "SI Live 24",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-25",
     "ora": "05:40",
     "sport": "Tennis",
     "competizione": "Sport Tennis",
@@ -948,6 +1298,36 @@
     "paese": "Italia",
     "canale": "SuperTennis",
     "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "06:00",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Serie A Women Athora",
+    "paese": "Italia",
+    "canale": "Rai Sport",
+    "link": "https://www.raiplay.it/dirette/raisport"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "06:00",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "SI Live 24",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "06:30",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "SI Live 24",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
   },
   {
     "data": "2026-11-25",
@@ -972,6 +1352,16 @@
   {
     "data": "2026-11-25",
     "ora": "06:55",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "SI Live 24",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "06:55",
     "sport": "Calcio",
     "competizione": "TV Svizzera",
     "evento": "Ruben & Cie",
@@ -982,8 +1372,8 @@
   {
     "data": "2026-11-25",
     "ora": "07:00",
-    "sport": "Calcio",
-    "competizione": "Calcio Dibattito Sportivo",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Sportitalia Mercato",
     "paese": "Italia",
     "canale": "Sportitalia",
@@ -1001,23 +1391,63 @@
   },
   {
     "data": "2026-11-25",
-    "ora": "08:45",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "UEFA Europa League magazine",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
+    "ora": "08:30",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Celebrity Chef - Anteprima",
+    "paese": "Italia",
+    "canale": "Cielo",
+    "link": "https://www.cielotv.it/streaming.html"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "08:35",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Unomattina",
+    "paese": "Italia",
+    "canale": "Rai 1",
+    "link": "https://www.raiplay.it/dirette/rai1"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "08:42",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Mattino Cinque News",
+    "paese": "Italia",
+    "canale": "Canale 5",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/canale5_cC5"
   },
   {
     "data": "2026-11-25",
     "ora": "09:00",
-    "sport": "Calcio",
-    "competizione": "Calcio Talk Show",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Tutti In campo",
     "paese": "Italia",
     "canale": "Sportitalia",
     "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "09:03",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Unomattina",
+    "paese": "Italia",
+    "canale": "Rai 1",
+    "link": "https://www.raiplay.it/dirette/rai1"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "09:42",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Unomattina",
+    "paese": "Italia",
+    "canale": "Rai 1",
+    "link": "https://www.raiplay.it/dirette/rai1"
   },
   {
     "data": "2026-11-25",
@@ -1051,16 +1481,6 @@
   },
   {
     "data": "2026-11-25",
-    "ora": "10:05",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "UEFA Champions League magazine",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-25",
     "ora": "10:30",
     "sport": "Calcio",
     "competizione": "TV Svizzera",
@@ -1071,6 +1491,16 @@
   },
   {
     "data": "2026-11-25",
+    "ora": "10:55",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Forum",
+    "paese": "Italia",
+    "canale": "Canale 5",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/canale5_cC5"
+  },
+  {
+    "data": "2026-11-25",
     "ora": "11:00",
     "sport": "Sci Alpino",
     "competizione": "Ski Alpin",
@@ -1078,6 +1508,16 @@
     "paese": "Germania",
     "canale": "Eurosport 1 DE",
     "link": "https://www.eurosport.de/"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "11:00",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Tg Sport",
+    "paese": "Italia",
+    "canale": "Rai 2",
+    "link": "https://www.raiplay.it/dirette/rai2"
   },
   {
     "data": "2026-11-25",
@@ -1112,22 +1552,12 @@
   {
     "data": "2026-11-25",
     "ora": "12:00",
-    "sport": "Calcio",
-    "competizione": "Calcio Dibattito Sportivo",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Sportitalia Mercato",
     "paese": "Italia",
     "canale": "Sportitalia",
     "link": "https://www.sportitalia.it/"
-  },
-  {
-    "data": "2026-11-25",
-    "ora": "12:25",
-    "sport": "Pallavolo",
-    "competizione": "TV Italia",
-    "evento": "Basket: Serie A2 Old Wild West",
-    "paese": "Italia",
-    "canale": "Rai Sport",
-    "link": "https://www.raiplay.it/dirette/raisport"
   },
   {
     "data": "2026-11-25",
@@ -1151,6 +1581,26 @@
   },
   {
     "data": "2026-11-25",
+    "ora": "12:30",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Italia Per Due - Anteprima",
+    "paese": "Italia",
+    "canale": "TV8",
+    "link": "https://tv8.it/streaming"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "13:10",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Sport Mediaset 2026",
+    "paese": "Italia",
+    "canale": "Italia 1",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/italia1_cI1"
+  },
+  {
+    "data": "2026-11-25",
     "ora": "13:20",
     "sport": "Tennis",
     "competizione": "TV Svizzera",
@@ -1158,6 +1608,16 @@
     "paese": "Svizzera",
     "canale": "RTS 1",
     "link": "https://www.rts.ch/play/tv"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "13:53",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Sport Mediaset Extra",
+    "paese": "Italia",
+    "canale": "Italia 1",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/italia1_cI1"
   },
   {
     "data": "2026-11-25",
@@ -1191,13 +1651,13 @@
   },
   {
     "data": "2026-11-25",
-    "ora": "14:40",
-    "sport": "Pallavolo",
-    "competizione": "TV Italia",
-    "evento": "SportAbilia",
+    "ora": "14:45",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Uomini E Donne",
     "paese": "Italia",
-    "canale": "Rai Sport",
-    "link": "https://www.raiplay.it/dirette/raisport"
+    "canale": "Canale 5",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/canale5_cC5"
   },
   {
     "data": "2026-11-25",
@@ -1211,9 +1671,19 @@
   },
   {
     "data": "2026-11-25",
+    "ora": "15:00",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Si Café",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-25",
     "ora": "15:30",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Supertennis Today - Speciale Davis Cup",
     "paese": "Italia",
     "canale": "SuperTennis",
@@ -1251,19 +1721,19 @@
   },
   {
     "data": "2026-11-25",
-    "ora": "16:30",
-    "sport": "Calcio",
-    "competizione": "Sport Calcio",
-    "evento": "Speciale Serie C",
+    "ora": "16:55",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Dentro La Notizia",
     "paese": "Italia",
-    "canale": "Sportitalia",
-    "link": "https://www.sportitalia.it/"
+    "canale": "Canale 5",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/canale5_cC5"
   },
   {
     "data": "2026-11-25",
     "ora": "17:55",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Supertennis Today - Speciale Davis Cup",
     "paese": "Italia",
     "canale": "SuperTennis",
@@ -1271,13 +1741,23 @@
   },
   {
     "data": "2026-11-25",
+    "ora": "17:56",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Sport Mediaset",
+    "paese": "Italia",
+    "canale": "Italia 1",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/italia1_cI1"
+  },
+  {
+    "data": "2026-11-25",
     "ora": "18:00",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "UEFA Europa League Magazin",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Celebrity Chef - Anteprima",
+    "paese": "Italia",
+    "canale": "Cielo",
+    "link": "https://www.cielotv.it/streaming.html"
   },
   {
     "data": "2026-11-25",
@@ -1301,6 +1781,16 @@
   },
   {
     "data": "2026-11-25",
+    "ora": "18:35",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Tg Sport",
+    "paese": "Italia",
+    "canale": "Rai 2",
+    "link": "https://www.raiplay.it/dirette/rai2"
+  },
+  {
+    "data": "2026-11-25",
     "ora": "18:55",
     "sport": "Calcio",
     "competizione": "TV Svizzera",
@@ -1308,6 +1798,16 @@
     "paese": "Svizzera",
     "canale": "blue Zoom",
     "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "19:11",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Studio Aperto Mag",
+    "paese": "Italia",
+    "canale": "Italia 1",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/italia1_cI1"
   },
   {
     "data": "2026-11-25",
@@ -1341,23 +1841,23 @@
   },
   {
     "data": "2026-11-25",
-    "ora": "20:00",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "Supertennis Today - Speciale Davis Cup",
+    "ora": "19:54",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Tg5 Prima Pagina",
     "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
+    "canale": "Canale 5",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/canale5_cC5"
   },
   {
     "data": "2026-11-25",
     "ora": "20:00",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "UEFA Champions League - Der Countdown",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Supertennis Today - Speciale Davis Cup",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
   },
   {
     "data": "2026-11-25",
@@ -1391,19 +1891,9 @@
   },
   {
     "data": "2026-11-25",
-    "ora": "20:15",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "L'avant-match - UEFA Champions League",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-25",
     "ora": "20:20",
-    "sport": "Calcio",
-    "competizione": "Sport Calcio",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Tv8 Football Night",
     "paese": "Italia",
     "canale": "TV8",
@@ -1428,6 +1918,16 @@
     "paese": "Svizzera",
     "canale": "RSI La 2",
     "link": "https://www.rsi.ch/play/tv"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "20:55",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Focus On Planetwin",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
   },
   {
     "data": "2026-11-25",
@@ -1472,8 +1972,8 @@
   {
     "data": "2026-11-25",
     "ora": "22:05",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Supertennis Today - Speciale Davis Cup",
     "paese": "Italia",
     "canale": "SuperTennis",
@@ -1492,8 +1992,8 @@
   {
     "data": "2026-11-25",
     "ora": "22:55",
-    "sport": "Calcio",
-    "competizione": "Sport Calcio",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Lo Sai Che?",
     "paese": "Italia",
     "canale": "Sportitalia",
@@ -1532,8 +2032,8 @@
   {
     "data": "2026-11-25",
     "ora": "23:00",
-    "sport": "Calcio",
-    "competizione": "Sport Calcio",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Tv8 Football Night",
     "paese": "Italia",
     "canale": "TV8",
@@ -1542,8 +2042,8 @@
   {
     "data": "2026-11-25",
     "ora": "23:00",
-    "sport": "Calcio",
-    "competizione": "Calcio Dibattito Sportivo",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Sportitalia Mercato",
     "paese": "Italia",
     "canale": "Sportitalia",
@@ -1560,26 +2060,6 @@
     "link": "https://www.blueplus.ch/de/bluezoom"
   },
   {
-    "data": "2026-11-25",
-    "ora": "23:00",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "UEFA Champions League - Highlights - Alle Spiele, alle Tore",
-    "paese": "Svizzera",
-    "canale": "SRF zwei",
-    "link": "https://www.srf.ch/play/tv"
-  },
-  {
-    "data": "2026-11-25",
-    "ora": "23:45",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "UEFA Europa League magazine",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
     "data": "2026-11-26",
     "ora": "00:00",
     "sport": "Sci Alpino",
@@ -1591,6 +2071,16 @@
   },
   {
     "data": "2026-11-26",
+    "ora": "00:00",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "SI Live 24: Rassegna",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-26",
     "ora": "00:05",
     "sport": "Calcio",
     "competizione": "TV Svizzera",
@@ -1598,6 +2088,16 @@
     "paese": "Svizzera",
     "canale": "blue Zoom",
     "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "00:30",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "SI Live 24",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
   },
   {
     "data": "2026-11-26",
@@ -1631,6 +2131,36 @@
   },
   {
     "data": "2026-11-26",
+    "ora": "01:05",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Parlamento Magazine",
+    "paese": "Italia",
+    "canale": "Rai 3",
+    "link": "https://www.raiplay.it/dirette/rai3"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "01:10",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Uomini E Donne",
+    "paese": "Italia",
+    "canale": "Canale 5",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/canale5_cC5"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "01:45",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Ciak Speciale",
+    "paese": "Italia",
+    "canale": "Italia 1",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/italia1_cI1"
+  },
+  {
+    "data": "2026-11-26",
     "ora": "01:45",
     "sport": "Calcio",
     "competizione": "TV Italia",
@@ -1648,6 +2178,26 @@
     "paese": "Svizzera",
     "canale": "RSI La 2",
     "link": "https://www.rsi.ch/play/tv"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "01:55",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Sulla Via di Damasco",
+    "paese": "Italia",
+    "canale": "Rai 3",
+    "link": "https://www.raiplay.it/dirette/rai3"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "02:01",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Sport Mediaset La Giornata",
+    "paese": "Italia",
+    "canale": "Italia 1",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/italia1_cI1"
   },
   {
     "data": "2026-11-26",
@@ -1691,6 +2241,26 @@
   },
   {
     "data": "2026-11-26",
+    "ora": "03:30",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "SI Live 24",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "04:00",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "SI Live 24",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-26",
     "ora": "04:05",
     "sport": "Calcio",
     "competizione": "TV Svizzera",
@@ -1701,13 +2271,13 @@
   },
   {
     "data": "2026-11-26",
-    "ora": "04:40",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "UEFA Champions League magazine",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
+    "ora": "04:30",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "SI Live 24",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
   },
   {
     "data": "2026-11-26",
@@ -1731,6 +2301,16 @@
   },
   {
     "data": "2026-11-26",
+    "ora": "05:00",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "SI Live 24",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-26",
     "ora": "05:10",
     "sport": "Calcio",
     "competizione": "TV Svizzera",
@@ -1741,9 +2321,49 @@
   },
   {
     "data": "2026-11-26",
+    "ora": "05:30",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "SI Live 24",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "06:00",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "SI Live 24",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "06:30",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "SI Live 24",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "06:55",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "SI Live 24",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-26",
     "ora": "07:00",
-    "sport": "Calcio",
-    "competizione": "Calcio Dibattito Sportivo",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Sportitalia Mercato",
     "paese": "Italia",
     "canale": "Sportitalia",
@@ -1771,6 +2391,26 @@
   },
   {
     "data": "2026-11-26",
+    "ora": "08:30",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Celebrity Chef - Anteprima",
+    "paese": "Italia",
+    "canale": "Cielo",
+    "link": "https://www.cielotv.it/streaming.html"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "08:35",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Unomattina",
+    "paese": "Italia",
+    "canale": "Rai 1",
+    "link": "https://www.raiplay.it/dirette/rai1"
+  },
+  {
+    "data": "2026-11-26",
     "ora": "08:35",
     "sport": "Calcio",
     "competizione": "TV Svizzera",
@@ -1782,8 +2422,8 @@
   {
     "data": "2026-11-26",
     "ora": "09:00",
-    "sport": "Calcio",
-    "competizione": "Calcio Talk Show",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Tutti In campo",
     "paese": "Italia",
     "canale": "Sportitalia",
@@ -1801,6 +2441,16 @@
   },
   {
     "data": "2026-11-26",
+    "ora": "09:03",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Unomattina",
+    "paese": "Italia",
+    "canale": "Rai 1",
+    "link": "https://www.raiplay.it/dirette/rai1"
+  },
+  {
+    "data": "2026-11-26",
     "ora": "09:15",
     "sport": "Calcio",
     "competizione": "TV Italia",
@@ -1812,12 +2462,22 @@
   {
     "data": "2026-11-26",
     "ora": "10:30",
-    "sport": "Calcio",
-    "competizione": "Sport Calcio",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Magazine Inside City",
     "paese": "Italia",
     "canale": "Sportitalia",
     "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "10:35",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Law & Order: Special Victims Unit",
+    "paese": "Italia",
+    "canale": "Italia 1",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/italia1_cI1"
   },
   {
     "data": "2026-11-26",
@@ -1848,6 +2508,26 @@
     "paese": "Germania",
     "canale": "Eurosport 1 DE",
     "link": "https://www.eurosport.de/"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "11:00",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Tg Sport",
+    "paese": "Italia",
+    "canale": "Rai 2",
+    "link": "https://www.raiplay.it/dirette/rai2"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "11:00",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "SI Live 24",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
   },
   {
     "data": "2026-11-26",
@@ -1891,13 +2571,33 @@
   },
   {
     "data": "2026-11-26",
+    "ora": "11:30",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "SI Live 24",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-26",
     "ora": "12:00",
-    "sport": "Calcio",
-    "competizione": "Calcio Dibattito Sportivo",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Sportitalia Mercato",
     "paese": "Italia",
     "canale": "Sportitalia",
     "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "12:30",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Italia Per Due - Anteprima",
+    "paese": "Italia",
+    "canale": "TV8",
+    "link": "https://tv8.it/streaming"
   },
   {
     "data": "2026-11-26",
@@ -1908,6 +2608,26 @@
     "paese": "Svizzera",
     "canale": "blue Zoom",
     "link": "https://www.blueplus.ch/de/bluezoom"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "13:11",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Sport Mediaset 2026",
+    "paese": "Italia",
+    "canale": "Italia 1",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/italia1_cI1"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "13:52",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Sport Mediaset Extra",
+    "paese": "Italia",
+    "canale": "Italia 1",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/italia1_cI1"
   },
   {
     "data": "2026-11-26",
@@ -1962,6 +2682,16 @@
   {
     "data": "2026-11-26",
     "ora": "14:45",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Uomini E Donne",
+    "paese": "Italia",
+    "canale": "Canale 5",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/canale5_cC5"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "14:45",
     "sport": "Calcio",
     "competizione": "TV Svizzera",
     "evento": "Foot: Paris Saint-Germain - AS Roma",
@@ -1998,6 +2728,16 @@
     "paese": "DAZN Free Spagna",
     "canale": "DAZN App Gratis (ES)",
     "link": "https://www.dazn.com/es-ES/home"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "15:00",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Si Café",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
   },
   {
     "data": "2026-11-26",
@@ -2051,6 +2791,16 @@
   },
   {
     "data": "2026-11-26",
+    "ora": "17:55",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Sport Mediaset",
+    "paese": "Italia",
+    "canale": "Italia 1",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/italia1_cI1"
+  },
+  {
+    "data": "2026-11-26",
     "ora": "18:00",
     "sport": "Altri Sport",
     "competizione": "Boxeo",
@@ -2058,6 +2808,26 @@
     "paese": "DAZN Free Spagna",
     "canale": "DAZN App Gratis (ES)",
     "link": "https://www.dazn.com/es-ES/home"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "18:00",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Celebrity Chef - Anteprima",
+    "paese": "Italia",
+    "canale": "Cielo",
+    "link": "https://www.cielotv.it/streaming.html"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "18:00",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Tipstop",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
   },
   {
     "data": "2026-11-26",
@@ -2071,23 +2841,13 @@
   },
   {
     "data": "2026-11-26",
-    "ora": "18:15",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "L'avant-match - UEFA Europa League",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-26",
-    "ora": "18:15",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "UEFA Europa League - Der Countdown",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
+    "ora": "18:25",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Focus On Planetwin",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
   },
   {
     "data": "2026-11-26",
@@ -2132,6 +2892,16 @@
   {
     "data": "2026-11-26",
     "ora": "18:35",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Tg Sport",
+    "paese": "Italia",
+    "canale": "Rai 2",
+    "link": "https://www.raiplay.it/dirette/rai2"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "18:35",
     "sport": "Calcio",
     "competizione": "TV Svizzera",
     "evento": "UEFA Conference League: Ajax - FC Thoune",
@@ -2161,6 +2931,16 @@
   },
   {
     "data": "2026-11-26",
+    "ora": "19:54",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "Tg5 Prima Pagina",
+    "paese": "Italia",
+    "canale": "Canale 5",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/canale5_cC5"
+  },
+  {
+    "data": "2026-11-26",
     "ora": "20:15",
     "sport": "Calcio",
     "competizione": "Fußball",
@@ -2172,8 +2952,8 @@
   {
     "data": "2026-11-26",
     "ora": "20:20",
-    "sport": "Calcio",
-    "competizione": "Sport Calcio",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Tv8 Football Night",
     "paese": "Italia",
     "canale": "TV8",
@@ -2232,8 +3012,8 @@
   {
     "data": "2026-11-26",
     "ora": "22:55",
-    "sport": "Calcio",
-    "competizione": "Sport Calcio",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Lo Sai Che?",
     "paese": "Italia",
     "canale": "Sportitalia",
@@ -2252,8 +3032,8 @@
   {
     "data": "2026-11-26",
     "ora": "23:00",
-    "sport": "Calcio",
-    "competizione": "Sport Calcio",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Tv8 Football Night",
     "paese": "Italia",
     "canale": "TV8",
@@ -2272,22 +3052,12 @@
   {
     "data": "2026-11-26",
     "ora": "23:00",
-    "sport": "Calcio",
-    "competizione": "Calcio Dibattito Sportivo",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Sportitalia Mercato",
     "paese": "Italia",
     "canale": "Sportitalia",
     "link": "https://www.sportitalia.it/"
-  },
-  {
-    "data": "2026-11-26",
-    "ora": "23:00",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "UEFA Europa League - Highlights",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
   },
   {
     "data": "2026-11-26",
@@ -2300,20 +3070,30 @@
     "link": "https://www.rsi.ch/play/tv"
   },
   {
-    "data": "2026-11-26",
-    "ora": "23:45",
-    "sport": "Calcio",
-    "competizione": "Rugby",
-    "evento": "Rugby: Super League",
-    "paese": "Germania",
-    "canale": "More Than Sports TV",
-    "link": "https://morethansports.tv/"
+    "data": "2026-11-27",
+    "ora": "00:00",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "SI Live 24: Rassegna",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-27",
+    "ora": "00:05",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
+    "evento": "X Style",
+    "paese": "Italia",
+    "canale": "Canale 5",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/canale5_cC5"
   },
   {
     "data": "2026-11-27",
     "ora": "00:30",
-    "sport": "Calcio",
-    "competizione": "Calcio Dibattito Sportivo",
+    "sport": "Programmi & Magazine",
+    "competizione": "Programma TV",
     "evento": "Sportitalia Mercato",
     "paese": "Italia",
     "canale": "Sportitalia",
@@ -2401,16 +3181,6 @@
   },
   {
     "data": "2026-11-27",
-    "ora": "11:05",
-    "sport": "Calcio",
-    "competizione": "Rugby",
-    "evento": "Rugby: Super League",
-    "paese": "Germania",
-    "canale": "More Than Sports TV",
-    "link": "https://morethansports.tv/"
-  },
-  {
-    "data": "2026-11-27",
     "ora": "11:30",
     "sport": "Altri Sport",
     "competizione": "WBSC Premier12",
@@ -2478,16 +3248,6 @@
     "paese": "DAZN Free Spagna",
     "canale": "DAZN App Gratis (ES)",
     "link": "https://www.dazn.com/es-ES/home"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "19:45",
-    "sport": "Calcio",
-    "competizione": "Sportmagazin",
-    "evento": "Sportschau vor acht",
-    "paese": "Germania",
-    "canale": "Das Erste",
-    "link": "https://www.ardmediathek.de/live"
   },
   {
     "data": "2026-11-27",
