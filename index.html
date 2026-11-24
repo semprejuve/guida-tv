@@ -1,1081 +1,555 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Guida TV Sport Gratis</title>
-  <style>
-    :root {
-      --bg: #0f172a;
-      --card: #1e293b;
-      --card-hover: #273549;
-      --border: #334155;
-      --text: #f8fafc;
-      --muted: #94a3b8;
-      --accent: #22c55e;
-      --accent-blue: #38bdf8;
-      --accent-mag: #a78bfa;
-      --dazn: #facc15;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.5;
-      padding-bottom: 50px;
-    }
-    header {
-      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-      border-bottom: 1px solid var(--border);
-      padding: 22px 16px;
-      text-align: center;
-    }
-    header h1 { font-size: 1.75rem; margin-bottom: 6px; }
-    header p { color: var(--muted); font-size: 0.95rem; }
-    .bot-status {
-      display: inline-block;
-      margin-top: 8px;
-      font-size: 0.8rem;
-      color: var(--accent);
-      background: rgba(34, 197, 94, 0.12);
-      border: 1px solid rgba(34, 197, 94, 0.3);
-      padding: 3px 10px;
-      border-radius: 999px;
-    }
-    .container { max-width: 1100px; margin: 0 auto; padding: 18px 14px; }
-
-    .search-box {
-      width: 100%;
-      padding: 13px 16px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      background: var(--card);
-      color: var(--text);
-      font-size: 1rem;
-      margin-bottom: 16px;
-      outline: none;
-    }
-    .search-box:focus { border-color: var(--accent-blue); }
-
-    .filters-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 12px;
-      margin-bottom: 14px;
-    }
-    .filter-section { margin-bottom: 14px; }
-    .filters-grid .filter-section { margin-bottom: 0; }
-    .filter-label {
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      color: var(--muted);
-      margin-bottom: 7px;
-      display: block;
-      font-weight: 700;
-    }
-    .filter-select {
-      width: 100%;
-      padding: 11px 38px 11px 14px;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      background-color: var(--card);
-      color: var(--text);
-      font-size: 0.96rem;
-      font-weight: 700;
-      cursor: pointer;
-      outline: none;
-      appearance: none;
-      background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2394a3b8' viewBox='0 0 16 16'%3E%3Cpath d='M4.2 6.2a.75.75 0 0 1 1.06 0L8 8.94l2.74-2.74a.75.75 0 1 1 1.06 1.06l-3.27 3.27a.75.75 0 0 1-1.06 0L4.2 7.26a.75.75 0 0 1 0-1.06z'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 12px center;
-    }
-    .filter-select:focus, .filter-select:hover {
-      border-color: var(--accent-blue);
-    }
-
-    .days-row {
-      display: flex;
-      flex-wrap: nowrap;
-      gap: 8px;
-      overflow-x: auto;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-      padding-bottom: 4px;
-    }
-    .days-row::-webkit-scrollbar { display: none; }
-    .day-pill {
-      flex: 1 0 auto;
-      min-width: 82px;
-      background: var(--card);
-      color: var(--text);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 8px 10px;
-      cursor: pointer;
-      text-align: center;
-      white-space: nowrap;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1px;
-      transition: background 0.15s, border-color 0.15s;
-    }
-    .day-pill:hover { background: var(--card-hover); }
-    .day-pill .d-top {
-      font-size: 0.72rem;
-      font-weight: 800;
-      letter-spacing: 0.5px;
-      color: var(--muted);
-    }
-    .day-pill .d-sub {
-      font-size: 0.85rem;
-      font-weight: 700;
-    }
-    .day-pill.active {
-      background: var(--accent);
-      color: #052e16;
-      border-color: var(--accent);
-    }
-    .day-pill.active .d-top {
-      color: #052e16;
-    }
-
-    .stats {
-      margin: 14px 0;
-      font-size: 0.9rem;
-      color: var(--muted);
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .concluded-box {
-      margin: 14px 0 18px;
-      background: #131d31;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-    }
-    .concluded-toggle {
-      width: 100%;
-      background: transparent;
-      border: none;
-      color: var(--muted);
-      padding: 11px 14px;
-      font-size: 0.9rem;
-      font-weight: 700;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-    }
-    .concluded-toggle:hover {
-      background: rgba(148, 163, 184, 0.08);
-      color: var(--text);
-    }
-    .concluded-panel {
-      display: none;
-      padding: 0 14px 14px;
-      border-top: 1px solid var(--border);
-    }
-    .concluded-panel.open {
-      display: block;
-      padding-top: 14px;
-    }
-    .day-group { margin-top: 18px; }
-    .day-title {
-      font-size: 1.15rem;
-      font-weight: 700;
-      padding: 8px 12px;
-      background: #172033;
-      border-left: 4px solid var(--accent);
-      border-radius: 6px;
-      margin-bottom: 10px;
-      text-transform: capitalize;
-    }
-    .day-title.mag {
-      background: #1d1836;
-      border-left-color: var(--accent-mag);
-      color: #ede9fe;
-    }
-    .events-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 12px;
-      align-items: start;
-    }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 14px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 10px;
-    }
-    .card:hover { border-color: var(--accent-blue); }
-    .card.magazine { border-color: rgba(167, 139, 250, 0.3); }
-    .card.magazine:hover { border-color: var(--accent-mag); }
-    .card.concluded {
-      opacity: 0.78;
-      background: #182234;
-    }
-    .card-header-clickable { cursor: pointer; }
-    .card-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
-    .time-group { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
-    .time-badge {
-      background: #0f172a;
-      color: var(--accent);
-      font-weight: 800;
-      padding: 4px 10px;
-      border-radius: 8px;
-      font-size: 0.92rem;
-      border: 1px solid var(--border);
-    }
-    .card.magazine .time-badge { color: var(--accent-mag); }
-    .card.concluded .time-badge { color: var(--muted); }
-    .live-badge {
-      background: rgba(239, 68, 68, 0.16);
-      color: #fca5a5;
-      border: 1px solid rgba(239, 68, 68, 0.45);
-      font-size: 0.72rem;
-      font-weight: 800;
-      padding: 3px 7px;
-      border-radius: 6px;
-      letter-spacing: 0.3px;
-    }
-    .sport-tag { font-size: 0.8rem; color: var(--accent-blue); font-weight: 600; }
-    .card.magazine .sport-tag { color: var(--accent-mag); }
-    .comp-name { font-size: 0.78rem; color: var(--muted); text-transform: uppercase; margin-top: 8px; }
-    .event-title { font-size: 1.03rem; font-weight: 700; color: var(--text); }
-    .card-channels {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      padding-top: 10px;
-      border-top: 1px solid var(--border);
-    }
-    .channel-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 9px;
-      border-radius: 8px;
-      background: #0f172a;
-      border: 1px solid transparent;
-      text-decoration: none;
-      color: #e2e8f0;
-      font-size: 0.82rem;
-      font-weight: 600;
-      transition: border-color 0.15s, background 0.15s;
-    }
-    .channel-row:hover {
-      border-color: var(--accent-blue);
-      background: #162238;
-    }
-    .channel-row.dazn {
-      color: var(--dazn);
-      border-color: rgba(250, 204, 21, 0.28);
-    }
-    .channel-row.dazn:hover {
-      border-color: var(--dazn);
-    }
-    .channel-name {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-    .channel-time {
-      color: var(--muted);
-      font-weight: 500;
-      font-size: 0.76rem;
-    }
-    .channel-open {
-      font-size: 0.76rem;
-      font-weight: 700;
-      color: #082f49;
-      background: var(--accent-blue);
-      padding: 3px 8px;
-      border-radius: 6px;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-    .extra-channels {
-      display: none;
-      flex-direction: column;
-      gap: 6px;
-    }
-    .extra-channels.open {
-      display: flex;
-    }
-    .toggle-channels-btn {
-      width: 100%;
-      background: rgba(56, 189, 248, 0.08);
-      color: var(--accent-blue);
-      border: 1px dashed rgba(56, 189, 248, 0.35);
-      border-radius: 8px;
-      padding: 6px 10px;
-      font-size: 0.8rem;
-      font-weight: 700;
-      cursor: pointer;
-      text-align: center;
-      transition: background 0.15s;
-    }
-    .toggle-channels-btn:hover {
-      background: rgba(56, 189, 248, 0.18);
-    }
-    .empty-msg {
-      text-align: center;
-      padding: 34px 20px;
-      background: var(--card);
-      border-radius: 14px;
-      color: var(--muted);
-      margin-top: 14px;
-    }
-    .hint-jumps {
-      margin-top: 12px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .hint-btn {
-      background: rgba(56, 189, 248, 0.14);
-      color: var(--accent-blue);
-      border: 1px solid rgba(56, 189, 248, 0.4);
-      padding: 6px 12px;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      cursor: pointer;
-    }
-    .hint-btn:hover {
-      background: rgba(56, 189, 248, 0.25);
-    }
-    .channels-directory {
-      margin-top: 38px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 18px;
-    }
-    .channels-directory h2 { font-size: 1.1rem; margin-bottom: 10px; }
-    .dir-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-      gap: 12px;
-      font-size: 0.86rem;
-    }
-    .dir-box h3 { font-size: 0.9rem; margin-bottom: 5px; color: var(--accent-blue); }
-    .dir-box a { display: inline-block; color: var(--muted); text-decoration: none; margin-right: 8px; margin-bottom: 4px; }
-    .dir-box a:hover { color: var(--text); text-decoration: underline; }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>📺 Guida TV Sport Gratis</h1>
-    <p>TV Gratis (IT • DE • CH) • YouTube Brasile 🇧🇷 • DAZN Free Mondo ⚡</p>
-    <div id="botStatus" class="bot-status" style="display:none;"></div>
-  </header>
-
-  <div class="container">
-    <input type="text" id="searchInput" class="search-box" placeholder="🔍 Cerca squadra, torneo, programma, canale o nazione..." />
-
-    <div class="filters-grid">
-      <div class="filter-section">
-        <label class="filter-label" for="sportSelect">🏅 Scegli lo sport</label>
-        <select id="sportSelect" class="filter-select"></select>
-      </div>
-
-      <div class="filter-section">
-        <label class="filter-label" for="countrySelect">🌍 Nazione / Piattaforma</label>
-        <select id="countrySelect" class="filter-select"></select>
-      </div>
-    </div>
-
-    <div class="filter-section">
-      <span class="filter-label">📅 Giorno</span>
-      <div class="days-row" id="dayFilters"></div>
-    </div>
-
-    <div class="stats">
-      <span id="resultsCount">Caricamento eventi...</span>
-      <span>🕒 Tutti gli orari sono in ora italiana</span>
-    </div>
-
-    <div id="eventsContainer"></div>
-
-    <div class="channels-directory">
-      <h2>🔗 Accesso rapido ai canali ufficiali gratuiti</h2>
-      <div class="dir-grid">
-        <div class="dir-box">
-          <h3>🇮🇹 Italia Free</h3>
-          <a href="https://www.raiplay.it/dirette" target="_blank">RaiPlay / Rai Sport</a>
-          <a href="https://mediasetinfinity.mediaset.it/diretta" target="_blank">Mediaset Infinity</a>
-          <a href="https://tv8.it/streaming" target="_blank">TV8</a>
-          <a href="https://www.cielotv.it/streaming.html" target="_blank">Cielo</a>
-          <a href="https://www.supertennis.tv/" target="_blank">SuperTennis</a>
-          <a href="https://www.sportitalia.it/" target="_blank">Sportitalia</a>
-        </div>
-        <div class="dir-box">
-          <h3>🇩🇪 Germania & 🇨🇭 Svizzera</h3>
-          <a href="https://www.ardmediathek.de/live" target="_blank">Das Erste</a>
-          <a href="https://www.zdf.de/live-tv" target="_blank">ZDF</a>
-          <a href="https://www.ran.de/" target="_blank">ran / ProSieben MAXX</a>
-          <a href="https://www.sport1.de/tv-programm" target="_blank">Sport1</a>
-          <a href="https://www.rtl.de/" target="_blank">RTL / Nitro</a>
-          <a href="https://www.rsi.ch/play/tv" target="_blank">RSI La 2</a>
-          <a href="https://www.srf.ch/play/tv" target="_blank">SRF zwei</a>
-        </div>
-        <div class="dir-box">
-          <h3>🇧🇷 Brasile YouTube</h3>
-          <a href="https://www.youtube.com/@CazeTV" target="_blank">CazéTV</a>
-          <a href="https://www.youtube.com/@getv" target="_blank">GE TV</a>
-          <a href="https://www.youtube.com/@canalgoatbr" target="_blank">Canal GOAT</a>
-          <a href="https://www.youtube.com/@xsports.brasil" target="_blank">Xsports</a>
-          <a href="https://www.youtube.com/@SportyNetBrasil" target="_blank">SportyNet</a>
-          <a href="https://www.youtube.com/@NSports" target="_blank">N Sports</a>
-          <a href="https://www.youtube.com/@TimeBrasil" target="_blank">Time Brasil</a>
-          <a href="https://www.youtube.com/@nbabrasil" target="_blank">NBA Brasil</a>
-        </div>
-        <div class="dir-box">
-          <h3>⚡ DAZN Free (Italia & Estero)</h3>
-          <a href="https://www.dazn.com/it-IT/help/articles/dazn-freemium" target="_blank">🇮🇹 Italia</a>
-          <a href="https://www.dazn.com/fr-BE/home" target="_blank">🇧🇪 Belgio</a>
-          <a href="https://www.dazn.com/de-DE/help/articles/dazn-kostenlos-dazn-free-spiele-inhalt-programm-stream" target="_blank">🇩🇪 Germania</a>
-          <a href="https://www.dazn.com/en-CA/home" target="_blank">🇨🇦 Canada</a>
-          <a href="https://www.dazn.com/ja-JP/home" target="_blank">🇯🇵 Giappone</a>
-          <a href="https://www.dazn.com/es-ES/home" target="_blank">🇪🇸 Spagna</a>
-          <a href="https://www.dazn.com/pt-PT/home" target="_blank">🇵🇹 Portogallo</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    const MAGAZINE_KEY = "Programmi & Magazine";
-
-    const sportIcons = {
-      "Calcio": "⚽", "Pallavolo": "🏐", "Basket & NBA": "🏀",
-      "Formula 1": "🏎️", "MotoGP": "🏍️", "Tennis": "🎾",
-      "Sci Alpino": "⛷️", "Football Americano": "🏈",
-      "College Football": "🎓", "Altri Sport": "🏅",
-      "Programmi & Magazine": "📺"
-    };
-
-    const sportLabels = {
-      "Programmi & Magazine": "Programmi Sportivi (DAZN IT)"
-    };
-
-    const countryFlags = {
-      "Italia": "🇮🇹", "Germania": "🇩🇪", "Svizzera": "🇨🇭",
-      "Brasile YouTube": "🇧🇷",
-      "DAZN Free Italia": "🇮🇹⚡", "DAZN Free Belgio": "🇧🇪⚡",
-      "DAZN Free Germania": "🇩🇪⚡", "DAZN Free Canada": "🇨🇦⚡",
-      "DAZN Free Giappone": "🇯🇵⚡", "DAZN Free Spagna": "🇪🇸⚡",
-      "DAZN Free Portogallo": "🇵🇹⚡", "DAZN Free": "⚡"
-    };
-
-    const TEAM_ALIASES = {
-      "italia": "italia", "italien": "italia", "italie": "italia", "italy": "italia",
-      "germania": "germania", "deutschland": "germania", "allemagne": "germania", "germany": "germania", "alemanha": "germania", "alemania": "germania",
-      "francia": "francia", "frankreich": "francia", "france": "francia", "franca": "francia",
-      "spagna": "spagna", "spanien": "spagna", "espagne": "spagna", "spain": "spagna", "espanha": "spagna", "espana": "spagna",
-      "portogallo": "portogallo", "portugal": "portogallo",
-      "inghilterra": "inghilterra", "england": "inghilterra", "angleterre": "inghilterra", "inglaterra": "inghilterra",
-      "gran bretagna": "greatbritain", "great britain": "greatbritain", "gran bretana": "greatbritain", "uk": "greatbritain", "grossbritannien": "greatbritain",
-      "repubblica ceca": "czech", "czech republic": "czech", "republica checa": "czech", "tschechien": "czech", "republique tcheque": "czech",
-      "svizzera": "svizzera", "schweiz": "svizzera", "suisse": "svizzera", "switzerland": "svizzera", "suica": "svizzera",
-      "olanda": "olanda", "paesi bassi": "olanda", "netherlands": "olanda", "niederlande": "olanda", "pays bas": "olanda", "holanda": "olanda",
-      "belgio": "belgio", "belgien": "belgio", "belgique": "belgio", "belgium": "belgio", "belgica": "belgio",
-      "stati uniti": "usa", "usa": "usa", "united states": "usa", "estados unidos": "usa",
-      "brasile": "brasile", "brasilien": "brasile", "bresil": "brasile", "brazil": "brasile", "brasil": "brasile",
-      "argentina": "argentina", "argentinien": "argentina", "argentine": "argentina",
-      "austria": "austria", "osterreich": "austria", "autriche": "austria",
-      "cina": "china", "china": "china", "chine": "china",
-      "giappone": "giappone", "japan": "giappone", "japon": "giappone", "japao": "giappone",
-      "bayern monaco": "bayern", "bayern munchen": "bayern", "bayern munich": "bayern", "bayern": "bayern",
-      "barcellona": "barcelona", "barcelona": "barcelona", "barca": "barcelona",
-      "real madrid": "realmadrid",
-      "atletico madrid": "atleticomadrid", "atletico de madrid": "atleticomadrid",
-      "inter": "inter", "internazionale": "inter", "inter milan": "inter", "inter milano": "inter",
-      "milan": "milan",
-      "psg": "psg", "paris saint germain": "psg", "paris sg": "psg",
-      "manchester city": "mancity", "man city": "mancity",
-      "manchester united": "manunited", "man united": "manunited", "man utd": "manunited",
-      "borussia dortmund": "dortmund", "dortmund": "dortmund", "bvb": "dortmund",
-      "bayer leverkusen": "leverkusen", "leverkusen": "leverkusen",
-      "eintracht francoforte": "eintrachtfrankfurt", "eintracht frankfurt": "eintrachtfrankfurt",
-      "stoccarda": "stuttgart", "stuttgart": "stuttgart",
-      "lipsia": "leipzig", "leipzig": "leipzig",
-      "colonia": "koln", "koln": "koln",
-      "amburgo": "hamburger", "hamburger": "hamburger", "hsv": "hamburger",
-      "olympique marsiglia": "marsiglia", "marseille": "marsiglia", "marsiglia": "marsiglia",
-      "olympique lione": "lione", "lyon": "lione", "lione": "lione",
-      "sporting lisbona": "sporting", "sporting cp": "sporting", "sporting": "sporting",
-      "stella rossa": "stellarossa", "red star": "stellarossa", "crvena zvezda": "stellarossa"
-    };
-
-    const PREVIEW_CHANNELS_COUNT = 2;
-    const LIVE_WINDOW_MINUTES = 120;
-
-    let allEvents = [];
-    let selectedSport = "Calcio";
-    let selectedCountry = "Tutti";
-    let selectedDay = "";
-    let searchQuery = "";
-    let showConcluded = false;
-
-    function escapeHtml(str) {
-      return String(str || "")
-        .replace(/&/g, "&amp;").replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-    }
-
-    function getRomeNow() {
-      const parts = new Intl.DateTimeFormat("en-CA", {
-        timeZone: "Europe/Rome",
-        year: "numeric",
-        month: "2-digit",
-        day: "2-digit",
-        hour: "2-digit",
-        minute: "2-digit",
-        hourCycle: "h23"
-      }).formatToParts(new Date());
-      const map = Object.fromEntries(parts.map(p => [p.type, p.value]));
-      const dateStr = `${map.year}-${map.month}-${map.day}`;
-      const mins = (parseInt(map.hour, 10) % 24) * 60 + parseInt(map.minute, 10);
-      return { dateStr, mins };
-    }
-
-    function getNext7Days(todayStr) {
-      const [y, m, d] = todayStr.split("-").map(Number);
-      const days = [];
-      for (let i = 0; i < 7; i++) {
-        const dt = new Date(Date.UTC(y, m - 1, d + i));
-        const yy = dt.getUTCFullYear();
-        const mm = String(dt.getUTCMonth() + 1).padStart(2, "0");
-        const dd = String(dt.getUTCDate()).padStart(2, "0");
-        const dateStr = `${yy}-${mm}-${dd}`;
-        const weekday = dt.toLocaleDateString("it-IT", { weekday: "short", timeZone: "UTC" }).replace(".", "");
-        const dayNum = dt.toLocaleDateString("it-IT", { day: "2-digit", month: "short", timeZone: "UTC" }).replace(".", "");
-        days.push({
-          dateStr,
-          topLabel: i === 0 ? "OGGI" : (i === 1 ? "DOMANI" : weekday.toUpperCase()),
-          subLabel: dayNum
-        });
-      }
-      return days;
-    }
-
-    function formatDayLabel(dateStr) {
-      const [y, m, d] = dateStr.split("-").map(Number);
-      const date = new Date(y, m - 1, d);
-      const isToday = dateStr === getRomeNow().dateStr;
-      const label = date.toLocaleDateString("it-IT", { weekday: "long", day: "numeric", month: "long" });
-      return isToday ? `OGGI • ${label}` : label;
-    }
-
-    function formatShortDay(dateStr, todayStr) {
-      if (dateStr === todayStr) return "Oggi";
-      const [y, m, d] = dateStr.split("-").map(Number);
-      return new Date(y, m - 1, d).toLocaleDateString("it-IT", { weekday: "short", day: "numeric", month: "short" });
-    }
-
-    function timeToMinutes(ora) {
-      const m = /^(\d{1,2}):(\d{2})$/.exec((ora || "").trim());
-      if (!m) return 0;
-      return parseInt(m[1], 10) * 60 + parseInt(m[2], 10);
-    }
-
-    function channelPriority(ev) {
-      const p = ev.paese || "";
-      const c = (ev.canale || "").toLowerCase();
-      if (p === "Italia") return 1;
-      if (p === "DAZN Free Italia") return 2;
-      if (p === "Svizzera") return c.startsWith("rsi") ? 3 : 4;
-      if (p === "Germania") return 5;
-      if (p === "Brasile YouTube") return 6;
-      if (p.startsWith("DAZN Free")) return 7;
-      return 8;
-    }
-
-    function normalizeTeam(raw) {
-      let s = String(raw || "")
-        .toLowerCase()
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .replace(/&/g, " ")
-        .replace(/\b(?:fc|cf|sc|ac|as|us|ss|cd|ca|ec|cr|ud|sd|sv|vfb|vfl|tsg|fsv|fk|sk|sl|bk|hk|asv|tsv|ssc|ue|rc)\b/g, " ")
-        .replace(/[^a-z0-9\s]/g, " ")
-        .replace(/\s+/g, " ")
-        .trim();
-      if (TEAM_ALIASES[s]) s = TEAM_ALIASES[s];
-      return s.replace(/\s+/g, "");
-    }
-
-    function getEventSignature(ev) {
-      let clean = String(ev.evento || "").trim();
-      const prefixRe = /^(?:diretta|live|repliche?|replica|sport|calcio|pallavolo|volley|pallacanestro|basket|basketball|baloncesto|tennis|sci alpino|ski alpin|formula 1|f1|motogp|football americano|nfl|fussball|fußball|football|futebol|futbol|fútbol)\s*[:\-–—]\s*/i;
-      while (prefixRe.test(clean)) {
-        clean = clean.replace(prefixRe, "").trim();
-      }
-      if (clean.includes(":")) {
-        const idx = clean.lastIndexOf(":");
-        const after = clean.slice(idx + 1).trim();
-        if (after.length >= 5 && /\s+(?:vs\.?|x|×|@|-|–|—)\s+/i.test(after)) {
-          clean = after;
-        }
-      }
-      const match = clean.match(/^(.*?)\s+(?:vs\.?|x|×|@|-|–|—)\s+(.*?)$/i);
-      const nonTeamSuffix = /\b(?:qualifying|qualifiche|race|gara|sprint|practice|prove|day\s*\d+|giornata\s*\d+|paddock|rueda de prensa|finale|semifinale|slalom|discesa|super-?g)\b/i;
-      if (match && !nonTeamSuffix.test(match[2])) {
-        const t1 = normalizeTeam(match[1]);
-        const t2 = normalizeTeam(match[2]);
-        if (t1.length >= 2 && t2.length >= 2) {
-          return { isMatch: true, teams: [t1, t2].sort() };
-        }
-      }
-      return { isMatch: false, full: normalizeTeam(clean) };
-    }
-
-    function sameSignature(a, b) {
-      if (a.isMatch && b.isMatch) {
-        return a.teams[0] === b.teams[0] && a.teams[1] === b.teams[1];
-      }
-      if (!a.isMatch && !b.isMatch) {
-        return a.full.length >= 4 && a.full === b.full;
-      }
-      return false;
-    }
-
-    function groupEvents(events) {
-      const sorted = [...events].sort((a, b) => {
-        const cmp = (a.data + a.ora).localeCompare(b.data + b.ora);
-        return cmp !== 0 ? cmp : channelPriority(a) - channelPriority(b);
-      });
-
-      const byDate = {};
-      const allGroups = [];
-
-      sorted.forEach(ev => {
-        const date = ev.data || "";
-        const mins = timeToMinutes(ev.ora);
-        const sig = getEventSignature(ev);
-        const prio = channelPriority(ev);
-        if (!byDate[date]) byDate[date] = [];
-
-        let target = byDate[date].find(g =>
-          g.sport === ev.sport &&
-          Math.abs(g.mins - mins) <= 45 &&
-          sameSignature(g.sig, sig)
-        );
-
-        const chObj = {
-          canale: ev.canale,
-          paese: ev.paese,
-          link: ev.link,
-          ora: ev.ora,
-          prio: prio
-        };
-
-        if (!target) {
-          target = {
-            data: date,
-            ora: ev.ora,
-            mins: mins,
-            sport: ev.sport,
-            competizione: ev.competizione,
-            evento: ev.evento,
-            sig: sig,
-            bestPrio: prio,
-            channels: [chObj]
-          };
-          byDate[date].push(target);
-          allGroups.push(target);
-        } else {
-          if (prio < target.bestPrio) {
-            target.bestPrio = prio;
-            target.evento = ev.evento;
-            target.competizione = ev.competizione;
-            target.ora = ev.ora;
-            target.mins = mins;
-          }
-          const exists = target.channels.some(
-            c => c.canale === chObj.canale && c.link === chObj.link
-          );
-          if (!exists) {
-            target.channels.push(chObj);
-          }
-        }
-      });
-
-      allGroups.forEach(g => {
-        g.channels.sort((a, b) => a.prio - b.prio || (a.canale || "").localeCompare(b.canale || ""));
-      });
-
-      allGroups.sort((a, b) => (a.data + a.ora).localeCompare(b.data + b.ora));
-      return allGroups;
-    }
-
-    function matchesSearch(ev, q) {
-      if (!q) return true;
-      return (
-        (ev.evento || "").toLowerCase().includes(q) ||
-        (ev.competizione || "").toLowerCase().includes(q) ||
-        (ev.canale || "").toLowerCase().includes(q) ||
-        (ev.sport || "").toLowerCase().includes(q) ||
-        (ev.paese || "").toLowerCase().includes(q)
-      );
-    }
-
-    function sportDisplayName(s) {
-      return `${sportIcons[s] || "🏅"} ${sportLabels[s] || s}`;
-    }
-
-    function renderControls() {
-      const sportSelect = document.getElementById("sportSelect");
-      const preferredOrder = Object.keys(sportIcons);
-      const uniqueSports = [...new Set(allEvents.map(e => e.sport))].sort((a, b) => {
-        const ia = preferredOrder.indexOf(a);
-        const ib = preferredOrder.indexOf(b);
-        return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib);
-      });
-
-      if (uniqueSports.length > 0 && !uniqueSports.includes(selectedSport)) {
-        selectedSport = uniqueSports.includes("Calcio") ? "Calcio" : uniqueSports[0];
-      }
-
-      sportSelect.innerHTML = "";
-      uniqueSports.forEach(s => {
-        const opt = document.createElement("option");
-        opt.value = s;
-        opt.textContent = sportDisplayName(s);
-        sportSelect.appendChild(opt);
-      });
-      if (selectedSport) sportSelect.value = selectedSport;
-
-      const countrySelect = document.getElementById("countrySelect");
-      const sportEvents = allEvents.filter(e => e.sport === selectedSport);
-      const uniqueCountries = [...new Set(sportEvents.map(e => e.paese))];
-      const daznCountries = uniqueCountries.filter(c => c.startsWith("DAZN Free"));
-
-      if (
-        selectedCountry !== "Tutti" &&
-        !(selectedCountry === "ALL_DAZN" && daznCountries.length > 1) &&
-        !uniqueCountries.includes(selectedCountry)
-      ) {
-        selectedCountry = "Tutti";
-      }
-
-      countrySelect.innerHTML = "";
-      const optAll = document.createElement("option");
-      optAll.value = "Tutti";
-      optAll.textContent = "🌍 Tutte";
-      countrySelect.appendChild(optAll);
-
-      if (daznCountries.length > 1) {
-        const optDaznAll = document.createElement("option");
-        optDaznAll.value = "ALL_DAZN";
-        optDaznAll.textContent = "⚡ Tutti i DAZN Free";
-        countrySelect.appendChild(optDaznAll);
-      }
-
-      uniqueCountries.forEach(c => {
-        const opt = document.createElement("option");
-        opt.value = c;
-        opt.textContent = `${countryFlags[c] || "🌍"} ${c}`;
-        countrySelect.appendChild(opt);
-      });
-      countrySelect.value = selectedCountry;
-
-      const todayStr = getRomeNow().dateStr;
-      const days7 = getNext7Days(todayStr);
-      if (!days7.some(d => d.dateStr === selectedDay)) {
-        selectedDay = todayStr;
-      }
-
-      const dayContainer = document.getElementById("dayFilters");
-      dayContainer.innerHTML = "";
-      days7.forEach(d => {
-        const btn = document.createElement("button");
-        btn.type = "button";
-        btn.className = `day-pill ${selectedDay === d.dateStr ? "active" : ""}`;
-        btn.innerHTML = `<span class="d-top">${escapeHtml(d.topLabel)}</span><span class="d-sub">${escapeHtml(d.subLabel)}</span>`;
-        btn.onclick = () => {
-          selectedDay = d.dateStr;
-          showConcluded = false;
-          updateUI();
-        };
-        dayContainer.appendChild(btn);
-      });
-    }
-
-    function buildChannelRowHtml(ch, mainOra) {
-      const isDazn = (ch.paese || "").startsWith("DAZN Free");
-      const flag = countryFlags[ch.paese] || "📺";
-      const timeNote = ch.ora && ch.ora !== mainOra ? ` <span class="channel-time">• ${escapeHtml(ch.ora)}</span>` : "";
-      return `
-        <a class="channel-row ${isDazn ? "dazn" : ""}" href="${escapeHtml(ch.link || "#")}" target="_blank" rel="noopener">
-          <span class="channel-name">${flag} ${escapeHtml(ch.canale)}${timeNote}</span>
-          <span class="channel-open">Apri ↗</span>
-        </a>
-      `;
-    }
-
-    function createCardElement(ev, isConcluded) {
-      const isMag = ev.sport === MAGAZINE_KEY;
-      const card = document.createElement("div");
-      card.className = `card ${isMag ? "magazine" : ""} ${isConcluded ? "concluded" : ""}`;
-      const icon = isMag ? "📺" : (sportIcons[ev.sport] || "🏅");
-      const sportTag = isMag ? "Programma Sportivo" : ev.sport;
-      const previewChannels = ev.channels.slice(0, PREVIEW_CHANNELS_COUNT);
-      const extraChannels = ev.channels.slice(PREVIEW_CHANNELS_COUNT);
-      const hasExtra = extraChannels.length > 0;
-      const moreText = extraChannels.length === 1
-        ? "+ Altro 1 canale ▾"
-        : `+ Altri ${extraChannels.length} canali ▾`;
-
-      card.innerHTML = `
-        <div class="${hasExtra ? "card-header-clickable" : ""}">
-          <div class="card-top">
-            <div class="time-group">
-              <span class="time-badge">🕒 ${escapeHtml(ev.ora)}</span>
-              ${!isConcluded && ev.isLive ? `<span class="live-badge">🔴 IN CORSO</span>` : ""}
-            </div>
-            <span class="sport-tag">${icon} ${escapeHtml(sportTag)}</span>
-          </div>
-          <div class="comp-name">${escapeHtml(ev.competizione)}</div>
-          <div class="event-title">${escapeHtml(ev.evento)}</div>
-        </div>
-        <div class="card-channels">
-          ${previewChannels.map(ch => buildChannelRowHtml(ch, ev.ora)).join("")}
-          ${hasExtra ? `
-            <div class="extra-channels">
-              ${extraChannels.map(ch => buildChannelRowHtml(ch, ev.ora)).join("")}
-            </div>
-            <button type="button" class="toggle-channels-btn">${moreText}</button>
-          ` : ""}
-        </div>
-      `;
-
-      if (hasExtra) {
-        const extraBox = card.querySelector(".extra-channels");
-        const toggleBtn = card.querySelector(".toggle-channels-btn");
-        const headerEl = card.querySelector(".card-header-clickable");
-        const toggleFn = () => {
-          const isOpen = extraBox.classList.toggle("open");
-          toggleBtn.textContent = isOpen ? "Mostra meno ▴" : moreText;
-        };
-        toggleBtn.addEventListener("click", toggleFn);
-        headerEl.addEventListener("click", toggleFn);
-      }
-
-      return card;
-    }
-
-    function renderEmptyWithHints(container, q, todayStr) {
-      const box = document.createElement("div");
-      box.className = "empty-msg";
-      box.innerHTML = `😕 Nessun evento di <strong>${escapeHtml(sportLabels[selectedSport] || selectedSport)}</strong> per <strong>${escapeHtml(formatShortDay(selectedDay, todayStr))}</strong>.`;
-
-      const hints = document.createElement("div");
-      hints.className = "hint-jumps";
-
-      const days7 = getNext7Days(todayStr).map(d => d.dateStr);
-      const nextDayEv = allEvents.find(ev =>
-        ev.sport === selectedSport &&
-        ev.data !== selectedDay &&
-        days7.includes(ev.data) &&
-        (selectedCountry === "Tutti" ||
-          (selectedCountry === "ALL_DAZN" && (ev.paese || "").startsWith("DAZN Free")) ||
-          ev.paese === selectedCountry) &&
-        matchesSearch(ev, q)
-      );
-      if (nextDayEv) {
-        const btn = document.createElement("button");
-        btn.type = "button";
-        btn.className = "hint-btn";
-        btn.textContent = `Vedi ${formatShortDay(nextDayEv.data, todayStr)}`;
-        btn.onclick = () => {
-          selectedDay = nextDayEv.data;
-          showConcluded = false;
-          updateUI();
-        };
-        hints.appendChild(btn);
-      }
-
-      if (q.length >= 2) {
-        const otherMatches = {};
-        allEvents.forEach(ev => {
-          if (ev.sport === selectedSport || !matchesSearch(ev, q)) return;
-          otherMatches[ev.sport] = (otherMatches[ev.sport] || 0) + 1;
-        });
-        Object.keys(otherMatches).forEach(sp => {
-          const btn = document.createElement("button");
-          btn.type = "button";
-          btn.className = "hint-btn";
-          btn.textContent = `Cerca in ${sportDisplayName(sp)} (${otherMatches[sp]})`;
-          btn.onclick = () => {
-            selectedSport = sp;
-            selectedCountry = "Tutti";
-            showConcluded = false;
-            updateUI();
-          };
-          hints.appendChild(btn);
-        });
-      }
-
-      if (hints.children.length > 0) box.appendChild(hints);
-      container.appendChild(box);
-    }
-
-    function renderEvents() {
-      const container = document.getElementById("eventsContainer");
-      const q = searchQuery.trim().toLowerCase();
-      const { dateStr: todayStr, mins: nowMins } = getRomeNow();
-
-      const filtered = allEvents.filter(ev => {
-        if (ev.sport !== selectedSport) return false;
-        if (ev.data !== selectedDay) return false;
-        const matchCountry =
-          selectedCountry === "Tutti" ||
-          (selectedCountry === "ALL_DAZN" && (ev.paese || "").startsWith("DAZN Free")) ||
-          ev.paese === selectedCountry;
-        return matchCountry && matchesSearch(ev, q);
-      });
-
-      const groupedEvents = groupEvents(filtered);
-      const activeEvents = [];
-      const concludedEvents = [];
-
-      groupedEvents.forEach(ev => {
-        const isTodayConcluded = ev.data === todayStr && (nowMins - ev.mins) > LIVE_WINDOW_MINUTES;
-        if (isTodayConcluded) {
-          concludedEvents.push(ev);
-        } else {
-          ev.isLive = ev.data === todayStr && ev.mins <= nowMins;
-          activeEvents.push(ev);
-        }
-      });
-
-      const dayWord = formatShortDay(selectedDay, todayStr);
-      const spWord = sportDisplayName(selectedSport);
-      document.getElementById("resultsCount").textContent =
-        concludedEvents.length > 0
-          ? `${spWord} • ${dayWord}: ${activeEvents.length} in programma • ${concludedEvents.length} conclusi`
-          : `${spWord} • ${dayWord}: ${activeEvents.length} in programma`;
-
-      container.innerHTML = "";
-
-      if (activeEvents.length === 0 && concludedEvents.length === 0) {
-        renderEmptyWithHints(container, q, todayStr);
-        return;
-      }
-
-      if (concludedEvents.length > 0) {
-        const box = document.createElement("div");
-        box.className = "concluded-box";
-
-        const isOpen = showConcluded || activeEvents.length === 0;
-        const label = concludedEvents.length === 1
-          ? "🏁 1 già concluso"
-          : `🏁 ${concludedEvents.length} già conclusi`;
-
-        const toggleBtn = document.createElement("button");
-        toggleBtn.type = "button";
-        toggleBtn.className = "concluded-toggle";
-        toggleBtn.innerHTML = `<span>${label}</span><span>${isOpen ? "Nascondi ▴" : "Mostra ▾"}</span>`;
-
-        const panel = document.createElement("div");
-        panel.className = `concluded-panel ${isOpen ? "open" : ""}`;
-
-        const cGrid = document.createElement("div");
-        cGrid.className = "events-grid";
-        concludedEvents.forEach(ev => cGrid.appendChild(createCardElement(ev, true)));
-        panel.appendChild(cGrid);
-
-        toggleBtn.addEventListener("click", () => {
-          showConcluded = !panel.classList.contains("open");
-          panel.classList.toggle("open", showConcluded);
-          toggleBtn.lastElementChild.textContent = showConcluded ? "Nascondi ▴" : "Mostra ▾";
-        });
-
-        box.appendChild(toggleBtn);
-        box.appendChild(panel);
-        container.appendChild(box);
-      }
-
-      if (activeEvents.length === 0) {
-        const note = document.createElement("div");
-        note.className = "empty-msg";
-        note.textContent = "🌙 Nessun altro evento in programma per oggi (vedi quelli già conclusi qui sopra).";
-        container.appendChild(note);
-        return;
-      }
-
-      const section = document.createElement("div");
-      section.className = "day-group";
-      const title = document.createElement("div");
-      title.className = `day-title ${selectedSport === MAGAZINE_KEY ? "mag" : ""}`;
-      title.textContent = formatDayLabel(selectedDay);
-      section.appendChild(title);
-
-      const grid = document.createElement("div");
-      grid.className = "events-grid";
-      activeEvents.forEach(ev => grid.appendChild(createCardElement(ev, false)));
-
-      section.appendChild(grid);
-      container.appendChild(section);
-    }
-
-    function updateUI() {
-      renderControls();
-      renderEvents();
-    }
-
-    document.getElementById("sportSelect").addEventListener("change", e => {
-      selectedSport = e.target.value;
-      showConcluded = false;
-      updateUI();
-    });
-
-    document.getElementById("countrySelect").addEventListener("change", e => {
-      selectedCountry = e.target.value;
-      showConcluded = false;
-      renderEvents();
-    });
-
-    document.getElementById("searchInput").addEventListener("input", e => {
-      searchQuery = e.target.value;
-      renderEvents();
-    });
-
-    fetch(`eventi.json?v=${Date.now()}`)
-      .then(res => res.json())
-      .then(data => {
-        allEvents = data.filter(ev => !(ev.sport === MAGAZINE_KEY && ev.paese !== "DAZN Free Italia"));
-        updateUI();
-      })
-      .catch(() => {
-        document.getElementById("eventsContainer").innerHTML =
-          `<div class="empty-msg">⚠️ Impossibile caricare <strong>eventi.json</strong>.</div>`;
-      });
-
-    fetch(`meta.json?v=${Date.now()}`)
-      .then(res => res.ok ? res.json() : null)
-      .then(meta => {
-        if (meta && meta.ultimo_aggiornamento) {
-          const el = document.getElementById("botStatus");
-          el.textContent = `🤖 Robottino aggiornato il ${meta.ultimo_aggiornamento}`;
-          el.style.display = "inline-block";
-        }
-      })
-      .catch(() => {});
-  </script>
-</body>
-</html>
+import gzip
+import io
+import json
+import os
+import re
+import xml.etree.ElementTree as ET
+from datetime import datetime, timedelta
+from email.utils import parsedate_to_datetime
+from urllib.parse import quote_plus, urljoin
+from zoneinfo import ZoneInfo
+import requests
+from bs4 import BeautifulSoup
+
+ROME_TZ = ZoneInfo("Europe/Rome")
+BR_TZ = ZoneInfo("America/Sao_Paulo")
+NOW = datetime.now(ROME_TZ)
+MIN_DT = NOW.replace(hour=0, minute=0, second=0, microsecond=0)
+MAX_DT = NOW + timedelta(days=7)
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/128.0.0.0 Safari/537.36",
+    "Accept-Language": "it-IT,it;q=0.9,en;q=0.8",
+}
+
+PAESI_TV = {
+    "Italia": {
+        "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz",
+        "canali": {
+            "Rai 1": {"alias": ["rai 1", "rai1", "rai 1 hd"], "link": "https://www.raiplay.it/dirette/rai1"},
+            "Rai 2": {"alias": ["rai 2", "rai2", "rai 2 hd"], "link": "https://www.raiplay.it/dirette/rai2"},
+            "Rai 3": {"alias": ["rai 3", "rai3", "rai 3 hd"], "link": "https://www.raiplay.it/dirette/rai3"},
+            "Rai Sport": {"alias": ["rai sport", "raisport", "rai sport hd"], "link": "https://www.raiplay.it/dirette/raisport"},
+            "Canale 5": {"alias": ["canale 5", "canale5", "canale 5 hd"], "link": "https://mediasetinfinity.mediaset.it/diretta/canale5_cC5"},
+            "Italia 1": {"alias": ["italia 1", "italia1", "italia 1 hd"], "link": "https://mediasetinfinity.mediaset.it/diretta/italia1_cI1"},
+            "20 Mediaset": {"alias": ["20 mediaset", "20mediaset", "20", "venti", "20 hd"], "link": "https://mediasetinfinity.mediaset.it/diretta/20mediaset_cLB"},
+            "TV8": {"alias": ["tv8", "tv 8", "tv8 hd"], "link": "https://tv8.it/streaming"},
+            "Cielo": {"alias": ["cielo", "cielo hd"], "link": "https://www.cielotv.it/streaming.html"},
+            "Nove": {"alias": ["nove", "nove hd"], "link": "https://www.nove.tv/"},
+            "DMAX": {"alias": ["dmax", "dmax hd"], "link": "https://dmax.it/"},
+            "SuperTennis": {"alias": ["supertennis", "super tennis", "supertennis hd"], "link": "https://www.supertennis.tv/"},
+            "Sportitalia": {"alias": ["sportitalia", "sport italia", "sportitalia hd"], "link": "https://www.sportitalia.it/"},
+            "SoloCalcio": {"alias": ["solocalcio", "solo calcio", "sportitalia solocalcio"], "link": "https://www.sportitalia.it/"},
+        },
+    },
+    "Germania": {
+        "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_DE1.xml.gz",
+        "canali": {
+            "Das Erste": {"alias": ["das erste", "das erste hd", "ard"], "link": "https://www.ardmediathek.de/live"},
+            "ZDF": {"alias": ["zdf", "zdf hd"], "link": "https://www.zdf.de/live-tv"},
+            "RTL": {"alias": ["rtl", "rtl hd", "rtl television"], "link": "https://www.rtl.de/"},
+            "Nitro": {"alias": ["nitro", "nitro hd", "rtl nitro"], "link": "https://www.rtl.de/"},
+            "ProSieben": {"alias": ["prosieben", "prosieben hd", "pro7"], "link": "https://www.prosieben.de/"},
+            "ProSieben MAXX": {"alias": ["prosieben maxx", "prosieben maxx hd", "pro7 maxx"], "link": "https://www.ran.de/"},
+            "Sat.1": {"alias": ["sat.1", "sat 1", "sat1", "sat.1 hd"], "link": "https://www.ran.de/"},
+            "Sport1": {"alias": ["sport1", "sport 1", "sport1 hd"], "link": "https://www.sport1.de/tv-programm"},
+            "DF1": {"alias": ["df1", "df1 hd"], "link": "https://df1.de/"},
+            "Eurosport 1 DE": {"alias": ["eurosport 1", "eurosport 1 hd", "eurosport1"], "link": "https://www.eurosport.de/"},
+            "More Than Sports TV": {"alias": ["more than sports tv", "more than sports.tv"], "link": "https://morethansports.tv/"},
+        },
+    },
+    "Svizzera": {
+        "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz",
+        "canali": {
+            "RSI La 1": {"alias": ["rsi la 1", "rsi la1", "rsi la 1 hd"], "link": "https://www.rsi.ch/play/tv"},
+            "RSI La 2": {"alias": ["rsi la 2", "rsi la2", "rsi la 2 hd"], "link": "https://www.rsi.ch/play/tv"},
+            "SRF 1": {"alias": ["srf 1", "srf1", "srf 1 hd"], "link": "https://www.srf.ch/play/tv"},
+            "SRF zwei": {"alias": ["srf zwei", "srf 2", "srf zwei hd"], "link": "https://www.srf.ch/play/tv"},
+            "RTS 1": {"alias": ["rts 1", "rts un", "rts 1 hd"], "link": "https://www.rts.ch/play/tv"},
+            "RTS 2": {"alias": ["rts 2", "rts deux", "rts 2 hd"], "link": "https://www.rts.ch/play/tv"},
+        },
+    },
+}
+
+CANALI_BR_INFO = [
+    ("CazéTV (YouTube)", "https://www.youtube.com/@CazeTV", [r"\bcaz[ée]tv\b"]),
+    ("GE TV (YouTube)", "https://www.youtube.com/@getv", [r"\bge\s*tv\b"]),
+    ("Canal GOAT (YouTube)", "https://www.youtube.com/@canalgoatbr", [r"\bcanal\s*goat\b"]),
+    ("Xsports (YouTube)", "https://www.youtube.com/@xsports.brasil", [r"\bx\s*sports\b"]),
+    ("SportyNet (YouTube)", "https://www.youtube.com/@SportyNetBrasil", [r"\bsportynet\b"]),
+    ("N Sports (YouTube)", "https://www.youtube.com/@NSports", [r"\bn\s*sports\b"]),
+    ("Romário TV (YouTube)", "https://www.youtube.com/@RomarioTVoficial", [r"\brom[áa]rio\s*tv\b", r"\btv\s*rom[áa]rio\b"]),
+    ("Time Brasil (YouTube)", "https://www.youtube.com/@TimeBrasil", [r"\btime\s*brasil\b"]),
+    ("NBA Brasil (YouTube)", "https://www.youtube.com/@nbabrasil", [r"\bnba\s*brasil\b"]),
+    ("NBB (YouTube)", "https://www.youtube.com/@NBB", [r"youtube\s*\(nbb\)", r"nbb\s*\(youtube\)"]),
+    ("SBT Sports (YouTube)", "https://www.youtube.com/@SBTSports", [r"\bsbt\s*sports\b", r"youtube.*\bsbt\b"]),
+    ("CNN Esportes (YouTube)", "https://www.youtube.com/@cnnesportes", [r"\bcnn\s*esportes\b"]),
+    ("Metrópoles Esportes (YouTube)", "https://www.youtube.com/@MetropolesEsportes", [r"\bmetr[óo]poles\s*esportes\b"]),
+    ("Desimpedidos (YouTube)", "https://www.youtube.com/@desimpedidos", [r"\bdesimpedidos\b"]),
+    ("TNT Sports (YouTube)", "https://www.youtube.com/@TNTSportsBR", [r"tnt\s*sports.*youtube", r"youtube.*tnt\s*sports"]),
+    ("ESPN Brasil (YouTube)", "https://www.youtube.com/@espnbrasil", [r"espn.*youtube", r"youtube.*espn"]),
+    ("Canal GOL Brasil (YouTube)", "https://www.youtube.com/@canalgolbrasil", [r"canal\s*gol\s*br", r"golbrasil\s*youtube"]),
+    ("Jovem Pan Esportes (YouTube)", "https://www.youtube.com/@jovempanesportes", [r"\bjovem\s*pan\b.*youtube", r"youtube.*\bjovem\s*pan\b", r"\bjovem\s*pan\s*esportes\b"]),
+    ("Vôlei Brasil / CBV (YouTube)", "https://www.youtube.com/@voleibrasil", [r"v[ôo]lei\s*brasil", r"canal\s*v[ôo]lei"]),
+    ("LNF / CBFS Futsal (YouTube)", "https://www.youtube.com/@LNFTV", [r"\blnf\s*(?:tv|\(youtube\))", r"\bcbfs\s*tv\b"]),
+    ("CONCACAF (YouTube)", "https://www.youtube.com/@concacaf", [r"concacaf.*youtube", r"youtube.*concacaf"]),
+    ("A-Leagues (YouTube)", "https://www.youtube.com/@aleagues", [r"a-leagues.*youtube", r"youtube.*a-leagues"]),
+]
+
+PAROLE_DA_ESCLUDERE = [
+    "telegiornale", "tg1", "tg2", "tg3", "tagesschau", "heute-journal",
+    "meteo", "previsioni", "teleshopping", "quizshow", "reality", "blab",
+]
+
+TITLE_ONLY_EXCLUDE_REGEX = r"\b(?:notizie|notiziario|news|tg|rassegna\s+stampa|edizioni\s+del\s+tg)\b"
+
+REPLAY_REGEX = (
+    r"\(\s*[rw]\s*\)|\[\s*[rw]\s*\]|"
+    r"\b(?:replic[ah]e?|in\s+replica|differita|in\s+differita|"
+    r"wiederholung(?::\s*w)?|wdh\.?|wh\.?|rerun:\s*w|"
+    r"rediffusion|rediff\.?|en\s+reprise|diff[ée]r[ée]|"
+    r"repetici[óo]n|diferido|replay|re-?run|re-?live|relive|tape\s+delay|zeitversetzt|aufzeichnung|"
+    r"partita\s+storica|partite\s+storiche|match\s+storico|archivio|amarcord|vintage|rewind|throwback|memory\s*-\s*rai)\b"
+)
+
+ESCLUDI_SPORT_REGEX = [
+    r"\bcurling\b",
+    r"\b(?:equitazione|ippica|horse racing|h[íi]pica|equestrian|pferdesport|pferderennen|reitsport|springreiten|dressur|galopp|show jumping|salto ostacoli)\b",
+    r"\bp[áa]del\b",
+    r"\b(?:scacchi|chess|ajedrez|schach|xadrez|[ée]checs)\b",
+]
+
+SECONDA_DIVISIONE_REGEX = (
+    r"\b(?:"
+    r"serie\s*a2|lvf\s*a2|a2\s*(?:credem|maschile|femminile|\(m\)|\(f\))|"
+    r"serie\s*a3|2\.?\s*bundesliga|zweite\s*bundesliga|3\.?\s*liga|dritte\s*liga|"
+    r"segunda\s*divisi[óo]n|laliga\s*hypermotion|laliga\s*2|la\s*liga\s*2|primera\s*federaci[óo]n|"
+    r"ligue\s*2|ligue\s*b|efl\s*championship|league\s*one|league\s*two|"
+    r"challenge\s*league|challenger\s*pro\s*league|1b\s*pro\s*league|"
+    r"eerste\s*divisie|keuken\s*kampioen|liga\s*portugal\s*2|segunda\s*liga|"
+    r"superliga\s*b|superliga\s*2|proa|prob|lnb\s*pro\s*b|2\.\s*basketball|"
+    r"leb\s*oro|primera\s*feb|segunda\s*feb|"
+    r"g[\s-]*league|del2|swiss\s*league|j2\s*league|j3\s*league|j2|j3|"
+    r"s[ée]rie\s*[cd]|serie\s*[cd]|série\s*b|"
+    r"seconda\s*divisione|second\s*division|2a\s*divisione|2nd\s*division|divisi[óo]n\s*de\s*plata|"
+    r"brasileir[ãa]o\s*(?:s[ée]rie\s*)?b|paulist[ãa]o\s*a2|paulista\s*a2"
+    r")\b"
+)
+
+MAGAZINE_ALWAYS_REGEX = (
+    r"[a-zäöüß]*magazin[es]?|"
+    r"\b(?:"
+    r"matchnight|matchday\s+(?:live|show|highlights)|"
+    r"rubrica|rotocalco|approfondimento|talk\s*show|podcast|cortes|resenha|mesa\s+redonda|debate|"
+    r"domenica\s+sportiva|90[°º]?\s*minuto|novantesimo\s+minuto|pressing|dribbling|"
+    r"tutti\s+convocati|fantacalcio|calciomercato|calcio\s*mercato|sportitalia\s*mercato|"
+    r"sport\s*mediaset|sportmediaset|tg\s*sport|studio\s*sport|processo\s+del\s+luned[ìi]|"
+    r"bordocampo|la\s+rosa\s+del\s+calcio|reparto\s+corse|oltre\s+la\s+rete|passaggi|"
+    r"si\s+live\s*24|si\s+motori|si\s+cafe|inside\s+city|tutti\s+in\s+campo|diretta\s+stadio|lo\s+sai\s+che|prima\s+serata|"
+    r"cartellino\s+rosa|otto\s+in\s+punto|speciale\s+cun|tg\s+betsson|"
+    r"supertennis\s+(?:today|tg)|tennis\s+talk|tie\s+book|tie\s+movie|hawk\s+eye|circolando|race\s+to\s+foro|tennis\s+symposium|tutorial\s+pickleball|"
+    r"moviola|anteprima|prepartita|pre-?partita|postpartita|post-?partita|pre-?gara|post-?gara|"
+    r"paddock|griglia\s+di\s+partenza|highlights|sintesi|i\s+gol\s+del|tutti\s+i\s+gol|zona\s+gol|"
+    r"fuorigioco|tiki\s*taka|contropiede|"
+    r"45\s*[-–—]\s*die\s+fu[ßs]{1,2}ball-halbzeit|fu[ßs]{1,2}ball-halbzeit|guten\s+abend\s+football|"
+    r"zdfsportstudio\s+(?:uefa\s+)?champions\s+league|aktuelles?\s+sportstudio|"
+    r"doppelpass|fantalk|sky90|bundesliga\s+pur|heimspiel|blickpunkt\s+sport|"
+    r"alle\s+spiele,?\s+alle\s+tore|alle\s+tore|scooore|der\s+countdown|the\s+evolution\s+of\s+sport|the\s+power\s+of\s+sport|watts|"
+    r"sportpanorama|sportflash|sportaktuell|"
+    r"zusammenfassung|r[üu]ckblick|vorschau|vorbericht|dokumentation|doku|reportage|"
+    r"[ée]mission|r[ée]sum[ée]|temps\s+forts|r[ée]trospective|avant-?match|apr[èe]s-?match|d[ée]brief|documentaire|"
+    r"preview|review|watchalong|trending|rueda\s+de\s+prensa|press\s+conference|pesaje|weigh-?in|"
+    r"documentary|docuseries|all\s+access|behind\s+the\s+scenes|paddock\s+abierto"
+    r")\b"
+)
+
+MAGAZINE_NO_MATCH_REGEX = (
+    r"[a-zäöüß]*sportstudio|"
+    r"\b(?:"
+    r"sportschau|champions\s+league\s+live|europa\s+league\s+live|conference\s+league\s+live|"
+    r"speciale\s+(?:calcio|sport|serie|moto|f1|formula|volley|basket|tennis)|"
+    r"focus\s+on|im\s+fokus|countdown|talk|studio|solo\s+calcio"
+    r")\b"
+)
+
+CALCIO_FEMMINILE_REGEX = r"\b(?:femminil[ei]|feminino|feminina|femenin[ao]|f[ée]minin[eo]?|frauen|damen|women'?s?|woman|liga f|uwcl|wsl|nwsl|d1 arkema|frauenfu[ßs]ball)\b"
+
+REGOLE_SPORT = [
+    ("College Football", [r"\bcollege football\b", r"\bncaa football\b", r"\bncaaf\b"]),
+    ("Football Americano", [r"\bnfl\b", r"\bfoot us\b", r"\bfutebol americano\b", r"\bfootball americano\b", r"\bamerican football\b", r"\bfútbol americano\b", r"\bsuper bowl\b", r"\bran football\b", r"\bflag football\b", r"redzone", r"アメフト"]),
+    ("Formula 1", [r"\bformula 1\b", r"\bf[óo]rmula 1\b", r"\bformula uno\b", r"\bformel 1\b", r"\bformule 1\b", r"\bf1\b", r"\bgran premio di f1\b", r"\bgarage f1\b"]),
+    ("MotoGP", [r"\bmotogp\b", r"\bmoto gp\b", r"\bmoto2\b", r"\bmoto3\b", r"\bmotomondiale\b", r"\bsuperbike\b", r"\bwsbk\b"]),
+    ("Sci Alpino", [r"\bsci alpino\b", r"\bski alpin\b", r"\bski weltcup\b", r"\bski-weltcup\b", r"\bslalom\b", r"\bdiscesa libera\b", r"\bsuper-g\b", r"\bsuper g\b", r"\briesenslalom\b", r"\babfahrt\b", r"\bcoppa del mondo di sci\b"]),
+    ("Pallavolo", [r"\bpallavolo\b", r"\bvolley\b", r"\bvolleyball\b", r"\bv[ôo]lei\b", r"\bsuperlega\b", r"\bsuperliga\b", r"\blvf\b", r"\bvnl\b", r"\bserie a1\b", r"バレー"]),
+    ("Basket & NBA", [r"\bnba\b", r"\bwnba\b", r"\bbasket\b", r"\bbasquete\b", r"\bbaloncesto\b", r"\bpallacanestro\b", r"\bbasketball\b", r"\beurolega\b", r"\beuroleague\b", r"\beurocup\b", r"\beuroliga\b", r"\bnbb\b", r"\bfiba\b", r"\blega basket\b", r"\bliga endesa\b", r"\bliga acb\b", r"\bliga betclic\b", r"\bmarch madness\b", r"\bbbl\b", r"バスケ", r"bリーグ"]),
+    ("Tennis", [r"\btennis\b", r"\bt[êe]nis\b", r"\btenis\b", r"\batp\b", r"\bwta\b", r"\bcoppa davis\b", r"\bdavis cup\b", r"\bbillie jean king\b", r"\broland garros\b", r"\bwimbledon\b", r"\baustralian open\b", r"\bus open\b", r"\bchallenger\b", r"テニス"]),
+    ("Calcio", [r"\bcalcio\b", r"\bfutebol\b", r"\bf[úu]tbol\b", r"\bfootball\b", r"\bsoccer\b", r"\bfu[ßs]ball\b", r"\bvoetbal\b", r"\bserie a\b", r"\bserie b(?:kt)?\b", r"\bcoppa italia\b", r"\bsupercoppa\b", r"\bchampions league\b", r"\beuropa league\b", r"\bconference league\b", r"\bnations league\b", r"\bmondiali\b", r"\bpremier league\b", r"\bbundesliga\b", r"\bdfb-pokal\b", r"\bdfb pokal\b", r"\blaliga\b", r"\bla liga\b", r"\bligue 1\b", r"\bbrasileir[ãa]o\b", r"\bpaulist[ãa]o\b", r"\bcarioca\b", r"\bcopa do brasil\b", r"\blibertadores\b", r"\bsul-americana\b", r"\bsudamericana\b", r"\bsuper league\b", r"\bjupiler\b", r"\bcroky cup\b", r"\bliga portugal\b", r"\bfa cup\b", r"\bcopa del rey\b", r"\bfutsal\b", r"\bfifa\b", r"\bkings league\b", r"\byouth league\b", r"\bu17-wm\b", r"\bu-17\b", r"\bjリーグ\b", r"\bj1\b", r"サッカー", r"セリエa", r"ラリーガ", r"ブンデスリーガ", r"リーグアン", r"ベルギーリーグ"]),
+]
+
+GENERIC_EPG_TITLE_RE = re.compile(
+    r"^(?:american\s+football(?:\s*:\s*nfl)?|nfl(?:\s+live)?|football\s+americano|calcio|fu[ßs]ball|football|basketball?|pallavolo|volleyball|tennis|eishockey|ice\s+hockey)(?:\s*[-:]\s*live)?$",
+    re.I,
+)
+MATCH_SEP_RE = re.compile(r"\S+\s+(?:vs\.?|–|-|—|@|x|×|\bat\b|\bgegen\b)\s+\S+", re.I)
+
+
+def ha_anno_passato(testo):
+    for m in re.finditer(r"\b(201[5-9]|202[0-5])\b", testo or ""):
+        yr = int(m.group(1))
+        if yr < NOW.year - 1:
+            return True
+        if yr == NOW.year - 1:
+            after = (testo or "")[m.end():m.end() + 6]
+            if not re.match(r"^\s*[-/]\s*(?:26|2026)\b", after):
+                return True
+    return False
+
+
+def risolvi_titolo_epg(title, sub_title, desc):
+    t = (title or "").strip()
+    st = (sub_title or "").strip()
+    if st and MATCH_SEP_RE.search(st) and not MATCH_SEP_RE.search(t):
+        cleaned = re.sub(r"^(?:week\s*\d+|spieltag\s*\d+|thanksgiving\s+game|sunday\s+night|monday\s+night|thursday\s+night)\s*[:\-–—]\s*", "", st, flags=re.I)
+        cleaned = re.sub(r"^(?:thanksgiving\s+game|sunday\s+night|monday\s+night|thursday\s+night)\s*[:\-–—]\s*", "", cleaned, flags=re.I).strip()
+        return f"NFL: {cleaned}" if "nfl" in t.lower() else cleaned
+    if GENERIC_EPG_TITLE_RE.match(t):
+        if st and len(st) > 3:
+            return f"{t}: {st}"
+        m = re.search(
+            r"([A-ZÄÖÜ][A-Za-zÀ-ÿ0-9.' ]{2,28}\s+(?:vs\.?|–|—|-|@|\bat\b|\bgegen\b)\s+[A-ZÄÖÜ][A-Za-zÀ-ÿ0-9.' ]{2,28})",
+            (desc or "")[:450],
+        )
+        if m:
+            cleaned = re.sub(r"^(?:week\s*\d+|thanksgiving\s+game|sunday\s+night|monday\s+night|thursday\s+night)\s*[:\-–—]\s*", "", m.group(1), flags=re.I).strip()
+            return f"NFL: {cleaned}" if "nfl" in t.lower() else cleaned
+    return t
+
+
+def classifica_sport(testo, canale_solo_sport=False, paese="", title=""):
+    t = (testo or "").lower()
+    tl = (title or testo or "").lower()
+
+    if any(p in t for p in PAROLE_DA_ESCLUDERE):
+        return None
+    if re.search(TITLE_ONLY_EXCLUDE_REGEX, tl):
+        return None
+    if re.search(REPLAY_REGEX, tl):
+        return None
+    if re.search(REPLAY_REGEX, t) and not re.search(r"\b(?:diretta|live)\b", tl):
+        return None
+    if ha_anno_passato(tl):
+        return None
+    if any(re.search(pat, t) for pat in ESCLUDI_SPORT_REGEX):
+        return None
+    if re.search(SECONDA_DIVISIONE_REGEX, t):
+        return None
+
+    is_match_or_race = bool(
+        re.search(r"(\s+-\s+|\s+–\s+|\bvs\.?\b|×|\s+x\s+|\s+@\s+|\s+at\s+|\b(?:gran premio|grand prix|qualifiche|qualifying|gara|race|sprint|slalom|discesa|super-?g|gigante|semifinale|finale|quarti|ottavi)\b)", tl)
+    )
+    if re.search(MAGAZINE_ALWAYS_REGEX, tl) or (not is_match_or_race and (re.search(MAGAZINE_ALWAYS_REGEX, t) or re.search(MAGAZINE_NO_MATCH_REGEX, tl) or re.search(MAGAZINE_NO_MATCH_REGEX, t))):
+        return None
+
+    for sport, patterns in REGOLE_SPORT:
+        if any(re.search(pat, t) for pat in patterns):
+            if sport == "Calcio":
+                if re.search(CALCIO_FEMMINILE_REGEX, t):
+                    return None
+                if re.search(r"\bserie\s*b(?:kt)?\b", t):
+                    if paese not in ("Italia", "DAZN Free Italia", "") or re.search(r"\b(?:brasil|brasileir|argentin|ecuador|colombia|chile|rugby|basket|volley|pallavolo)\b", t):
+                        return None
+            else:
+                if re.search(r"\bserie\s*b(?:kt)?\b", t):
+                    return None
+            return sport
+
+    if canale_solo_sport and re.search(r"(\bx\b|vs\.?|×|対|\s-\s|\s·\s|\s@\s)", t):
+        if re.search(r"\bserie\s*b(?:kt)?\b", t):
+            return None
+        return "Altri Sport"
+    return None
+
+
+def scarica_epg_paesi():
+    risultati = []
+    for paese, cfg in PAESI_TV.items():
+        alias_map = {re.sub(r"\s+", " ", al.strip().lower()): (n, info["link"]) for n, info in cfg["canali"].items() for al in info["alias"]}
+        print(f"📡 Scarico guida TV per {paese}...")
+        try:
+            resp = requests.get(cfg["epg_url"], timeout=90, headers={"User-Agent": "Mozilla/5.0"})
+            resp.raise_for_status()
+        except Exception as e:
+            print(f"⚠️ Errore EPG {paese}: {e}")
+            continue
+        matched_ids, count = {}, 0
+        try:
+            with gzip.GzipFile(fileobj=io.BytesIO(resp.content)) as gz:
+                for _, elem in ET.iterparse(gz, events=("end",)):
+                    if elem.tag == "channel":
+                        cid = elem.attrib.get("id", "")
+                        for dn in elem.findall("display-name"):
+                            k = re.sub(r"\s+", " ", (dn.text or "").strip().lower())
+                            if k in alias_map:
+                                matched_ids[cid] = alias_map[k]
+                                break
+                        elem.clear()
+                    elif elem.tag == "programme":
+                        cid = elem.attrib.get("channel", "")
+                        if cid in matched_ids:
+                            s = (elem.attrib.get("start") or "").strip()
+                            if s and " " not in s:
+                                s = s[:14] + " +0000"
+                            try:
+                                dt = datetime.strptime(s, "%Y%m%d%H%M%S %z").astimezone(ROME_TZ)
+                            except Exception:
+                                dt = None
+                            if dt and MIN_DT <= dt <= MAX_DT:
+                                title = (elem.findtext("title") or "").strip()
+                                sub_title = (elem.findtext("sub-title") or "").strip()
+                                desc = (elem.findtext("desc") or "").strip()
+                                cats = " ".join((c.text or "") for c in elem.findall("category"))
+                                prev_shown = elem.find("previously-shown") is not None
+
+                                if prev_shown:
+                                    elem.clear()
+                                    continue
+                                if re.search(r"\b(?:documentar\w*|doku|talk\s*show|rubrica|reportage|notiziario|[a-zäöüß]*magazin[es]?)\b", cats.lower()):
+                                    elem.clear()
+                                    continue
+
+                                evento_pulito = risolvi_titolo_epg(title, sub_title, desc)
+                                full_title = f"{evento_pulito} {title} {sub_title} {cats}".strip()
+                                full_text = f"{evento_pulito} {title} {sub_title} {cats} {desc}".strip()
+                                sport = classifica_sport(full_text, False, paese=paese, title=full_title)
+
+                                if sport and evento_pulito:
+                                    nc, lk = matched_ids[cid]
+                                    low_all = full_text.lower()
+
+                                    # Esclude repliche di calcio europeo trasmesse di notte/mattina (00:00-11:59)
+                                    if sport == "Calcio" and 0 <= dt.hour < 12:
+                                        if not re.search(r"\b(?:argentin|boca|river|racing|independiente|san lorenzo|brasile|brasil|flamengo|palmeiras|botafogo|corinthians|sao paulo|libertadores|sudamericana|mls|messico|liga mx|concacaf|australia|a-league|giappone|j1|corea)\b", low_all):
+                                            elem.clear()
+                                            continue
+
+                                    # Su Sportitalia/SoloCalcio esclude differite dei top campionati europei
+                                    if nc in ("Sportitalia", "SoloCalcio") and sport == "Calcio":
+                                        if re.search(r"\b(?:premier\s+league|champions\s+league|europa\s+league|conference\s+league|bundesliga|laliga|la\s+liga|ligue\s*1|eredivisie|serie\s+a|serie\s+b|coppa\s+italia|fa\s+cup|dfb)\b", low_all):
+                                            elem.clear()
+                                            continue
+
+                                    risultati.append({"data": dt.strftime("%Y-%m-%d"), "ora": dt.strftime("%H:%M"), "sport": sport, "competizione": cats.strip() or f"TV {paese}", "evento": evento_pulito, "paese": paese, "canale": nc, "link": lk})
+                                    count += 1
+                        elem.clear()
+        except Exception as e:
+            print(f"⚠️ Errore XML {paese}: {e}")
+        print(f"✅ {paese}: trovati {count} eventi")
+    return risultati
+
+
+def risolvi_canali_br(testo):
+    t = (testo or "").lower()
+    trovati, visti = [], set()
+    for nome, link, pats in CANALI_BR_INFO:
+        if any(re.search(p, t) for p in pats) and nome not in visti:
+            visti.add(nome)
+            trovati.append((nome, link))
+    if not trovati:
+        for m in re.finditer(r"youtube\s*\(([^)]+)\)", testo or "", re.I):
+            ex = m.group(1).strip()
+            if ex and f"{ex} (YouTube)" not in visti:
+                visti.add(f"{ex} (YouTube)")
+                trovati.append((f"{ex} (YouTube)", f"https://www.youtube.com/results?search_query={quote_plus(ex)}"))
+    return trovati
+
+
+def scarica_futebol_tv_br():
+    risultati, base = [], "https://futebol.tv.br"
+    print("🇧🇷 Controllo futebol.tv.br/canais...")
+    try:
+        resp = requests.get(f"{base}/canais", headers=HEADERS, timeout=30)
+        resp.raise_for_status()
+    except Exception:
+        return risultati
+    soup = BeautifulSoup(resp.text, "html.parser")
+    pagine = {}
+    for a in soup.find_all("a", href=True):
+        txt = re.sub(r"\d+\s*pr[óo]ximos?\s*jogos.*", "", a.get_text(" ", strip=True), flags=re.I).strip()
+        mc = risolvi_canali_br(txt)
+        if mc:
+            u = urljoin(base, a["href"])
+            if u not in pagine:
+                pagine[u] = mc[0]
+    for url_p, (nc, lyt) in pagine.items():
+        try:
+            r = requests.get(url_p, headers=HEADERS, timeout=25)
+            r.raise_for_status()
+        except Exception:
+            continue
+        testo = BeautifulSoup(r.text, "html.parser").get_text("\n")
+        testo = testo.split("Próximos jogos", 1)[-1].split("Histórico recente", 1)[0]
+        cd = ct = None
+        for rl in testo.splitlines():
+            line = re.sub(r"\s+", " ", rl).strip()
+            if not line:
+                continue
+            md = re.search(r"\b(\d{2}/\d{2}/\d{4})\b", line)
+            if md:
+                cd = md.group(1)
+                continue
+            mt = re.search(r"\b(\d{2}:\d{2})\b", line)
+            if mt and len(line) < 25:
+                ct = mt.group(1)
+                continue
+            if cd and ct and " x " in line and "Ver jogo" not in line and "Logo " not in line:
+                parti = [p.strip() for p in line.split("·") if p.strip()]
+                ev = parti[0]
+                comp = re.sub(r"Logo\s+.*", "", parti[1] if len(parti) > 1 else "Calcio").strip() or "Calcio"
+                if classifica_sport(f"futebol {comp} {ev}", True, paese="Brasile YouTube", title=f"{comp} {ev}") != "Calcio":
+                    ct = None
+                    continue
+                try:
+                    dt_it = datetime.strptime(f"{cd} {ct}", "%d/%m/%Y %H:%M").replace(tzinfo=BR_TZ).astimezone(ROME_TZ)
+                    if MIN_DT <= dt_it <= MAX_DT:
+                        risultati.append({"data": dt_it.strftime("%Y-%m-%d"), "ora": dt_it.strftime("%H:%M"), "sport": "Calcio", "competizione": comp, "evento": ev, "paese": "Brasile YouTube", "canale": nc, "link": lyt})
+                except Exception:
+                    pass
+                ct = None
+    print(f"✅ futebol.tv.br: {len(risultati)} eventi")
+    return risultati
+
+
+def risolvi_data_post_br(pub_dt, title_text):
+    m = re.search(r"\((\d{1,2})(?:/\d{1,2})?\)", title_text or "") or re.search(r"\b(\d{1,2})\s+de\s+[a-zç]+", (title_text or "").lower())
+    if m:
+        g = int(m.group(1))
+        for d in (0, 1, -1):
+            c = pub_dt + timedelta(days=d)
+            if c.day == g:
+                return c
+    return pub_dt
+
+
+def estrai_br_html(html, base_dt):
+    ris, sez = [], ""
+    for rl in BeautifulSoup(html, "html.parser").get_text("\n").splitlines():
+        line = re.sub(r"\s+", " ", rl).strip()
+        if not line:
+            continue
+        if len(line) < 55 and not re.match(r"^\d{1,2}h", line):
+            if any(k in line.lower() for k in ["futebol", "vôlei", "volei", "basquete", "nba", "nbb", "futsal", "tênis", "automobilismo", "fórmula 1", "motogp", "nfl", "brasileirão", "laliga", "bundesliga", "premier league", "ligue 1"]):
+                sez = line
+            continue
+        m = re.match(r"^(\d{1,2})h(\d{2})?\s*[–—\-]\s*(.+?)\s+[–—\-]\s+(.+)$", line)
+        if not m:
+            continue
+        cf = risolvi_canali_br(m.group(4))
+        if not cf:
+            continue
+        corpo = m.group(3).strip()
+        comp, ev = ([x.strip() for x in corpo.split(":", 1)] if ":" in corpo else (sez or "Sport Brasile", corpo))
+        sport = classifica_sport(f"{sez} {comp} {ev}", True, paese="Brasile YouTube", title=f"{comp} {ev}")
+        if not sport:
+            continue
+        try:
+            dt_it = datetime(base_dt.year, base_dt.month, base_dt.day, int(m.group(1)), int(m.group(2) or "0"), tzinfo=BR_TZ).astimezone(ROME_TZ)
+        except Exception:
+            continue
+        if MIN_DT <= dt_it <= MAX_DT:
+            nome = " / ".join(c[0].replace(" (YouTube)", "") for c in cf) + " (YouTube)"
+            ris.append({"data": dt_it.strftime("%Y-%m-%d"), "ora": dt_it.strftime("%H:%M"), "sport": sport, "competizione": comp, "evento": ev, "paese": "Brasile YouTube", "canale": nome, "link": cf[0][1]})
+    return ris
+
+
+def scarica_auvaromaia_br():
+    ris = []
+    try:
+        r = requests.get("https://auvaromaia.com/wp-json/wp/v2/posts?search=Agenda+esportiva&per_page=7", headers=HEADERS, timeout=25)
+        r.raise_for_status()
+        for p in r.json():
+            tit = BeautifulSoup(p.get("title", {}).get("rendered", ""), "html.parser").get_text()
+            if "agenda esportiva" in tit.lower():
+                ris.extend(estrai_br_html(p.get("content", {}).get("rendered", ""), risolvi_data_post_br(datetime.fromisoformat(p["date"][:19]), tit)))
+    except Exception:
+        try:
+            r = requests.get("https://auvaromaia.com/feed/", headers=HEADERS, timeout=25)
+            root = ET.fromstring(r.text)
+            ns = {"c": "http://purl.org/rss/1.0/modules/content/"}
+            for it in root.findall("./channel/item"):
+                tit = it.findtext("title") or ""
+                if "agenda esportiva" in tit.lower():
+                    try:
+                        pdt = parsedate_to_datetime(it.findtext("pubDate") or "").replace(tzinfo=None)
+                    except Exception:
+                        pdt = NOW
+                    ris.extend(estrai_br_html(it.findtext("c:encoded", namespaces=ns) or it.findtext("description") or "", risolvi_data_post_br(pdt, tit)))
+        except Exception:
+            pass
+    print(f"✅ AuvaroMaia: {len(ris)} eventi")
+    return ris
+
+
+def scarica_gfesporte_br():
+    ris = []
+    try:
+        r = requests.get("https://www.gfesporte.com.br/", headers=HEADERS, timeout=25)
+        soup = BeautifulSoup(r.text, "html.parser")
+        links, visti = [], set()
+        for a in soup.find_all("a", href=True):
+            href, txt = urljoin("https://www.gfesporte.com.br/", a["href"]), a.get_text(" ", strip=True)
+            if ("programacao-esportiva" in href.lower() or "agenda esportiva" in txt.lower() or "programação esportiva" in txt.lower()) and href not in visti:
+                visti.add(href)
+                links.append((href, txt))
+        for u, txt in links[:5]:
+            rp = requests.get(u, headers=HEADERS, timeout=25)
+            h1 = BeautifulSoup(rp.text, "html.parser").find("h1")
+            ris.extend(estrai_br_html(rp.text, risolvi_data_post_br(NOW.astimezone(BR_TZ), h1.get_text(" ", strip=True) if h1 else txt)))
+    except Exception:
+        pass
+    print(f"✅ GFEsporte: {len(ris)} eventi")
+    return ris
+
+
+def carica_manuali():
+    if not os.path.exists("eventi_manuali.json"):
+        return []
+    try:
+        with open("eventi_manuali.json", "r", encoding="utf-8") as f:
+            eventi = [ev for ev in json.load(f) if ev.get("data", "") >= NOW.strftime("%Y-%m-%d")]
+            print(f"✍️ Eventi manuali caricati: {len(eventi)}")
+            return eventi
+    except Exception as e:
+        print(f"⚠️ Errore lettura eventi_manuali.json: {e}")
+        return []
+
+
+def deduplica(eventi):
+    visti, puliti = set(), []
+    for ev in eventi:
+        tb = re.sub(r"\b(fc|sc|ec|cr|ca)\b", "", ev.get("evento", "").split(":", 1)[-1].lower())
+        k = (ev.get("data", ""), ev.get("ora", ""), ev.get("paese", ""), re.sub(r"[^a-z0-9]", "", tb)[:22])
+        if k not in visti:
+            visti.add(k)
+            puliti.append(ev)
+    puliti.sort(key=lambda x: (x.get("data", ""), x.get("ora", ""), x.get("paese", "")))
+    return puliti
+
+
+def main():
+    tutti = (
+        scarica_epg_paesi()
+        + scarica_futebol_tv_br()
+        + scarica_auvaromaia_br()
+        + scarica_gfesporte_br()
+        + carica_manuali()
+    )
+    finali = deduplica(tutti)
+    if finali:
+        with open("eventi.json", "w", encoding="utf-8") as f:
+            json.dump(finali, f, ensure_ascii=False, indent=2)
+        with open("meta.json", "w", encoding="utf-8") as f:
+            json.dump({"ultimo_aggiornamento": NOW.strftime("%d/%m/%Y alle %H:%M"), "totale_eventi": len(finali)}, f, ensure_ascii=False, indent=2)
+        print(f"🎉 Salvati {len(finali)} eventi totali in eventi.json!")
+
+
+if __name__ == "__main__":
+    main()
