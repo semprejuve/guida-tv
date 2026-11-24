@@ -30,10 +30,8 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Installa librerie e browser
-        run: |
-          pip install requests beautifulsoup4 curl_cffi playwright googlenewsdecoder
-          playwright install --with-deps chromium
+      - name: Installa librerie
+        run: pip install requests beautifulsoup4
 
       - name: Esegui il robottino
         run: python aggiorna.py
@@ -43,7 +41,7 @@ jobs:
           if [ -f eventi.json ]; then cp eventi.json /tmp/ev_new.json; fi
           if [ -f meta.json ]; then cp meta.json /tmp/meta_new.json; fi
           git fetch origin main
-          git checkout -B main origin/main
+          git checkout -f -B main origin/main
           if [ -f /tmp/ev_new.json ]; then mv /tmp/ev_new.json eventi.json; fi
           if [ -f /tmp/meta_new.json ]; then mv /tmp/meta_new.json meta.json; fi
           git config user.name "Robottino Guida TV"
