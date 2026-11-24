@@ -97,8 +97,9 @@ CANALI_BR_INFO = [
 ]
 
 PAROLE_DA_ESCLUDERE = [
-    "telegiornale", "tg1", "tg2", "tg3", "tagesschau", "heute-journal",
-    "meteo", "previsioni", "teleshopping",
+    "telegiornale", "tg sport", "tg1", "tg2", "tg3",
+    "sport mediaset", "sportmediaset", "tagesschau", "heute-journal",
+    "meteo", "previsioni", "teleshopping", "rubrica", "cortes", "podcast", "resenha",
 ]
 
 REPLAY_REGEX = (
@@ -133,27 +134,21 @@ SECONDA_DIVISIONE_REGEX = (
     r")\b"
 )
 
-MAGAZINE_IT_REGEX = (
+MAGAZINE_REGEX = (
     r"\b(?:"
-    r"magazine|rubrica|rotocalco|approfondimento|talk\s*show|"
+    r"magazin[es]?|rubrica|rotocalco|approfondimento|talk\s*show|podcast|cortes|resenha|mesa\s+redonda|debate|"
     r"domenica\s+sportiva|90[°º]?\s*minuto|novantesimo\s+minuto|pressing|dribbling|"
     r"tutti\s+convocati|fantacalcio|calciomercato|calcio\s*mercato|sportitalia\s+(?:mercato|live)|"
     r"sport\s*mediaset|sportmediaset|tg\s*sport|studio\s*sport|processo\s+del\s+luned[ìi]|"
     r"moviola|anteprima|prepartita|pre-?partita|postpartita|post-?partita|pre-?gara|post-?gara|"
     r"paddock|griglia\s+di\s+partenza|highlights|sintesi|i\s+gol\s+del|tutti\s+i\s+gol|zona\s+gol|"
     r"fuorigioco|tiki\s*taka|contropiede|supertennis\s+(?:magazine|today)|tennis\s+talk|"
-    r"speciale\s+(?:calcio|sport|serie|moto|f1|formula|volley|basket|tennis)"
-    r")\b"
-)
-
-MAGAZINE_ESTERI_REGEX = (
-    r"\b(?:"
-    r"magazin[es]?|rubrica|approfondimento|talk\s*show|podcast|cortes|resenha|mesa\s+redonda|debate|"
+    r"speciale\s+(?:calcio|sport|serie|moto|f1|formula|volley|basket|tennis)|"
     r"sportschau|sportstudio|doppelpass|fantalk|sky90|bundesliga\s+pur|heimspiel|blickpunkt\s+sport|"
-    r"sportpanorama|sportflash|sportaktuell|domenica\s+sportiva|"
+    r"sportpanorama|sportflash|sportaktuell|"
     r"zusammenfassung|r[üu]ckblick|vorschau|vorbericht|countdown|dokumentation|doku|reportage|"
     r"[ée]mission|r[ée]sum[ée]|temps\s+forts|r[ée]trospective|avant-?match|apr[èe]s-?match|d[ée]brief|documentaire|"
-    r"highlights|preview|review|watchalong|trending|rueda\s+de\s+prensa|press\s+conference|pesaje|weigh-?in|"
+    r"preview|review|watchalong|trending|rueda\s+de\s+prensa|press\s+conference|pesaje|weigh-?in|"
     r"documentary|docuseries|all\s+access|behind\s+the\s+scenes|paddock\s+abierto"
     r")\b"
 )
@@ -191,13 +186,8 @@ def classifica_sport(testo, canale_solo_sport=False, paese="", title=""):
     is_match_or_race = bool(
         re.search(r"(\s+-\s+|\bvs\.?\b|×|\s+x\s+|\s+@\s+|\b(?:gran premio|grand prix|qualifiche|qualifying|gara|race|sprint|slalom|discesa|super-?g|gigante|semifinale|finale|quarti|ottavi)\b)", tl)
     )
-
-    if paese == "Italia":
-        if re.search(MAGAZINE_IT_REGEX, tl) or (not is_match_or_race and re.search(MAGAZINE_IT_REGEX, t)):
-            return "Programmi & Magazine"
-    else:
-        if re.search(MAGAZINE_ESTERI_REGEX, tl) or (not is_match_or_race and re.search(MAGAZINE_ESTERI_REGEX, t)):
-            return None
+    if re.search(MAGAZINE_REGEX, tl) or (not is_match_or_race and re.search(MAGAZINE_REGEX, t)):
+        return None
 
     for sport, patterns in REGOLE_SPORT:
         if any(re.search(pat, t) for pat in patterns):
@@ -259,8 +249,7 @@ def scarica_epg_paesi():
                                 sport = classifica_sport(f"{title} {cats} {desc}", False, paese=paese, title=f"{title} {cats}")
                                 if sport and title:
                                     nc, lk = matched_ids[cid]
-                                    comp_lbl = "Programma TV" if sport == "Programmi & Magazine" else (cats.strip() or f"TV {paese}")
-                                    risultati.append({"data": dt.strftime("%Y-%m-%d"), "ora": dt.strftime("%H:%M"), "sport": sport, "competizione": comp_lbl, "evento": title, "paese": paese, "canale": nc, "link": lk})
+                                    risultati.append({"data": dt.strftime("%Y-%m-%d"), "ora": dt.strftime("%H:%M"), "sport": sport, "competizione": cats.strip() or f"TV {paese}", "evento": title, "paese": paese, "canale": nc, "link": lk})
                                     count += 1
                         elem.clear()
         except Exception as e:
