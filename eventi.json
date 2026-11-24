@@ -333,41 +333,11 @@
     "data": "2026-11-24",
     "ora": "13:30",
     "sport": "Calcio",
-    "competizione": "Länderseite International",
-    "evento": "U17-WM vs Costa Rica (U17)",
-    "paese": "DAZN Free Germania",
-    "canale": "DAZN Free Germania",
-    "link": "https://www.dazn.com/de-DE/home"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "13:30",
-    "sport": "Calcio",
-    "competizione": "Länderseite International",
-    "evento": "U17-WM vs Venezuela (U17)",
-    "paese": "DAZN Free Germania",
-    "canale": "DAZN Free Germania",
-    "link": "https://www.dazn.com/de-DE/home"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "13:30",
-    "sport": "Calcio",
     "competizione": "Sport Notizie",
     "evento": "B-Lab",
     "paese": "Italia",
     "canale": "Sportitalia",
     "link": "https://www.sportitalia.it/"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "14:00",
-    "sport": "Calcio",
-    "competizione": "Länderseite International",
-    "evento": "U17-WM vs Japan (U17)",
-    "paese": "DAZN Free Germania",
-    "canale": "DAZN Free Germania",
-    "link": "https://www.dazn.com/de-DE/home"
   },
   {
     "data": "2026-11-24",
@@ -378,16 +348,6 @@
     "paese": "Italia",
     "canale": "Rai Sport",
     "link": "https://www.raiplay.it/dirette/raisport"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "14:30",
-    "sport": "Calcio",
-    "competizione": "Länderseite International",
-    "evento": "U17-WM vs Mexiko (U17)",
-    "paese": "DAZN Free Germania",
-    "canale": "DAZN Free Germania",
-    "link": "https://www.dazn.com/de-DE/home"
   },
   {
     "data": "2026-11-24",
@@ -451,16 +411,6 @@
   },
   {
     "data": "2026-11-24",
-    "ora": "15:30",
-    "sport": "Calcio",
-    "competizione": "Länderseite International",
-    "evento": "U17-WM vs Dominikanische Republik (U17)",
-    "paese": "DAZN Free Germania",
-    "canale": "DAZN Free Germania",
-    "link": "https://www.dazn.com/de-DE/home"
-  },
-  {
-    "data": "2026-11-24",
     "ora": "15:40",
     "sport": "Tennis",
     "competizione": "Sport Tennis",
@@ -521,16 +471,6 @@
   },
   {
     "data": "2026-11-24",
-    "ora": "16:00",
-    "sport": "Calcio",
-    "competizione": "Länderseite International",
-    "evento": "U17-WM vs Brasilien (U17)",
-    "paese": "DAZN Free Germania",
-    "canale": "DAZN Free Germania",
-    "link": "https://www.dazn.com/de-DE/home"
-  },
-  {
-    "data": "2026-11-24",
     "ora": "16:15",
     "sport": "Tennis",
     "competizione": "Sport Tennis",
@@ -538,26 +478,6 @@
     "paese": "Italia",
     "canale": "SuperTennis",
     "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "16:30",
-    "sport": "Calcio",
-    "competizione": "Länderseite International",
-    "evento": "U17-WM vs Algerien (U17)",
-    "paese": "DAZN Free Germania",
-    "canale": "DAZN Free Germania",
-    "link": "https://www.dazn.com/de-DE/home"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "16:30",
-    "sport": "Calcio",
-    "competizione": "Länderseite International",
-    "evento": "U17-WM vs Honduras (U17)",
-    "paese": "DAZN Free Germania",
-    "canale": "DAZN Free Germania",
-    "link": "https://www.dazn.com/de-DE/home"
   },
   {
     "data": "2026-11-24",
@@ -1331,26 +1251,6 @@
   },
   {
     "data": "2026-11-25",
-    "ora": "13:30",
-    "sport": "Calcio",
-    "competizione": "Länderseite International",
-    "evento": "U17-WM vs Ecuador (U17)",
-    "paese": "DAZN Free Germania",
-    "canale": "DAZN Free Germania",
-    "link": "https://www.dazn.com/de-DE/home"
-  },
-  {
-    "data": "2026-11-25",
-    "ora": "13:30",
-    "sport": "Calcio",
-    "competizione": "Länderseite International",
-    "evento": "U17-WM vs Uganda (U17)",
-    "paese": "DAZN Free Germania",
-    "canale": "DAZN Free Germania",
-    "link": "https://www.dazn.com/de-DE/home"
-  },
-  {
-    "data": "2026-11-25",
     "ora": "14:00",
     "sport": "Calcio",
     "competizione": "Sport Notizie",
@@ -1371,26 +1271,6 @@
   },
   {
     "data": "2026-11-25",
-    "ora": "14:30",
-    "sport": "Calcio",
-    "competizione": "Länderseite International",
-    "evento": "U17-WM vs Uruguay (U17)",
-    "paese": "DAZN Free Germania",
-    "canale": "DAZN Free Germania",
-    "link": "https://www.dazn.com/de-DE/home"
-  },
-  {
-    "data": "2026-11-25",
-    "ora": "14:30",
-    "sport": "Calcio",
-    "competizione": "Länderseite International",
-    "evento": "U17-WM vs Haiti (U17)",
-    "paese": "DAZN Free Germania",
-    "canale": "DAZN Free Germania",
-    "link": "https://www.dazn.com/de-DE/home"
-  },
-  {
-    "data": "2026-11-25",
     "ora": "14:40",
     "sport": "Pallavolo",
     "competizione": "TV Italia",
@@ -1398,26 +1278,6 @@
     "paese": "Italia",
     "canale": "Rai Sport",
     "link": "https://www.raiplay.it/dirette/raisport"
-  },
-  {
-    "data": "2026-11-25",
-    "ora": "15:30",
-    "sport": "Calcio",
-    "competizione": "Länderseite International",
-    "evento": "U17-WM vs Panama (U17)",
-    "paese": "DAZN Free Germania",
-    "canale": "DAZN Free Germania",
-    "link": "https://www.dazn.com/de-DE/home"
-  },
-  {
-    "data": "2026-11-25",
-    "ora": "15:30",
-    "sport": "Calcio",
-    "competizione": "Länderseite International",
-    "evento": "U17-WM vs Griechenland (U17)",
-    "paese": "DAZN Free Germania",
-    "canale": "DAZN Free Germania",
-    "link": "https://www.dazn.com/de-DE/home"
   },
   {
     "data": "2026-11-25",
@@ -1458,26 +1318,6 @@
     "paese": "Svizzera",
     "canale": "blue Zoom",
     "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-25",
-    "ora": "16:30",
-    "sport": "Calcio",
-    "competizione": "Länderseite International",
-    "evento": "U17-WM vs Dänemark (U17)",
-    "paese": "DAZN Free Germania",
-    "canale": "DAZN Free Germania",
-    "link": "https://www.dazn.com/de-DE/home"
-  },
-  {
-    "data": "2026-11-25",
-    "ora": "16:30",
-    "sport": "Calcio",
-    "competizione": "Länderseite International",
-    "evento": "U17-WM vs Australien (U17)",
-    "paese": "DAZN Free Germania",
-    "canale": "DAZN Free Germania",
-    "link": "https://www.dazn.com/de-DE/home"
   },
   {
     "data": "2026-11-25",
@@ -2093,26 +1933,6 @@
     "data": "2026-11-26",
     "ora": "14:00",
     "sport": "Calcio",
-    "competizione": "Länderseite International",
-    "evento": "U17-WM vs Neuseeland (U17)",
-    "paese": "DAZN Free Germania",
-    "canale": "DAZN Free Germania",
-    "link": "https://www.dazn.com/de-DE/home"
-  },
-  {
-    "data": "2026-11-26",
-    "ora": "14:00",
-    "sport": "Calcio",
-    "competizione": "Länderseite International",
-    "evento": "U17-WM vs Vietnam (U17)",
-    "paese": "DAZN Free Germania",
-    "canale": "DAZN Free Germania",
-    "link": "https://www.dazn.com/de-DE/home"
-  },
-  {
-    "data": "2026-11-26",
-    "ora": "14:00",
-    "sport": "Calcio",
     "competizione": "Sport Notizie",
     "evento": "B-Lab",
     "paese": "Italia",
@@ -2161,46 +1981,6 @@
   },
   {
     "data": "2026-11-26",
-    "ora": "15:00",
-    "sport": "Calcio",
-    "competizione": "Länderseite International",
-    "evento": "U17-WM vs Usbekistan (U17)",
-    "paese": "DAZN Free Germania",
-    "canale": "DAZN Free Germania",
-    "link": "https://www.dazn.com/de-DE/home"
-  },
-  {
-    "data": "2026-11-26",
-    "ora": "15:00",
-    "sport": "Calcio",
-    "competizione": "Länderseite International",
-    "evento": "U17-WM vs Jamaika (U17)",
-    "paese": "DAZN Free Germania",
-    "canale": "DAZN Free Germania",
-    "link": "https://www.dazn.com/de-DE/home"
-  },
-  {
-    "data": "2026-11-26",
-    "ora": "16:00",
-    "sport": "Calcio",
-    "competizione": "Länderseite International",
-    "evento": "U17-WM vs China (U17)",
-    "paese": "DAZN Free Germania",
-    "canale": "DAZN Free Germania",
-    "link": "https://www.dazn.com/de-DE/home"
-  },
-  {
-    "data": "2026-11-26",
-    "ora": "16:00",
-    "sport": "Calcio",
-    "competizione": "Länderseite International",
-    "evento": "U17-WM vs Marokko (U17)",
-    "paese": "DAZN Free Germania",
-    "canale": "DAZN Free Germania",
-    "link": "https://www.dazn.com/de-DE/home"
-  },
-  {
-    "data": "2026-11-26",
     "ora": "16:00",
     "sport": "Calcio",
     "competizione": "Sport Calcio",
@@ -2208,26 +1988,6 @@
     "paese": "Italia",
     "canale": "Sportitalia",
     "link": "https://www.sportitalia.it/"
-  },
-  {
-    "data": "2026-11-26",
-    "ora": "17:00",
-    "sport": "Calcio",
-    "competizione": "Länderseite International",
-    "evento": "U17-WM vs Tadschikistan (U17)",
-    "paese": "DAZN Free Germania",
-    "canale": "DAZN Free Germania",
-    "link": "https://www.dazn.com/de-DE/home"
-  },
-  {
-    "data": "2026-11-26",
-    "ora": "17:00",
-    "sport": "Calcio",
-    "competizione": "Länderseite International",
-    "evento": "U17-WM vs Kroatien (U17)",
-    "paese": "DAZN Free Germania",
-    "canale": "DAZN Free Germania",
-    "link": "https://www.dazn.com/de-DE/home"
   },
   {
     "data": "2026-11-26",
@@ -2388,16 +2148,6 @@
     "paese": "Italia",
     "canale": "Rai Sport",
     "link": "https://www.raiplay.it/dirette/raisport"
-  },
-  {
-    "data": "2026-11-26",
-    "ora": "21:00",
-    "sport": "Calcio",
-    "competizione": "Länderseite International",
-    "evento": "UEFA Conference League vs SC Freiburg",
-    "paese": "DAZN Free Germania",
-    "canale": "DAZN Free Germania",
-    "link": "https://www.dazn.com/de-DE/home"
   },
   {
     "data": "2026-11-26",
