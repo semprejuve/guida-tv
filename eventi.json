@@ -11,26 +11,6 @@
   },
   {
     "data": "2026-11-24",
-    "ora": "01:10",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Fussball: FC Lausanne-Sport - FC Vaduz",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "02:00",
-    "sport": "Calcio",
-    "competizione": "Sport Calcio",
-    "evento": "Manchester City TV",
-    "paese": "Italia",
-    "canale": "Sportitalia",
-    "link": "https://www.sportitalia.it/"
-  },
-  {
-    "data": "2026-11-24",
     "ora": "02:10",
     "sport": "Football Americano",
     "competizione": "American Football",
@@ -61,26 +41,6 @@
   },
   {
     "data": "2026-11-24",
-    "ora": "03:55",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Fussball: FC Zürich - FC St.Gallen 1879",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "04:00",
-    "sport": "Calcio",
-    "competizione": "Sport Calcio",
-    "evento": "Campionato Primavera 1 TIM",
-    "paese": "Italia",
-    "canale": "Sportitalia",
-    "link": "https://www.sportitalia.it/"
-  },
-  {
-    "data": "2026-11-24",
     "ora": "04:05",
     "sport": "Tennis",
     "competizione": "Sport Tennis",
@@ -91,16 +51,6 @@
   },
   {
     "data": "2026-11-24",
-    "ora": "04:30",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "This is Paris - Staffel 2",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-24",
     "ora": "06:00",
     "sport": "Tennis",
     "competizione": "Sport Tennis",
@@ -108,126 +58,6 @@
     "paese": "Italia",
     "canale": "SuperTennis",
     "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "07:00",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "TIE-BREAK 2026 - Stag. 2023 Ep. 28 - Tie Break - Shelton vs Alcaraz 1 set US OPEN 2026",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "07:15",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "Davis Cup Finals 8 2025 SF1 - ITA vs BEL - Ep. 1 - Matteo Berrettini vs Raphael Collignon ITA vs BEL Davis Cup Final 8 Bologna SF1 # 1",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "08:20",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Fussball: FC Basel 1893 - FC Luzern",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "08:35",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Foot: FC Lugano - Grasshopper Club Zurich",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "08:40",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "Davis Cup Finals 8 2025 SF1 - ITA vs BEL - Ep. 2 - Flavio Cobolli vs Zizou Bergs ITA vs BEL Davis Cup Final 8 Bologna SF1 # 1",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "09:35",
-    "sport": "Calcio",
-    "competizione": "Football",
-    "evento": "Australian Football League",
-    "paese": "Germania",
-    "canale": "More Than Sports TV",
-    "link": "https://morethansports.tv/"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "10:55",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Foot: BSC Young Boys - FC Thoune",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "11:05",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Alle Spiele, alle Tore - Brack Super League",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "11:10",
-    "sport": "Calcio",
-    "competizione": "Arti Marziali",
-    "evento": "Karate",
-    "paese": "Italia",
-    "canale": "Rai Sport",
-    "link": "https://www.raiplay.it/dirette/raisport"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "11:40",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "Davis Cup Finals 8 2025- Fin ITA vs ESP - Ep. 1 - Matteo Berrettini vs Pablo Carreno Busta Italia vs Spagna Davis Cup Final 8 Bologna Finale # 1",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "12:55",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "Davis Cup Finals 8 2025- Fin ITA vs ESP - Ep. 2 - Flavio Cobolli vs Jaume Munar Italia vs Spagna Davis Cup Final 8 Bologna Finale # 1",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "13:25",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Foot: FC Sion - Servette FC",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
   },
   {
     "data": "2026-11-24",
@@ -311,16 +141,6 @@
   },
   {
     "data": "2026-11-24",
-    "ora": "15:45",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Le temps additionnel - Brack Super League",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-24",
     "ora": "16:00",
     "sport": "Calcio",
     "competizione": "Copa do Mundo Sub-17",
@@ -361,26 +181,6 @@
   },
   {
     "data": "2026-11-24",
-    "ora": "16:50",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Fussball: OGC Nice - Paris Saint-Germain",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "17:40",
-    "sport": "Formula 1",
-    "competizione": "Sport",
-    "evento": "Reparto Corse",
-    "paese": "Italia",
-    "canale": "Rai Sport",
-    "link": "https://www.raiplay.it/dirette/raisport"
-  },
-  {
-    "data": "2026-11-24",
     "ora": "18:20",
     "sport": "Tennis",
     "competizione": "Sport Tennis",
@@ -388,26 +188,6 @@
     "paese": "Italia",
     "canale": "SuperTennis",
     "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "18:30",
-    "sport": "Calcio",
-    "competizione": "Sport Calcio",
-    "evento": "UEFA Champions League",
-    "paese": "Italia",
-    "canale": "Sportitalia",
-    "link": "https://www.sportitalia.it/"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "19:30",
-    "sport": "Calcio",
-    "competizione": "Fußballmagazin",
-    "evento": "45 – Die Fußball-Halbzeit auf SPORT1",
-    "paese": "Germania",
-    "canale": "Sport1",
-    "link": "https://www.sport1.de/tv-programm"
   },
   {
     "data": "2026-11-24",
@@ -451,16 +231,6 @@
   },
   {
     "data": "2026-11-24",
-    "ora": "20:50",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Fussball: Manchester City - FC Fulham",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-24",
     "ora": "21:00",
     "sport": "Altri Sport",
     "competizione": "Sport Brasile",
@@ -478,26 +248,6 @@
     "paese": "Brasile YouTube",
     "canale": "Canal GOL Brasil (YouTube)",
     "link": "https://www.youtube.com/@canalgolbrasil"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "21:00",
-    "sport": "Calcio",
-    "competizione": "Sport Calcio",
-    "evento": "UEFA Champions League",
-    "paese": "Italia",
-    "canale": "Sportitalia",
-    "link": "https://www.sportitalia.it/"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "21:00",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Foot: Manchester City - FC Fulham",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
   },
   {
     "data": "2026-11-24",
@@ -530,46 +280,6 @@
     "link": "https://www.youtube.com/@getv"
   },
   {
-    "data": "2026-11-24",
-    "ora": "22:55",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Matchnight",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "23:00",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Le temps additionnel - UEFA Champions League",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "23:10",
-    "sport": "MotoGP",
-    "competizione": "TV Germania",
-    "evento": "Isle of Man Tourist Trophy 2019",
-    "paese": "Germania",
-    "canale": "More Than Sports TV",
-    "link": "https://morethansports.tv/"
-  },
-  {
-    "data": "2026-11-25",
-    "ora": "00:05",
-    "sport": "Basket & NBA",
-    "competizione": "TV Svizzera",
-    "evento": "Basketball: Valencia Basket - Panathinaikos Athen",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
     "data": "2026-11-25",
     "ora": "00:20",
     "sport": "Tennis",
@@ -581,16 +291,6 @@
   },
   {
     "data": "2026-11-25",
-    "ora": "01:15",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Foot: OGC Nice - Paris Saint-Germain",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-25",
     "ora": "02:00",
     "sport": "Tennis",
     "competizione": "Sport Tennis",
@@ -598,16 +298,6 @@
     "paese": "Italia",
     "canale": "SuperTennis",
     "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-25",
-    "ora": "03:10",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "This is Paris - Staffel 2",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
   },
   {
     "data": "2026-11-25",
@@ -625,46 +315,6 @@
     "sport": "Tennis",
     "competizione": "Sport Tennis",
     "evento": "WTA Finals Indian Wells 2026 - Singolare - Ep. 15 - Mirra Andreeva vs Elina Svitolina WTA Finals # 1",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-25",
-    "ora": "06:45",
-    "sport": "Calcio",
-    "competizione": "TV Italia",
-    "evento": "Karate",
-    "paese": "Italia",
-    "canale": "Rai Sport",
-    "link": "https://www.raiplay.it/dirette/raisport"
-  },
-  {
-    "data": "2026-11-25",
-    "ora": "06:45",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Foot: Manchester City - FC Fulham",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-25",
-    "ora": "06:55",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Ruben & Cie",
-    "paese": "Svizzera",
-    "canale": "RTS 1",
-    "link": "https://www.rts.ch/play/tv"
-  },
-  {
-    "data": "2026-11-25",
-    "ora": "07:25",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "Davis Cup Finals 8 2025- Fin ITA vs ESP - Ep. 2 - Flavio Cobolli vs Jaume Munar Italia vs Spagna Davis Cup Final 8 Bologna Finale # 1",
     "paese": "Italia",
     "canale": "SuperTennis",
     "link": "https://www.supertennis.tv/"
@@ -701,16 +351,6 @@
   },
   {
     "data": "2026-11-25",
-    "ora": "10:30",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Foot: Galatasaray AŞ - Aston Villa FC",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-25",
     "ora": "11:00",
     "sport": "Sci Alpino",
     "competizione": "Ski Alpin",
@@ -718,16 +358,6 @@
     "paese": "Germania",
     "canale": "Eurosport 1 DE",
     "link": "https://www.eurosport.de/"
-  },
-  {
-    "data": "2026-11-25",
-    "ora": "11:40",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Fussball: Arsenal FC - Borussia Dortmund",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
   },
   {
     "data": "2026-11-25",
@@ -748,16 +378,6 @@
     "paese": "Germania",
     "canale": "More Than Sports TV",
     "link": "https://morethansports.tv/"
-  },
-  {
-    "data": "2026-11-25",
-    "ora": "12:25",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Foot: Manchester City - SSC Napoli",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
   },
   {
     "data": "2026-11-25",
@@ -801,26 +421,6 @@
   },
   {
     "data": "2026-11-25",
-    "ora": "14:20",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Foot: Real Madrid CF - PSV Eindhoven",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-25",
-    "ora": "15:50",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Paris Saint-Germain - AS Roma",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-25",
     "ora": "16:00",
     "sport": "Tennis",
     "competizione": "Sport Tennis",
@@ -828,16 +428,6 @@
     "paese": "Italia",
     "canale": "SuperTennis",
     "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-25",
-    "ora": "16:15",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Foot: Arsenal FC - Borussia Dortmund",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
   },
   {
     "data": "2026-11-25",
@@ -851,26 +441,6 @@
   },
   {
     "data": "2026-11-25",
-    "ora": "18:30",
-    "sport": "Calcio",
-    "competizione": "Sport Calcio",
-    "evento": "UEFA Champions League",
-    "paese": "Italia",
-    "canale": "Sportitalia",
-    "link": "https://www.sportitalia.it/"
-  },
-  {
-    "data": "2026-11-25",
-    "ora": "18:55",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Le temps additionnel - UEFA Champions League",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-25",
     "ora": "19:15",
     "sport": "Altri Sport",
     "competizione": "Ice Hockey League",
@@ -878,16 +448,6 @@
     "paese": "DAZN Free Italia",
     "canale": "DAZN Free Italia",
     "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-25",
-    "ora": "19:20",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Matchnight",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
   },
   {
     "data": "2026-11-25",
@@ -951,26 +511,6 @@
   },
   {
     "data": "2026-11-25",
-    "ora": "21:00",
-    "sport": "Calcio",
-    "competizione": "Sport Calcio",
-    "evento": "UEFA Champions League",
-    "paese": "Italia",
-    "canale": "Sportitalia",
-    "link": "https://www.sportitalia.it/"
-  },
-  {
-    "data": "2026-11-25",
-    "ora": "21:00",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Foot: Liverpool FC - Manchester United",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-25",
     "ora": "22:00",
     "sport": "Sci Alpino",
     "competizione": "Ski Alpin",
@@ -988,16 +528,6 @@
     "paese": "Italia",
     "canale": "SuperTennis",
     "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-25",
-    "ora": "22:55",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Matchnight",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
   },
   {
     "data": "2026-11-25",
@@ -1020,16 +550,6 @@
     "link": "https://www.eurosport.de/"
   },
   {
-    "data": "2026-11-25",
-    "ora": "23:00",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Le temps additionnel - UEFA Champions League",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
     "data": "2026-11-26",
     "ora": "00:00",
     "sport": "Sci Alpino",
@@ -1041,16 +561,6 @@
   },
   {
     "data": "2026-11-26",
-    "ora": "00:05",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Fussball: Liverpool FC - Manchester United",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-26",
     "ora": "00:45",
     "sport": "Sci Alpino",
     "competizione": "Ski Alpin",
@@ -1058,16 +568,6 @@
     "paese": "Germania",
     "canale": "Eurosport 1 DE",
     "link": "https://www.eurosport.de/"
-  },
-  {
-    "data": "2026-11-26",
-    "ora": "00:45",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Foot: Manchester City - FC Fulham",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
   },
   {
     "data": "2026-11-26",
@@ -1081,36 +581,6 @@
   },
   {
     "data": "2026-11-26",
-    "ora": "01:45",
-    "sport": "Calcio",
-    "competizione": "TV Italia",
-    "evento": "Tiro a Volo",
-    "paese": "Italia",
-    "canale": "Rai Sport",
-    "link": "https://www.raiplay.it/dirette/raisport"
-  },
-  {
-    "data": "2026-11-26",
-    "ora": "01:45",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "UEFA Champions League: Inter - VfB Stoccarda",
-    "paese": "Svizzera",
-    "canale": "RSI La 2",
-    "link": "https://www.rsi.ch/play/tv"
-  },
-  {
-    "data": "2026-11-26",
-    "ora": "02:05",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Fussball: RB Leipzig - RC Lens",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-26",
     "ora": "02:20",
     "sport": "Pallavolo",
     "competizione": "TV Italia",
@@ -1118,36 +588,6 @@
     "paese": "Italia",
     "canale": "Rai Sport",
     "link": "https://www.raiplay.it/dirette/raisport"
-  },
-  {
-    "data": "2026-11-26",
-    "ora": "02:30",
-    "sport": "Calcio",
-    "competizione": "Football",
-    "evento": "Australian Football League",
-    "paese": "Germania",
-    "canale": "More Than Sports TV",
-    "link": "https://morethansports.tv/"
-  },
-  {
-    "data": "2026-11-26",
-    "ora": "02:40",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Foot: OGC Nice - Paris Saint-Germain",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-26",
-    "ora": "04:05",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Fussball: Real Madrid CF - PSV Eindhoven",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
   },
   {
     "data": "2026-11-26",
@@ -1171,66 +611,6 @@
   },
   {
     "data": "2026-11-26",
-    "ora": "05:10",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Foot: Como 1907 - AEK Athens FC",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-26",
-    "ora": "07:05",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Foot: RB Leipzig - RC Lens",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-26",
-    "ora": "07:30",
-    "sport": "Calcio",
-    "competizione": "TV Italia",
-    "evento": "Tiro a Volo",
-    "paese": "Italia",
-    "canale": "Rai Sport",
-    "link": "https://www.raiplay.it/dirette/raisport"
-  },
-  {
-    "data": "2026-11-26",
-    "ora": "08:35",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Fussball: Manchester City - SSC Napoli",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-26",
-    "ora": "09:00",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Foot: Liverpool FC - Manchester United",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-26",
-    "ora": "09:15",
-    "sport": "Calcio",
-    "competizione": "TV Italia",
-    "evento": "Tiro a Volo",
-    "paese": "Italia",
-    "canale": "Rai Sport",
-    "link": "https://www.raiplay.it/dirette/raisport"
-  },
-  {
-    "data": "2026-11-26",
     "ora": "10:50",
     "sport": "Pallavolo",
     "competizione": "TV Italia",
@@ -1241,16 +621,6 @@
   },
   {
     "data": "2026-11-26",
-    "ora": "10:55",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Foot: Club Brugge - Liverpool FC",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-26",
     "ora": "11:00",
     "sport": "Sci Alpino",
     "competizione": "Ski Alpin",
@@ -1258,16 +628,6 @@
     "paese": "Germania",
     "canale": "Eurosport 1 DE",
     "link": "https://www.eurosport.de/"
-  },
-  {
-    "data": "2026-11-26",
-    "ora": "11:20",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Fussball: Liverpool FC - Manchester United",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
   },
   {
     "data": "2026-11-26",
@@ -1301,16 +661,6 @@
   },
   {
     "data": "2026-11-26",
-    "ora": "12:50",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Foot: FC Internazionale Milano - VfB Stuttgart",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-26",
     "ora": "13:55",
     "sport": "Calcio",
     "competizione": "Sport Calcio",
@@ -1341,16 +691,6 @@
   },
   {
     "data": "2026-11-26",
-    "ora": "14:05",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Fussball: Paris Saint-Germain - AS Roma",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-26",
     "ora": "14:25",
     "sport": "Calcio",
     "competizione": "TV Svizzera",
@@ -1361,16 +701,6 @@
   },
   {
     "data": "2026-11-26",
-    "ora": "14:45",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Foot: Paris Saint-Germain - AS Roma",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-26",
     "ora": "14:50",
     "sport": "Calcio",
     "competizione": "TV Italia",
@@ -1378,36 +708,6 @@
     "paese": "Italia",
     "canale": "Rai Sport",
     "link": "https://www.raiplay.it/dirette/raisport"
-  },
-  {
-    "data": "2026-11-26",
-    "ora": "16:00",
-    "sport": "Calcio",
-    "competizione": "Sport Calcio",
-    "evento": "Manchester City TV",
-    "paese": "Italia",
-    "canale": "Sportitalia",
-    "link": "https://www.sportitalia.it/"
-  },
-  {
-    "data": "2026-11-26",
-    "ora": "17:25",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Le temps additionnel - UEFA Champions League",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-26",
-    "ora": "17:35",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Matchnight",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
   },
   {
     "data": "2026-11-26",
@@ -1453,16 +753,6 @@
     "data": "2026-11-26",
     "ora": "18:30",
     "sport": "Calcio",
-    "competizione": "Sport Calcio",
-    "evento": "UEFA Europa League",
-    "paese": "Italia",
-    "canale": "Sportitalia",
-    "link": "https://www.sportitalia.it/"
-  },
-  {
-    "data": "2026-11-26",
-    "ora": "18:30",
-    "sport": "Calcio",
     "competizione": "TV Svizzera",
     "evento": "UEFA Conference League: Ajax Amsterdam - FC Thun",
     "paese": "Svizzera",
@@ -1478,26 +768,6 @@
     "paese": "Svizzera",
     "canale": "RTS 2",
     "link": "https://www.rts.ch/play/tv"
-  },
-  {
-    "data": "2026-11-26",
-    "ora": "18:45",
-    "sport": "Basket & NBA",
-    "competizione": "TV Svizzera",
-    "evento": "Basketball: Valencia Basket - Panathinaikos Athen",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-26",
-    "ora": "19:30",
-    "sport": "Calcio",
-    "competizione": "Fußballmagazin",
-    "evento": "45 – Die Fußball-Halbzeit auf SPORT1",
-    "paese": "Germania",
-    "canale": "Sport1",
-    "link": "https://www.sport1.de/tv-programm"
   },
   {
     "data": "2026-11-26",
@@ -1531,16 +801,6 @@
   },
   {
     "data": "2026-11-26",
-    "ora": "21:00",
-    "sport": "Calcio",
-    "competizione": "Sport Calcio",
-    "evento": "UEFA Europa League",
-    "paese": "Italia",
-    "canale": "Sportitalia",
-    "link": "https://www.sportitalia.it/"
-  },
-  {
-    "data": "2026-11-26",
     "ora": "22:20",
     "sport": "Football Americano",
     "competizione": "American Football",
@@ -1561,16 +821,6 @@
   },
   {
     "data": "2026-11-26",
-    "ora": "22:55",
-    "sport": "Basket & NBA",
-    "competizione": "TV Svizzera",
-    "evento": "Basketball: Valencia Basket - Panathinaikos Athen",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-26",
     "ora": "23:00",
     "sport": "Calcio",
     "competizione": "TV Italia",
@@ -1578,16 +828,6 @@
     "paese": "Italia",
     "canale": "Rai Sport",
     "link": "https://www.raiplay.it/dirette/raisport"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "00:30",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Fussball: LOSC Lille - FC Bayern München",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
   },
   {
     "data": "2026-11-27",
@@ -1601,16 +841,6 @@
   },
   {
     "data": "2026-11-27",
-    "ora": "01:25",
-    "sport": "Basket & NBA",
-    "competizione": "TV Svizzera",
-    "evento": "Basketball: Zalgiris Kaunas - Panathinaikos Athens",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
-  },
-  {
-    "data": "2026-11-27",
     "ora": "02:10",
     "sport": "Football Americano",
     "competizione": "American Football",
@@ -1618,26 +848,6 @@
     "paese": "Germania",
     "canale": "RTL",
     "link": "https://www.rtl.de/"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "03:10",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "UEFA Conference League: Ajax - Thun",
-    "paese": "Svizzera",
-    "canale": "RSI La 2",
-    "link": "https://www.rsi.ch/play/tv"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "04:15",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "Foot: Sabah FC - FC Barcelona",
-    "paese": "Svizzera",
-    "canale": "blue Zoom",
-    "link": "https://www.blueplus.ch/de/bluezoom"
   },
   {
     "data": "2026-11-27",
