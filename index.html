@@ -45,39 +45,6 @@
     }
     .container { max-width: 1100px; margin: 0 auto; padding: 18px 14px; }
 
-    .section-tabs {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-bottom: 16px;
-    }
-    .section-tab {
-      background: var(--card);
-      color: var(--muted);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 12px 14px;
-      font-size: 0.98rem;
-      font-weight: 800;
-      cursor: pointer;
-      transition: all 0.15s;
-      text-align: center;
-    }
-    .section-tab:hover {
-      background: var(--card-hover);
-      color: var(--text);
-    }
-    .section-tab.active-events {
-      background: var(--accent);
-      color: #052e16;
-      border-color: var(--accent);
-    }
-    .section-tab.active-programs {
-      background: var(--accent-mag);
-      color: #2e1065;
-      border-color: var(--accent-mag);
-    }
-
     .search-box {
       width: 100%;
       padding: 13px 16px;
@@ -91,7 +58,14 @@
     }
     .search-box:focus { border-color: var(--accent-blue); }
 
+    .filters-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+      margin-bottom: 14px;
+    }
     .filter-section { margin-bottom: 14px; }
+    .filters-grid .filter-section { margin-bottom: 0; }
     .filter-label {
       font-size: 0.78rem;
       text-transform: uppercase;
@@ -101,15 +75,14 @@
       display: block;
       font-weight: 700;
     }
-    .sport-select {
+    .filter-select {
       width: 100%;
-      max-width: 360px;
       padding: 11px 38px 11px 14px;
       border-radius: 10px;
       border: 1px solid var(--border);
       background-color: var(--card);
       color: var(--text);
-      font-size: 0.98rem;
+      font-size: 0.96rem;
       font-weight: 700;
       cursor: pointer;
       outline: none;
@@ -118,25 +91,56 @@
       background-repeat: no-repeat;
       background-position: right 12px center;
     }
-    .sport-select:focus, .sport-select:hover {
-      border-color: var(--accent);
+    .filter-select:focus, .filter-select:hover {
+      border-color: var(--accent-blue);
     }
 
-    .pills { display: flex; flex-wrap: wrap; gap: 8px; }
-    .pill {
+    .days-row {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 8px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding-bottom: 4px;
+    }
+    .days-row::-webkit-scrollbar { display: none; }
+    .day-pill {
+      flex: 1 0 auto;
+      min-width: 82px;
       background: var(--card);
       color: var(--text);
       border: 1px solid var(--border);
-      padding: 7px 13px;
-      border-radius: 999px;
-      font-size: 0.85rem;
+      border-radius: 10px;
+      padding: 8px 10px;
       cursor: pointer;
+      text-align: center;
+      white-space: nowrap;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1px;
+      transition: background 0.15s, border-color 0.15s;
     }
-    .pill:hover { background: var(--card-hover); }
-    .pill.active { background: var(--accent); color: #052e16; border-color: var(--accent); font-weight: 700; }
-    .pill.active-blue { background: var(--accent-blue); color: #082f49; border-color: var(--accent-blue); font-weight: 700; }
-    .pill.active-dazn { background: var(--dazn); color: #422006; border-color: var(--dazn); font-weight: 700; }
-    .pill.active-mag { background: var(--accent-mag); color: #2e1065; border-color: var(--accent-mag); font-weight: 700; }
+    .day-pill:hover { background: var(--card-hover); }
+    .day-pill .d-top {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      color: var(--muted);
+    }
+    .day-pill .d-sub {
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+    .day-pill.active {
+      background: var(--accent);
+      color: #052e16;
+      border-color: var(--accent);
+    }
+    .day-pill.active .d-top {
+      color: #052e16;
+    }
 
     .stats {
       margin: 14px 0;
@@ -180,7 +184,7 @@
       display: block;
       padding-top: 14px;
     }
-    .day-group { margin-top: 22px; }
+    .day-group { margin-top: 18px; }
     .day-title {
       font-size: 1.15rem;
       font-weight: 700;
@@ -379,26 +383,23 @@
   </header>
 
   <div class="container">
-    <div class="section-tabs">
-      <button type="button" id="tabEvents" class="section-tab active-events">🏅 Eventi Sportivi</button>
-      <button type="button" id="tabPrograms" class="section-tab">📺 Programmi Sportivi</button>
-    </div>
-
     <input type="text" id="searchInput" class="search-box" placeholder="🔍 Cerca squadra, torneo, programma, canale o nazione..." />
 
-    <div class="filter-section" id="sportSelectSection">
-      <label class="filter-label" for="sportSelect">🏅 Scegli lo sport</label>
-      <select id="sportSelect" class="sport-select"></select>
+    <div class="filters-grid">
+      <div class="filter-section">
+        <label class="filter-label" for="sportSelect">🏅 Scegli lo sport</label>
+        <select id="sportSelect" class="filter-select"></select>
+      </div>
+
+      <div class="filter-section">
+        <label class="filter-label" for="countrySelect">🌍 Nazione / Piattaforma</label>
+        <select id="countrySelect" class="filter-select"></select>
+      </div>
     </div>
 
     <div class="filter-section">
       <span class="filter-label">📅 Giorno</span>
-      <div class="pills" id="dayFilters"></div>
-    </div>
-
-    <div class="filter-section">
-      <span class="filter-label">🌍 Nazione / Piattaforma</span>
-      <div class="pills" id="countryFilters"></div>
+      <div class="days-row" id="dayFilters"></div>
     </div>
 
     <div class="stats">
@@ -462,7 +463,12 @@
       "Calcio": "⚽", "Pallavolo": "🏐", "Basket & NBA": "🏀",
       "Formula 1": "🏎️", "MotoGP": "🏍️", "Tennis": "🎾",
       "Sci Alpino": "⛷️", "Football Americano": "🏈",
-      "College Football": "🎓", "Altri Sport": "🏅"
+      "College Football": "🎓", "Altri Sport": "🏅",
+      "Programmi & Magazine": "📺"
+    };
+
+    const sportLabels = {
+      "Programmi & Magazine": "Programmi Sportivi (DAZN IT)"
     };
 
     const countryFlags = {
@@ -518,10 +524,9 @@
     const LIVE_WINDOW_MINUTES = 120;
 
     let allEvents = [];
-    let activeTab = "events"; // "events" | "programs"
     let selectedSport = "Calcio";
-    let selectedDay = "Tutti";
     let selectedCountry = "Tutti";
+    let selectedDay = "";
     let searchQuery = "";
     let showConcluded = false;
 
@@ -547,6 +552,26 @@
       return { dateStr, mins };
     }
 
+    function getNext7Days(todayStr) {
+      const [y, m, d] = todayStr.split("-").map(Number);
+      const days = [];
+      for (let i = 0; i < 7; i++) {
+        const dt = new Date(Date.UTC(y, m - 1, d + i));
+        const yy = dt.getUTCFullYear();
+        const mm = String(dt.getUTCMonth() + 1).padStart(2, "0");
+        const dd = String(dt.getUTCDate()).padStart(2, "0");
+        const dateStr = `${yy}-${mm}-${dd}`;
+        const weekday = dt.toLocaleDateString("it-IT", { weekday: "short", timeZone: "UTC" }).replace(".", "");
+        const dayNum = dt.toLocaleDateString("it-IT", { day: "2-digit", month: "short", timeZone: "UTC" }).replace(".", "");
+        days.push({
+          dateStr,
+          topLabel: i === 0 ? "OGGI" : (i === 1 ? "DOMANI" : weekday.toUpperCase()),
+          subLabel: dayNum
+        });
+      }
+      return days;
+    }
+
     function formatDayLabel(dateStr) {
       const [y, m, d] = dateStr.split("-").map(Number);
       const date = new Date(y, m - 1, d);
@@ -555,11 +580,10 @@
       return isToday ? `OGGI • ${label}` : label;
     }
 
-    function formatShortDayTime(dateStr, ora, todayStr) {
-      if (dateStr === todayStr) return `Oggi • ${ora}`;
+    function formatShortDay(dateStr, todayStr) {
+      if (dateStr === todayStr) return "Oggi";
       const [y, m, d] = dateStr.split("-").map(Number);
-      const dt = new Date(y, m - 1, d);
-      return `${dt.toLocaleDateString("it-IT", { weekday: "short", day: "2-digit", month: "2-digit" })} • ${ora}`;
+      return new Date(y, m - 1, d).toLocaleDateString("it-IT", { weekday: "short", day: "numeric", month: "short" });
     }
 
     function timeToMinutes(ora) {
@@ -709,105 +733,85 @@
       );
     }
 
-    function getSectionBaseEvents() {
-      if (activeTab === "programs") {
-        return allEvents.filter(ev => ev.sport === MAGAZINE_KEY);
-      }
-      return allEvents.filter(ev => ev.sport === selectedSport);
+    function sportDisplayName(s) {
+      return `${sportIcons[s] || "🏅"} ${sportLabels[s] || s}`;
     }
 
     function renderControls() {
-      const tabEv = document.getElementById("tabEvents");
-      const tabPr = document.getElementById("tabPrograms");
-      tabEv.className = `section-tab ${activeTab === "events" ? "active-events" : ""}`;
-      tabPr.className = `section-tab ${activeTab === "programs" ? "active-programs" : ""}`;
-
-      const sportSection = document.getElementById("sportSelectSection");
       const sportSelect = document.getElementById("sportSelect");
       const preferredOrder = Object.keys(sportIcons);
-      const uniqueSports = [...new Set(allEvents.filter(e => e.sport !== MAGAZINE_KEY).map(e => e.sport))].sort((a, b) => {
+      const uniqueSports = [...new Set(allEvents.map(e => e.sport))].sort((a, b) => {
         const ia = preferredOrder.indexOf(a);
         const ib = preferredOrder.indexOf(b);
         return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib);
       });
 
-      if (activeTab === "events") {
-        sportSection.style.display = "block";
-        if (uniqueSports.length > 0 && !uniqueSports.includes(selectedSport)) {
-          selectedSport = uniqueSports.includes("Calcio") ? "Calcio" : uniqueSports[0];
-        }
-        sportSelect.innerHTML = "";
-        uniqueSports.forEach(s => {
-          const opt = document.createElement("option");
-          opt.value = s;
-          opt.textContent = `${sportIcons[s] || "🏅"} ${s}`;
-          sportSelect.appendChild(opt);
-        });
-        sportSelect.value = selectedSport;
-      } else {
-        sportSection.style.display = "none";
+      if (uniqueSports.length > 0 && !uniqueSports.includes(selectedSport)) {
+        selectedSport = uniqueSports.includes("Calcio") ? "Calcio" : uniqueSports[0];
       }
 
-      const baseEvents = getSectionBaseEvents();
-      const uniqueDates = [...new Set(baseEvents.map(e => e.data))].sort();
-      if (selectedDay !== "Tutti" && !uniqueDates.includes(selectedDay)) {
-        selectedDay = "Tutti";
-      }
-
-      const activePillClass = activeTab === "programs" ? "active-mag" : "active";
-      const dayContainer = document.getElementById("dayFilters");
-      dayContainer.innerHTML = "";
-
-      const allDayBtn = document.createElement("button");
-      allDayBtn.className = `pill ${selectedDay === "Tutti" ? activePillClass : ""}`;
-      allDayBtn.textContent = "Tutta la settimana";
-      allDayBtn.onclick = () => { selectedDay = "Tutti"; updateUI(); };
-      dayContainer.appendChild(allDayBtn);
-
-      uniqueDates.forEach(dateStr => {
-        const btn = document.createElement("button");
-        btn.className = `pill ${selectedDay === dateStr ? activePillClass : ""}`;
-        const [y, m, d] = dateStr.split("-").map(Number);
-        const dt = new Date(y, m - 1, d);
-        btn.textContent = dt.toLocaleDateString("it-IT", { weekday: "short", day: "numeric", month: "short" });
-        btn.onclick = () => { selectedDay = dateStr; updateUI(); };
-        dayContainer.appendChild(btn);
+      sportSelect.innerHTML = "";
+      uniqueSports.forEach(s => {
+        const opt = document.createElement("option");
+        opt.value = s;
+        opt.textContent = sportDisplayName(s);
+        sportSelect.appendChild(opt);
       });
+      if (selectedSport) sportSelect.value = selectedSport;
 
-      const uniqueCountries = [...new Set(baseEvents.map(e => e.paese))];
-      const hasAnyDazn = uniqueCountries.some(c => c.startsWith("DAZN Free"));
+      const countrySelect = document.getElementById("countrySelect");
+      const sportEvents = allEvents.filter(e => e.sport === selectedSport);
+      const uniqueCountries = [...new Set(sportEvents.map(e => e.paese))];
+      const daznCountries = uniqueCountries.filter(c => c.startsWith("DAZN Free"));
+
       if (
         selectedCountry !== "Tutti" &&
-        !(selectedCountry === "ALL_DAZN" && hasAnyDazn) &&
+        !(selectedCountry === "ALL_DAZN" && daznCountries.length > 1) &&
         !uniqueCountries.includes(selectedCountry)
       ) {
         selectedCountry = "Tutti";
       }
 
-      const countryContainer = document.getElementById("countryFilters");
-      countryContainer.innerHTML = "";
+      countrySelect.innerHTML = "";
+      const optAll = document.createElement("option");
+      optAll.value = "Tutti";
+      optAll.textContent = "🌍 Tutte";
+      countrySelect.appendChild(optAll);
 
-      const allCBtn = document.createElement("button");
-      allCBtn.className = `pill ${selectedCountry === "Tutti" ? "active-blue" : ""}`;
-      allCBtn.textContent = "Tutte";
-      allCBtn.onclick = () => { selectedCountry = "Tutti"; updateUI(); };
-      countryContainer.appendChild(allCBtn);
-
-      if (hasAnyDazn && uniqueCountries.filter(c => c.startsWith("DAZN Free")).length > 1) {
-        const daznAllBtn = document.createElement("button");
-        daznAllBtn.className = `pill ${selectedCountry === "ALL_DAZN" ? "active-dazn" : ""}`;
-        daznAllBtn.textContent = "⚡ Tutti i DAZN Free";
-        daznAllBtn.onclick = () => { selectedCountry = "ALL_DAZN"; updateUI(); };
-        countryContainer.appendChild(daznAllBtn);
+      if (daznCountries.length > 1) {
+        const optDaznAll = document.createElement("option");
+        optDaznAll.value = "ALL_DAZN";
+        optDaznAll.textContent = "⚡ Tutti i DAZN Free";
+        countrySelect.appendChild(optDaznAll);
       }
 
       uniqueCountries.forEach(c => {
-        const isDazn = c.startsWith("DAZN Free");
+        const opt = document.createElement("option");
+        opt.value = c;
+        opt.textContent = `${countryFlags[c] || "🌍"} ${c}`;
+        countrySelect.appendChild(opt);
+      });
+      countrySelect.value = selectedCountry;
+
+      const todayStr = getRomeNow().dateStr;
+      const days7 = getNext7Days(todayStr);
+      if (!days7.some(d => d.dateStr === selectedDay)) {
+        selectedDay = todayStr;
+      }
+
+      const dayContainer = document.getElementById("dayFilters");
+      dayContainer.innerHTML = "";
+      days7.forEach(d => {
         const btn = document.createElement("button");
-        btn.className = `pill ${selectedCountry === c ? (isDazn ? "active-dazn" : "active-blue") : ""}`;
-        btn.textContent = `${countryFlags[c] || "🌍"} ${c}`;
-        btn.onclick = () => { selectedCountry = c; updateUI(); };
-        countryContainer.appendChild(btn);
+        btn.type = "button";
+        btn.className = `day-pill ${selectedDay === d.dateStr ? "active" : ""}`;
+        btn.innerHTML = `<span class="d-top">${escapeHtml(d.topLabel)}</span><span class="d-sub">${escapeHtml(d.subLabel)}</span>`;
+        btn.onclick = () => {
+          selectedDay = d.dateStr;
+          showConcluded = false;
+          updateUI();
+        };
+        dayContainer.appendChild(btn);
       });
     }
 
@@ -823,12 +827,12 @@
       `;
     }
 
-    function createCardElement(ev, isConcluded, todayStr, includeDateInTime) {
+    function createCardElement(ev, isConcluded) {
       const isMag = ev.sport === MAGAZINE_KEY;
       const card = document.createElement("div");
       card.className = `card ${isMag ? "magazine" : ""} ${isConcluded ? "concluded" : ""}`;
       const icon = isMag ? "📺" : (sportIcons[ev.sport] || "🏅");
-      const sportLabel = isMag ? "Programma TV" : ev.sport;
+      const sportTag = isMag ? "Programma Sportivo" : ev.sport;
       const previewChannels = ev.channels.slice(0, PREVIEW_CHANNELS_COUNT);
       const extraChannels = ev.channels.slice(PREVIEW_CHANNELS_COUNT);
       const hasExtra = extraChannels.length > 0;
@@ -836,18 +840,14 @@
         ? "+ Altro 1 canale ▾"
         : `+ Altri ${extraChannels.length} canali ▾`;
 
-      const timeLabel = includeDateInTime
-        ? formatShortDayTime(ev.data, ev.ora, todayStr)
-        : ev.ora;
-
       card.innerHTML = `
         <div class="${hasExtra ? "card-header-clickable" : ""}">
           <div class="card-top">
             <div class="time-group">
-              <span class="time-badge">🕒 ${escapeHtml(timeLabel)}</span>
+              <span class="time-badge">🕒 ${escapeHtml(ev.ora)}</span>
               ${!isConcluded && ev.isLive ? `<span class="live-badge">🔴 IN CORSO</span>` : ""}
             </div>
-            <span class="sport-tag">${icon} ${escapeHtml(sportLabel)}</span>
+            <span class="sport-tag">${icon} ${escapeHtml(sportTag)}</span>
           </div>
           <div class="comp-name">${escapeHtml(ev.competizione)}</div>
           <div class="event-title">${escapeHtml(ev.evento)}</div>
@@ -878,78 +878,84 @@
       return card;
     }
 
-    function renderEmptyWithHints(container, q) {
+    function renderEmptyWithHints(container, q, todayStr) {
       const box = document.createElement("div");
       box.className = "empty-msg";
-      const currentName = activeTab === "programs" ? "Programmi Sportivi" : (selectedSport || "questo sport");
-      box.innerHTML = `😕 Nessun risultato in <strong>${escapeHtml(currentName)}</strong> con questi filtri.`;
+      box.innerHTML = `😕 Nessun evento di <strong>${escapeHtml(sportLabels[selectedSport] || selectedSport)}</strong> per <strong>${escapeHtml(formatShortDay(selectedDay, todayStr))}</strong>.`;
+
+      const hints = document.createElement("div");
+      hints.className = "hint-jumps";
+
+      const days7 = getNext7Days(todayStr).map(d => d.dateStr);
+      const nextDayEv = allEvents.find(ev =>
+        ev.sport === selectedSport &&
+        ev.data !== selectedDay &&
+        days7.includes(ev.data) &&
+        (selectedCountry === "Tutti" ||
+          (selectedCountry === "ALL_DAZN" && (ev.paese || "").startsWith("DAZN Free")) ||
+          ev.paese === selectedCountry) &&
+        matchesSearch(ev, q)
+      );
+      if (nextDayEv) {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "hint-btn";
+        btn.textContent = `Vedi ${formatShortDay(nextDayEv.data, todayStr)}`;
+        btn.onclick = () => {
+          selectedDay = nextDayEv.data;
+          showConcluded = false;
+          updateUI();
+        };
+        hints.appendChild(btn);
+      }
 
       if (q.length >= 2) {
         const otherMatches = {};
         allEvents.forEach(ev => {
-          if (!matchesSearch(ev, q)) return;
-          if (activeTab === "programs" && ev.sport === MAGAZINE_KEY) return;
-          if (activeTab === "events" && ev.sport === selectedSport) return;
+          if (ev.sport === selectedSport || !matchesSearch(ev, q)) return;
           otherMatches[ev.sport] = (otherMatches[ev.sport] || 0) + 1;
         });
-
-        const keys = Object.keys(otherMatches);
-        if (keys.length > 0) {
-          const hints = document.createElement("div");
-          hints.className = "hint-jumps";
-          keys.forEach(sp => {
-            const btn = document.createElement("button");
-            btn.type = "button";
-            btn.className = "hint-btn";
-            const label = sp === MAGAZINE_KEY
-              ? `📺 Programmi Sportivi (${otherMatches[sp]})`
-              : `${sportIcons[sp] || "🏅"} ${sp} (${otherMatches[sp]})`;
-            btn.textContent = `Vedi in ${label}`;
-            btn.onclick = () => {
-              if (sp === MAGAZINE_KEY) {
-                activeTab = "programs";
-              } else {
-                activeTab = "events";
-                selectedSport = sp;
-              }
-              selectedDay = "Tutti";
-              selectedCountry = "Tutti";
-              showConcluded = false;
-              updateUI();
-            };
-            hints.appendChild(btn);
-          });
-          box.appendChild(hints);
-        }
+        Object.keys(otherMatches).forEach(sp => {
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "hint-btn";
+          btn.textContent = `Cerca in ${sportDisplayName(sp)} (${otherMatches[sp]})`;
+          btn.onclick = () => {
+            selectedSport = sp;
+            selectedCountry = "Tutti";
+            showConcluded = false;
+            updateUI();
+          };
+          hints.appendChild(btn);
+        });
       }
 
+      if (hints.children.length > 0) box.appendChild(hints);
       container.appendChild(box);
     }
 
     function renderEvents() {
       const container = document.getElementById("eventsContainer");
       const q = searchQuery.trim().toLowerCase();
-      const baseEvents = getSectionBaseEvents();
+      const { dateStr: todayStr, mins: nowMins } = getRomeNow();
 
-      const filtered = baseEvents.filter(ev => {
-        const matchDay = selectedDay === "Tutti" || ev.data === selectedDay;
+      const filtered = allEvents.filter(ev => {
+        if (ev.sport !== selectedSport) return false;
+        if (ev.data !== selectedDay) return false;
         const matchCountry =
           selectedCountry === "Tutti" ||
           (selectedCountry === "ALL_DAZN" && (ev.paese || "").startsWith("DAZN Free")) ||
           ev.paese === selectedCountry;
-        return matchDay && matchCountry && matchesSearch(ev, q);
+        return matchCountry && matchesSearch(ev, q);
       });
 
       const groupedEvents = groupEvents(filtered);
-      const { dateStr: todayStr, mins: nowMins } = getRomeNow();
-
       const activeEvents = [];
       const concludedEvents = [];
 
       groupedEvents.forEach(ev => {
-        const isPastDay = ev.data < todayStr;
         const isTodayConcluded = ev.data === todayStr && (nowMins - ev.mins) > LIVE_WINDOW_MINUTES;
-        if (isPastDay || isTodayConcluded) {
+        if (isTodayConcluded) {
           concludedEvents.push(ev);
         } else {
           ev.isLive = ev.data === todayStr && ev.mins <= nowMins;
@@ -957,19 +963,17 @@
         }
       });
 
-      const sectionLabel = activeTab === "programs"
-        ? "📺 Programmi Sportivi"
-        : `${sportIcons[selectedSport] || "🏅"} ${selectedSport}`;
-      const evWord = activeEvents.length === 1 ? "in programma" : "in programma";
+      const dayWord = formatShortDay(selectedDay, todayStr);
+      const spWord = sportDisplayName(selectedSport);
       document.getElementById("resultsCount").textContent =
         concludedEvents.length > 0
-          ? `${sectionLabel}: ${activeEvents.length} ${evWord} • ${concludedEvents.length} conclusi`
-          : `${sectionLabel}: ${activeEvents.length} ${evWord}`;
+          ? `${spWord} • ${dayWord}: ${activeEvents.length} in programma • ${concludedEvents.length} conclusi`
+          : `${spWord} • ${dayWord}: ${activeEvents.length} in programma`;
 
       container.innerHTML = "";
 
       if (activeEvents.length === 0 && concludedEvents.length === 0) {
-        renderEmptyWithHints(container, q);
+        renderEmptyWithHints(container, q, todayStr);
         return;
       }
 
@@ -992,7 +996,7 @@
 
         const cGrid = document.createElement("div");
         cGrid.className = "events-grid";
-        concludedEvents.forEach(ev => cGrid.appendChild(createCardElement(ev, true, todayStr, ev.data !== todayStr)));
+        concludedEvents.forEach(ev => cGrid.appendChild(createCardElement(ev, true)));
         panel.appendChild(cGrid);
 
         toggleBtn.addEventListener("click", () => {
@@ -1009,35 +1013,24 @@
       if (activeEvents.length === 0) {
         const note = document.createElement("div");
         note.className = "empty-msg";
-        note.textContent = "🌙 Nessun altro in programma al momento (vedi quelli già conclusi qui sopra).";
+        note.textContent = "🌙 Nessun altro evento in programma per oggi (vedi quelli già conclusi qui sopra).";
         container.appendChild(note);
         return;
       }
 
-      const byDay = {};
-      activeEvents.forEach(ev => {
-        if (!byDay[ev.data]) byDay[ev.data] = [];
-        byDay[ev.data].push(ev);
-      });
+      const section = document.createElement("div");
+      section.className = "day-group";
+      const title = document.createElement("div");
+      title.className = `day-title ${selectedSport === MAGAZINE_KEY ? "mag" : ""}`;
+      title.textContent = formatDayLabel(selectedDay);
+      section.appendChild(title);
 
-      Object.keys(byDay).sort().forEach(dateStr => {
-        const section = document.createElement("div");
-        section.className = "day-group";
-        const title = document.createElement("div");
-        title.className = `day-title ${activeTab === "programs" ? "mag" : ""}`;
-        title.textContent = formatDayLabel(dateStr);
-        section.appendChild(title);
+      const grid = document.createElement("div");
+      grid.className = "events-grid";
+      activeEvents.forEach(ev => grid.appendChild(createCardElement(ev, false)));
 
-        const grid = document.createElement("div");
-        grid.className = "events-grid";
-
-        byDay[dateStr].forEach(ev => {
-          grid.appendChild(createCardElement(ev, false, todayStr, false));
-        });
-
-        section.appendChild(grid);
-        container.appendChild(section);
-      });
+      section.appendChild(grid);
+      container.appendChild(section);
     }
 
     function updateUI() {
@@ -1045,28 +1038,16 @@
       renderEvents();
     }
 
-    document.getElementById("tabEvents").addEventListener("click", () => {
-      if (activeTab === "events") return;
-      activeTab = "events";
-      selectedDay = "Tutti";
-      selectedCountry = "Tutti";
-      showConcluded = false;
-      updateUI();
-    });
-
-    document.getElementById("tabPrograms").addEventListener("click", () => {
-      if (activeTab === "programs") return;
-      activeTab = "programs";
-      selectedDay = "Tutti";
-      selectedCountry = "Tutti";
-      showConcluded = false;
-      updateUI();
-    });
-
     document.getElementById("sportSelect").addEventListener("change", e => {
       selectedSport = e.target.value;
       showConcluded = false;
       updateUI();
+    });
+
+    document.getElementById("countrySelect").addEventListener("change", e => {
+      selectedCountry = e.target.value;
+      showConcluded = false;
+      renderEvents();
     });
 
     document.getElementById("searchInput").addEventListener("input", e => {
@@ -1077,7 +1058,7 @@
     fetch(`eventi.json?v=${Date.now()}`)
       .then(res => res.json())
       .then(data => {
-        allEvents = data.filter(ev => !(ev.sport === MAGAZINE_KEY && ev.paese !== "Italia" && ev.paese !== "DAZN Free Italia"));
+        allEvents = data.filter(ev => !(ev.sport === MAGAZINE_KEY && ev.paese !== "DAZN Free Italia"));
         updateUI();
       })
       .catch(() => {
