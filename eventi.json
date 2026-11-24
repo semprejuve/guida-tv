@@ -14,7 +14,7 @@
     "ora": "02:10",
     "sport": "Football Americano",
     "competizione": "American Football",
-    "evento": "American Football: NFL",
+    "evento": "NFL: Washington Commanders – Cincinnati Bengals",
     "paese": "Germania",
     "canale": "RTL",
     "link": "https://www.rtl.de/"
@@ -61,16 +61,6 @@
   },
   {
     "data": "2026-11-24",
-    "ora": "13:30",
-    "sport": "Calcio",
-    "competizione": "Sport Notizie",
-    "evento": "B-Lab",
-    "paese": "Italia",
-    "canale": "Sportitalia",
-    "link": "https://www.sportitalia.it/"
-  },
-  {
-    "data": "2026-11-24",
     "ora": "14:05",
     "sport": "Programmi & Magazine",
     "competizione": "Serie A Enilive",
@@ -84,7 +74,7 @@
     "ora": "14:10",
     "sport": "Pallavolo",
     "competizione": "Pallavolo",
-    "evento": "Pallavolo: Serie A Maschile",
+    "evento": "6a giornata: Piacenza - Perugia",
     "paese": "Italia",
     "canale": "Rai Sport",
     "link": "https://www.raiplay.it/dirette/raisport"
@@ -128,6 +118,16 @@
     "paese": "Germania",
     "canale": "Eurosport 1 DE",
     "link": "https://www.eurosport.de/"
+  },
+  {
+    "data": "2026-11-24",
+    "ora": "15:20",
+    "sport": "Calcio",
+    "competizione": "Rugby",
+    "evento": "Hull FC – Wigan Warriors",
+    "paese": "Germania",
+    "canale": "More Than Sports TV",
+    "link": "https://morethansports.tv/"
   },
   {
     "data": "2026-11-24",
@@ -374,7 +374,7 @@
     "ora": "12:00",
     "sport": "Calcio",
     "competizione": "Football",
-    "evento": "Australian Football League",
+    "evento": "Port Adelaide – Sydney Swans",
     "paese": "Germania",
     "canale": "More Than Sports TV",
     "link": "https://morethansports.tv/"
@@ -398,16 +398,6 @@
     "paese": "Svizzera",
     "canale": "RTS 1",
     "link": "https://www.rts.ch/play/tv"
-  },
-  {
-    "data": "2026-11-25",
-    "ora": "14:00",
-    "sport": "Calcio",
-    "competizione": "Sport Notizie",
-    "evento": "B-Lab",
-    "paese": "Italia",
-    "canale": "Sportitalia",
-    "link": "https://www.sportitalia.it/"
   },
   {
     "data": "2026-11-25",
@@ -574,7 +564,7 @@
     "ora": "01:00",
     "sport": "Calcio",
     "competizione": "Sport Calcio",
-    "evento": "Campionato argentino",
+    "evento": "Boca Juniors vs. Independiente Rivadavia",
     "paese": "Italia",
     "canale": "Sportitalia",
     "link": "https://www.sportitalia.it/"
@@ -671,16 +661,6 @@
   },
   {
     "data": "2026-11-26",
-    "ora": "14:00",
-    "sport": "Calcio",
-    "competizione": "Sport Notizie",
-    "evento": "B-Lab",
-    "paese": "Italia",
-    "canale": "Sportitalia",
-    "link": "https://www.sportitalia.it/"
-  },
-  {
-    "data": "2026-11-26",
     "ora": "14:05",
     "sport": "Programmi & Magazine",
     "competizione": "Serie A Enilive",
@@ -744,7 +724,7 @@
     "ora": "18:30",
     "sport": "Football Americano",
     "competizione": "American Football",
-    "evento": "American Football: NFL",
+    "evento": "NFL: Detroit Lions – Chicago Bears",
     "paese": "Germania",
     "canale": "Nitro",
     "link": "https://www.rtl.de/"
@@ -774,7 +754,7 @@
     "ora": "20:15",
     "sport": "Calcio",
     "competizione": "Fußball",
-    "evento": "Fußball: UEFA Europa Conference League",
+    "evento": "4. Spieltag: SC Freiburg – FC Twente Enschede",
     "paese": "Germania",
     "canale": "RTL",
     "link": "https://www.rtl.de/"
@@ -804,7 +784,7 @@
     "ora": "22:20",
     "sport": "Football Americano",
     "competizione": "American Football",
-    "evento": "American Football: NFL",
+    "evento": "NFL: Dallas Cowboys – Philadelphia Eagles",
     "paese": "Germania",
     "canale": "Nitro",
     "link": "https://www.rtl.de/"
@@ -830,6 +810,16 @@
     "link": "https://www.raiplay.it/dirette/raisport"
   },
   {
+    "data": "2026-11-26",
+    "ora": "23:45",
+    "sport": "Calcio",
+    "competizione": "Rugby",
+    "evento": "Wakefield Trinity – Wigan Warriors",
+    "paese": "Germania",
+    "canale": "More Than Sports TV",
+    "link": "https://morethansports.tv/"
+  },
+  {
     "data": "2026-11-27",
     "ora": "01:10",
     "sport": "Basket & NBA",
@@ -844,7 +834,7 @@
     "ora": "02:10",
     "sport": "Football Americano",
     "competizione": "American Football",
-    "evento": "American Football: NFL",
+    "evento": "NFL: Buffalo Bills – Kansas City Chiefs",
     "paese": "Germania",
     "canale": "RTL",
     "link": "https://www.rtl.de/"
@@ -944,7 +934,7 @@
     "ora": "20:20",
     "sport": "Calcio",
     "competizione": "Football",
-    "evento": "Australian Football League",
+    "evento": "Sydney Swans – Adelaide Crows",
     "paese": "Germania",
     "canale": "More Than Sports TV",
     "link": "https://morethansports.tv/"
