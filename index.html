@@ -103,6 +103,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 12px;
+      align-items: start;
     }
     .card {
       background: var(--card);
@@ -115,6 +116,7 @@
       gap: 10px;
     }
     .card:hover { border-color: var(--accent-blue); }
+    .card-header-clickable { cursor: pointer; }
     .card-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
     .time-badge {
       background: #0f172a;
@@ -128,32 +130,82 @@
     .sport-tag { font-size: 0.8rem; color: var(--accent-blue); font-weight: 600; }
     .comp-name { font-size: 0.78rem; color: var(--muted); text-transform: uppercase; margin-top: 8px; }
     .event-title { font-size: 1.03rem; font-weight: 700; color: var(--text); }
-    .card-footer {
+    .card-channels {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+    }
+    .channel-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 8px;
-      padding-top: 8px;
-      border-top: 1px solid var(--border);
-    }
-    .channel-badge {
+      padding: 6px 9px;
+      border-radius: 8px;
+      background: #0f172a;
+      border: 1px solid transparent;
+      text-decoration: none;
+      color: #e2e8f0;
       font-size: 0.82rem;
       font-weight: 600;
-      padding: 4px 9px;
-      border-radius: 6px;
-      background: #0f172a;
-      color: #e2e8f0;
+      transition: border-color 0.15s, background 0.15s;
     }
-    .channel-badge.dazn { color: var(--dazn); border: 1px solid rgba(250, 204, 21, 0.35); }
-    .watch-btn {
-      text-decoration: none;
-      background: var(--accent-blue);
-      color: #082f49;
-      font-weight: 700;
-      font-size: 0.82rem;
-      padding: 6px 11px;
-      border-radius: 8px;
+    .channel-row:hover {
+      border-color: var(--accent-blue);
+      background: #162238;
+    }
+    .channel-row.dazn {
+      color: var(--dazn);
+      border-color: rgba(250, 204, 21, 0.28);
+    }
+    .channel-row.dazn:hover {
+      border-color: var(--dazn);
+    }
+    .channel-name {
+      overflow: hidden;
+      text-overflow: ellipsis;
       white-space: nowrap;
+    }
+    .channel-time {
+      color: var(--muted);
+      font-weight: 500;
+      font-size: 0.76rem;
+    }
+    .channel-open {
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: #082f49;
+      background: var(--accent-blue);
+      padding: 3px 8px;
+      border-radius: 6px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .extra-channels {
+      display: none;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .extra-channels.open {
+      display: flex;
+    }
+    .toggle-channels-btn {
+      width: 100%;
+      background: rgba(56, 189, 248, 0.08);
+      color: var(--accent-blue);
+      border: 1px dashed rgba(56, 189, 248, 0.35);
+      border-radius: 8px;
+      padding: 6px 10px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: center;
+      transition: background 0.15s;
+    }
+    .toggle-channels-btn:hover {
+      background: rgba(56, 189, 248, 0.18);
     }
     .empty-msg {
       text-align: center;
@@ -190,7 +242,7 @@
   </header>
 
   <div class="container">
-    <input type="text" id="searchInput" class="search-box" placeholder="🔍 Cerca squadra, torneo, canale o nazione (es. DAZN, Belgio, Giappone, TV8, CazéTV, NBA)..." />
+    <input type="text" id="searchInput" class="search-box" placeholder="🔍 Cerca squadra, torneo, canale o nazione (es. DAZN, Spagna, TV8, CazéTV, NBA)..." />
 
     <div class="filter-section">
       <span class="filter-label">📅 Giorno</span>
@@ -278,6 +330,48 @@
       "DAZN Free Portogallo": "🇵🇹⚡", "DAZN Free": "⚡"
     };
 
+    const TEAM_ALIASES = {
+      "italia": "italia", "italien": "italia", "italie": "italia", "italy": "italia",
+      "germania": "germania", "deutschland": "germania", "allemagne": "germania", "germany": "germania", "alemanha": "germania", "alemania": "germania",
+      "francia": "francia", "frankreich": "francia", "france": "francia", "franca": "francia",
+      "spagna": "spagna", "spanien": "spagna", "espagne": "spagna", "spain": "spagna", "espanha": "spagna", "espana": "spagna",
+      "portogallo": "portogallo", "portugal": "portogallo",
+      "inghilterra": "inghilterra", "england": "inghilterra", "angleterre": "inghilterra", "inglaterra": "inghilterra",
+      "gran bretagna": "greatbritain", "great britain": "greatbritain", "gran bretana": "greatbritain", "uk": "greatbritain", "grossbritannien": "greatbritain",
+      "repubblica ceca": "czech", "czech republic": "czech", "republica checa": "czech", "tschechien": "czech", "republique tcheque": "czech",
+      "svizzera": "svizzera", "schweiz": "svizzera", "suisse": "svizzera", "switzerland": "svizzera", "suica": "svizzera",
+      "olanda": "olanda", "paesi bassi": "olanda", "netherlands": "olanda", "niederlande": "olanda", "pays bas": "olanda", "holanda": "olanda",
+      "belgio": "belgio", "belgien": "belgio", "belgique": "belgio", "belgium": "belgio", "belgica": "belgio",
+      "stati uniti": "usa", "usa": "usa", "united states": "usa", "estados unidos": "usa",
+      "brasile": "brasile", "brasilien": "brasile", "bresil": "brasile", "brazil": "brasile", "brasil": "brasile",
+      "argentina": "argentina", "argentinien": "argentina", "argentine": "argentina",
+      "austria": "austria", "osterreich": "austria", "autriche": "austria",
+      "cina": "china", "china": "china", "chine": "china",
+      "giappone": "giappone", "japan": "giappone", "japon": "giappone", "japao": "giappone",
+      "bayern monaco": "bayern", "bayern munchen": "bayern", "bayern munich": "bayern", "bayern": "bayern",
+      "barcellona": "barcelona", "barcelona": "barcelona", "barca": "barcelona",
+      "real madrid": "realmadrid",
+      "atletico madrid": "atleticomadrid", "atletico de madrid": "atleticomadrid",
+      "inter": "inter", "internazionale": "inter", "inter milan": "inter", "inter milano": "inter",
+      "milan": "milan",
+      "psg": "psg", "paris saint germain": "psg", "paris sg": "psg",
+      "manchester city": "mancity", "man city": "mancity",
+      "manchester united": "manunited", "man united": "manunited", "man utd": "manunited",
+      "borussia dortmund": "dortmund", "dortmund": "dortmund", "bvb": "dortmund",
+      "bayer leverkusen": "leverkusen", "leverkusen": "leverkusen",
+      "eintracht francoforte": "eintrachtfrankfurt", "eintracht frankfurt": "eintrachtfrankfurt",
+      "stoccarda": "stuttgart", "stuttgart": "stuttgart",
+      "lipsia": "leipzig", "leipzig": "leipzig",
+      "colonia": "koln", "koln": "koln",
+      "amburgo": "hamburger", "hamburger": "hamburger", "hsv": "hamburger",
+      "olympique marsiglia": "marsiglia", "marseille": "marsiglia", "marsiglia": "marsiglia",
+      "olympique lione": "lione", "lyon": "lione", "lione": "lione",
+      "sporting lisbona": "sporting", "sporting cp": "sporting", "sporting": "sporting",
+      "stella rossa": "stellarossa", "red star": "stellarossa", "crvena zvezda": "stellarossa"
+    };
+
+    const PREVIEW_CHANNELS_COUNT = 2;
+
     let allEvents = [];
     let selectedDay = "Tutti";
     let selectedCountry = "Tutti";
@@ -300,6 +394,142 @@
         date.getDate() === today.getDate();
       const label = date.toLocaleDateString("it-IT", { weekday: "long", day: "numeric", month: "long" });
       return isToday ? `OGGI • ${label}` : label;
+    }
+
+    function timeToMinutes(ora) {
+      const m = /^(\d{1,2}):(\d{2})$/.exec((ora || "").trim());
+      if (!m) return 0;
+      return parseInt(m[1], 10) * 60 + parseInt(m[2], 10);
+    }
+
+    function channelPriority(ev) {
+      const p = ev.paese || "";
+      const c = (ev.canale || "").toLowerCase();
+      if (p === "Italia") return 1;
+      if (p === "DAZN Free Italia") return 2;
+      if (p === "Svizzera") return c.startsWith("rsi") ? 3 : 4;
+      if (p === "Germania") return 5;
+      if (p === "Brasile YouTube") return 6;
+      if (p.startsWith("DAZN Free")) return 7;
+      return 8;
+    }
+
+    function normalizeTeam(raw) {
+      let s = String(raw || "")
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/&/g, " ")
+        .replace(/\b(?:fc|cf|sc|ac|as|us|ss|cd|ca|ec|cr|ud|sd|sv|vfb|vfl|tsg|fsv|fk|sk|sl|bk|hk|asv|tsv|ssc|ue|rc)\b/g, " ")
+        .replace(/[^a-z0-9\s]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+      if (TEAM_ALIASES[s]) s = TEAM_ALIASES[s];
+      return s.replace(/\s+/g, "");
+    }
+
+    function getEventSignature(ev) {
+      let clean = String(ev.evento || "").trim();
+      const prefixRe = /^(?:diretta|live|repliche?|replica|sport|calcio|pallavolo|volley|pallacanestro|basket|basketball|baloncesto|tennis|sci alpino|ski alpin|formula 1|f1|motogp|football americano|nfl|fussball|fußball|football|futebol|futbol|fútbol)\s*[:\-–—]\s*/i;
+      while (prefixRe.test(clean)) {
+        clean = clean.replace(prefixRe, "").trim();
+      }
+      if (clean.includes(":")) {
+        const idx = clean.lastIndexOf(":");
+        const after = clean.slice(idx + 1).trim();
+        if (after.length >= 5 && /\s+(?:vs\.?|x|×|@|-|–|—)\s+/i.test(after)) {
+          clean = after;
+        }
+      }
+      const match = clean.match(/^(.*?)\s+(?:vs\.?|x|×|@|-|–|—)\s+(.*?)$/i);
+      const nonTeamSuffix = /\b(?:qualifying|qualifiche|race|gara|sprint|practice|prove|day\s*\d+|giornata\s*\d+|paddock|rueda de prensa|finale|semifinale|slalom|discesa|super-?g)\b/i;
+      if (match && !nonTeamSuffix.test(match[2])) {
+        const t1 = normalizeTeam(match[1]);
+        const t2 = normalizeTeam(match[2]);
+        if (t1.length >= 2 && t2.length >= 2) {
+          return { isMatch: true, teams: [t1, t2].sort() };
+        }
+      }
+      return { isMatch: false, full: normalizeTeam(clean) };
+    }
+
+    function sameSignature(a, b) {
+      if (a.isMatch && b.isMatch) {
+        return a.teams[0] === b.teams[0] && a.teams[1] === b.teams[1];
+      }
+      if (!a.isMatch && !b.isMatch) {
+        return a.full.length >= 4 && a.full === b.full;
+      }
+      return false;
+    }
+
+    function groupEvents(events) {
+      const sorted = [...events].sort((a, b) => {
+        const cmp = (a.data + a.ora).localeCompare(b.data + b.ora);
+        return cmp !== 0 ? cmp : channelPriority(a) - channelPriority(b);
+      });
+
+      const byDate = {};
+      const allGroups = [];
+
+      sorted.forEach(ev => {
+        const date = ev.data || "";
+        const mins = timeToMinutes(ev.ora);
+        const sig = getEventSignature(ev);
+        const prio = channelPriority(ev);
+        if (!byDate[date]) byDate[date] = [];
+
+        let target = byDate[date].find(g =>
+          g.sport === ev.sport &&
+          Math.abs(g.mins - mins) <= 45 &&
+          sameSignature(g.sig, sig)
+        );
+
+        const chObj = {
+          canale: ev.canale,
+          paese: ev.paese,
+          link: ev.link,
+          ora: ev.ora,
+          prio: prio
+        };
+
+        if (!target) {
+          target = {
+            data: date,
+            ora: ev.ora,
+            mins: mins,
+            sport: ev.sport,
+            competizione: ev.competizione,
+            evento: ev.evento,
+            sig: sig,
+            bestPrio: prio,
+            channels: [chObj]
+          };
+          byDate[date].push(target);
+          allGroups.push(target);
+        } else {
+          if (prio < target.bestPrio) {
+            target.bestPrio = prio;
+            target.evento = ev.evento;
+            target.competizione = ev.competizione;
+            target.ora = ev.ora;
+            target.mins = mins;
+          }
+          const exists = target.channels.some(
+            c => c.canale === chObj.canale && c.link === chObj.link
+          );
+          if (!exists) {
+            target.channels.push(chObj);
+          }
+        }
+      });
+
+      allGroups.forEach(g => {
+        g.channels.sort((a, b) => a.prio - b.prio || (a.canale || "").localeCompare(b.canale || ""));
+      });
+
+      allGroups.sort((a, b) => (a.data + a.ora).localeCompare(b.data + b.ora));
+      return allGroups;
     }
 
     function renderFilterPills() {
@@ -376,6 +606,18 @@
       });
     }
 
+    function buildChannelRowHtml(ch, mainOra) {
+      const isDazn = (ch.paese || "").startsWith("DAZN Free");
+      const flag = countryFlags[ch.paese] || "📺";
+      const timeNote = ch.ora && ch.ora !== mainOra ? ` <span class="channel-time">• ${escapeHtml(ch.ora)}</span>` : "";
+      return `
+        <a class="channel-row ${isDazn ? "dazn" : ""}" href="${escapeHtml(ch.link || "#")}" target="_blank" rel="noopener">
+          <span class="channel-name">${flag} ${escapeHtml(ch.canale)}${timeNote}</span>
+          <span class="channel-open">Apri ↗</span>
+        </a>
+      `;
+    }
+
     function renderEvents() {
       const container = document.getElementById("eventsContainer");
       const filtered = allEvents.filter(ev => {
@@ -396,23 +638,26 @@
         return matchDay && matchCountry && matchSport && matchSearch;
       });
 
-      filtered.sort((a, b) => (a.data + a.ora).localeCompare(b.data + b.ora));
+      const groupedEvents = groupEvents(filtered);
+      const evLabel = groupedEvents.length === 1 ? "evento trovato" : "eventi trovati";
       document.getElementById("resultsCount").textContent =
-        `${filtered.length} ${filtered.length === 1 ? "evento trovato" : "eventi trovati"}`;
+        groupedEvents.length === filtered.length
+          ? `${groupedEvents.length} ${evLabel}`
+          : `${groupedEvents.length} ${evLabel} (${filtered.length} canali)`;
 
-      if (filtered.length === 0) {
+      if (groupedEvents.length === 0) {
         container.innerHTML = `<div class="empty-msg">😕 Nessun evento trovato con questi filtri.<br/>Prova a cambiare sport, nazione o parola cercata!</div>`;
         return;
       }
 
-      const grouped = {};
-      filtered.forEach(ev => {
-        if (!grouped[ev.data]) grouped[ev.data] = [];
-        grouped[ev.data].push(ev);
+      const byDay = {};
+      groupedEvents.forEach(ev => {
+        if (!byDay[ev.data]) byDay[ev.data] = [];
+        byDay[ev.data].push(ev);
       });
 
       container.innerHTML = "";
-      Object.keys(grouped).sort().forEach(dateStr => {
+      Object.keys(byDay).sort().forEach(dateStr => {
         const section = document.createElement("div");
         section.className = "day-group";
         const title = document.createElement("div");
@@ -423,15 +668,19 @@
         const grid = document.createElement("div");
         grid.className = "events-grid";
 
-        grouped[dateStr].forEach(ev => {
+        byDay[dateStr].forEach(ev => {
           const card = document.createElement("div");
           card.className = "card";
-          const isDazn = (ev.paese || "").startsWith("DAZN Free");
           const icon = sportIcons[ev.sport] || "🏅";
-          const flag = countryFlags[ev.paese] || "📺";
+          const previewChannels = ev.channels.slice(0, PREVIEW_CHANNELS_COUNT);
+          const extraChannels = ev.channels.slice(PREVIEW_CHANNELS_COUNT);
+          const hasExtra = extraChannels.length > 0;
+          const moreText = extraChannels.length === 1
+            ? "+ Altro 1 canale ▾"
+            : `+ Altri ${extraChannels.length} canali ▾`;
 
           card.innerHTML = `
-            <div>
+            <div class="${hasExtra ? "card-header-clickable" : ""}">
               <div class="card-top">
                 <span class="time-badge">🕒 ${escapeHtml(ev.ora)}</span>
                 <span class="sport-tag">${icon} ${escapeHtml(ev.sport)}</span>
@@ -439,11 +688,29 @@
               <div class="comp-name">${escapeHtml(ev.competizione)}</div>
               <div class="event-title">${escapeHtml(ev.evento)}</div>
             </div>
-            <div class="card-footer">
-              <span class="channel-badge ${isDazn ? "dazn" : ""}">${flag} ${escapeHtml(ev.canale)}</span>
-              <a class="watch-btn" href="${escapeHtml(ev.link || "#")}" target="_blank" rel="noopener">Apri ↗</a>
+            <div class="card-channels">
+              ${previewChannels.map(ch => buildChannelRowHtml(ch, ev.ora)).join("")}
+              ${hasExtra ? `
+                <div class="extra-channels">
+                  ${extraChannels.map(ch => buildChannelRowHtml(ch, ev.ora)).join("")}
+                </div>
+                <button type="button" class="toggle-channels-btn">${moreText}</button>
+              ` : ""}
             </div>
           `;
+
+          if (hasExtra) {
+            const extraBox = card.querySelector(".extra-channels");
+            const toggleBtn = card.querySelector(".toggle-channels-btn");
+            const headerEl = card.querySelector(".card-header-clickable");
+            const toggleFn = () => {
+              const isOpen = extraBox.classList.toggle("open");
+              toggleBtn.textContent = isOpen ? "Mostra meno ▴" : moreText;
+            };
+            toggleBtn.addEventListener("click", toggleFn);
+            headerEl.addEventListener("click", toggleFn);
+          }
+
           grid.appendChild(card);
         });
 
