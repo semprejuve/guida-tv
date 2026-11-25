@@ -1,287 +1,7 @@
 [
   {
-    "data": "2026-11-24",
-    "ora": "00:20",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "WTA Finals Indian Wells 2026 - Singolare - Ep. 15 - Mirra Andreeva vs Elina Svitolina WTA Finals # 1",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "02:10",
-    "sport": "Football Americano",
-    "competizione": "American Football",
-    "evento": "NFL: Washington Commanders – Cincinnati Bengals",
-    "paese": "Germania",
-    "canale": "RTL",
-    "link": "https://www.rtl.de/"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "02:10",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "LIVE MAJOR MEXICO",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "03:50",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "Colpo da campione - Stagione 2026 - Ep. 32 - Colpo da campione By Head - il servizio di Sonego",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "04:05",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "LIVE MAJOR MEXICO",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "06:00",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "WTA Finals Indian Wells 2026 - Doppio - Ep. 1 - Siniakova/Townsend vs Errani/Paolini WTA Finals # 4",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "14:05",
-    "sport": "Programmi & Magazine",
-    "competizione": "Serie A Enilive",
-    "evento": "Tutti Convocati",
-    "paese": "DAZN Free Italia",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "14:10",
-    "sport": "Pallavolo",
-    "competizione": "Pallavolo",
-    "evento": "6a giornata: Piacenza - Perugia",
-    "paese": "Italia",
-    "canale": "Rai Sport",
-    "link": "https://www.raiplay.it/dirette/raisport"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "14:30",
-    "sport": "Sci Alpino",
-    "competizione": "Ski Alpin",
-    "evento": "Ski alpin: Weltcup",
-    "paese": "Germania",
-    "canale": "Eurosport 1 DE",
-    "link": "https://www.eurosport.de/"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "15:00",
-    "sport": "Calcio",
-    "competizione": "Campeonato Indiano",
-    "evento": "North East United x Delhi",
-    "paese": "Brasile YouTube",
-    "canale": "Indian Super League (YouTube)",
-    "link": "https://www.youtube.com/results?search_query=Indian+Super+League"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "15:00",
-    "sport": "Tennis",
-    "competizione": "Surf Brasil Pro",
-    "evento": "etapa de Guarda do Embaú",
-    "paese": "Brasile YouTube",
-    "canale": "Xsports (YouTube)",
-    "link": "https://www.youtube.com/@xsports.brasil"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "15:00",
-    "sport": "Sci Alpino",
-    "competizione": "Ski Alpin",
-    "evento": "Ski alpin: Weltcup",
-    "paese": "Germania",
-    "canale": "Eurosport 1 DE",
-    "link": "https://www.eurosport.de/"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "15:20",
-    "sport": "Calcio",
-    "competizione": "Rugby",
-    "evento": "Hull FC – Wigan Warriors",
-    "paese": "Germania",
-    "canale": "More Than Sports TV",
-    "link": "https://morethansports.tv/"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "15:45",
-    "sport": "Sci Alpino",
-    "competizione": "Ski Alpin",
-    "evento": "Ski alpin: Weltcup",
-    "paese": "Germania",
-    "canale": "Eurosport 1 DE",
-    "link": "https://www.eurosport.de/"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "16:00",
-    "sport": "Calcio",
-    "competizione": "Copa do Mundo Sub-17",
-    "evento": "Brasil x Tanzânia",
-    "paese": "Brasile YouTube",
-    "canale": "CazéTV (YouTube)",
-    "link": "https://www.youtube.com/@CazeTV"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "16:00",
-    "sport": "Tennis",
-    "competizione": "Copa Davis",
-    "evento": "República Tcheca x Canadá",
-    "paese": "Brasile YouTube",
-    "canale": "CazéTV (YouTube)",
-    "link": "https://www.youtube.com/@CazeTV"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "16:00",
-    "sport": "Tennis",
-    "competizione": "Copa Davis",
-    "evento": "República Checa x Canadá",
-    "paese": "Brasile YouTube",
-    "canale": "CazéTV (YouTube)",
-    "link": "https://www.youtube.com/@CazeTV"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "16:15",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "LIVE DAVIS CUP FINALS BY GENERALI",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "18:20",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "LIVE DAVIS CUP FINALS BY GENERALI",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "20:00",
-    "sport": "Calcio",
-    "competizione": "Serie BKT",
-    "evento": "Benevento - Empoli",
-    "paese": "DAZN Free Italia",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "20:25",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "LIVE DAVIS CUP FINALS BY GENERALI",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "20:30",
-    "sport": "Basket & NBA",
-    "competizione": "Euroliga",
-    "evento": "Valência x Panathinaikos",
-    "paese": "Brasile YouTube",
-    "canale": "Xsports (YouTube)",
-    "link": "https://www.youtube.com/@xsports.brasil"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "20:30",
-    "sport": "Basket & NBA",
-    "competizione": "Liga U 2026/27",
-    "evento": "Real Madrid - Casademont Zaragoza",
-    "paese": "DAZN Free Spagna",
-    "canale": "DAZN App Gratis (ES)",
-    "link": "https://www.dazn.com/es-ES/home"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "21:00",
-    "sport": "Altri Sport",
-    "competizione": "Sport Brasile",
-    "evento": "Arsenal x Borussia Dortmund",
-    "paese": "Brasile YouTube",
-    "canale": "TNT Sports (YouTube)",
-    "link": "https://www.youtube.com/@TNTSportsBR"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "21:00",
-    "sport": "Calcio",
-    "competizione": "Campeonato Escocês",
-    "evento": "Rangers x Aberdeen",
-    "paese": "Brasile YouTube",
-    "canale": "Canal GOL Brasil (YouTube)",
-    "link": "https://www.youtube.com/@canalgolbrasil"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "22:00",
-    "sport": "Calcio",
-    "competizione": "BRASILEIRÃO SÉRIE A",
-    "evento": "Chapecoense x Palmeiras",
-    "paese": "Brasile YouTube",
-    "canale": "CazéTV (YouTube)",
-    "link": "https://www.youtube.com/@CazeTV"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "22:25",
-    "sport": "Tennis",
-    "competizione": "Sport Tennis",
-    "evento": "Davis Cup Finals 2026 - CZE vs CAN",
-    "paese": "Italia",
-    "canale": "SuperTennis",
-    "link": "https://www.supertennis.tv/"
-  },
-  {
-    "data": "2026-11-24",
-    "ora": "22:30",
-    "sport": "Pallavolo",
-    "competizione": "Superliga Feminina",
-    "evento": "Brasília x Pinheiros",
-    "paese": "Brasile YouTube",
-    "canale": "GE TV (YouTube)",
-    "link": "https://www.youtube.com/@getv"
-  },
-  {
     "data": "2026-11-25",
-    "ora": "00:20",
+    "ora": "00:05",
     "sport": "Tennis",
     "competizione": "Sport Tennis",
     "evento": "Davis Cup Finals 2026 - CZE vs CAN",
@@ -304,6 +24,16 @@
     "ora": "03:50",
     "sport": "Tennis",
     "competizione": "Sport Tennis",
+    "evento": "Tennis Parade 2026 - Ep. 10 - Tennis Parade del 4 novembre 2026",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "04:05",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
     "evento": "LIVE MAJOR MEXICO",
     "paese": "Italia",
     "canale": "SuperTennis",
@@ -311,7 +41,7 @@
   },
   {
     "data": "2026-11-25",
-    "ora": "05:40",
+    "ora": "05:55",
     "sport": "Tennis",
     "competizione": "Sport Tennis",
     "evento": "WTA Finals Indian Wells 2026 - Singolare - Ep. 15 - Mirra Andreeva vs Elina Svitolina WTA Finals # 1",
@@ -323,8 +53,8 @@
     "data": "2026-11-25",
     "ora": "09:45",
     "sport": "Pallavolo",
-    "competizione": "TV Italia",
-    "evento": "Pallavolo: Serie A Maschile",
+    "competizione": "Pallavolo",
+    "evento": "6a giornata: Piacenza - Perugia",
     "paese": "Italia",
     "canale": "Rai Sport",
     "link": "https://www.raiplay.it/dirette/raisport"
@@ -341,7 +71,7 @@
   },
   {
     "data": "2026-11-25",
-    "ora": "10:05",
+    "ora": "10:25",
     "sport": "Tennis",
     "competizione": "Sport Tennis",
     "evento": "Davis Cup Finals 2026 - CZE vs CAN",
@@ -381,6 +111,16 @@
   },
   {
     "data": "2026-11-25",
+    "ora": "12:10",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "Davis Cup Finals 2026 - CZE vs CAN",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-25",
     "ora": "12:30",
     "sport": "Sci Alpino",
     "competizione": "Ski Alpin",
@@ -401,6 +141,26 @@
   },
   {
     "data": "2026-11-25",
+    "ora": "13:45",
+    "sport": "Football Americano",
+    "competizione": "Surf Brasil Pro",
+    "evento": "etapa de Guarda do Embaú",
+    "paese": "Brasile YouTube",
+    "canale": "Xsports (YouTube)",
+    "link": "https://www.youtube.com/@xsports.brasil"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "13:55",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "Davis Cup Finals 2026 - CZE vs CAN",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-25",
     "ora": "14:05",
     "sport": "Programmi & Magazine",
     "competizione": "Serie A Enilive",
@@ -411,6 +171,16 @@
   },
   {
     "data": "2026-11-25",
+    "ora": "14:30",
+    "sport": "Calcio",
+    "competizione": "Copa do Mundo Sub-17",
+    "evento": "Uruguai x França",
+    "paese": "Brasile YouTube",
+    "canale": "CazéTV (YouTube)",
+    "link": "https://www.youtube.com/@CazeTV"
+  },
+  {
+    "data": "2026-11-25",
     "ora": "16:00",
     "sport": "Tennis",
     "competizione": "Sport Tennis",
@@ -418,6 +188,36 @@
     "paese": "Italia",
     "canale": "SuperTennis",
     "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "16:30",
+    "sport": "Calcio",
+    "competizione": "Copa do Mundo Sub-17",
+    "evento": "Dinamarca x Argentina",
+    "paese": "Brasile YouTube",
+    "canale": "CazéTV (YouTube)",
+    "link": "https://www.youtube.com/@CazeTV"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "17:00",
+    "sport": "Basket & NBA",
+    "competizione": "BASQUETE – EUROLIGA",
+    "evento": "Dubai x Partizan",
+    "paese": "Brasile YouTube",
+    "canale": "Xsports (YouTube)",
+    "link": "https://www.youtube.com/@xsports.brasil"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "17:00",
+    "sport": "Calcio",
+    "competizione": "TV Italia",
+    "evento": "Tiro a Volo",
+    "paese": "Italia",
+    "canale": "Rai Sport",
+    "link": "https://www.raiplay.it/dirette/raisport"
   },
   {
     "data": "2026-11-25",
@@ -444,10 +244,40 @@
     "ora": "19:50",
     "sport": "Pallavolo",
     "competizione": "TV Italia",
-    "evento": "Pallanuoto",
+    "evento": "9a giornata: Savona - Brescia",
     "paese": "Italia",
     "canale": "Rai Sport",
     "link": "https://www.raiplay.it/dirette/raisport"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "20:00",
+    "sport": "Calcio",
+    "competizione": "Campeonato Pernambucano",
+    "evento": "América x Central",
+    "paese": "Brasile YouTube",
+    "canale": "FPEF TV (YouTube)",
+    "link": "https://www.youtube.com/results?search_query=FPEF+TV"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "20:00",
+    "sport": "Calcio",
+    "competizione": "Campeonato Pernambucano",
+    "evento": "Petrolina x Íbis",
+    "paese": "Brasile YouTube",
+    "canale": "FPEF TV (YouTube)",
+    "link": "https://www.youtube.com/results?search_query=FPEF+TV"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "20:00",
+    "sport": "Pallavolo",
+    "competizione": "Champions League Feminina",
+    "evento": "Milano x Paris",
+    "paese": "Brasile YouTube",
+    "canale": "Xsports (YouTube)",
+    "link": "https://www.youtube.com/@xsports.brasil"
   },
   {
     "data": "2026-11-25",
@@ -492,6 +322,16 @@
   {
     "data": "2026-11-25",
     "ora": "21:00",
+    "sport": "Altri Sport",
+    "competizione": "Sport Brasile",
+    "evento": "Lille x Bayern de Munique",
+    "paese": "Brasile YouTube",
+    "canale": "TNT Sports (YouTube)",
+    "link": "https://www.youtube.com/@TNTSportsBR"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "21:00",
     "sport": "Calcio",
     "competizione": "Sport Calcio",
     "evento": "Lille OSC - FC Bayern Monaco",
@@ -523,6 +363,26 @@
     "data": "2026-11-25",
     "ora": "23:00",
     "sport": "Calcio",
+    "competizione": "Copa Fares Lopes",
+    "evento": "Fortaleza B x Ceará B",
+    "paese": "Brasile YouTube",
+    "canale": "Metrópoles Esportes (YouTube)",
+    "link": "https://www.youtube.com/@MetropolesEsportes"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "23:00",
+    "sport": "Pallavolo",
+    "competizione": "Superliga Masculina",
+    "evento": "Montes Claros x Campinas",
+    "paese": "Brasile YouTube",
+    "canale": "GE TV (YouTube)",
+    "link": "https://www.youtube.com/@getv"
+  },
+  {
+    "data": "2026-11-25",
+    "ora": "23:00",
+    "sport": "Calcio",
     "competizione": "Champions League",
     "evento": "Fußball: Champions League",
     "paese": "Germania",
@@ -538,6 +398,16 @@
     "paese": "Germania",
     "canale": "Eurosport 1 DE",
     "link": "https://www.eurosport.de/"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "00:00",
+    "sport": "Calcio",
+    "competizione": "Taça Paraíba",
+    "evento": "Serra Branca x Campinense (semifinal)",
+    "paese": "Brasile YouTube",
+    "canale": "Metrópoles Esportes (YouTube)",
+    "link": "https://www.youtube.com/@MetropolesEsportes"
   },
   {
     "data": "2026-11-26",
@@ -571,6 +441,16 @@
   },
   {
     "data": "2026-11-26",
+    "ora": "02:00",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "LIVE MAJOR MEXICO",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-26",
     "ora": "02:20",
     "sport": "Pallavolo",
     "competizione": "TV Italia",
@@ -578,6 +458,16 @@
     "paese": "Italia",
     "canale": "Rai Sport",
     "link": "https://www.raiplay.it/dirette/raisport"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "04:10",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "LIVE MAJOR MEXICO",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
   },
   {
     "data": "2026-11-26",
@@ -598,6 +488,26 @@
     "paese": "DAZN Free Spagna",
     "canale": "DAZN App Gratis (ES)",
     "link": "https://www.dazn.com/es-ES/home"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "06:00",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "Davis Cup Finals 2026 - ITA vs KOR",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "09:50",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "LIVE DAVIS CUP FINALS BY GENERALI",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
   },
   {
     "data": "2026-11-26",
@@ -651,6 +561,26 @@
   },
   {
     "data": "2026-11-26",
+    "ora": "12:00",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "LIVE DAVIS CUP FINALS BY GENERALI",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "13:55",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "Colpo da campione - Stagione 2026 - Ep. 32 - Colpo da campione By Head - il servizio di Sonego",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-26",
     "ora": "13:55",
     "sport": "Calcio",
     "competizione": "Sport Calcio",
@@ -671,6 +601,16 @@
   },
   {
     "data": "2026-11-26",
+    "ora": "14:05",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "LIVE DAVIS CUP FINALS BY GENERALI",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-26",
     "ora": "14:25",
     "sport": "Calcio",
     "competizione": "TV Svizzera",
@@ -688,6 +628,26 @@
     "paese": "Italia",
     "canale": "Rai Sport",
     "link": "https://www.raiplay.it/dirette/raisport"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "16:00",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "Davis Cup Finals 2026 - ITA vs KOR",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "17:20",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "LIVE DAVIS CUP FINALS BY GENERALI",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
   },
   {
     "data": "2026-11-26",
@@ -721,6 +681,16 @@
   },
   {
     "data": "2026-11-26",
+    "ora": "18:25",
+    "sport": "Calcio",
+    "competizione": "TV Svizzera",
+    "evento": "UEFA Conference League: Ajax Amsterdam - FC Thun",
+    "paese": "Svizzera",
+    "canale": "SRF zwei",
+    "link": "https://www.srf.ch/play/tv"
+  },
+  {
+    "data": "2026-11-26",
     "ora": "18:30",
     "sport": "Football Americano",
     "competizione": "American Football",
@@ -731,16 +701,6 @@
   },
   {
     "data": "2026-11-26",
-    "ora": "18:30",
-    "sport": "Calcio",
-    "competizione": "TV Svizzera",
-    "evento": "UEFA Conference League: Ajax Amsterdam - FC Thun",
-    "paese": "Svizzera",
-    "canale": "SRF zwei",
-    "link": "https://www.srf.ch/play/tv"
-  },
-  {
-    "data": "2026-11-26",
     "ora": "18:35",
     "sport": "Calcio",
     "competizione": "TV Svizzera",
@@ -748,6 +708,16 @@
     "paese": "Svizzera",
     "canale": "RTS 2",
     "link": "https://www.rts.ch/play/tv"
+  },
+  {
+    "data": "2026-11-26",
+    "ora": "19:25",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "LIVE DAVIS CUP FINALS BY GENERALI",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
   },
   {
     "data": "2026-11-26",
@@ -781,6 +751,16 @@
   },
   {
     "data": "2026-11-26",
+    "ora": "21:30",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "LIVE DAVIS CUP FINALS BY GENERALI",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-26",
     "ora": "22:20",
     "sport": "Football Americano",
     "competizione": "American Football",
@@ -811,6 +791,16 @@
   },
   {
     "data": "2026-11-26",
+    "ora": "23:30",
+    "sport": "Tennis",
+    "competizione": "Sport Tennis",
+    "evento": "Davis Cup Finals 2026 - GRB vs GER",
+    "paese": "Italia",
+    "canale": "SuperTennis",
+    "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-26",
     "ora": "23:45",
     "sport": "Calcio",
     "competizione": "Rugby",
@@ -821,6 +811,16 @@
   },
   {
     "data": "2026-11-27",
+    "ora": "00:43",
+    "sport": "Football Americano",
+    "competizione": "TV Italia",
+    "evento": "2026 Nfl Thanksgiving Games",
+    "paese": "Italia",
+    "canale": "20 Mediaset",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/20mediaset_cLB"
+  },
+  {
+    "data": "2026-11-27",
     "ora": "01:10",
     "sport": "Basket & NBA",
     "competizione": "TV Svizzera",
@@ -828,6 +828,16 @@
     "paese": "Svizzera",
     "canale": "RSI La 2",
     "link": "https://www.rsi.ch/play/tv"
+  },
+  {
+    "data": "2026-11-27",
+    "ora": "01:31",
+    "sport": "Football Americano",
+    "competizione": "TV Italia",
+    "evento": "2026 Nfl Thanksgiving Games",
+    "paese": "Italia",
+    "canale": "20 Mediaset",
+    "link": "https://mediasetinfinity.mediaset.it/diretta/20mediaset_cLB"
   },
   {
     "data": "2026-11-27",
@@ -891,6 +901,26 @@
   },
   {
     "data": "2026-11-27",
+    "ora": "15:00",
+    "sport": "Calcio",
+    "competizione": "Sport Calcio",
+    "evento": "Bologna U20 - Albinoleffe U20: Bologna FC 1909 U20 - AlbinoLeffe U20",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-27",
+    "ora": "15:35",
+    "sport": "Calcio",
+    "competizione": "TV Italia",
+    "evento": "Karate",
+    "paese": "Italia",
+    "canale": "Rai Sport",
+    "link": "https://www.raiplay.it/dirette/raisport"
+  },
+  {
+    "data": "2026-11-27",
     "ora": "16:00",
     "sport": "Basket & NBA",
     "competizione": "Liga U 2026/27",
@@ -908,6 +938,16 @@
     "paese": "DAZN Free Spagna",
     "canale": "DAZN App Gratis (ES)",
     "link": "https://www.dazn.com/es-ES/home"
+  },
+  {
+    "data": "2026-11-27",
+    "ora": "17:00",
+    "sport": "Calcio",
+    "competizione": "Sport Calcio",
+    "evento": "Atalanta - Monza",
+    "paese": "Italia",
+    "canale": "Sportitalia",
+    "link": "https://www.sportitalia.it/"
   },
   {
     "data": "2026-11-27",
