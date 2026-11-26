@@ -231,16 +231,6 @@
   },
   {
     "data": "2026-11-26",
-    "ora": "15:00",
-    "sport": "Tennis",
-    "competizione": "Surf Brasil Pro",
-    "evento": "etapa de Guarda do Embaú",
-    "paese": "Brasile YouTube",
-    "canale": "Xsports (YouTube)",
-    "link": "https://www.youtube.com/@xsports.brasil"
-  },
-  {
-    "data": "2026-11-26",
     "ora": "16:00",
     "sport": "Calcio",
     "competizione": "Copa do Mundo Sub-17",
@@ -851,16 +841,6 @@
   },
   {
     "data": "2026-11-27",
-    "ora": "15:35",
-    "sport": "Calcio",
-    "competizione": "TV Italia",
-    "evento": "Karate",
-    "paese": "Italia",
-    "canale": "Rai Sport",
-    "link": "https://www.raiplay.it/dirette/raisport"
-  },
-  {
-    "data": "2026-11-27",
     "ora": "16:00",
     "sport": "Basket & NBA",
     "competizione": "Liga U 2026/27",
@@ -1451,6 +1431,86 @@
   },
   {
     "data": "2026-11-29",
+    "ora": "08:30",
+    "sport": "Sci Alpino",
+    "competizione": "Ski Alpin",
+    "evento": "Ski alpin: Weltcup",
+    "paese": "Germania",
+    "canale": "Eurosport 1 DE",
+    "link": "https://www.eurosport.de/"
+  },
+  {
+    "data": "2026-11-29",
+    "ora": "11:00",
+    "sport": "Sci Alpino",
+    "competizione": "Ski Alpin",
+    "evento": "Ski alpin: Weltcup",
+    "paese": "Germania",
+    "canale": "Das Erste",
+    "link": "https://www.ardmediathek.de/live"
+  },
+  {
+    "data": "2026-11-29",
+    "ora": "11:00",
+    "sport": "MotoGP",
+    "competizione": "Motorrad",
+    "evento": "Moto3: Großer Preis von Valencia",
+    "paese": "Germania",
+    "canale": "DF1",
+    "link": "https://df1.de/"
+  },
+  {
+    "data": "2026-11-29",
+    "ora": "11:45",
+    "sport": "Sci Alpino",
+    "competizione": "Snowboard",
+    "evento": "Snowboard: Weltcup",
+    "paese": "Germania",
+    "canale": "Das Erste",
+    "link": "https://www.ardmediathek.de/live"
+  },
+  {
+    "data": "2026-11-29",
+    "ora": "12:15",
+    "sport": "MotoGP",
+    "competizione": "Motorrad",
+    "evento": "Moto2: Großer Preis von Valencia",
+    "paese": "Germania",
+    "canale": "DF1",
+    "link": "https://df1.de/"
+  },
+  {
+    "data": "2026-11-29",
+    "ora": "13:20",
+    "sport": "Basket & NBA",
+    "competizione": "Show",
+    "evento": "Wer stiehlt mir die Show?",
+    "paese": "Germania",
+    "canale": "ProSieben",
+    "link": "https://www.prosieben.de/"
+  },
+  {
+    "data": "2026-11-29",
+    "ora": "14:00",
+    "sport": "MotoGP",
+    "competizione": "Motorrad",
+    "evento": "Motorrad: Großer Preis der Stadt Valencia",
+    "paese": "Germania",
+    "canale": "DF1",
+    "link": "https://df1.de/"
+  },
+  {
+    "data": "2026-11-29",
+    "ora": "14:45",
+    "sport": "MotoGP",
+    "competizione": "Motorrad",
+    "evento": "Motorrad: Großer Preis der Stadt Valencia",
+    "paese": "Germania",
+    "canale": "DF1",
+    "link": "https://df1.de/"
+  },
+  {
+    "data": "2026-11-29",
     "ora": "16:15",
     "sport": "Calcio",
     "competizione": "LaLiga",
@@ -1491,6 +1551,56 @@
   },
   {
     "data": "2026-11-29",
+    "ora": "17:45",
+    "sport": "Sci Alpino",
+    "competizione": "Ski Alpin",
+    "evento": "Ski alpin: Weltcup",
+    "paese": "Germania",
+    "canale": "Eurosport 1 DE",
+    "link": "https://www.eurosport.de/"
+  },
+  {
+    "data": "2026-11-29",
+    "ora": "19:00",
+    "sport": "Football Americano",
+    "competizione": "American Football",
+    "evento": "NFL: Cincinnati Bengals – New Orleans Saints",
+    "paese": "Germania",
+    "canale": "RTL",
+    "link": "https://www.rtl.de/"
+  },
+  {
+    "data": "2026-11-29",
+    "ora": "19:30",
+    "sport": "Sci Alpino",
+    "competizione": "Ski Alpin",
+    "evento": "Ski alpin: Weltcup",
+    "paese": "Germania",
+    "canale": "Eurosport 1 DE",
+    "link": "https://www.eurosport.de/"
+  },
+  {
+    "data": "2026-11-29",
+    "ora": "20:15",
+    "sport": "Basket & NBA",
+    "competizione": "Show",
+    "evento": "Wer stiehlt Knossi die Show?",
+    "paese": "Germania",
+    "canale": "ProSieben",
+    "link": "https://www.prosieben.de/"
+  },
+  {
+    "data": "2026-11-29",
+    "ora": "20:45",
+    "sport": "Sci Alpino",
+    "competizione": "Ski Alpin",
+    "evento": "Ski alpin: Weltcup",
+    "paese": "Germania",
+    "canale": "Eurosport 1 DE",
+    "link": "https://www.eurosport.de/"
+  },
+  {
+    "data": "2026-11-29",
     "ora": "21:30",
     "sport": "Calcio",
     "competizione": "Liga Portugal",
@@ -1498,6 +1608,36 @@
     "paese": "DAZN Free Italia",
     "canale": "DAZN Free Italia",
     "link": "https://www.dazn.com/it-IT/home"
+  },
+  {
+    "data": "2026-11-29",
+    "ora": "22:25",
+    "sport": "Football Americano",
+    "competizione": "American Football",
+    "evento": "NFL: San Francisco 49ers – Seattle Seahawks",
+    "paese": "Germania",
+    "canale": "RTL",
+    "link": "https://www.rtl.de/"
+  },
+  {
+    "data": "2026-11-29",
+    "ora": "23:00",
+    "sport": "Calcio",
+    "competizione": "Rugby",
+    "evento": "Wigan Warriors – Leeds Rhinos",
+    "paese": "Germania",
+    "canale": "More Than Sports TV",
+    "link": "https://morethansports.tv/"
+  },
+  {
+    "data": "2026-11-30",
+    "ora": "00:40",
+    "sport": "Basket & NBA",
+    "competizione": "Show",
+    "evento": "Wer stiehlt Knossi die Show?",
+    "paese": "Germania",
+    "canale": "ProSieben",
+    "link": "https://www.prosieben.de/"
   },
   {
     "data": "2026-11-30",
