@@ -116,6 +116,10 @@ ESCLUDI_SPORT_REGEX = [
     r"\b(?:equitazione|ippica|horse racing|h[íi]pica|equestrian|pferdesport|pferderennen|reitsport|springreiten|dressur|galopp|show jumping|salto ostacoli)\b",
     r"\bp[áa]del\b",
     r"\b(?:scacchi|chess|ajedrez|schach|xadrez|[ée]checs)\b",
+    r"\b(?:surf|surfing|shortboard|longboard|wsl|tsurigasaki|s\.one|s\.two)\b",
+    r"\bkings?\s*(?:league|cup)\b",
+    r"\b(?:boxe|boxing|boxeo|boxen|pugilato|bare\s*knuckle|bkfc|matchroom|queensberry)\b",
+    r"\b(?:arti\s*marziali|artes\s*marciales|martial\s*arts|mma|ufc|muay\s*thai|kickboxing|bellator|pfl|one\s*championship|oktagon|rajadamnern|rws|kok\s*fight|efc|cage\s*warriors|karate|judo|taekwondo|wrestling|grappling)\b",
 ]
 
 SECONDA_DIVISIONE_REGEX = (
@@ -126,7 +130,7 @@ SECONDA_DIVISIONE_REGEX = (
     r"ligue\s*2|ligue\s*b|efl\s*championship|league\s*one|league\s*two|"
     r"challenge\s*league|challenger\s*pro\s*league|1b\s*pro\s*league|"
     r"eerste\s*divisie|keuken\s*kampioen|liga\s*portugal\s*2|segunda\s*liga|"
-    r"superliga\s*b|superliga\s*2|proa|prob|lnb\s*pro\s*b|2\.\s*basketball|"
+    r"superliga\s*b|superliga\s*2|liga\s+u|proa|prob|lnb\s*pro\s*b|2\.\s*basketball|"
     r"leb\s*oro|primera\s*feb|segunda\s*feb|"
     r"g[\s-]*league|del2|swiss\s*league|j2\s*league|j3\s*league|j2|j3|"
     r"s[ée]rie\s*[cd]|serie\s*[cd]|série\s*b|"
@@ -180,9 +184,9 @@ REGOLE_SPORT = [
     ("MotoGP", [r"\bmotogp\b", r"\bmoto gp\b", r"\bmoto2\b", r"\bmoto3\b", r"\bmotomondiale\b", r"\bsuperbike\b", r"\bwsbk\b"]),
     ("Sci Alpino", [r"\bsci alpino\b", r"\bski alpin\b", r"\bski weltcup\b", r"\bski-weltcup\b", r"\bslalom\b", r"\bdiscesa libera\b", r"\bsuper-g\b", r"\bsuper g\b", r"\briesenslalom\b", r"\babfahrt\b", r"\bcoppa del mondo di sci\b"]),
     ("Pallavolo", [r"\bpallavolo\b", r"\bvolley\b", r"\bvolleyball\b", r"\bv[ôo]lei\b", r"\bsuperlega\b", r"\bsuperliga\b", r"\blvf\b", r"\bvnl\b", r"\bserie a1\b", r"バレー"]),
-    ("Basket & NBA", [r"\bnba\b", r"\bwnba\b", r"\bbasket\b", r"\bbasquete\b", r"\bbaloncesto\b", r"\bpallacanestro\b", r"\bbasketball\b", r"\beurolega\b", r"\beuroleague\b", r"\beurocup\b", r"\beuroliga\b", r"\bnbb\b", r"\bfiba\b", r"\blega basket\b", r"\bliga endesa\b", r"\bliga acb\b", r"\bliga betclic\b", r"\bmarch madness\b", r"\bbbl\b", r"バスケ", r"bリーグ"]),
+    ("Basket & NBA", [r"\bnba\b", r"\bwnba\b", r"\bbasket\b", r"\bbasquete\b", r"\bbaloncesto\b", r"\bpallacanestro\b", r"\bbasketball\b", r"\bncaa\b", r"\bncaab\b", r"\beurolega\b", r"\beuroleague\b", r"\beurocup\b", r"\beuroliga\b", r"\bnbb\b", r"\bfiba\b", r"\blega basket\b", r"\bliga endesa\b", r"\bliga acb\b", r"\bliga betclic\b", r"\bmarch madness\b", r"\bbbl\b", r"バスケ", r"bリーグ"]),
     ("Tennis", [r"\btennis\b", r"\bt[êe]nis\b", r"\btenis\b", r"\batp\b", r"\bwta\b", r"\bcoppa davis\b", r"\bdavis cup\b", r"\bbillie jean king\b", r"\broland garros\b", r"\bwimbledon\b", r"\baustralian open\b", r"\bus open\b", r"\bchallenger\b", r"テニス"]),
-    ("Calcio", [r"\bcalcio\b", r"\bfutebol\b", r"\bf[úu]tbol\b", r"\bfootball\b", r"\bsoccer\b", r"\bfu[ßs]ball\b", r"\bvoetbal\b", r"\bserie a\b", r"\bserie b(?:kt)?\b", r"\bcoppa italia\b", r"\bsupercoppa\b", r"\bchampions league\b", r"\beuropa league\b", r"\bconference league\b", r"\bnations league\b", r"\bmondiali\b", r"\bpremier league\b", r"\bbundesliga\b", r"\bdfb-pokal\b", r"\bdfb pokal\b", r"\blaliga\b", r"\bla liga\b", r"\bligue 1\b", r"\bbrasileir[ãa]o\b", r"\bpaulist[ãa]o\b", r"\bcarioca\b", r"\bcopa do brasil\b", r"\blibertadores\b", r"\bsul-americana\b", r"\bsudamericana\b", r"\bsuper league\b", r"\bjupiler\b", r"\bcroky cup\b", r"\bliga portugal\b", r"\bfa cup\b", r"\bcopa del rey\b", r"\bfutsal\b", r"\bfifa\b", r"\bkings league\b", r"\byouth league\b", r"\bu17-wm\b", r"\bu-17\b", r"\bjリーグ\b", r"\bj1\b", r"サッカー", r"セリエa", r"ラリーガ", r"ブンデスリーガ", r"リーグアン", r"ベルギーリーグ"]),
+    ("Calcio", [r"\bcalcio\b", r"\bfutebol\b", r"\bf[úu]tbol\b", r"\bfootball\b", r"\bsoccer\b", r"\bfu[ßs]ball\b", r"\bvoetbal\b", r"\bserie a\b", r"\bserie b(?:kt)?\b", r"\bcoppa italia\b", r"\bsupercoppa\b", r"\bchampions league\b", r"\beuropa league\b", r"\bconference league\b", r"\bnations league\b", r"\bmondiali\b", r"\bpremier league\b", r"\bbundesliga\b", r"\bdfb-pokal\b", r"\bdfb pokal\b", r"\blaliga\b", r"\bla liga\b", r"\bligue 1\b", r"\bbrasileir[ãa]o\b", r"\bpaulist[ãa]o\b", r"\bcarioca\b", r"\bcopa do brasil\b", r"\blibertadores\b", r"\bsul-americana\b", r"\bsudamericana\b", r"\bsuper league\b", r"\bjupiler\b", r"\bcroky cup\b", r"\bliga portugal\b", r"\bfa cup\b", r"\bcopa del rey\b", r"\bfutsal\b", r"\bfifa\b", r"\byouth league\b", r"\bu17-wm\b", r"\bu-17\b", r"\bjリーグ\b", r"\bj1\b", r"サッカー", r"セリエa", r"ラリーガ", r"ブンデスリーガ", r"リーグアン", r"ベルギーリーグ"]),
 ]
 
 GENERIC_EPG_TITLE_RE = re.compile(
@@ -325,13 +329,11 @@ def scarica_epg_paesi():
                                     nc, lk = matched_ids[cid]
                                     low_all = full_text.lower()
 
-                                    # Esclude repliche di calcio europeo trasmesse di notte/mattina (00:00-11:59)
                                     if sport == "Calcio" and 0 <= dt.hour < 12:
                                         if not re.search(r"\b(?:argentin|boca|river|racing|independiente|san lorenzo|brasile|brasil|flamengo|palmeiras|botafogo|corinthians|sao paulo|libertadores|sudamericana|mls|messico|liga mx|concacaf|australia|a-league|giappone|j1|corea)\b", low_all):
                                             elem.clear()
                                             continue
 
-                                    # Su Sportitalia/SoloCalcio esclude differite dei top campionati europei
                                     if nc in ("Sportitalia", "SoloCalcio") and sport == "Calcio":
                                         if re.search(r"\b(?:premier\s+league|champions\s+league|europa\s+league|conference\s+league|bundesliga|laliga|la\s+liga|ligue\s*1|eredivisie|serie\s+a|serie\s+b|coppa\s+italia|fa\s+cup|dfb)\b", low_all):
                                             elem.clear()
@@ -550,6 +552,9 @@ def main():
             json.dump({"ultimo_aggiornamento": NOW.strftime("%d/%m/%Y alle %H:%M"), "totale_eventi": len(finali)}, f, ensure_ascii=False, indent=2)
         print(f"🎉 Salvati {len(finali)} eventi totali in eventi.json!")
 
+
+if __name__ == "__main__":
+    main()
 
 if __name__ == "__main__":
     main()
