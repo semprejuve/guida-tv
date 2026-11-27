@@ -685,7 +685,7 @@
         else if (/\bgara\b|\brace\b|\bgare\b|\brennen\b/.test(raw)) sess = "gara";
         else if (/libere|practice|fp[123]/.test(raw)) sess = "libere";
 
-        return { isMatch: false, full: `motor_${cls}_${sess}` };
+        return { isMotor: true, cls, sess };
       }
 
       let clean = String(ev.evento || "").replace(/\([^)]*\)\s*$/, "").trim();
@@ -744,7 +744,11 @@
       if (a.isMatch && b.isMatch) {
         return a.teams[0] === b.teams[0] && a.teams[1] === b.teams[1];
       }
-      if (!a.isMatch && !b.isMatch) {
+      if (a.isMotor && b.isMotor) {
+        if (a.cls !== b.cls) return false;
+        return a.sess === b.sess || a.sess === "event" || b.sess === "event";
+      }
+      if (!a.isMatch && !b.isMatch && !a.isMotor && !b.isMotor) {
         return a.full.length >= 4 && a.full === b.full;
       }
       return false;
@@ -764,11 +768,12 @@
         const mins = timeToMinutes(ev.ora);
         const sig = getEventSignature(ev);
         const prio = channelPriority(ev);
+        const maxDiff = ["MotoGP", "Formula 1", "Sci Alpino", "Snowboard"].includes(ev.sport) ? 75 : 45;
         if (!byDate[date]) byDate[date] = [];
 
         let target = byDate[date].find(g =>
           g.sport === ev.sport &&
-          Math.abs(g.mins - mins) <= 45 &&
+          Math.abs(g.mins - mins) <= maxDiff &&
           sameSignature(g.sig, sig)
         );
 
@@ -795,7 +800,17 @@
           byDate[date].push(target);
           allGroups.push(target);
         } else {
-          if (prio < target.bestPrio) {
+          const currHasVenue = (target.competizione || "").includes("•");
+          const newHasVenue = (ev.competizione || "").includes("•");
+          if (!currHasVenue && newHasVenue) {
+            target.evento = ev.evento;
+            target.competizione = ev.competizione;
+            if (prio < target.bestPrio) {
+              target.bestPrio = prio;
+              target.ora = ev.ora;
+              target.mins = mins;
+            }
+          } else if (currHasVenue === newHasVenue && prio < target.bestPrio) {
             target.bestPrio = prio;
             target.evento = ev.evento;
             target.competizione = ev.competizione;
