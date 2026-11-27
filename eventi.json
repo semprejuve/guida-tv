@@ -374,20 +374,10 @@
     "ora": "10:45",
     "sport": "MotoGP",
     "competizione": "MotoGP • GP Valencia",
-    "evento": "MotoGP (GP Valencia)",
+    "evento": "MotoGP - Qualifiche (GP Valencia)",
     "paese": "Svizzera",
     "canale": "RSI La 2",
     "link": "https://www.rsi.ch/play/tv"
-  },
-  {
-    "data": "2026-11-28",
-    "ora": "11:10",
-    "sport": "Snowboard",
-    "competizione": "Coppa del Mondo",
-    "evento": "Big Air Uomini & Donne",
-    "paese": "Germania",
-    "canale": "Das Erste",
-    "link": "https://www.ardmediathek.de/live"
   },
   {
     "data": "2026-11-28",
@@ -424,7 +414,7 @@
     "ora": "12:40",
     "sport": "MotoGP",
     "competizione": "Moto3 • GP Valencia",
-    "evento": "Moto3 (GP Valencia)",
+    "evento": "Moto3 - Qualifiche (GP Valencia)",
     "paese": "Svizzera",
     "canale": "RSI La 2",
     "link": "https://www.rsi.ch/play/tv"
@@ -434,7 +424,7 @@
     "ora": "12:45",
     "sport": "MotoGP",
     "competizione": "Moto3 • GP Valencia",
-    "evento": "Moto3 - Gara (GP Valencia)",
+    "evento": "Moto3 - Qualifiche (GP Valencia)",
     "paese": "Germania",
     "canale": "DF1",
     "link": "https://df1.de/"
@@ -444,7 +434,7 @@
     "ora": "13:40",
     "sport": "MotoGP",
     "competizione": "Moto2 • GP Valencia",
-    "evento": "Moto2 - Gara (GP Valencia)",
+    "evento": "Moto2 - Qualifiche (GP Valencia)",
     "paese": "Germania",
     "canale": "DF1",
     "link": "https://df1.de/"
@@ -464,7 +454,7 @@
     "ora": "13:50",
     "sport": "MotoGP",
     "competizione": "Moto2 • GP Valencia",
-    "evento": "Moto2 (GP Valencia)",
+    "evento": "Moto2 - Qualifiche (GP Valencia)",
     "paese": "Svizzera",
     "canale": "RSI La 2",
     "link": "https://www.rsi.ch/play/tv"
@@ -683,8 +673,8 @@
     "data": "2026-11-28",
     "ora": "19:40",
     "sport": "Sci Alpino",
-    "competizione": "Coppa del Mondo",
-    "evento": "Super-G Uomini",
+    "competizione": "Coppa del Mondo • Copper Mountain",
+    "evento": "Super-G Uomini - Copper Mountain",
     "paese": "Italia",
     "canale": "Rai Sport",
     "link": "https://www.raiplay.it/dirette/raisport"
@@ -894,7 +884,7 @@
     "ora": "23:20",
     "sport": "Formula 1",
     "competizione": "Formula 1 • GP Qatar",
-    "evento": "Formula 1 (GP Qatar)",
+    "evento": "Formula 1 - Qualifiche (GP Qatar)",
     "paese": "Svizzera",
     "canale": "RSI La 2",
     "link": "https://www.rsi.ch/play/tv"
@@ -974,7 +964,7 @@
     "ora": "08:45",
     "sport": "Formula 1",
     "competizione": "Formula 1 • GP Qatar",
-    "evento": "Formula 1 (GP Qatar)",
+    "evento": "Formula 1 - Qualifiche (GP Qatar)",
     "paese": "Svizzera",
     "canale": "RSI La 2",
     "link": "https://www.rsi.ch/play/tv"
@@ -1002,32 +992,12 @@
   {
     "data": "2026-11-29",
     "ora": "11:00",
-    "sport": "Sci Alpino",
-    "competizione": "Coppa del Mondo • Sölden",
-    "evento": "Slalom Gigante Uomini & Donne - Sölden",
-    "paese": "Germania",
-    "canale": "Das Erste",
-    "link": "https://www.ardmediathek.de/live"
-  },
-  {
-    "data": "2026-11-29",
-    "ora": "11:00",
     "sport": "MotoGP",
     "competizione": "Moto3 • GP Valencia",
     "evento": "Moto3 - Gara (GP Valencia)",
     "paese": "Germania",
     "canale": "DF1",
     "link": "https://df1.de/"
-  },
-  {
-    "data": "2026-11-29",
-    "ora": "11:45",
-    "sport": "Snowboard",
-    "competizione": "Coppa del Mondo",
-    "evento": "Big Air",
-    "paese": "Germania",
-    "canale": "Das Erste",
-    "link": "https://www.ardmediathek.de/live"
   },
   {
     "data": "2026-11-29",
@@ -1151,6 +1121,16 @@
   },
   {
     "data": "2026-11-29",
+    "ora": "16:30",
+    "sport": "MotoGP",
+    "competizione": "MotoGP",
+    "evento": "MotoGP - Gara",
+    "paese": "Italia",
+    "canale": "TV8",
+    "link": "https://tv8.it/streaming"
+  },
+  {
+    "data": "2026-11-29",
     "ora": "16:55",
     "sport": "Formula 1",
     "competizione": "Formula 1 • GP Qatar",
@@ -1193,8 +1173,8 @@
     "data": "2026-11-29",
     "ora": "17:45",
     "sport": "Sci Alpino",
-    "competizione": "Coppa del Mondo",
-    "evento": "Slalom Gigante Uomini (1ª Manche)",
+    "competizione": "Coppa del Mondo • Copper Mountain",
+    "evento": "Slalom Gigante Uomini (1ª Manche) - Copper Mountain",
     "paese": "Italia",
     "canale": "Rai Sport",
     "link": "https://www.raiplay.it/dirette/raisport"
@@ -1263,8 +1243,8 @@
     "data": "2026-11-29",
     "ora": "20:55",
     "sport": "Sci Alpino",
-    "competizione": "Coppa del Mondo",
-    "evento": "Slalom Gigante Uomini (2ª Manche)",
+    "competizione": "Coppa del Mondo • Copper Mountain",
+    "evento": "Slalom Gigante Uomini (2ª Manche) - Copper Mountain",
     "paese": "Italia",
     "canale": "Rai Sport",
     "link": "https://www.raiplay.it/dirette/raisport"
