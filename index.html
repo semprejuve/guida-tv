@@ -429,7 +429,6 @@
           <a href="https://www.sport1.de/tv-programm" target="_blank">Sport1</a>
           <a href="https://www.rtl.de/" target="_blank">RTL / Nitro</a>
           <a href="https://www.rsi.ch/play/tv" target="_blank">RSI La 2</a>
-          <a href="https://www.srf.ch/play/tv" target="_blank">SRF zwei</a>
         </div>
         <div class="dir-box">
           <h3>🇧🇷 Brasile YouTube</h3>
@@ -660,9 +659,33 @@
         else if (/discesa|abfahrt|descente|downhill/.test(raw)) disc = "discesa";
         else if (/slalom/.test(raw)) disc = "slalom";
 
-        const gen = /donne|femminil|frauen|damen|dames|femmes|women/.test(raw) ? "F" : (/uomini|maschil|manner|herren|messieurs|hommes|men/.test(raw) ? "M" : "");
+        const gen = /uomini.*donne|donne.*uomini/.test(raw)
+          ? ""
+          : (/donne|femminil|frauen|damen|dames|femmes|women/.test(raw) ? "F" : (/uomini|maschil|manner|herren|messieurs|hommes|men/.test(raw) ? "M" : ""));
         const run = /1[aª]?\s*manche|1\.?\s*lauf|1ere\s*manche/.test(raw) ? "1" : (/2[aª]?\s*manche|2\.?\s*lauf|2eme\s*manche/.test(raw) ? "2" : "");
         return { isMatch: false, full: `winter_${disc}_${gen}_${run}` };
+      }
+
+      if (ev.sport === "MotoGP" || ev.sport === "Formula 1") {
+        const raw = `${ev.competizione || ""} ${ev.evento || ""}`
+          .toLowerCase()
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "");
+        if (/moto3.*moto2|moto2.*motogp|all\s*classes/.test(raw)) {
+          return { isMatch: false, full: normalizeTeam(ev.evento) };
+        }
+        let cls = ev.sport === "Formula 1" ? "f1" : "motogp";
+        if (/moto\s*3/.test(raw)) cls = "moto3";
+        else if (/moto\s*2/.test(raw)) cls = "moto2";
+        else if (/superbike|wsbk/.test(raw)) cls = "sbk";
+
+        let sess = "event";
+        if (/qualif|\bqp\b|\bq[12]\b/.test(raw)) sess = "quali";
+        else if (/sprint/.test(raw)) sess = "sprint";
+        else if (/\bgara\b|\brace\b|\bgare\b|\brennen\b/.test(raw)) sess = "gara";
+        else if (/libere|practice|fp[123]/.test(raw)) sess = "libere";
+
+        return { isMatch: false, full: `motor_${cls}_${sess}` };
       }
 
       let clean = String(ev.evento || "").replace(/\([^)]*\)\s*$/, "").trim();
@@ -1156,9 +1179,6 @@
         }
       })
       .catch(() => {});
-  </script>
-</body>
-</html>
   </script>
 </body>
 </html>
