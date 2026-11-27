@@ -96,7 +96,7 @@ PAROLE_DA_ESCLUDERE = [
     "bienvenue chez les",
 ]
 
-TITLE_ONLY_EXCLUDE_REGEX = r"\b(?:notizie|notiziario|news|tg|rassegna\s+stampa|edizioni\s+del\s+tg)\b"
+TITLE_ONLY_EXCLUDE_REGEX = r"\b(?:notizie|notiziario|news|tg|rassegna\s+stampa|edizioni\s+del\s+tg|vorbericht\w*|analyse\w*)\b"
 
 NON_SPORT_CATS_REGEX = (
     r"\b(?:film|movie|serie|s[ée]rie|jeunesse|animation|dessin\s*anim[ée]?|carton[ei]|bambini|ragazzi|kinder|"
@@ -159,7 +159,7 @@ MAGAZINE_ALWAYS_REGEX = (
     r"si\s+live\s*24|si\s+motori|si\s+cafe|inside\s+city|tutti\s+in\s+campo|diretta\s+stadio|lo\s+sai\s+che|prima\s+serata|"
     r"cartellino\s+rosa|otto\s+in\s+punto|speciale\s+cun|tg\s+betsson|"
     r"supertennis\s+(?:today|tg)|tennis\s+talk|tie\s+book|tie\s+movie|hawk\s+eye|circolando|race\s+to\s+foro|tennis\s+symposium|tutorial\s+pickleball|colpo\s+da\s+campione|"
-    r"moviola|anteprima|prepartita|pre-?partita|postpartita|post-?partita|pre-?gara|post-?gara|vorbericht|analyse|"
+    r"moviola|anteprima|prepartita|pre-?partita|postpartita|post-?partita|pre-?gara|post-?gara|"
     r"paddock|griglia\s+di\s+partenza|highlights|sintesi|i\s+gol\s+del|tutti\s+i\s+gol|zona\s+gol|"
     r"fuorigioco|tiki\s*taka|contropiede|"
     r"45\s*[-–—]\s*die\s+fu[ßs]{1,2}ball-halbzeit|fu[ßs]{1,2}ball-halbzeit|guten\s+abend\s+football|"
@@ -207,8 +207,9 @@ REGOLE_SPORT = [
 
 WINTER_VENUES = [
     ("Snow Ruyi", "Snow Ruyi (Cina)"), ("Zhangjiakou", "Snow Ruyi (Cina)"), ("Chongli", "Snow Ruyi (Cina)"),
-    ("Bergisel", "Innsbruck"), ("Airdrenaline", "Innsbruck"), ("Tirol", "Innsbruck"),
-    ("Innsbruck", "Innsbruck"), ("Killington", "Killington"), ("Copper Mountain", "Copper Mountain"),
+    ("Bergisel", "Innsbruck"), ("Airdrenaline", "Innsbruck"), ("Tirol", "Innsbruck"), ("Tirolo", "Innsbruck"),
+    ("Innsbruck", "Innsbruck"), ("Killington", "Killington"), ("Vermont", "Killington"),
+    ("Copper Mountain", "Copper Mountain"), ("Copper", "Copper Mountain"), ("Colorado", "Copper Mountain"),
     ("Beaver Creek", "Beaver Creek"), ("Tremblant", "Tremblant"), ("Gurgl", "Gurgl"),
     ("Sölden", "Sölden"), ("Levi", "Levi"), ("Val d'Isère", "Val d'Isère"),
     ("Courchevel", "Courchevel"), ("Val Gardena", "Val Gardena"), ("Alta Badia", "Alta Badia"),
@@ -419,11 +420,10 @@ def estrai_winter_dettagli(sport, full_text):
     return comp, ev
 
 
-def estrai_motori_dettagli(sport, title, sub_title, desc):
+def estrai_motori_dettagli(sport, title, sub_title, desc, dt=None):
     head_low = f"{title} {sub_title}".lower()
     all_low = f"{title} {sub_title} {desc}".lower()
 
-    # Cerca la classe PRIMA su title+sub_title così la desc di Moto2 ("Dopo la Moto3...") non sovrascrive Moto2!
     classe = sport
     if sport == "MotoGP":
         for txt_src in (head_low, all_low):
@@ -442,18 +442,24 @@ def estrai_motori_dettagli(sport, title, sub_title, desc):
 
     sess = ""
     for txt_src in (head_low, all_low):
-        if re.search(r"\b(?:qualif|qp|q1|q2)\b", txt_src):
+        if re.search(r"\b(?:qualif\w*|qp|q1|q2)\b", txt_src):
             sess = "Qualifiche"
             break
-        if re.search(r"\bsprint\b", txt_src):
+        if re.search(r"\bsprint\w*", txt_src):
             sess = "Sprint"
             break
-        if re.search(r"\b(?:gara|race|rennen|course|carrera)\b", txt_src):
+        if re.search(r"\b(?:gara|gare|race|course|carrera)\b|[a-zäöüß]*rennen\b", txt_src):
             sess = "Gara"
             break
         if re.search(r"\b(?:libere|practice|training|essai|ft[123]|fp[123])\b", txt_src):
             sess = "Prove Libere"
             break
+
+    if not sess and sport == "MotoGP" and dt is not None:
+        if dt.weekday() == 6 and 9 <= dt.hour <= 16:
+            sess = "Gara"
+        elif dt.weekday() == 5 and 10 <= dt.hour <= 14:
+            sess = "Qualifiche"
 
     gp = ""
     for pat, label in MOTORS_VENUES:
@@ -471,7 +477,7 @@ def estrai_motori_dettagli(sport, title, sub_title, desc):
     return comp, ev
 
 
-def arricchisci_epg(title, sub_title, desc, cats, sport, paese):
+def arricchisci_epg(title, sub_title, desc, cats, sport, paese, dt=None):
     t = (title or "").strip()
     st = (sub_title or "").strip()
     d = (desc or "").strip()
@@ -480,7 +486,7 @@ def arricchisci_epg(title, sub_title, desc, cats, sport, paese):
     if sport in ("Sci Alpino", "Snowboard"):
         return estrai_winter_dettagli(sport, all_info)
     if sport in ("MotoGP", "Formula 1"):
-        return estrai_motori_dettagli(sport, t, st, d)
+        return estrai_motori_dettagli(sport, t, st, d, dt=dt)
 
     comp = ""
     for pat, label in COMP_PATTERNS:
@@ -534,7 +540,7 @@ def classifica_sport(title_text, full_text_for_checks, canale_solo_sport=False, 
         return None
 
     is_match_or_race = bool(
-        re.search(r"(\s+-\s+|\s+–\s+|\bvs\.?\b|×|\s+x\s+|\s+@\s+|\s+at\s+|\b(?:gran premio|grand prix|qualifiche|qualifying|gara|race|rennen|sprint|slalom|discesa|super-?g|gigante|semifinale|finale|quarti|ottavi)\b)", tl)
+        re.search(r"(\s+-\s+|\s+–\s+|\bvs\.?\b|×|\s+x\s+|\s+@\s+|\s+at\s+|\b(?:gran\s+premio|grand\s+prix|gp|motogp|moto2|moto3|formula\s*1|f1|superbike|qualif\w*|gara|race|rennen|sprint\w*|slalom|discesa|super-?g|gigante|semifinale|finale|quarti|ottavi)\b)", tl)
     )
     if re.search(MAGAZINE_ALWAYS_REGEX, tl) or (not is_match_or_race and (re.search(MAGAZINE_ALWAYS_REGEX, t) or re.search(MAGAZINE_NO_MATCH_REGEX, tl) or re.search(MAGAZINE_NO_MATCH_REGEX, t))):
         return None
@@ -642,6 +648,10 @@ def scarica_epg_paesi():
 
                                 sport = classifica_sport(full_title, full_text, False, paese=paese)
                                 if sport and title:
+                                    if nc == "Das Erste" and sport in ("Sci Alpino", "Snowboard") and not has_live:
+                                        elem.clear()
+                                        continue
+
                                     low_all = full_text.lower()
 
                                     if sport == "MotoGP" and nc in ("RSI La 1", "RSI La 2", "DF1") and re.search(r"\bmoto\s*3\b", full_title.lower()) and dt.hour >= 14:
@@ -658,7 +668,7 @@ def scarica_epg_paesi():
                                             elem.clear()
                                             continue
 
-                                    comp, evento_finale = arricchisci_epg(title, sub_title, desc, cats, sport, paese)
+                                    comp, evento_finale = arricchisci_epg(title, sub_title, desc, cats, sport, paese, dt=dt)
                                     risultati.append({
                                         "data": dt.strftime("%Y-%m-%d"),
                                         "ora": dt.strftime("%H:%M"),
