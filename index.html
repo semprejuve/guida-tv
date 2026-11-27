@@ -378,7 +378,7 @@
 <body>
   <header>
     <h1>📺 Guida TV Sport Gratis</h1>
-    <p>TV Gratis (IT • DE • CH) • YouTube Brasile 🇧🇷 • DAZN Free Mondo ⚡</p>
+    <p>TV Gratis (IT • DE • CH) • YouTube Brasile 🇧🇷 • DAZN Free & ABEMA ⚡</p>
     <div id="botStatus" class="bot-status" style="display:none;"></div>
   </header>
 
@@ -443,14 +443,14 @@
           <a href="https://www.youtube.com/@nbabrasil" target="_blank">NBA Brasil</a>
         </div>
         <div class="dir-box">
-          <h3>⚡ DAZN Free (Italia & Estero)</h3>
-          <a href="https://www.dazn.com/it-IT/help/articles/dazn-freemium" target="_blank">🇮🇹 Italia</a>
-          <a href="https://www.dazn.com/fr-BE/home" target="_blank">🇧🇪 Belgio</a>
-          <a href="https://www.dazn.com/de-DE/help/articles/dazn-kostenlos-dazn-free-spiele-inhalt-programm-stream" target="_blank">🇩🇪 Germania</a>
-          <a href="https://www.dazn.com/en-CA/home" target="_blank">🇨🇦 Canada</a>
-          <a href="https://www.dazn.com/ja-JP/home" target="_blank">🇯🇵 Giappone</a>
-          <a href="https://www.dazn.com/es-ES/home" target="_blank">🇪🇸 Spagna</a>
-          <a href="https://www.dazn.com/pt-PT/home" target="_blank">🇵🇹 Portogallo</a>
+          <h3>⚡ DAZN Free & ABEMA</h3>
+          <a href="https://www.dazn.com/it-IT/help/articles/dazn-freemium" target="_blank">🇮🇹 DAZN Italia</a>
+          <a href="https://www.dazn.com/en-BE/home" target="_blank">🇧🇪 DAZN Belgio</a>
+          <a href="https://www.dazn.com/de-DE/help/articles/dazn-kostenlos-dazn-free-spiele-inhalt-programm-stream" target="_blank">🇩🇪 DAZN Germania</a>
+          <a href="https://www.dazn.com/en-CA/home" target="_blank">🇨🇦 DAZN Canada</a>
+          <a href="https://www.dazn.com/es-ES/home" target="_blank">🇪🇸 DAZN Spagna</a>
+          <a href="https://www.dazn.com/pt-PT/home" target="_blank">🇵🇹 DAZN Portogallo</a>
+          <a href="https://abema.tv/feature/8uTS3SadDwvqMH?moduleType=0" target="_blank">🇯🇵 ABEMA Giappone</a>
         </div>
       </div>
     </div>
@@ -460,11 +460,11 @@
     const MAGAZINE_KEY = "Programmi & Magazine";
 
     const sportIcons = {
-      "Calcio": "⚽", "Pallavolo": "🏐", "Basket & NBA": "🏀",
-      "Formula 1": "🏎️", "MotoGP": "🏍️", "Tennis": "🎾",
-      "Sci Alpino": "⛷️", "Football Americano": "🏈",
-      "College Football": "🎓", "Altri Sport": "🏅",
-      "Programmi & Magazine": "📺"
+      "Calcio": "⚽", "Pallavolo": "🏐", "Pallanuoto": "🤽",
+      "Basket & NBA": "🏀", "Formula 1": "🏎️", "MotoGP": "🏍️",
+      "Tennis": "🎾", "Sci Alpino": "⛷️", "Snowboard": "🏂",
+      "Football Americano": "🏈", "College Football": "🎓",
+      "Altri Sport": "🏅", "Programmi & Magazine": "📺"
     };
 
     const sportLabels = {
@@ -474,6 +474,7 @@
     const countryFlags = {
       "Italia": "🇮🇹", "Germania": "🇩🇪", "Svizzera": "🇨🇭",
       "Brasile YouTube": "🇧🇷",
+      "Giappone ABEMA Free": "🇯🇵📺",
       "DAZN Free Italia": "🇮🇹⚡", "DAZN Free Belgio": "🇧🇪⚡",
       "DAZN Free Germania": "🇩🇪⚡", "DAZN Free Canada": "🇨🇦⚡",
       "DAZN Free Giappone": "🇯🇵⚡", "DAZN Free Spagna": "🇪🇸⚡",
@@ -488,7 +489,7 @@
       "portogallo": "portogallo", "portugal": "portogallo",
       "inghilterra": "inghilterra", "england": "inghilterra", "angleterre": "inghilterra", "inglaterra": "inghilterra",
       "gran bretagna": "greatbritain", "great britain": "greatbritain", "gran bretana": "greatbritain", "uk": "greatbritain", "grossbritannien": "greatbritain",
-      "repubblica ceca": "czech", "czech republic": "czech", "republica checa": "czech", "tschechien": "czech", "republique tcheque": "czech",
+      "repubblica ceca": "czech", "cechia": "czech", "czech republic": "czech", "czechia": "czech", "republica checa": "czech", "tschechien": "czech", "republique tcheque": "czech",
       "svizzera": "svizzera", "schweiz": "svizzera", "suisse": "svizzera", "switzerland": "svizzera", "suica": "svizzera",
       "olanda": "olanda", "paesi bassi": "olanda", "netherlands": "olanda", "niederlande": "olanda", "pays bas": "olanda", "holanda": "olanda",
       "belgio": "belgio", "belgien": "belgio", "belgique": "belgio", "belgium": "belgio", "belgica": "belgio",
@@ -498,26 +499,47 @@
       "austria": "austria", "osterreich": "austria", "autriche": "austria",
       "cina": "china", "china": "china", "chine": "china",
       "giappone": "giappone", "japan": "giappone", "japon": "giappone", "japao": "giappone",
+      "corea": "corea", "corea del sud": "corea", "south korea": "corea", "sudkorea": "corea",
+      "libano": "libano", "lebanon": "libano", "libanon": "libano",
+      "arkansas razorbacks": "arkansas", "arkansas": "arkansas",
       "ajax amsterdam": "ajax", "ajax": "ajax",
       "thoune": "thun", "thun": "thun",
       "bayern monaco": "bayern", "bayern munchen": "bayern", "bayern munich": "bayern", "bayern": "bayern",
       "barcellona": "barcelona", "barcelona": "barcelona", "barca": "barcelona",
       "real madrid": "realmadrid",
       "atletico madrid": "atleticomadrid", "atletico de madrid": "atleticomadrid",
+      "athletic bilbao": "athletic", "athletic club": "athletic", "bilbao": "athletic",
+      "deportivo coruna": "deportivo", "deportivo la coruna": "deportivo", "deportivo": "deportivo",
       "inter": "inter", "internazionale": "inter", "inter milan": "inter", "inter milano": "inter",
-      "milan": "milan",
+      "milan": "milan", "ac milan": "milan", "mailand": "milan",
+      "genoa": "genoa", "genua": "genoa",
+      "torino": "torino", "turin": "torino",
+      "napoli": "napoli", "neapel": "napoli",
+      "roma": "roma", "rom": "roma",
+      "fiorentina": "fiorentina", "florenz": "fiorentina",
+      "venezia": "venezia", "venedig": "venezia",
       "psg": "psg", "paris saint germain": "psg", "paris sg": "psg",
       "manchester city": "mancity", "man city": "mancity",
       "manchester united": "manunited", "man united": "manunited", "man utd": "manunited",
       "borussia dortmund": "dortmund", "dortmund": "dortmund", "bvb": "dortmund",
+      "borussia monchengladbach": "gladbach", "borussia m gladbach": "gladbach", "monchengladbach": "gladbach", "m gladbach": "gladbach", "gladbach": "gladbach",
+      "werder brema": "werderbremen", "werder bremen": "werderbremen",
       "bayer leverkusen": "leverkusen", "leverkusen": "leverkusen",
       "eintracht francoforte": "eintrachtfrankfurt", "eintracht frankfurt": "eintrachtfrankfurt",
       "stoccarda": "stuttgart", "stuttgart": "stuttgart",
-      "lipsia": "leipzig", "leipzig": "leipzig",
+      "lipsia": "leipzig", "rb lipsia": "leipzig", "rb leipzig": "leipzig", "leipzig": "leipzig",
+      "friburgo": "freiburg", "freiburg": "freiburg",
+      "magonza": "mainz", "mainz": "mainz", "mainz 05": "mainz",
+      "union berlino": "unionberlin", "union berlin": "unionberlin",
       "colonia": "koln", "koln": "koln",
       "amburgo": "hamburger", "hamburger": "hamburger", "hsv": "hamburger",
-      "olympique marsiglia": "marsiglia", "marseille": "marsiglia", "marsiglia": "marsiglia",
-      "olympique lione": "lione", "lyon": "lione", "lione": "lione",
+      "olympique marsiglia": "marsiglia", "olympique de marseille": "marsiglia", "marseille": "marsiglia", "marsiglia": "marsiglia",
+      "olympique lione": "lione", "olympique lyonnais": "lione", "lyonnais": "lione", "lyon": "lione", "lione": "lione",
+      "strasburgo": "strasbourg", "strasbourg": "strasbourg",
+      "tolosa": "toulouse", "toulouse": "toulouse",
+      "nizza": "nice", "nice": "nice",
+      "lilla": "lille", "lille": "lille",
+      "siviglia": "sevilla", "sevilla": "sevilla",
       "sporting lisbona": "sporting", "sporting cp": "sporting", "sporting": "sporting",
       "stella rossa": "stellarossa", "red star": "stellarossa", "crvena zvezda": "stellarossa"
     };
@@ -602,8 +624,9 @@
       if (p === "Svizzera") return c.startsWith("rsi") ? 3 : 4;
       if (p === "Germania") return 5;
       if (p === "Brasile YouTube") return 6;
-      if (p.startsWith("DAZN Free")) return 7;
-      return 8;
+      if (p === "Giappone ABEMA Free") return 7;
+      if (p.startsWith("DAZN Free")) return 8;
+      return 9;
     }
 
     function normalizeTeam(raw) {
@@ -611,8 +634,8 @@
         .toLowerCase()
         .normalize("NFD")
         .replace(/[\u0300-\u036f]/g, "")
-        .replace(/&/g, " ")
-        .replace(/\b(?:fc|cf|sc|ac|as|us|ss|cd|ca|ec|cr|ud|sd|sv|vfb|vfl|tsg|fsv|fk|sk|sl|bk|hk|asv|tsv|ssc|ue|rc)\b/g, " ")
+        .replace(/[&'’]/g, " ")
+        .replace(/\b(?:fc|afc|cf|sc|ac|as|us|ss|cd|ca|ec|cr|ud|sd|sv|vfb|vfl|tsg|fsv|fk|sk|sl|bk|hk|asv|tsv|ssc|ue|rc|rcd|ogc|losc|bsc|1|rb)\b/g, " ")
         .replace(/[^a-z0-9\s]/g, " ")
         .replace(/\s+/g, " ")
         .trim();
@@ -621,15 +644,34 @@
     }
 
     function getEventSignature(ev) {
+      if (ev.sport === "Sci Alpino" || ev.sport === "Snowboard") {
+        const raw = `${ev.competizione || ""} ${ev.evento || ""}`
+          .toLowerCase()
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "");
+        let disc = "race";
+        if (/big\s*air/.test(raw)) disc = "bigair";
+        else if (/slopestyle/.test(raw)) disc = "slopestyle";
+        else if (/half[-\s]*pipe/.test(raw)) disc = "halfpipe";
+        else if (/snowboard\s*cross|boardercross|sbx/.test(raw)) disc = "sbx";
+        else if (/riesenslalom|slalom\s+geant|slalom\s+gigante|gigante/.test(raw)) disc = "gigante";
+        else if (/super[-\s]*g/.test(raw)) disc = "superg";
+        else if (/discesa|abfahrt|descente|downhill/.test(raw)) disc = "discesa";
+        else if (/slalom/.test(raw)) disc = "slalom";
+
+        const gen = /donne|femminil|frauen|damen|dames|femmes|women/.test(raw) ? "F" : (/uomini|maschil|manner|herren|messieurs|hommes|men/.test(raw) ? "M" : "");
+        const run = /1[aª]?\s*manche|1\.?\s*lauf|1ere\s*manche/.test(raw) ? "1" : (/2[aª]?\s*manche|2\.?\s*lauf|2eme\s*manche/.test(raw) ? "2" : "");
+        return { isMatch: false, full: `winter_${disc}_${gen}_${run}` };
+      }
+
       let clean = String(ev.evento || "").trim();
-      const prefixRe = /^(?:diretta|live|repliche?|replica|sport|calcio|pallavolo|volley|pallacanestro|basket|basketball|baloncesto|tennis|sci alpino|ski alpin|formula 1|f1|motogp|football americano|nfl|fussball|fußball|football|futebol|futbol|fútbol)\s*[:\-–—]\s*/i;
+      const prefixRe = /^(?:diretta|live|repliche?|replica|sport|calcio|pallavolo|pallanuoto|volley|pallacanestro|basket|basketball|baloncesto|tennis|sci alpino|ski alpin|snowboard|formula 1|f1|motogp|football americano|nfl|fussball|fußball|football|futebol|futbol|fútbol)\s*[:\-–—]\s*/i;
       while (prefixRe.test(clean)) {
         clean = clean.replace(prefixRe, "").trim();
       }
 
       const sepRe = /\s+(?:vs\.?|x|×|@|-|–|—|\bat\b|\bgegen\b)\s+/i;
 
-      // Gestisce "Squadra A - Squadra B: Competizione..." (es. RTS 2)
       if (clean.includes(":")) {
         const firstColon = clean.indexOf(":");
         const left = clean.slice(0, firstColon).trim();
@@ -645,7 +687,6 @@
         }
       }
 
-      // Gestisce "Conference League, Ligaphase, Ajax Amsterdam - Thun" (es. SRF zwei)
       if (clean.includes(",")) {
         const lastComma = clean.lastIndexOf(",");
         const afterComma = clean.slice(lastComma + 1).trim();
@@ -654,7 +695,6 @@
         }
       }
 
-      // Gestisce "Conference League 2026/2027 - Ajax - Thun" (es. RSI La 2)
       const parts = clean.split(/\s+(?:vs\.?|x|×|@|-|–|—|\bat\b|\bgegen\b)\s+/i);
       const nonTeamSuffix = /\b(?:qualifying|qualifiche|race|gara|sprint|practice|prove|day\s*\d+|giornata\s*\d+|paddock|rueda de prensa|finale|semifinale|slalom|discesa|super-?g)\b/i;
 
