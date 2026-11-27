@@ -384,7 +384,7 @@
     "ora": "11:10",
     "sport": "Snowboard",
     "competizione": "Coppa del Mondo",
-    "evento": "Big Air Donne",
+    "evento": "Big Air Uomini & Donne",
     "paese": "Germania",
     "canale": "Das Erste",
     "link": "https://www.ardmediathek.de/live"
@@ -443,8 +443,8 @@
     "data": "2026-11-28",
     "ora": "13:40",
     "sport": "MotoGP",
-    "competizione": "Moto3 • GP Valencia",
-    "evento": "Moto3 - Gara (GP Valencia)",
+    "competizione": "Moto2 • GP Valencia",
+    "evento": "Moto2 - Gara (GP Valencia)",
     "paese": "Germania",
     "canale": "DF1",
     "link": "https://df1.de/"
@@ -453,8 +453,8 @@
     "data": "2026-11-28",
     "ora": "13:40",
     "sport": "Snowboard",
-    "competizione": "Coppa del Mondo",
-    "evento": "Slalom Parallelo",
+    "competizione": "Coppa del Mondo • Snow Ruyi (Cina)",
+    "evento": "Gigante Parallelo - Snow Ruyi (Cina)",
     "paese": "Italia",
     "canale": "Rai Sport",
     "link": "https://www.raiplay.it/dirette/raisport"
@@ -503,8 +503,8 @@
     "data": "2026-11-28",
     "ora": "15:00",
     "sport": "MotoGP",
-    "competizione": "Moto3 • GP Valencia",
-    "evento": "Moto3 - Sprint (GP Valencia)",
+    "competizione": "MotoGP • GP Valencia",
+    "evento": "MotoGP - Sprint (GP Valencia)",
     "paese": "Germania",
     "canale": "DF1",
     "link": "https://df1.de/"
@@ -521,33 +521,13 @@
   },
   {
     "data": "2026-11-28",
-    "ora": "15:15",
-    "sport": "Sci Alpino",
-    "competizione": "Coppa del Mondo • Killington",
-    "evento": "Slalom Gigante Donne (1ª Manche) - Killington",
-    "paese": "Svizzera",
-    "canale": "SRF zwei",
-    "link": "https://www.srf.ch/play/tv"
-  },
-  {
-    "data": "2026-11-28",
     "ora": "15:20",
     "sport": "Calcio",
-    "competizione": "Sport Calcio",
+    "competizione": "Saudi Pro League",
     "evento": "Al Ettifaq - Al Hilal",
     "paese": "Italia",
     "canale": "Sportitalia",
     "link": "https://www.sportitalia.it/"
-  },
-  {
-    "data": "2026-11-28",
-    "ora": "15:20",
-    "sport": "Sci Alpino",
-    "competizione": "Coppa del Mondo • Killington",
-    "evento": "Slalom Gigante (1ª Manche) - Killington",
-    "paese": "Svizzera",
-    "canale": "RTS 2",
-    "link": "https://www.rts.ch/play/tv"
   },
   {
     "data": "2026-11-28",
@@ -598,16 +578,6 @@
     "paese": "DAZN Free Spagna",
     "canale": "DAZN App Gratis (ES)",
     "link": "https://www.dazn.com/es-ES/home"
-  },
-  {
-    "data": "2026-11-28",
-    "ora": "16:30",
-    "sport": "MotoGP",
-    "competizione": "Moto3 • GP Valencia",
-    "evento": "Moto3 (GP Valencia)",
-    "paese": "Svizzera",
-    "canale": "RSI La 2",
-    "link": "https://www.rsi.ch/play/tv"
   },
   {
     "data": "2026-11-28",
@@ -671,16 +641,6 @@
   },
   {
     "data": "2026-11-28",
-    "ora": "18:00",
-    "sport": "Sci Alpino",
-    "competizione": "Coppa del Mondo • Killington",
-    "evento": "Slalom Gigante Donne (2ª Manche) - Killington",
-    "paese": "Svizzera",
-    "canale": "SRF zwei",
-    "link": "https://www.srf.ch/play/tv"
-  },
-  {
-    "data": "2026-11-28",
     "ora": "18:15",
     "sport": "Sci Alpino",
     "competizione": "Coppa del Mondo • Killington",
@@ -688,16 +648,6 @@
     "paese": "Italia",
     "canale": "Rai Sport",
     "link": "https://www.raiplay.it/dirette/raisport"
-  },
-  {
-    "data": "2026-11-28",
-    "ora": "18:20",
-    "sport": "Sci Alpino",
-    "competizione": "Coppa del Mondo • Killington",
-    "evento": "Slalom Gigante (2ª Manche) - Killington",
-    "paese": "Svizzera",
-    "canale": "RTS 2",
-    "link": "https://www.rts.ch/play/tv"
   },
   {
     "data": "2026-11-28",
@@ -728,26 +678,6 @@
     "paese": "DAZN Free Canada",
     "canale": "DAZN Free Canada",
     "link": "https://www.dazn.com/en-CA/home"
-  },
-  {
-    "data": "2026-11-28",
-    "ora": "19:30",
-    "sport": "Sci Alpino",
-    "competizione": "Coppa del Mondo • Copper Mountain",
-    "evento": "Super-G Uomini - Copper Mountain",
-    "paese": "Svizzera",
-    "canale": "SRF zwei",
-    "link": "https://www.srf.ch/play/tv"
-  },
-  {
-    "data": "2026-11-28",
-    "ora": "19:35",
-    "sport": "Sci Alpino",
-    "competizione": "Coppa del Mondo • Copper Mountain",
-    "evento": "Super-G - Copper Mountain",
-    "paese": "Svizzera",
-    "canale": "RTS 2",
-    "link": "https://www.rts.ch/play/tv"
   },
   {
     "data": "2026-11-28",
@@ -973,7 +903,7 @@
     "data": "2026-11-29",
     "ora": "00:00",
     "sport": "Calcio",
-    "competizione": "Sport Calcio",
+    "competizione": "Liga Profesional Argentina",
     "evento": "Vélez Sársfield - Independiente",
     "paese": "Italia",
     "canale": "Sportitalia",
@@ -1074,7 +1004,7 @@
     "ora": "11:00",
     "sport": "Sci Alpino",
     "competizione": "Coppa del Mondo • Sölden",
-    "evento": "Slalom Gigante Donne - Sölden",
+    "evento": "Slalom Gigante Uomini & Donne - Sölden",
     "paese": "Germania",
     "canale": "Das Erste",
     "link": "https://www.ardmediathek.de/live"
@@ -1113,8 +1043,8 @@
     "data": "2026-11-29",
     "ora": "12:15",
     "sport": "MotoGP",
-    "competizione": "Moto3 • GP Valencia",
-    "evento": "Moto3 - Gara (GP Valencia)",
+    "competizione": "Moto2 • GP Valencia",
+    "evento": "Moto2 - Gara (GP Valencia)",
     "paese": "Germania",
     "canale": "DF1",
     "link": "https://df1.de/"
@@ -1144,20 +1074,10 @@
     "ora": "14:00",
     "sport": "Calcio",
     "competizione": "Serie A",
-    "evento": "Rugby: Serie A Elite maschile",
+    "evento": "Fiamme Oro - 4a g",
     "paese": "Italia",
     "canale": "Rai Sport",
     "link": "https://www.raiplay.it/dirette/raisport"
-  },
-  {
-    "data": "2026-11-29",
-    "ora": "14:20",
-    "sport": "MotoGP",
-    "competizione": "MotoGP • GP Valencia",
-    "evento": "MotoGP (GP Valencia)",
-    "paese": "Svizzera",
-    "canale": "SRF zwei",
-    "link": "https://www.srf.ch/play/tv"
   },
   {
     "data": "2026-11-29",
@@ -1221,26 +1141,6 @@
   },
   {
     "data": "2026-11-29",
-    "ora": "16:15",
-    "sport": "Sci Alpino",
-    "competizione": "Coppa del Mondo • Killington",
-    "evento": "Slalom Donne (1ª Manche) - Killington",
-    "paese": "Svizzera",
-    "canale": "SRF zwei",
-    "link": "https://www.srf.ch/play/tv"
-  },
-  {
-    "data": "2026-11-29",
-    "ora": "16:20",
-    "sport": "Sci Alpino",
-    "competizione": "Coppa del Mondo • Killington",
-    "evento": "Slalom (1ª Manche) - Killington",
-    "paese": "Svizzera",
-    "canale": "RTS 2",
-    "link": "https://www.rts.ch/play/tv"
-  },
-  {
-    "data": "2026-11-29",
     "ora": "16:25",
     "sport": "Sci Alpino",
     "competizione": "Coppa del Mondo • Killington",
@@ -1301,26 +1201,6 @@
   },
   {
     "data": "2026-11-29",
-    "ora": "17:45",
-    "sport": "Sci Alpino",
-    "competizione": "Coppa del Mondo • Copper Mountain",
-    "evento": "Slalom Gigante Uomini (1ª Manche) - Copper Mountain",
-    "paese": "Svizzera",
-    "canale": "SRF zwei",
-    "link": "https://www.srf.ch/play/tv"
-  },
-  {
-    "data": "2026-11-29",
-    "ora": "17:50",
-    "sport": "Sci Alpino",
-    "competizione": "Coppa del Mondo • Copper Mountain",
-    "evento": "Slalom Gigante (1ª Manche) - Copper Mountain",
-    "paese": "Svizzera",
-    "canale": "RTS 2",
-    "link": "https://www.rts.ch/play/tv"
-  },
-  {
-    "data": "2026-11-29",
     "ora": "18:00",
     "sport": "MotoGP",
     "competizione": "MotoGP",
@@ -1361,26 +1241,6 @@
   },
   {
     "data": "2026-11-29",
-    "ora": "19:15",
-    "sport": "Sci Alpino",
-    "competizione": "Coppa del Mondo • Killington",
-    "evento": "Slalom Donne (2ª Manche) - Killington",
-    "paese": "Svizzera",
-    "canale": "SRF zwei",
-    "link": "https://www.srf.ch/play/tv"
-  },
-  {
-    "data": "2026-11-29",
-    "ora": "19:20",
-    "sport": "Sci Alpino",
-    "competizione": "Coppa del Mondo • Killington",
-    "evento": "Slalom (2ª Manche) - Killington",
-    "paese": "Svizzera",
-    "canale": "RTS 2",
-    "link": "https://www.rts.ch/play/tv"
-  },
-  {
-    "data": "2026-11-29",
     "ora": "19:25",
     "sport": "Sci Alpino",
     "competizione": "Coppa del Mondo • Killington",
@@ -1398,26 +1258,6 @@
     "paese": "Svizzera",
     "canale": "RSI La 2",
     "link": "https://www.rsi.ch/play/tv"
-  },
-  {
-    "data": "2026-11-29",
-    "ora": "20:40",
-    "sport": "Sci Alpino",
-    "competizione": "Coppa del Mondo • Copper Mountain",
-    "evento": "Slalom Gigante Uomini (2ª Manche) - Copper Mountain",
-    "paese": "Svizzera",
-    "canale": "SRF zwei",
-    "link": "https://www.srf.ch/play/tv"
-  },
-  {
-    "data": "2026-11-29",
-    "ora": "20:50",
-    "sport": "Sci Alpino",
-    "competizione": "Coppa del Mondo • Copper Mountain",
-    "evento": "Slalom Gigante (2ª Manche) - Copper Mountain",
-    "paese": "Svizzera",
-    "canale": "RTS 2",
-    "link": "https://www.rts.ch/play/tv"
   },
   {
     "data": "2026-11-29",
@@ -1448,16 +1288,6 @@
     "paese": "DAZN Free Italia",
     "canale": "DAZN Free Italia",
     "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-29",
-    "ora": "22:10",
-    "sport": "Formula 1",
-    "competizione": "Formula 1 • GP Qatar",
-    "evento": "Formula 1 - Gara (GP Qatar)",
-    "paese": "Svizzera",
-    "canale": "RTS 2",
-    "link": "https://www.rts.ch/play/tv"
   },
   {
     "data": "2026-11-29",
