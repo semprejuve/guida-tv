@@ -94,7 +94,7 @@
     "ora": "09:40",
     "sport": "Calcio",
     "competizione": "FUTEBOL PELO MUNDO",
-    "evento": "Macarthur x Melbourne City (Campeonato Australiano)",
+    "evento": "Macarthur x Melbourne City",
     "paese": "Brasile YouTube",
     "canale": "A-Leagues (YouTube)",
     "link": "https://www.youtube.com/@aleagues"
@@ -114,7 +114,7 @@
     "ora": "13:00",
     "sport": "Calcio",
     "competizione": "FUTEBOL PELO MUNDO",
-    "evento": "Bukhoro x Mashal Muborak (Campeonato Uzbeque)",
+    "evento": "Bukhoro x Mashal Muborak",
     "paese": "Brasile YouTube",
     "canale": "Uzbekistan PFL (YouTube)",
     "link": "https://www.youtube.com/results?search_query=Uzbekistan+PFL"
@@ -124,7 +124,7 @@
     "ora": "13:00",
     "sport": "Calcio",
     "competizione": "FUTEBOL PELO MUNDO",
-    "evento": "Kokand 1912 x Xorazm Urganch (Campeonato Uzbeque)",
+    "evento": "Kokand 1912 x Xorazm Urganch",
     "paese": "Brasile YouTube",
     "canale": "Uzbekistan PFL (YouTube)",
     "link": "https://www.youtube.com/results?search_query=Uzbekistan+PFL"
@@ -154,7 +154,7 @@
     "ora": "15:00",
     "sport": "Calcio",
     "competizione": "FUTEBOL PELO MUNDO",
-    "evento": "Inter Kashi x Churchill Brothers (Campeonato Indiano)",
+    "evento": "Inter Kashi x Churchill Brothers",
     "paese": "Brasile YouTube",
     "canale": "Indian Super League (YouTube)",
     "link": "https://www.youtube.com/results?search_query=Indian+Super+League"
@@ -174,7 +174,7 @@
     "ora": "15:20",
     "sport": "Calcio",
     "competizione": "FUTEBOL PELO MUNDO",
-    "evento": "Al Qadsiah x Al Fayha (Campeonato Saudita)",
+    "evento": "Al Qadsiah x Al Fayha",
     "paese": "Brasile YouTube",
     "canale": "Canal GOAT (YouTube)",
     "link": "https://www.youtube.com/@canalgoatbr"
@@ -254,7 +254,7 @@
     "ora": "18:30",
     "sport": "Calcio",
     "competizione": "FUTEBOL PELO MUNDO",
-    "evento": "Al Ittihad x Neom (Campeonato Saudita)",
+    "evento": "Al Ittihad x Neom",
     "paese": "Brasile YouTube",
     "canale": "Canal GOAT / Xsports (YouTube)",
     "link": "https://www.youtube.com/@canalgoatbr"
@@ -264,10 +264,30 @@
     "ora": "19:00",
     "sport": "Tennis",
     "competizione": "Coppa Davis",
-    "evento": "Coppa Davis - Semifinale Italia",
+    "evento": "Italia - Cechia",
     "paese": "Italia",
     "canale": "Rai 1",
     "link": "https://www.raiplay.it/dirette/rai1"
+  },
+  {
+    "data": "2026-11-27",
+    "ora": "20:00",
+    "sport": "Altri Sport",
+    "competizione": "Eredivisie",
+    "evento": "Ajax x Heracles",
+    "paese": "Brasile YouTube",
+    "canale": "Link Alviverde (YouTube)",
+    "link": "https://www.youtube.com/results?search_query=Link+Alviverde"
+  },
+  {
+    "data": "2026-11-27",
+    "ora": "20:00",
+    "sport": "Altri Sport",
+    "competizione": "Eredivisie",
+    "evento": "VVV Venlo x RKC Waalwijk",
+    "paese": "Brasile YouTube",
+    "canale": "Link Alviverde (YouTube)",
+    "link": "https://www.youtube.com/results?search_query=Link+Alviverde"
   },
   {
     "data": "2026-11-27",
@@ -294,7 +314,7 @@
     "ora": "20:30",
     "sport": "Calcio",
     "competizione": "Bundesliga",
-    "evento": "Werder Bremen x Borussia Mönchengladbach (Bundesliga)",
+    "evento": "Werder Bremen x Borussia Mönchengladbach",
     "paese": "Brasile YouTube",
     "canale": "CazéTV / SportyNet (YouTube)",
     "link": "https://www.youtube.com/@CazeTV"
@@ -371,16 +391,6 @@
   },
   {
     "data": "2026-11-28",
-    "ora": "01:00",
-    "sport": "Pallavolo",
-    "competizione": "SUPERLIGA FEMININA DE VÔLEI",
-    "evento": "Praia Clube x Osasco",
-    "paese": "Brasile YouTube",
-    "canale": "GE TV (YouTube)",
-    "link": "https://www.youtube.com/@getv"
-  },
-  {
-    "data": "2026-11-28",
     "ora": "02:00",
     "sport": "Basket & NBA",
     "competizione": "NCAA Men's Basketball",
@@ -423,8 +433,8 @@
     "data": "2026-11-28",
     "ora": "10:45",
     "sport": "MotoGP",
-    "competizione": "MotoGP",
-    "evento": "MotoGP: GP Valencia: Qualifiche",
+    "competizione": "MotoGP • GP Valencia",
+    "evento": "MotoGP (GP Valencia)",
     "paese": "Svizzera",
     "canale": "RSI La 2",
     "link": "https://www.rsi.ch/play/tv"
@@ -451,16 +461,6 @@
   },
   {
     "data": "2026-11-28",
-    "ora": "11:35",
-    "sport": "MotoGP",
-    "competizione": "MotoGP",
-    "evento": "Qualifying Analyse",
-    "paese": "Germania",
-    "canale": "DF1",
-    "link": "https://df1.de/"
-  },
-  {
-    "data": "2026-11-28",
     "ora": "12:05",
     "sport": "Tennis",
     "competizione": "Coppa Davis",
@@ -483,8 +483,8 @@
     "data": "2026-11-28",
     "ora": "12:40",
     "sport": "MotoGP",
-    "competizione": "Moto3",
-    "evento": "Moto3: GP Valencia: Qualifiche",
+    "competizione": "Moto3 • GP Valencia",
+    "evento": "Moto3 (GP Valencia)",
     "paese": "Svizzera",
     "canale": "RSI La 2",
     "link": "https://www.rsi.ch/play/tv"
@@ -493,8 +493,8 @@
     "data": "2026-11-28",
     "ora": "12:45",
     "sport": "MotoGP",
-    "competizione": "MotoGP",
-    "evento": "Qualifying",
+    "competizione": "Moto3 • GP Valencia",
+    "evento": "Moto3 - Gara (GP Valencia)",
     "paese": "Germania",
     "canale": "DF1",
     "link": "https://df1.de/"
@@ -503,8 +503,8 @@
     "data": "2026-11-28",
     "ora": "13:40",
     "sport": "MotoGP",
-    "competizione": "MotoGP",
-    "evento": "Qualifying",
+    "competizione": "Moto3 • GP Valencia",
+    "evento": "Moto3 - Gara (GP Valencia)",
     "paese": "Germania",
     "canale": "DF1",
     "link": "https://df1.de/"
@@ -523,8 +523,8 @@
     "data": "2026-11-28",
     "ora": "13:50",
     "sport": "MotoGP",
-    "competizione": "Moto2",
-    "evento": "Moto2: GP Valencia: Qualifiche",
+    "competizione": "Moto2 • GP Valencia",
+    "evento": "Moto2 (GP Valencia)",
     "paese": "Svizzera",
     "canale": "RSI La 2",
     "link": "https://www.rsi.ch/play/tv"
@@ -553,21 +553,11 @@
     "data": "2026-11-28",
     "ora": "14:55",
     "sport": "MotoGP",
-    "competizione": "MotoGP",
-    "evento": "MotoGP: GP Valencia: Sprint Race",
+    "competizione": "MotoGP • GP Valencia",
+    "evento": "MotoGP - Sprint (GP Valencia)",
     "paese": "Svizzera",
     "canale": "RSI La 2",
     "link": "https://www.rsi.ch/play/tv"
-  },
-  {
-    "data": "2026-11-28",
-    "ora": "14:55",
-    "sport": "MotoGP",
-    "competizione": "MotoGP",
-    "evento": "MotoGP: GP de la Communauté valencienne : Course sprint",
-    "paese": "Svizzera",
-    "canale": "RTS 2",
-    "link": "https://www.rts.ch/play/tv"
   },
   {
     "data": "2026-11-28",
@@ -583,8 +573,8 @@
     "data": "2026-11-28",
     "ora": "15:00",
     "sport": "MotoGP",
-    "competizione": "MotoGP",
-    "evento": "Sprint Rennen",
+    "competizione": "Moto3 • GP Valencia",
+    "evento": "Moto3 - Sprint (GP Valencia)",
     "paese": "Germania",
     "canale": "DF1",
     "link": "https://df1.de/"
@@ -628,16 +618,6 @@
     "paese": "Svizzera",
     "canale": "RTS 2",
     "link": "https://www.rts.ch/play/tv"
-  },
-  {
-    "data": "2026-11-28",
-    "ora": "15:25",
-    "sport": "MotoGP",
-    "competizione": "MotoGP",
-    "evento": "Analyse",
-    "paese": "Germania",
-    "canale": "DF1",
-    "link": "https://df1.de/"
   },
   {
     "data": "2026-11-28",
@@ -703,8 +683,8 @@
     "data": "2026-11-28",
     "ora": "16:30",
     "sport": "MotoGP",
-    "competizione": "Moto3",
-    "evento": "Moto3: GP Valencia: Qualifiche",
+    "competizione": "Moto3 • GP Valencia",
+    "evento": "Moto3 (GP Valencia)",
     "paese": "Svizzera",
     "canale": "RSI La 2",
     "link": "https://www.rsi.ch/play/tv"
@@ -1063,8 +1043,8 @@
     "data": "2026-11-28",
     "ora": "23:20",
     "sport": "Formula 1",
-    "competizione": "Formula 1",
-    "evento": "Formula 1: GP Qatar: Qualifiche",
+    "competizione": "Formula 1 • GP Qatar",
+    "evento": "Formula 1 (GP Qatar)",
     "paese": "Svizzera",
     "canale": "RSI La 2",
     "link": "https://www.rsi.ch/play/tv"
@@ -1143,8 +1123,8 @@
     "data": "2026-11-29",
     "ora": "08:45",
     "sport": "Formula 1",
-    "competizione": "Formula 1",
-    "evento": "Formula 1: GP Qatar: Qualifiche",
+    "competizione": "Formula 1 • GP Qatar",
+    "evento": "Formula 1 (GP Qatar)",
     "paese": "Svizzera",
     "canale": "RSI La 2",
     "link": "https://www.rsi.ch/play/tv"
@@ -1163,8 +1143,8 @@
     "data": "2026-11-29",
     "ora": "10:55",
     "sport": "MotoGP",
-    "competizione": "Moto3",
-    "evento": "Moto3: GP Valencia: Gara",
+    "competizione": "Moto3 • GP Valencia",
+    "evento": "Moto3 - Gara (GP Valencia)",
     "paese": "Svizzera",
     "canale": "RSI La 2",
     "link": "https://www.rsi.ch/play/tv"
@@ -1183,8 +1163,8 @@
     "data": "2026-11-29",
     "ora": "11:00",
     "sport": "MotoGP",
-    "competizione": "MotoGP",
-    "evento": "Rennen",
+    "competizione": "Moto3 • GP Valencia",
+    "evento": "Moto3 - Gara (GP Valencia)",
     "paese": "Germania",
     "canale": "DF1",
     "link": "https://df1.de/"
@@ -1203,8 +1183,8 @@
     "data": "2026-11-29",
     "ora": "12:10",
     "sport": "MotoGP",
-    "competizione": "Moto2",
-    "evento": "Moto2: GP Valencia: Gara",
+    "competizione": "Moto2 • GP Valencia",
+    "evento": "Moto2 - Gara (GP Valencia)",
     "paese": "Svizzera",
     "canale": "RSI La 2",
     "link": "https://www.rsi.ch/play/tv"
@@ -1213,8 +1193,8 @@
     "data": "2026-11-29",
     "ora": "12:15",
     "sport": "MotoGP",
-    "competizione": "MotoGP",
-    "evento": "Rennen",
+    "competizione": "Moto3 • GP Valencia",
+    "evento": "Moto3 - Gara (GP Valencia)",
     "paese": "Germania",
     "canale": "DF1",
     "link": "https://df1.de/"
@@ -1223,21 +1203,11 @@
     "data": "2026-11-29",
     "ora": "13:50",
     "sport": "MotoGP",
-    "competizione": "MotoGP",
-    "evento": "MotoGP: GP Valencia: Gara",
+    "competizione": "MotoGP • GP Valencia",
+    "evento": "MotoGP - Gara (GP Valencia)",
     "paese": "Svizzera",
     "canale": "RSI La 2",
     "link": "https://www.rsi.ch/play/tv"
-  },
-  {
-    "data": "2026-11-29",
-    "ora": "13:50",
-    "sport": "MotoGP",
-    "competizione": "MotoGP",
-    "evento": "MotoGP: GP de la Communauté valencienne : La course",
-    "paese": "Svizzera",
-    "canale": "RTS 2",
-    "link": "https://www.rts.ch/play/tv"
   },
   {
     "data": "2026-11-29",
@@ -1263,8 +1233,8 @@
     "data": "2026-11-29",
     "ora": "14:20",
     "sport": "MotoGP",
-    "competizione": "MotoGP",
-    "evento": "MotoGP: GP Valencia: Warm Up",
+    "competizione": "MotoGP • GP Valencia",
+    "evento": "MotoGP (GP Valencia)",
     "paese": "Svizzera",
     "canale": "SRF zwei",
     "link": "https://www.srf.ch/play/tv"
@@ -1353,8 +1323,8 @@
     "data": "2026-11-29",
     "ora": "16:55",
     "sport": "Formula 1",
-    "competizione": "Formula 1",
-    "evento": "Formula 1: GP Qatar: Gara",
+    "competizione": "Formula 1 • GP Qatar",
+    "evento": "Formula 1 - Gara (GP Qatar)",
     "paese": "Svizzera",
     "canale": "RSI La 2",
     "link": "https://www.rsi.ch/play/tv"
@@ -1424,7 +1394,7 @@
     "ora": "18:00",
     "sport": "MotoGP",
     "competizione": "MotoGP",
-    "evento": "Moto GP Zona Rossa",
+    "evento": "MotoGP - Gara",
     "paese": "Italia",
     "canale": "TV8",
     "link": "https://tv8.it/streaming"
@@ -1553,8 +1523,8 @@
     "data": "2026-11-29",
     "ora": "22:10",
     "sport": "Formula 1",
-    "competizione": "Formula 1",
-    "evento": "Formule 1: GP du Qatar : La course",
+    "competizione": "Formula 1 • GP Qatar",
+    "evento": "Formula 1 - Gara (GP Qatar)",
     "paese": "Svizzera",
     "canale": "RTS 2",
     "link": "https://www.rts.ch/play/tv"
@@ -1574,7 +1544,7 @@
     "ora": "23:15",
     "sport": "Formula 1",
     "competizione": "Formula 1",
-    "evento": "F1 Podio",
+    "evento": "Formula 1",
     "paese": "Italia",
     "canale": "TV8",
     "link": "https://tv8.it/streaming"
@@ -1593,8 +1563,8 @@
     "data": "2026-11-30",
     "ora": "00:55",
     "sport": "Formula 1",
-    "competizione": "Formula 1",
-    "evento": "Formula 1: GP Qatar: Gara",
+    "competizione": "Formula 1 • GP Qatar",
+    "evento": "Formula 1 - Gara (GP Qatar)",
     "paese": "Svizzera",
     "canale": "RSI La 2",
     "link": "https://www.rsi.ch/play/tv"
