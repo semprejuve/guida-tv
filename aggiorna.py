@@ -163,7 +163,7 @@ MAGAZINE_ALWAYS_REGEX = (
     r"si\s+live\s*24|si\s+motori|si\s+cafe|inside\s+city|tutti\s+in\s+campo|diretta\s+stadio|lo\s+sai\s+che|prima\s+serata|"
     r"cartellino\s+rosa|otto\s+in\s+punto|speciale\s+cun|tg\s+betsson|"
     r"supertennis\s+(?:today|tg)|tennis\s+talk|tie\s+book|tie\s+movie|hawk\s+eye|circolando|race\s+to\s+foro|tennis\s+symposium|tutorial\s+pickleball|colpo\s+da\s+campione|"
-    r"moviola|anteprima|prepartita|pre-?partita|postpartita|post-?partita|pre-?gara|post-?gara|"
+    r"moviola|anteprima|prepartita|pre-?partita|postpartita|post-?partita|pre-?gara|post-?gara|vorbericht|analyse|"
     r"paddock|griglia\s+di\s+partenza|highlights|sintesi|i\s+gol\s+del|tutti\s+i\s+gol|zona\s+gol|"
     r"fuorigioco|tiki\s*taka|contropiede|"
     r"45\s*[-–—]\s*die\s+fu[ßs]{1,2}ball-halbzeit|fu[ßs]{1,2}ball-halbzeit|guten\s+abend\s+football|"
@@ -171,7 +171,7 @@ MAGAZINE_ALWAYS_REGEX = (
     r"doppelpass|fantalk|sky90|bundesliga\s+pur|heimspiel|blickpunkt\s+sport|"
     r"alle\s+spiele,?\s+alle\s+tore|alle\s+tore|scooore|der\s+countdown|the\s+evolution\s+of\s+sport|the\s+power\s+of\s+sport|watts|"
     r"sportpanorama|sportflash|sportaktuell|adr[ée]naline|"
-    r"zusammenfassung|r[üu]ckblick|vorschau|vorbericht|dokumentation|"
+    r"zusammenfassung|r[üu]ckblick|vorschau|dokumentation|"
     r"[ée]mission|r[ée]sum[ée]|temps\s+forts|r[ée]trospective|avant-?match|apr[èe]s-?match|d[ée]brief|documentaire|"
     r"preview|review|watchalong|trending|rueda\s+de\s+prensa|press\s+conference|pesaje|weigh-?in|"
     r"documentary|docuseries|all\s+access|behind\s+the\s+scenes|paddock\s+abierto"
@@ -208,14 +208,65 @@ REGOLE_SPORT = [
 ]
 
 WINTER_VENUES = [
-    "Killington", "Copper Mountain", "Beaver Creek", "Tremblant", "Gurgl", "Sölden", "Levi",
-    "Val d'Isère", "Courchevel", "Val Gardena", "Alta Badia", "Madonna di Campiglio", "Bormio",
-    "St. Moritz", "Adelboden", "Wengen", "Kitzbühel", "Schladming", "Garmisch", "Cortina d'Ampezzo",
-    "Cortina", "Kronplatz", "Zauchensee", "Tarvisio", "Kranjska Gora", "Flachau", "Lienz",
-    "Semmering", "Åre", "Kvitfjell", "Soldeu", "Crans-Montana", "Saalbach", "Sun Valley",
-    "Innsbruck", "Chur", "Secret Garden", "Mylin", "Carezza", "Davos", "Bad Gastein", "Scuol",
-    "Rogla", "Bansko", "Sierra Nevada", "Laax", "Calgary", "Aspen", "Veysonnaz", "Mont-Sainte-Anne",
-    "Cervinia", "Zermatt", "Klosters", "Lillehammer", "Ruka", "Kuusamo", "Kontiolahti", "Altenberg",
+    ("Bergisel", "Innsbruck"), ("Airdrenaline", "Innsbruck"), ("Tirol", "Innsbruck"),
+    ("Innsbruck", "Innsbruck"), ("Killington", "Killington"), ("Copper Mountain", "Copper Mountain"),
+    ("Beaver Creek", "Beaver Creek"), ("Tremblant", "Tremblant"), ("Gurgl", "Gurgl"),
+    ("Sölden", "Sölden"), ("Levi", "Levi"), ("Val d'Isère", "Val d'Isère"),
+    ("Courchevel", "Courchevel"), ("Val Gardena", "Val Gardena"), ("Alta Badia", "Alta Badia"),
+    ("Madonna di Campiglio", "Madonna di Campiglio"), ("Bormio", "Bormio"), ("St. Moritz", "St. Moritz"),
+    ("Adelboden", "Adelboden"), ("Wengen", "Wengen"), ("Kitzbühel", "Kitzbühel"),
+    ("Schladming", "Schladming"), ("Garmisch", "Garmisch"), ("Cortina d'Ampezzo", "Cortina d'Ampezzo"),
+    ("Cortina", "Cortina"), ("Kronplatz", "Kronplatz"), ("Zauchensee", "Zauchensee"),
+    ("Tarvisio", "Tarvisio"), ("Kranjska Gora", "Kranjska Gora"), ("Flachau", "Flachau"),
+    ("Lienz", "Lienz"), ("Semmering", "Semmering"), ("Åre", "Åre"), ("Kvitfjell", "Kvitfjell"),
+    ("Soldeu", "Soldeu"), ("Crans-Montana", "Crans-Montana"), ("Saalbach", "Saalbach"),
+    ("Sun Valley", "Sun Valley"), ("Chur", "Chur"), ("Secret Garden", "Secret Garden"),
+    ("Mylin", "Mylin"), ("Carezza", "Carezza"), ("Davos", "Davos"), ("Bad Gastein", "Bad Gastein"),
+    ("Scuol", "Scuol"), ("Rogla", "Rogla"), ("Bansko", "Bansko"), ("Sierra Nevada", "Sierra Nevada"),
+    ("Laax", "Laax"), ("Calgary", "Calgary"), ("Aspen", "Aspen"), ("Veysonnaz", "Veysonnaz"),
+    ("Mont-Sainte-Anne", "Mont-Sainte-Anne"), ("Cervinia", "Cervinia"), ("Zermatt", "Zermatt"),
+    ("Klosters", "Klosters"), ("Lillehammer", "Lillehammer"), ("Ruka", "Ruka"),
+    ("Kuusamo", "Kuusamo"), ("Kontiolahti", "Kontiolahti"),
+]
+
+MOTORS_VENUES = [
+    (r"\bvalencian?[ao]?\b|\bricardo\s+tormo\b", "GP Valencia"),
+    (r"\bqatar\b|\bkatar\b|\blusail\b|\blosail\b", "GP Qatar"),
+    (r"\babu\s*dhabi\b|\byas\s*marina\b", "GP Abu Dhabi"),
+    (r"\bportim[ãa]o\b|\bportugal\b|\bportogallo\b", "GP Portogallo"),
+    (r"\bmisano\b|\bsan\s+marino\b", "GP San Marino"),
+    (r"\bmugello\b", "GP Italia (Mugello)"),
+    (r"\bmonza\b", "GP Italia (Monza)"),
+    (r"\bimola\b", "GP Emilia-Romagna"),
+    (r"\bsilverstone\b", "GP Gran Bretagna"),
+    (r"\bcatalu[nñ]a\b|\bbarcell?ona\b|\bmontmel[óo]\b", "GP Catalogna"),
+    (r"\bjerez\b", "GP Spagna (Jerez)"),
+    (r"\bassen\b", "GP Olanda (Assen)"),
+    (r"\bsachsenring\b", "GP Germania"),
+    (r"\bspielberg\b|\bred\s+bull\s+ring\b", "GP Austria"),
+    (r"\bmotegi\b|\bjapan\b|\bgiappone\b", "GP Giappone"),
+    (r"\bphillip\s+island\b", "GP Australia"),
+    (r"\bsepang\b|\bmalaysia\b", "GP Malesia"),
+    (r"\bburiram\b|\bthailand\b", "GP Thailandia"),
+    (r"\bmandalika\b|\bindonesia\b", "GP Indonesia"),
+    (r"\baustin\b|\bamericas\b", "GP delle Americhe"),
+    (r"\blas\s+vegas\b", "GP Las Vegas"),
+    (r"\binterlagos\b|\bs[ãa]o\s+paulo\b|\bbrasil\b", "GP Brasile"),
+    (r"\bmexico\b|\bmessico\b", "GP Messico"),
+    (r"\bsuzuka\b", "GP Giappone (Suzuka)"),
+    (r"\bmonaco\b|\bmontecarlo\b", "GP Monaco"),
+    (r"\bspa[-\s]*francorchamps\b|\bbelgi\w+\b", "GP Belgio"),
+    (r"\bzandvoort\b", "GP Olanda"),
+    (r"\bhungaroring\b|\bungaria\b", "GP Ungheria"),
+    (r"\bbaku\b|\bazerbaijan\b", "GP Azerbaijan"),
+    (r"\bsingapore\b", "GP Singapore"),
+    (r"\bbahrain\b|\bsakhir\b", "GP Bahrain"),
+    (r"\bjeddah\b|\barabia\b", "GP Arabia Saudita"),
+    (r"\bmelbourne\b|\baustralia\b", "GP Australia"),
+    (r"\bshanghai\b|\bchina\b|\bcina\b", "GP Cina"),
+    (r"\bmiami\b", "GP Miami"),
+    (r"\bmontreal\b|\bcanada\b", "GP Canada"),
+    (r"\bmadrid\b", "GP Spagna (Madrid)"),
 ]
 
 COMP_PATTERNS = [
@@ -267,21 +318,39 @@ def ha_anno_passato(testo):
 
 
 def estrai_match_da_testo(testo):
-    s = re.sub(r"\s+", " ", (testo or "")).strip()
-    if not s:
+    s_raw = re.sub(r"\s+", " ", (testo or "")).strip()
+    if not s_raw:
         return None
-    s = re.sub(r"^(?:week\s*\d+|spieltag\s*\d+|thanksgiving\s+game|sunday\s+night|monday\s+night|thursday\s+night|diretta|live)\s*[:\-–—]\s*", "", s, flags=re.I)
-    m = re.search(
-        r"([A-ZÀ-ŸÄÖÜ][A-Za-zÀ-ÿäöüÄÖÜ0-9.'’/]{1,22}(?:\s+[A-ZÀ-ŸÄÖÜ0-9][A-Za-zÀ-ÿäöüÄÖÜ0-9.'’/]{1,18}){0,2})\s+(?:vs\.?|–|—|-|@|\bat\b|\bgegen\b|\bcontro\b)\s+([A-ZÀ-ŸÄÖÜ][A-Za-zÀ-ÿäöüÄÖÜ0-9.'’/]{1,22}(?:\s+[A-ZÀ-ŸÄÖÜ0-9][A-Za-zÀ-ÿäöüÄÖÜ0-9.'’/]{1,18}){0,2})",
-        s,
-    )
-    if not m:
-        return None
-    a, b = m.group(1).strip(" -–—:"), m.group(2).strip(" -–—:.,")
-    if re.search(r"^\d+$|\b(?:giorno|stagione|episode|ep|manche|lauf|giornata|spieltag|runde|round|partita)\b", f"{a} {b}", re.I):
-        return None
-    if len(a) >= 2 and len(b) >= 2:
-        return f"{a} - {b}"
+
+    team_pat = r"[A-ZÀ-ŸÄÖÜ][A-Za-zÀ-ÿäöüÄÖÜ0-9.'’/]{1,22}(?:\s+(?:di|del|della|dei|da|in|san|s\.|de|la|el|van|von|den|[A-ZÀ-ŸÄÖÜ0-9][A-Za-zÀ-ÿäöüÄÖÜ0-9.'’/]{0,20})){0,4}"
+    sep_pat = r"(?:\s+(?:vs\.?|–|—|-|@|\bat\b|\bgegen\b|\bcontro\b)\s+|(?<![0-9a-zà-ÿ])-(?![0-9]))"
+    bad_side = r"^\d+$|\b(?:coppa|davis|superlega|credem|banca|fineco|serie\s*a1?|champions|europa|conference|stagione|episode|ep|manche|lauf|spieltag|runde|round|singolare|doppio|qualifiche|prove|sprint|gara|giornata|pallavolo|pallanuoto|tennis|calcio|basket|diretta|live|rai|supertennis|202\d)\b"
+
+    # Prova prima spezzando su ":" e "-" da destra verso sinistra (es. "Coppa Davis 2026 - Semifinale Italia - Cechia: 2° singolare")
+    for frase in re.split(r"[.!?\n]+", s_raw):
+        chunks = [c.strip() for c in frase.split(":") if c.strip()]
+        for chunk in reversed(chunks):
+            chunk_clean = re.sub(
+                r"^(?:quarti(?:\s+di\s+finale)?|semifinal[ei]|final[ei]|ottavi|\d+[aª°]?\s*giornata|week\s*\d+|spieltag\s*\d+|thanksgiving\s+game|sunday\s+night|monday\s+night|thursday\s+night|diretta|live)\s*[-–—]?\s*",
+                "",
+                chunk,
+                flags=re.I,
+            ).strip()
+            # Se ci sono più " - " (es. "Coppa Davis 2026 - Semifinale Italia - Cechia"), controlla gli ultimi due blocchi
+            partes = re.split(r"\s+(?:vs\.?|–|—|-|@|\bat\b|\bgegen\b|\bcontro\b)\s+", chunk_clean, flags=re.I)
+            if len(partes) >= 3:
+                cand_a = re.sub(r"^(?:quarti(?:\s+di\s+finale)?|semifinal[ei]|final[ei]|ottavi|\d+[aª°]?\s*giornata)\s+", "", partes[-2].strip(), flags=re.I).strip()
+                cand_b = partes[-1].strip()
+                if not re.search(bad_side, cand_a, re.I) and not re.search(bad_side, cand_b, re.I) and 2 <= len(cand_a) <= 42 and 2 <= len(cand_b) <= 42:
+                    return f"{cand_a} - {cand_b}"
+
+            for m in re.finditer(rf"({team_pat}){sep_pat}({team_pat})", chunk_clean):
+                a = re.sub(r"^(?:quarti(?:\s+di\s+finale)?|semifinal[ei]|final[ei]|ottavi|\d+[aª°]?\s*giornata)\s+", "", m.group(1).strip(" -–—:.,"), flags=re.I).strip()
+                b = m.group(2).strip(" -–—:.,")
+                if re.search(bad_side, a, re.I) or re.search(bad_side, b, re.I):
+                    continue
+                if 2 <= len(a) <= 42 and 2 <= len(b) <= 42 and a.lower() != b.lower():
+                    return f"{a} - {b}"
     return None
 
 
@@ -321,15 +390,15 @@ def estrai_winter_dettagli(sport, full_text):
         manche = "(Qualificazioni)"
 
     luogo = ""
-    for v in WINTER_VENUES:
-        if re.search(rf"\b{re.escape(v)}\b", t, re.I):
-            luogo = v
+    for key, label in WINTER_VENUES:
+        if re.search(rf"\b{re.escape(key)}\b", t, re.I):
+            luogo = label
             break
     if not luogo:
         mv = re.search(r"\b(?:in|aus|da|dalle\s+nevi\s+di|from|à)\s+([A-ZÄÖÜÀ-Ÿ][A-Za-zÀ-ÿäöüÄÖÜ' -]{2,22})", t)
         if mv:
             cand = mv.group(1).strip(" .,:-/()")
-            if not re.search(r"\b(?:diretta|live|eurosport|rai|srf|rts|rsi|weltcup|coppa|italia|mondo)\b", cand, re.I):
+            if not re.search(r"\b(?:diretta|live|eurosport|rai|srf|rts|rsi|weltcup|coppa|italia|mondo|diretta)\b", cand, re.I):
                 luogo = cand
 
     comp = f"Coppa del Mondo • {luogo}" if luogo else "Coppa del Mondo"
@@ -344,14 +413,46 @@ def estrai_winter_dettagli(sport, full_text):
     return comp, ev
 
 
+def estrai_motori_dettagli(sport, full_text):
+    low = (full_text or "").lower()
+    classe = sport
+    if sport == "MotoGP":
+        if re.search(r"\bmoto\s*3\b", low): classe = "Moto3"
+        elif re.search(r"\bmoto\s*2\b", low): classe = "Moto2"
+        elif re.search(r"\bsuperbike\b|\bwsbk\b", low): classe = "Superbike"
+
+    sess = ""
+    if re.search(r"\b(?:qualif|qp|q1|q2)\b", low): sess = "Qualifiche"
+    elif re.search(r"\bsprint\b", low): sess = "Sprint"
+    elif re.search(r"\b(?:gara|race|rennen|course|carrera)\b", low): sess = "Gara"
+    elif re.search(r"\b(?:libere|practice|training|essai|ft[123]|fp[123])\b", low): sess = "Prove Libere"
+
+    gp = ""
+    for pat, label in MOTORS_VENUES:
+        if re.search(pat, low):
+            gp = label
+            break
+
+    comp = f"{classe} • {gp}" if gp else classe
+    ev_parts = [classe]
+    if sess:
+        ev_parts.append(sess)
+    ev = " - ".join(ev_parts)
+    if gp:
+        ev = f"{ev} ({gp})"
+    return comp, ev
+
+
 def arricchisci_epg(title, sub_title, desc, cats, sport, paese):
     t = (title or "").strip()
     st = (sub_title or "").strip()
     d = (desc or "").strip()
-    all_info = f"{t} {st} {d[:400]}"
+    all_info = f"{t} {st} {d}".strip()
 
     if sport in ("Sci Alpino", "Snowboard"):
         return estrai_winter_dettagli(sport, all_info)
+    if sport in ("MotoGP", "Formula 1"):
+        return estrai_motori_dettagli(sport, all_info)
 
     comp = ""
     for pat, label in COMP_PATTERNS:
@@ -365,7 +466,13 @@ def arricchisci_epg(title, sub_title, desc, cats, sport, paese):
         else:
             comp = sport
 
-    match_str = estrai_match_da_testo(t) or estrai_match_da_testo(st) or estrai_match_da_testo(d[:350])
+    if sport in ("Pallavolo", "Pallanuoto") and comp == "Serie A":
+        if re.search(r"\bfemminil[ei]|donne|fineco\b", all_info, re.I):
+            comp = "Serie A1 Femminile"
+        elif re.search(r"\bmaschil[ei]|uomini\b", all_info, re.I):
+            comp = "Serie A1 Maschile"
+
+    match_str = estrai_match_da_testo(t) or estrai_match_da_testo(st) or estrai_match_da_testo(d)
     if match_str:
         ev = f"NFL: {match_str}" if comp == "NFL" and "nfl" not in match_str.lower() else match_str
     elif st and len(st) >= 4 and st.lower() not in t.lower() and not re.match(r"^(?:sport|202\d|live|diretta)$", st, re.I):
@@ -396,7 +503,7 @@ def classifica_sport(title_text, full_text_for_checks, canale_solo_sport=False, 
         return None
 
     is_match_or_race = bool(
-        re.search(r"(\s+-\s+|\s+–\s+|\bvs\.?\b|×|\s+x\s+|\s+@\s+|\s+at\s+|\b(?:gran premio|grand prix|qualifiche|qualifying|gara|race|sprint|slalom|discesa|super-?g|gigante|semifinale|finale|quarti|ottavi)\b)", tl)
+        re.search(r"(\s+-\s+|\s+–\s+|\bvs\.?\b|×|\s+x\s+|\s+@\s+|\s+at\s+|\b(?:gran premio|grand prix|qualifiche|qualifying|gara|race|rennen|sprint|slalom|discesa|super-?g|gigante|semifinale|finale|quarti|ottavi)\b)", tl)
     )
     if re.search(MAGAZINE_ALWAYS_REGEX, tl) or (not is_match_or_race and (re.search(MAGAZINE_ALWAYS_REGEX, t) or re.search(MAGAZINE_NO_MATCH_REGEX, tl) or re.search(MAGAZINE_NO_MATCH_REGEX, t))):
         return None
@@ -412,6 +519,11 @@ def classifica_sport(title_text, full_text_for_checks, canale_solo_sport=False, 
                 if paese == "Svizzera" and not re.search(EURO_CUPS_REGEX, t):
                     if re.search(SWISS_LEAGUE_REGEX, t) or re.search(SWISS_CLUBS_REGEX, t):
                         return None
+            elif sport == "Pallavolo":
+                if paese == "Brasile YouTube" and re.search(r"\b(?:feminin[ao]s?|superliga\s+f|mulheres|women)\b", t):
+                    return None
+                if re.search(r"\bserie\s*b(?:kt)?\b", t):
+                    return None
             else:
                 if re.search(r"\bserie\s*b(?:kt)?\b", t):
                     return None
@@ -643,6 +755,11 @@ def estrai_br_html(html, base_dt):
             continue
         corpo = m.group(3).strip()
         comp, ev = ([x.strip() for x in corpo.split(":", 1)] if ":" in corpo else (sez or "Sport Brasile", corpo))
+        mp = re.search(r"\(([^)]+)\)\s*$", ev)
+        if mp and "youtube" not in mp.group(1).lower():
+            if not comp or comp in ("Sport Brasile", "Bundesliga", "LaLiga", "Serie A", "Ligue 1", "Premier League"):
+                comp = mp.group(1).strip()
+            ev = re.sub(r"\s*\([^)]+\)\s*$", "", ev).strip()
         sport = classifica_sport(f"{sez} {comp} {ev}", f"{sez} {comp} {ev}", True, paese="Brasile YouTube")
         if not sport:
             continue
@@ -718,9 +835,12 @@ def carica_manuali():
         return []
 
 
-def deduplica(eventi):
+def deduplica(eventi, manuali=None):
+    manual_slots = {(m.get("data", ""), m.get("sport", ""), m.get("canale", "")) for m in (manuali or [])}
     visti, puliti = set(), []
     for ev in eventi:
+        if ev not in (manuali or []) and (ev.get("data", ""), ev.get("sport", ""), ev.get("canale", "")) in manual_slots:
+            continue
         tb = re.sub(r"\b(fc|sc|ec|cr|ca|sv|vfb)\b", "", ev.get("evento", "").split(":", 1)[-1].lower())
         k = (ev.get("data", ""), ev.get("ora", ""), ev.get("paese", ""), re.sub(r"[^a-z0-9]", "", tb)[:22])
         if k not in visti:
@@ -731,14 +851,15 @@ def deduplica(eventi):
 
 
 def main():
+    manuali = carica_manuali()
     tutti = (
         scarica_epg_paesi()
         + scarica_futebol_tv_br()
         + scarica_auvaromaia_br()
         + scarica_gfesporte_br()
-        + carica_manuali()
+        + manuali
     )
-    finali = deduplica(tutti)
+    finali = deduplica(tutti, manuali)
     if finali:
         with open("eventi.json", "w", encoding="utf-8") as f:
             json.dump(finali, f, ensure_ascii=False, indent=2)
