@@ -489,7 +489,7 @@
       "portogallo": "portogallo", "portugal": "portogallo",
       "inghilterra": "inghilterra", "england": "inghilterra", "angleterre": "inghilterra", "inglaterra": "inghilterra",
       "gran bretagna": "greatbritain", "great britain": "greatbritain", "gran bretana": "greatbritain", "uk": "greatbritain", "grossbritannien": "greatbritain",
-      "repubblica ceca": "czech", "cechia": "czech", "czech republic": "czech", "czechia": "czech", "republica checa": "czech", "tschechien": "czech", "republique tcheque": "czech",
+      "repubblica ceca": "czech", "rep ceca": "czech", "cechia": "czech", "czech republic": "czech", "czechia": "czech", "republica checa": "czech", "tschechien": "czech", "republique tcheque": "czech",
       "svizzera": "svizzera", "schweiz": "svizzera", "suisse": "svizzera", "switzerland": "svizzera", "suica": "svizzera",
       "olanda": "olanda", "paesi bassi": "olanda", "netherlands": "olanda", "niederlande": "olanda", "pays bas": "olanda", "holanda": "olanda",
       "belgio": "belgio", "belgien": "belgio", "belgique": "belgio", "belgium": "belgio", "belgica": "belgio",
@@ -631,6 +631,7 @@
 
     function normalizeTeam(raw) {
       let s = String(raw || "")
+        .replace(/\([^)]*\)/g, " ")
         .toLowerCase()
         .normalize("NFD")
         .replace(/[\u0300-\u036f]/g, "")
@@ -664,7 +665,7 @@
         return { isMatch: false, full: `winter_${disc}_${gen}_${run}` };
       }
 
-      let clean = String(ev.evento || "").trim();
+      let clean = String(ev.evento || "").replace(/\([^)]*\)\s*$/, "").trim();
       const prefixRe = /^(?:diretta|live|repliche?|replica|sport|calcio|pallavolo|pallanuoto|volley|pallacanestro|basket|basketball|baloncesto|tennis|sci alpino|ski alpin|snowboard|formula 1|f1|motogp|football americano|nfl|fussball|fußball|football|futebol|futbol|fútbol)\s*[:\-–—]\s*/i;
       while (prefixRe.test(clean)) {
         clean = clean.replace(prefixRe, "").trim();
@@ -1155,6 +1156,9 @@
         }
       })
       .catch(() => {});
+  </script>
+</body>
+</html>
   </script>
 </body>
 </html>
