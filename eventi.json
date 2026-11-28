@@ -1,325 +1,5 @@
 [
   {
-    "data": "2026-11-27",
-    "ora": "00:00",
-    "sport": "Calcio",
-    "competizione": "Taça Paraíba (semifinal)",
-    "evento": "Treze x Nacional de Patos",
-    "paese": "Brasile YouTube",
-    "canale": "Metrópoles Esportes (YouTube)",
-    "link": "https://www.youtube.com/@MetropolesEsportes"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "00:00",
-    "sport": "Calcio",
-    "competizione": "Liga Nacional de Futsal Sub-20",
-    "evento": "Corinthians x Minas",
-    "paese": "Brasile YouTube",
-    "canale": "Xsports / LNF / CBFS Futsal (YouTube)",
-    "link": "https://www.youtube.com/@xsports.brasil"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "00:48",
-    "sport": "Football Americano",
-    "competizione": "NFL",
-    "evento": "2026 Nfl Thanksgiving Games",
-    "paese": "Italia",
-    "canale": "20 Mediaset",
-    "link": "https://mediasetinfinity.mediaset.it/diretta/20mediaset_cLB"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "01:00",
-    "sport": "Basket & NBA",
-    "competizione": "NCAA Men's Basketball",
-    "evento": "DePaul - Pittsburgh",
-    "paese": "DAZN Free Canada",
-    "canale": "DAZN Free Canada",
-    "link": "https://www.dazn.com/en-CA/home"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "02:10",
-    "sport": "Football Americano",
-    "competizione": "NFL",
-    "evento": "NFL: Buffalo Bills - Kansas City Chiefs",
-    "paese": "Germania",
-    "canale": "RTL",
-    "link": "https://www.rtl.de/"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "02:19",
-    "sport": "Football Americano",
-    "competizione": "NFL",
-    "evento": "2026 Nfl Thanksgiving Games",
-    "paese": "Italia",
-    "canale": "20 Mediaset",
-    "link": "https://mediasetinfinity.mediaset.it/diretta/20mediaset_cLB"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "02:20",
-    "sport": "Football Americano",
-    "competizione": "NFL",
-    "evento": "Kansas City Chiefs x Buffalo Bills",
-    "paese": "Brasile YouTube",
-    "canale": "GE TV (YouTube)",
-    "link": "https://www.youtube.com/@getv"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "05:00",
-    "sport": "Altri Sport",
-    "competizione": "WBSC Premier12",
-    "evento": "Repubblica Ceca - Nicaragua",
-    "paese": "DAZN Free Italia",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "08:55",
-    "sport": "MotoGP",
-    "competizione": "MotoGP • GP Valencia",
-    "evento": "GP Valencia - Prove Libere 1",
-    "paese": "DAZN Free Spagna",
-    "canale": "DAZN App Gratis (ES)",
-    "link": "https://www.dazn.com/es-ES/home"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "09:40",
-    "sport": "Calcio",
-    "competizione": "FUTEBOL PELO MUNDO",
-    "evento": "Macarthur x Melbourne City",
-    "paese": "Brasile YouTube",
-    "canale": "A-Leagues (YouTube)",
-    "link": "https://www.youtube.com/@aleagues"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "11:30",
-    "sport": "Altri Sport",
-    "competizione": "WBSC Premier12",
-    "evento": "China - Great Britain",
-    "paese": "DAZN Free Italia",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "13:00",
-    "sport": "Calcio",
-    "competizione": "FUTEBOL PELO MUNDO",
-    "evento": "Bukhoro x Mashal Muborak",
-    "paese": "Brasile YouTube",
-    "canale": "Uzbekistan PFL (YouTube)",
-    "link": "https://www.youtube.com/results?search_query=Uzbekistan+PFL"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "13:00",
-    "sport": "Calcio",
-    "competizione": "FUTEBOL PELO MUNDO",
-    "evento": "Kokand 1912 x Xorazm Urganch",
-    "paese": "Brasile YouTube",
-    "canale": "Uzbekistan PFL (YouTube)",
-    "link": "https://www.youtube.com/results?search_query=Uzbekistan+PFL"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "13:10",
-    "sport": "MotoGP",
-    "competizione": "MotoGP • GP Valencia",
-    "evento": "GP Valencia - Prove Libere 2",
-    "paese": "DAZN Free Spagna",
-    "canale": "DAZN App Gratis (ES)",
-    "link": "https://www.dazn.com/es-ES/home"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "14:05",
-    "sport": "Programmi & Magazine",
-    "competizione": "Serie A Enilive",
-    "evento": "Tutti Convocati",
-    "paese": "DAZN Free Italia",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "15:00",
-    "sport": "Calcio",
-    "competizione": "FUTEBOL PELO MUNDO",
-    "evento": "Inter Kashi x Churchill Brothers",
-    "paese": "Brasile YouTube",
-    "canale": "Indian Super League (YouTube)",
-    "link": "https://www.youtube.com/results?search_query=Indian+Super+League"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "15:00",
-    "sport": "Altri Sport",
-    "competizione": "COPA DO MUNDO SUB-17",
-    "evento": "Costa Rica x Brasil",
-    "paese": "Brasile YouTube",
-    "canale": "CazéTV (YouTube)",
-    "link": "https://www.youtube.com/@CazeTV"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "15:20",
-    "sport": "Calcio",
-    "competizione": "FUTEBOL PELO MUNDO",
-    "evento": "Al Qadsiah x Al Fayha",
-    "paese": "Brasile YouTube",
-    "canale": "Canal GOAT (YouTube)",
-    "link": "https://www.youtube.com/@canalgoatbr"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "16:00",
-    "sport": "Tennis",
-    "competizione": "Coppa Davis",
-    "evento": "Italia - Rep. Ceca (Musetti-Mensik, Cobolli-Lehecka)",
-    "paese": "Italia",
-    "canale": "Rai 1",
-    "link": "https://www.raiplay.it/dirette/rai1"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "18:00",
-    "sport": "College Football",
-    "competizione": "NCAA Football",
-    "evento": "Nebraska - Iowa",
-    "paese": "DAZN Free Canada",
-    "canale": "DAZN Free Canada",
-    "link": "https://www.dazn.com/en-CA/home"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "18:00",
-    "sport": "Programmi & Magazine",
-    "competizione": "Serie A Enilive",
-    "evento": "Fantacalcio Night",
-    "paese": "DAZN Free Italia",
-    "canale": "DAZN Free Italia",
-    "link": "https://www.dazn.com/it-IT/home"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "18:30",
-    "sport": "Calcio",
-    "competizione": "FUTEBOL PELO MUNDO",
-    "evento": "Al Ittihad x Neom",
-    "paese": "Brasile YouTube",
-    "canale": "Canal GOAT / Xsports (YouTube)",
-    "link": "https://www.youtube.com/@canalgoatbr"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "20:00",
-    "sport": "Altri Sport",
-    "competizione": "Eredivisie",
-    "evento": "Ajax x Heracles",
-    "paese": "Brasile YouTube",
-    "canale": "Link Alviverde (YouTube)",
-    "link": "https://www.youtube.com/results?search_query=Link+Alviverde"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "20:00",
-    "sport": "Altri Sport",
-    "competizione": "Eredivisie",
-    "evento": "VVV Venlo x RKC Waalwijk",
-    "paese": "Brasile YouTube",
-    "canale": "Link Alviverde (YouTube)",
-    "link": "https://www.youtube.com/results?search_query=Link+Alviverde"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "20:20",
-    "sport": "Calcio",
-    "competizione": "Jupiler Pro League",
-    "evento": "OH Leuven - KV Kortrijk",
-    "paese": "DAZN Free Belgio",
-    "canale": "DAZN Free Belgio",
-    "link": "https://www.dazn.com/en-BE/home"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "20:30",
-    "sport": "Calcio",
-    "competizione": "Bundesliga",
-    "evento": "Werder Bremen x Borussia Mönchengladbach",
-    "paese": "Brasile YouTube",
-    "canale": "CazéTV / SportyNet (YouTube)",
-    "link": "https://www.youtube.com/@CazeTV"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "20:30",
-    "sport": "Calcio",
-    "competizione": "Bundesliga",
-    "evento": "Werder Brema - Borussia M'gladbach",
-    "paese": "DAZN Free Portogallo",
-    "canale": "DAZN Free Portogallo",
-    "link": "https://www.dazn.com/pt-PT/home"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "20:45",
-    "sport": "Calcio",
-    "competizione": "Ligue 1",
-    "evento": "Brest x Paris FC",
-    "paese": "Brasile YouTube",
-    "canale": "CazéTV / Xsports (YouTube)",
-    "link": "https://www.youtube.com/@CazeTV"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "20:45",
-    "sport": "Calcio",
-    "competizione": "Ligue 1",
-    "evento": "Brest - Paris FC",
-    "paese": "DAZN Free Belgio",
-    "canale": "DAZN Free Belgio",
-    "link": "https://www.dazn.com/en-BE/home"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "20:45",
-    "sport": "Calcio",
-    "competizione": "Serie A",
-    "evento": "Venezia - Bologna",
-    "paese": "DAZN Free Belgio",
-    "canale": "DAZN Free Belgio",
-    "link": "https://www.dazn.com/en-BE/home"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "21:00",
-    "sport": "Calcio",
-    "competizione": "LaLiga",
-    "evento": "Levante x Racing",
-    "paese": "Brasile YouTube",
-    "canale": "CazéTV (YouTube)",
-    "link": "https://www.youtube.com/@CazeTV"
-  },
-  {
-    "data": "2026-11-27",
-    "ora": "21:00",
-    "sport": "Calcio",
-    "competizione": "LaLiga EA Sports",
-    "evento": "Levante - Racing Santander",
-    "paese": "DAZN Free Belgio",
-    "canale": "DAZN Free Belgio",
-    "link": "https://www.dazn.com/en-BE/home"
-  },
-  {
     "data": "2026-11-28",
     "ora": "00:10",
     "sport": "Basket & NBA",
@@ -371,6 +51,16 @@
   },
   {
     "data": "2026-11-28",
+    "ora": "09:40",
+    "sport": "Calcio",
+    "competizione": "Australiano",
+    "evento": "Central Coast Mariners x Auckland",
+    "paese": "Brasile YouTube",
+    "canale": "Canal GOL Brasil (YouTube)",
+    "link": "https://www.youtube.com/@canalgolbrasil"
+  },
+  {
+    "data": "2026-11-28",
     "ora": "10:45",
     "sport": "MotoGP",
     "competizione": "MotoGP • GP Valencia",
@@ -378,6 +68,16 @@
     "paese": "Svizzera",
     "canale": "RSI La 2",
     "link": "https://www.rsi.ch/play/tv"
+  },
+  {
+    "data": "2026-11-28",
+    "ora": "11:00",
+    "sport": "Tennis",
+    "competizione": "SailGP",
+    "evento": "Etapa de Abu Dhabi",
+    "paese": "Brasile YouTube",
+    "canale": "Esporte na Band (YouTube)",
+    "link": "https://www.youtube.com/results?search_query=Esporte+na+Band"
   },
   {
     "data": "2026-11-28",
@@ -393,11 +93,31 @@
     "data": "2026-11-28",
     "ora": "12:00",
     "sport": "Tennis",
+    "competizione": "Copa Davis (semifinal)",
+    "evento": "Espanha x Grã-Bretanha",
+    "paese": "Brasile YouTube",
+    "canale": "CazéTV (YouTube)",
+    "link": "https://www.youtube.com/@CazeTV"
+  },
+  {
+    "data": "2026-11-28",
+    "ora": "12:00",
+    "sport": "Tennis",
     "competizione": "Coppa Davis",
     "evento": "Spagna - Gran Bretagna (Jódar-Norrie, Alcaraz-Fery)",
     "paese": "Italia",
     "canale": "SuperTennis",
     "link": "https://www.supertennis.tv/"
+  },
+  {
+    "data": "2026-11-28",
+    "ora": "12:15",
+    "sport": "Calcio",
+    "competizione": "Uzbeque",
+    "evento": "Neftchi Fergana x Dinamo Samarkand",
+    "paese": "Brasile YouTube",
+    "canale": "Uzbekistan PFL (YouTube)",
+    "link": "https://www.youtube.com/results?search_query=Uzbekistan+PFL"
   },
   {
     "data": "2026-11-28",
@@ -428,6 +148,36 @@
     "paese": "Germania",
     "canale": "DF1",
     "link": "https://df1.de/"
+  },
+  {
+    "data": "2026-11-28",
+    "ora": "13:00",
+    "sport": "Calcio",
+    "competizione": "Uzbeque",
+    "evento": "Qizilqum x Pakhtakor",
+    "paese": "Brasile YouTube",
+    "canale": "Uzbekistan PFL (YouTube)",
+    "link": "https://www.youtube.com/results?search_query=Uzbekistan+PFL"
+  },
+  {
+    "data": "2026-11-28",
+    "ora": "13:00",
+    "sport": "Calcio",
+    "competizione": "Espanhol",
+    "evento": "Manzanares x Barcelona",
+    "paese": "Brasile YouTube",
+    "canale": "Canal GOL Brasil (YouTube)",
+    "link": "https://www.youtube.com/@canalgolbrasil"
+  },
+  {
+    "data": "2026-11-28",
+    "ora": "13:15",
+    "sport": "Calcio",
+    "competizione": "Saudita",
+    "evento": "Al Hazem x Al Nassr",
+    "paese": "Brasile YouTube",
+    "canale": "Canal GOAT / Xsports (YouTube)",
+    "link": "https://www.youtube.com/@canalgoatbr"
   },
   {
     "data": "2026-11-28",
@@ -463,11 +213,31 @@
     "data": "2026-11-28",
     "ora": "14:00",
     "sport": "Calcio",
+    "competizione": "LaLiga",
+    "evento": "Betis x Rayo Vallecano",
+    "paese": "Brasile YouTube",
+    "canale": "SportyNet (YouTube)",
+    "link": "https://www.youtube.com/@SportyNetBrasil"
+  },
+  {
+    "data": "2026-11-28",
+    "ora": "14:00",
+    "sport": "Calcio",
     "competizione": "LaLiga EA Sports",
     "evento": "Real Betis - Rayo Vallecano",
     "paese": "DAZN Free Belgio",
     "canale": "DAZN Free Belgio",
     "link": "https://www.dazn.com/en-BE/home"
+  },
+  {
+    "data": "2026-11-28",
+    "ora": "14:30",
+    "sport": "Altri Sport",
+    "competizione": "Russo",
+    "evento": "CSKA Moscou x Zenit",
+    "paese": "Brasile YouTube",
+    "canale": "Xsports / Canal GOL Brasil (YouTube)",
+    "link": "https://www.youtube.com/@xsports.brasil"
   },
   {
     "data": "2026-11-28",
@@ -513,11 +283,51 @@
     "data": "2026-11-28",
     "ora": "15:20",
     "sport": "Calcio",
+    "competizione": "Saudita",
+    "evento": "Al Ettifaq x Al Hilal",
+    "paese": "Brasile YouTube",
+    "canale": "Canal GOAT (YouTube)",
+    "link": "https://www.youtube.com/@canalgoatbr"
+  },
+  {
+    "data": "2026-11-28",
+    "ora": "15:20",
+    "sport": "Calcio",
     "competizione": "Saudi Pro League",
     "evento": "Al Ettifaq - Al Hilal",
     "paese": "Italia",
     "canale": "Sportitalia",
     "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-28",
+    "ora": "15:30",
+    "sport": "Calcio",
+    "competizione": "Bundesliga",
+    "evento": "Hamburgo x Bayern de Munique",
+    "paese": "Brasile YouTube",
+    "canale": "SportyNet (YouTube)",
+    "link": "https://www.youtube.com/@SportyNetBrasil"
+  },
+  {
+    "data": "2026-11-28",
+    "ora": "15:30",
+    "sport": "Calcio",
+    "competizione": "Bundesliga",
+    "evento": "Colônia x Elversberg",
+    "paese": "Brasile YouTube",
+    "canale": "Canal GOAT (YouTube)",
+    "link": "https://www.youtube.com/@canalgoatbr"
+  },
+  {
+    "data": "2026-11-28",
+    "ora": "15:30",
+    "sport": "Calcio",
+    "competizione": "Bundesliga",
+    "evento": "Paderborn x Schalke 04",
+    "paese": "Brasile YouTube",
+    "canale": "Canal GOAT (YouTube)",
+    "link": "https://www.youtube.com/@canalgoatbr"
   },
   {
     "data": "2026-11-28",
@@ -548,6 +358,26 @@
     "paese": "DAZN Free Belgio",
     "canale": "DAZN Free Belgio",
     "link": "https://www.dazn.com/en-BE/home"
+  },
+  {
+    "data": "2026-11-28",
+    "ora": "16:00",
+    "sport": "Calcio",
+    "competizione": "Premier League",
+    "evento": "Manchester United x Brentford",
+    "paese": "Brasile YouTube",
+    "canale": "CazéTV (YouTube)",
+    "link": "https://www.youtube.com/@CazeTV"
+  },
+  {
+    "data": "2026-11-28",
+    "ora": "16:15",
+    "sport": "Calcio",
+    "competizione": "LaLiga",
+    "evento": "Málaga x Athletic Bilbao",
+    "paese": "Brasile YouTube",
+    "canale": "CazéTV (YouTube)",
+    "link": "https://www.youtube.com/@CazeTV"
   },
   {
     "data": "2026-11-28",
@@ -584,6 +414,16 @@
     "ora": "17:15",
     "sport": "Calcio",
     "competizione": "Ligue 1",
+    "evento": "Angers x Lens",
+    "paese": "Brasile YouTube",
+    "canale": "CazéTV (YouTube)",
+    "link": "https://www.youtube.com/@CazeTV"
+  },
+  {
+    "data": "2026-11-28",
+    "ora": "17:15",
+    "sport": "Calcio",
+    "competizione": "Ligue 1",
     "evento": "Angers - Lens",
     "paese": "DAZN Free Belgio",
     "canale": "DAZN Free Belgio",
@@ -598,6 +438,26 @@
     "paese": "DAZN Free Belgio",
     "canale": "DAZN Free Belgio",
     "link": "https://www.dazn.com/en-BE/home"
+  },
+  {
+    "data": "2026-11-28",
+    "ora": "18:00",
+    "sport": "Altri Sport",
+    "competizione": "Suíço",
+    "evento": "Grasshoppers x Basel",
+    "paese": "Brasile YouTube",
+    "canale": "Canal GOL Brasil (YouTube)",
+    "link": "https://www.youtube.com/@canalgolbrasil"
+  },
+  {
+    "data": "2026-11-28",
+    "ora": "18:00",
+    "sport": "Altri Sport",
+    "competizione": "Galês",
+    "evento": "Treffynnon x Llandudno",
+    "paese": "Brasile YouTube",
+    "canale": "Sgorio (YouTube)",
+    "link": "https://www.youtube.com/results?search_query=Sgorio"
   },
   {
     "data": "2026-11-28",
@@ -653,6 +513,36 @@
     "data": "2026-11-28",
     "ora": "18:30",
     "sport": "Calcio",
+    "competizione": "Bundesliga",
+    "evento": "Stuttgart x Eintracht Frankfurt",
+    "paese": "Brasile YouTube",
+    "canale": "Xsports / SportyNet (YouTube)",
+    "link": "https://www.youtube.com/@xsports.brasil"
+  },
+  {
+    "data": "2026-11-28",
+    "ora": "18:30",
+    "sport": "Calcio",
+    "competizione": "LaLiga",
+    "evento": "Elche x Atlético de Madrid",
+    "paese": "Brasile YouTube",
+    "canale": "CazéTV (YouTube)",
+    "link": "https://www.youtube.com/@CazeTV"
+  },
+  {
+    "data": "2026-11-28",
+    "ora": "18:30",
+    "sport": "Calcio",
+    "competizione": "Saudita",
+    "evento": "Al Ahli x Al Taawoun",
+    "paese": "Brasile YouTube",
+    "canale": "Canal GOAT (YouTube)",
+    "link": "https://www.youtube.com/@canalgoatbr"
+  },
+  {
+    "data": "2026-11-28",
+    "ora": "18:30",
+    "sport": "Calcio",
     "competizione": "LaLiga EA Sports",
     "evento": "Elche - Atlético Madrid",
     "paese": "DAZN Free Belgio",
@@ -673,8 +563,8 @@
     "data": "2026-11-28",
     "ora": "19:40",
     "sport": "Sci Alpino",
-    "competizione": "Coppa del Mondo • Copper Mountain",
-    "evento": "Super-G Uomini - Copper Mountain",
+    "competizione": "Coppa del Mondo",
+    "evento": "Super-G Uomini",
     "paese": "Italia",
     "canale": "Rai Sport",
     "link": "https://www.raiplay.it/dirette/raisport"
@@ -691,6 +581,16 @@
   },
   {
     "data": "2026-11-28",
+    "ora": "20:00",
+    "sport": "Calcio",
+    "competizione": "Carioca B1 (final, ida)",
+    "evento": "Niteroiense x Serrano",
+    "paese": "Brasile YouTube",
+    "canale": "Cariocão TV (YouTube)",
+    "link": "https://www.youtube.com/results?search_query=Carioc%C3%A3o+TV"
+  },
+  {
+    "data": "2026-11-28",
     "ora": "20:25",
     "sport": "Calcio",
     "competizione": "Jupiler Pro League",
@@ -698,6 +598,46 @@
     "paese": "DAZN Free Belgio",
     "canale": "DAZN Free Belgio",
     "link": "https://www.dazn.com/en-BE/home"
+  },
+  {
+    "data": "2026-11-28",
+    "ora": "20:45",
+    "sport": "Calcio",
+    "competizione": "Ligue 1",
+    "evento": "Le Havre x Strasbourg",
+    "paese": "Brasile YouTube",
+    "canale": "CazéTV (YouTube)",
+    "link": "https://www.youtube.com/@CazeTV"
+  },
+  {
+    "data": "2026-11-28",
+    "ora": "20:45",
+    "sport": "Calcio",
+    "competizione": "Ligue 1",
+    "evento": "Le Mans x Lille",
+    "paese": "Brasile YouTube",
+    "canale": "CazéTV (YouTube)",
+    "link": "https://www.youtube.com/@CazeTV"
+  },
+  {
+    "data": "2026-11-28",
+    "ora": "20:45",
+    "sport": "Calcio",
+    "competizione": "Ligue 1",
+    "evento": "Nice x Troyes",
+    "paese": "Brasile YouTube",
+    "canale": "CazéTV (YouTube)",
+    "link": "https://www.youtube.com/@CazeTV"
+  },
+  {
+    "data": "2026-11-28",
+    "ora": "20:45",
+    "sport": "Calcio",
+    "competizione": "Ligue 1",
+    "evento": "PSG x Lorient",
+    "paese": "Brasile YouTube",
+    "canale": "CazéTV / Xsports (YouTube)",
+    "link": "https://www.youtube.com/@CazeTV"
   },
   {
     "data": "2026-11-28",
@@ -778,6 +718,26 @@
     "paese": "Giappone ABEMA Free",
     "canale": "ABEMA Free (JP)",
     "link": "https://abema.tv/feature/8uTS3SadDwvqMH?moduleType=0"
+  },
+  {
+    "data": "2026-11-28",
+    "ora": "21:00",
+    "sport": "Calcio",
+    "competizione": "COPA LIBERTADORES – FINAL",
+    "evento": "Palmeiras x Estudiantes",
+    "paese": "Brasile YouTube",
+    "canale": "GE TV (YouTube)",
+    "link": "https://www.youtube.com/@getv"
+  },
+  {
+    "data": "2026-11-28",
+    "ora": "21:00",
+    "sport": "Calcio",
+    "competizione": "LaLiga",
+    "evento": "Real Madrid x Alavés",
+    "paese": "Brasile YouTube",
+    "canale": "CazéTV (YouTube)",
+    "link": "https://www.youtube.com/@CazeTV"
   },
   {
     "data": "2026-11-28",
@@ -881,6 +841,16 @@
   },
   {
     "data": "2026-11-28",
+    "ora": "23:00",
+    "sport": "Calcio",
+    "competizione": "LNF Silver (final, ida)",
+    "evento": "ACEL x Vasco",
+    "paese": "Brasile YouTube",
+    "canale": "Xsports / LNF / CBFS Futsal (YouTube)",
+    "link": "https://www.youtube.com/@xsports.brasil"
+  },
+  {
+    "data": "2026-11-28",
     "ora": "23:20",
     "sport": "Formula 1",
     "competizione": "Formula 1 • GP Qatar",
@@ -898,6 +868,16 @@
     "paese": "Italia",
     "canale": "Sportitalia",
     "link": "https://www.sportitalia.it/"
+  },
+  {
+    "data": "2026-11-29",
+    "ora": "01:00",
+    "sport": "Pallavolo",
+    "competizione": "Superliga Masculina",
+    "evento": "Suzano x Praia Clube",
+    "paese": "Brasile YouTube",
+    "canale": "GE TV (YouTube)",
+    "link": "https://www.youtube.com/@getv"
   },
   {
     "data": "2026-11-29",
@@ -938,6 +918,16 @@
     "paese": "DAZN Free Canada",
     "canale": "DAZN Free Canada",
     "link": "https://www.dazn.com/en-CA/home"
+  },
+  {
+    "data": "2026-11-29",
+    "ora": "03:00",
+    "sport": "Calcio",
+    "competizione": "Australiano",
+    "evento": "Wellington Phoenix x Adelaide United",
+    "paese": "Brasile YouTube",
+    "canale": "Canal GOL Brasil (YouTube)",
+    "link": "https://www.youtube.com/@canalgolbrasil"
   },
   {
     "data": "2026-11-29",
@@ -1221,6 +1211,16 @@
   },
   {
     "data": "2026-11-29",
+    "ora": "19:00",
+    "sport": "Calcio",
+    "competizione": "Sport Calcio",
+    "evento": "Batistuta",
+    "paese": "Italia",
+    "canale": "TV8",
+    "link": "https://tv8.it/streaming"
+  },
+  {
+    "data": "2026-11-29",
     "ora": "19:25",
     "sport": "Sci Alpino",
     "competizione": "Coppa del Mondo • Killington",
@@ -1341,6 +1341,16 @@
   },
   {
     "data": "2026-11-30",
+    "ora": "13:10",
+    "sport": "Sci Alpino",
+    "competizione": "Coppa del Mondo • Copper Mountain",
+    "evento": "Slalom Gigante Uomini (1ª Manche) - Copper Mountain",
+    "paese": "Italia",
+    "canale": "Rai Sport",
+    "link": "https://www.raiplay.it/dirette/raisport"
+  },
+  {
+    "data": "2026-11-30",
     "ora": "14:05",
     "sport": "Programmi & Magazine",
     "competizione": "Serie A Enilive",
@@ -1348,6 +1358,16 @@
     "paese": "DAZN Free Italia",
     "canale": "DAZN Free Italia",
     "link": "https://www.dazn.com/it-IT/home"
+  },
+  {
+    "data": "2026-11-30",
+    "ora": "14:40",
+    "sport": "Sci Alpino",
+    "competizione": "Coppa del Mondo • Copper Mountain",
+    "evento": "Slalom Gigante Uomini (2ª Manche) - Copper Mountain",
+    "paese": "Italia",
+    "canale": "Rai Sport",
+    "link": "https://www.raiplay.it/dirette/raisport"
   },
   {
     "data": "2026-11-30",
@@ -1378,6 +1398,16 @@
     "paese": "DAZN Free Canada",
     "canale": "DAZN Free Canada",
     "link": "https://www.dazn.com/en-CA/home"
+  },
+  {
+    "data": "2026-12-01",
+    "ora": "02:00",
+    "sport": "Football Americano",
+    "competizione": "NFL",
+    "evento": "NFL: Tampa Bay Buccaneers - Carolina Panthers",
+    "paese": "Germania",
+    "canale": "RTL",
+    "link": "https://www.rtl.de/"
   },
   {
     "data": "2026-12-02",
